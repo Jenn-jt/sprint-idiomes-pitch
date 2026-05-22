@@ -1,0 +1,1407 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Sprint Idiomes · Escola d'anglès per a nens a Sant Cugat des de 1974</title>
+<meta name="description" content="Anglès per a nens, joves i famílies a Sant Cugat. Cambridge, IELTS i molta diversió. 50 anys aprenent jugant." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Nunito:wght@400;600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF6E4;
+  --cream-2:#FFEFCF;
+  --ink:#1F1B3A;
+  --ink-soft:#3F3960;
+  --yellow:#FFC83D;
+  --yellow-2:#FFB100;
+  --pink:#FF7AB6;
+  --pink-2:#FF4F9E;
+  --sky:#5DC5F0;
+  --sky-2:#2BA5DA;
+  --coral:#FF6B47;
+  --violet:#9B6BFF;
+  --mint:#7DD4A7;
+  --line:rgba(31,27,58,.14);
+  --line-strong:rgba(31,27,58,.3);
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Nunito",ui-sans-serif,system-ui,sans-serif;
+  --font-hand:"Caveat",cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.55;
+  font-size:16px;
+  overflow-x:hidden;
+  font-weight:500;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* ---------- BG DECORATION ---------- */
+.bg-shapes{
+  position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;
+}
+.bg-shapes .blob{
+  position:absolute;border-radius:50%;filter:blur(40px);opacity:.4;
+}
+.bg-shapes .b1{width:380px;height:380px;background:var(--yellow);top:-100px;left:-100px}
+.bg-shapes .b2{width:320px;height:320px;background:var(--pink);top:30%;right:-120px}
+.bg-shapes .b3{width:280px;height:280px;background:var(--sky);bottom:20%;left:-80px}
+
+main, nav, footer{position:relative;z-index:1}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,246,228,.88);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:2px dashed rgba(31,27,58,.12);
+}
+.nav-inner{
+  max-width:1320px;margin:0 auto;
+  padding:18px 32px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.logo{
+  display:inline-flex;flex-direction:column;align-items:stretch;
+  font-family:var(--font-display);
+  font-weight:500;
+  font-size:13px;
+  letter-spacing:.12em;
+  line-height:1;
+  color:var(--ink);
+  font-variation-settings:"wdth" 100;
+  text-transform:uppercase;
+  padding:2px 0;
+}
+.logo .lw{display:block;text-align:center}
+.logo .lr{
+  display:block;
+  height:3px;
+  background:var(--ink);
+  margin:4px 0;
+  border-radius:1px;
+}
+.logo:hover{color:var(--coral)}
+.logo:hover .lr{background:var(--coral);transition:background .2s}
+.logo .lw,.logo .lr{transition:all .2s}
+.nav-links{
+  display:flex;gap:30px;
+  font-size:15px;
+  font-weight:600;
+}
+.nav-links a{
+  position:relative;padding:4px 0;color:var(--ink-soft);
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--coral)}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:-2px;
+  width:0;height:3px;background:var(--yellow);border-radius:3px;
+  transition:width .3s ease;
+}
+.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 22px;
+  border-radius:100px;
+  font-size:15px;
+  font-weight:700;
+  transition:all .25s ease;
+  border:2px solid transparent;
+  font-family:var(--font-body);
+}
+.btn-ghost{color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--cream)}
+.btn-primary{
+  background:var(--coral);color:#fff;
+  box-shadow:0 4px 0 var(--ink);
+}
+.btn-primary:hover{transform:translate(-1px,-2px);box-shadow:0 6px 0 var(--ink)}
+.btn-primary:active{transform:translate(0,2px);box-shadow:0 2px 0 var(--ink)}
+.btn-yellow{background:var(--yellow);color:var(--ink);box-shadow:0 4px 0 var(--ink)}
+.btn-yellow:hover{transform:translate(-1px,-2px);box-shadow:0 6px 0 var(--ink)}
+.btn .arrow{width:16px;height:16px;transition:transform .25s}
+.btn:hover .arrow{transform:translateX(4px)}
+.btn-lang{
+  font-size:12px;color:var(--ink-soft);
+  border:2px solid var(--line);padding:8px 12px;border-radius:100px;
+  font-weight:700;letter-spacing:.04em;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  padding:50px 32px 60px;
+  max-width:1320px;margin:0 auto;
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:48px;
+  align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--cream-2);
+  border:2px solid var(--ink);
+  padding:8px 16px;border-radius:100px;
+  font-size:13px;font-weight:700;
+  color:var(--ink);
+  margin-bottom:24px;
+  box-shadow:0 3px 0 var(--ink);
+  transform:rotate(-1.5deg);
+}
+.hero-badge .pulse{
+  width:8px;height:8px;border-radius:50%;background:var(--coral);
+  animation:pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1.4);opacity:.7}
+}
+.hero-title{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:clamp(48px,8vw,108px);
+  line-height:.96;
+  letter-spacing:-0.035em;
+  font-variation-settings:"wdth" 90;
+  color:var(--ink);
+  margin-bottom:24px;
+}
+.hero-title .scribble{
+  position:relative;display:inline-block;color:var(--coral);
+}
+.hero-title .scribble::after{
+  content:"";position:absolute;
+  left:-4px;right:-4px;bottom:-2px;height:14px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 14' preserveAspectRatio='none'><path d='M2 10 Q 50 2, 100 8 T 200 8 T 298 6' stroke='%23FFC83D' stroke-width='5' fill='none' stroke-linecap='round'/></svg>") center/100% 100% no-repeat;
+}
+.hero-rotator{
+  display:inline-flex;align-items:baseline;
+  height:1em;overflow:hidden;vertical-align:baseline;
+}
+.hero-rotator-track{
+  display:flex;flex-direction:column;
+  animation:rot 12s steps(1) infinite;
+}
+.hero-rotator-track > span{
+  height:1em;line-height:1;white-space:nowrap;
+  color:var(--violet);
+}
+.hero-rotator-track > span:nth-child(2){color:var(--pink-2)}
+.hero-rotator-track > span:nth-child(3){color:var(--sky-2)}
+.hero-rotator-track > span:nth-child(4){color:var(--mint)}
+.hero-rotator-track > span:nth-child(5){color:var(--yellow-2)}
+@keyframes rot{
+  0%,18%{transform:translateY(0)}
+  20%,38%{transform:translateY(-1em)}
+  40%,58%{transform:translateY(-2em)}
+  60%,78%{transform:translateY(-3em)}
+  80%,98%{transform:translateY(-4em)}
+  100%{transform:translateY(-5em)}
+}
+.hero-lead{
+  font-size:19px;line-height:1.55;color:var(--ink-soft);max-width:520px;
+  margin-bottom:32px;
+}
+.hero-lead strong{color:var(--ink);font-weight:800}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.hero-actions .btn{font-size:16px;padding:16px 26px}
+.hero-meta-row{
+  display:flex;gap:36px;flex-wrap:wrap;
+  padding-top:28px;border-top:2px dashed var(--line);
+}
+.meta-stat .n{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:38px;line-height:1;color:var(--ink);
+  letter-spacing:-0.03em;
+}
+.meta-stat .n .accent{color:var(--coral)}
+.meta-stat .l{
+  font-size:13px;font-weight:600;color:var(--ink-soft);
+  margin-top:6px;
+}
+
+/* HERO ART */
+.hero-art{
+  position:relative;
+  aspect-ratio:1/1;
+  width:100%;
+  max-width:520px;
+  margin-left:auto;
+}
+.hero-art .bg-circle{
+  position:absolute;inset:0;
+  background:radial-gradient(circle at 40% 30%,var(--yellow) 0%,var(--coral) 100%);
+  border-radius:50%;
+  box-shadow:0 12px 0 var(--ink);
+}
+.hero-art .char{
+  position:absolute;inset:6%;
+  display:grid;place-items:center;
+}
+.hero-art .char svg{width:100%;height:auto;animation:bob 4s ease-in-out infinite}
+@keyframes bob{
+  0%,100%{transform:translateY(0) rotate(-1deg)}
+  50%{transform:translateY(-12px) rotate(1deg)}
+}
+.hero-art .floater{
+  position:absolute;
+  background:#fff;
+  border:2px solid var(--ink);
+  border-radius:18px;
+  padding:10px 14px;
+  font-weight:700;
+  font-size:14px;
+  box-shadow:0 4px 0 var(--ink);
+  display:flex;align-items:center;gap:8px;
+}
+.floater.f1{top:6%;right:-6%;transform:rotate(4deg);animation:float1 5s ease-in-out infinite}
+.floater.f2{bottom:14%;left:-8%;transform:rotate(-5deg);animation:float2 6s ease-in-out infinite}
+.floater.f3{bottom:-4%;right:6%;transform:rotate(3deg);animation:float1 5.5s ease-in-out infinite reverse}
+@keyframes float1{0%,100%{transform:rotate(4deg) translateY(0)}50%{transform:rotate(4deg) translateY(-10px)}}
+@keyframes float2{0%,100%{transform:rotate(-5deg) translateY(0)}50%{transform:rotate(-5deg) translateY(-12px)}}
+.floater .emoji{font-size:18px}
+.floater.fp{background:var(--pink)}
+.floater.fs{background:var(--sky)}
+.floater.fm{background:var(--mint)}
+
+/* sparkles around art */
+.spark{
+  position:absolute;width:24px;height:24px;
+}
+.spark.s1{top:-10px;left:30%;animation:twinkle 2.2s ease-in-out infinite}
+.spark.s2{top:40%;right:-12px;animation:twinkle 2.6s ease-in-out infinite .4s}
+.spark.s3{bottom:8%;left:-6%;animation:twinkle 2.4s ease-in-out infinite .8s}
+@keyframes twinkle{
+  0%,100%{transform:scale(.6) rotate(0deg);opacity:.5}
+  50%{transform:scale(1.1) rotate(40deg);opacity:1}
+}
+
+/* ---------- SECTION ---------- */
+section{padding:90px 32px;max-width:1320px;margin:0 auto;position:relative}
+.eyebrow{
+  font-family:var(--font-hand);
+  font-size:26px;
+  color:var(--coral);
+  font-weight:700;
+  display:inline-block;
+  transform:rotate(-2deg);
+  margin-bottom:8px;
+}
+.section-title{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:clamp(36px,5vw,72px);
+  line-height:1;
+  letter-spacing:-0.03em;
+  font-variation-settings:"wdth" 92;
+  max-width:880px;
+  margin-bottom:24px;
+}
+.section-title em{font-style:normal;color:var(--coral)}
+.section-title .hl{
+  background:var(--yellow);
+  padding:0 .12em;
+  border-radius:8px;
+  display:inline-block;
+  transform:rotate(-1deg);
+  font-style:normal;
+}
+.section-lead{font-size:18px;color:var(--ink-soft);max-width:580px;line-height:1.55}
+.section-head{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  gap:40px;margin-bottom:56px;flex-wrap:wrap;
+}
+
+/* ---------- WHY US ---------- */
+.why{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:24px;
+}
+.why-card{
+  position:relative;
+  background:#fff;border:2px solid var(--ink);
+  border-radius:24px;padding:26px;
+  box-shadow:0 6px 0 var(--ink);
+  transition:transform .25s, box-shadow .25s;
+}
+.why-card:hover{transform:translate(-2px,-3px);box-shadow:0 9px 0 var(--ink)}
+.why-card .icon{
+  width:64px;height:64px;border-radius:18px;
+  display:grid;place-items:center;
+  border:2px solid var(--ink);
+  margin-bottom:18px;
+  font-size:28px;
+}
+.why-card.w1 .icon{background:var(--yellow);transform:rotate(-4deg)}
+.why-card.w2 .icon{background:var(--pink);transform:rotate(3deg)}
+.why-card.w3 .icon{background:var(--sky);transform:rotate(-2deg)}
+.why-card.w4 .icon{background:var(--mint);transform:rotate(4deg)}
+.why-card h4{
+  font-family:var(--font-display);
+  font-weight:700;font-size:22px;line-height:1.1;
+  letter-spacing:-0.02em;margin-bottom:8px;
+}
+.why-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.5}
+
+/* ---------- COURSES ---------- */
+.courses-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:18px;
+}
+.course{
+  position:relative;
+  border:2px solid var(--ink);
+  border-radius:24px;
+  padding:28px;
+  min-height:300px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  transition:transform .3s ease, box-shadow .3s ease;
+  box-shadow:0 6px 0 var(--ink);
+  overflow:hidden;
+}
+.course:hover{transform:translate(-2px,-4px);box-shadow:0 10px 0 var(--ink)}
+.course .c-tag{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--ink);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 10px;border-radius:100px;
+  align-self:flex-start;
+}
+.course .c-age{
+  font-family:var(--font-hand);
+  font-size:32px;font-weight:700;color:var(--ink);
+  margin-top:6px;line-height:1;
+  transform:rotate(-2deg);display:inline-block;
+}
+.course .c-title{
+  font-family:var(--font-display);
+  font-weight:700;font-size:34px;line-height:1.02;
+  letter-spacing:-0.025em;
+  margin-top:14px;
+  font-variation-settings:"wdth" 92;
+}
+.course .c-desc{
+  margin-top:12px;font-size:14.5px;color:var(--ink-soft);line-height:1.5;
+  max-width:280px;
+}
+.course .c-foot{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  margin-top:22px;
+}
+.course .c-pills{display:flex;gap:6px;flex-wrap:wrap}
+.course .c-pills span{
+  background:rgba(31,27,58,.08);
+  font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:5px 9px;border-radius:100px;color:var(--ink);
+}
+.course .c-arrow{
+  width:46px;height:46px;border-radius:50%;
+  border:2px solid var(--ink);background:#fff;
+  display:grid;place-items:center;
+  font-size:18px;font-weight:700;
+  transition:all .25s;
+  box-shadow:0 3px 0 var(--ink);
+}
+.course:hover .c-arrow{background:var(--coral);color:#fff;transform:rotate(-45deg)}
+.c-kids{grid-column:span 5;background:var(--yellow)}
+.c-kids .c-arrow{background:#fff}
+.c-teens{grid-column:span 4;background:var(--pink);color:var(--ink)}
+.c-adults{grid-column:span 3;background:var(--mint)}
+.c-cambridge{grid-column:span 4;background:var(--ink);color:#fff}
+.c-cambridge .c-tag{background:var(--yellow);color:var(--ink)}
+.c-cambridge .c-desc{color:rgba(255,246,228,.75)}
+.c-cambridge .c-pills span{background:rgba(255,246,228,.15);color:#fff}
+.c-cambridge .c-arrow{background:var(--cream);border-color:var(--cream);color:var(--ink)}
+.c-cambridge .c-age{color:var(--yellow)}
+.c-summer{grid-column:span 5;background:var(--sky)}
+.c-business{grid-column:span 3;background:var(--violet);color:#fff}
+.c-business .c-pills span{background:rgba(255,255,255,.18);color:#fff}
+.c-business .c-desc{color:rgba(255,255,255,.85)}
+.c-business .c-tag{background:#fff;color:var(--ink)}
+.c-business .c-age{color:var(--yellow)}
+
+/* decorative shapes inside course */
+.course .deco{
+  position:absolute;
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:140px;
+  letter-spacing:-0.05em;
+  color:rgba(31,27,58,.08);
+  bottom:-50px;right:-10px;
+  pointer-events:none;
+  line-height:1;
+}
+.c-cambridge .deco{color:rgba(255,246,228,.08)}
+.c-business .deco{color:rgba(255,255,255,.15)}
+
+/* ---------- METHOD ---------- */
+.method{
+  background:var(--ink);color:var(--cream);
+  border-radius:32px;
+  padding:80px 64px;
+  max-width:1320px;margin:0 auto 80px;
+  position:relative;overflow:hidden;
+  border:2px solid var(--ink);
+  box-shadow:0 8px 0 var(--coral);
+}
+.method::before{
+  content:"";position:absolute;
+  top:-100px;right:-80px;width:340px;height:340px;border-radius:50%;
+  background:var(--coral);opacity:.25;filter:blur(20px);
+}
+.method::after{
+  content:"";position:absolute;
+  bottom:-100px;left:-80px;width:300px;height:300px;border-radius:50%;
+  background:var(--pink);opacity:.2;filter:blur(20px);
+}
+.method .eyebrow{color:var(--yellow)}
+.method .section-title{color:var(--cream)}
+.method .section-title em{color:var(--yellow)}
+.method .section-title .hl{background:var(--coral);color:var(--cream)}
+.method-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  margin-top:48px;position:relative;z-index:1;
+}
+.method-step{
+  background:rgba(255,246,228,.06);
+  border:2px solid rgba(255,246,228,.18);
+  border-radius:20px;padding:24px;
+  transition:all .3s;
+}
+.method-step:hover{
+  background:rgba(255,246,228,.12);
+  transform:translateY(-4px);
+}
+.method-step .step-num{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:60px;line-height:1;
+  letter-spacing:-0.04em;
+  margin-bottom:14px;
+  display:inline-block;
+}
+.method-step:nth-child(1) .step-num{color:var(--yellow)}
+.method-step:nth-child(2) .step-num{color:var(--pink)}
+.method-step:nth-child(3) .step-num{color:var(--sky)}
+.method-step:nth-child(4) .step-num{color:var(--mint)}
+.method-step h4{
+  font-family:var(--font-display);font-weight:700;
+  font-size:22px;line-height:1.1;letter-spacing:-0.02em;
+  margin-bottom:10px;color:var(--cream);
+}
+.method-step p{font-size:14.5px;color:rgba(255,246,228,.72);line-height:1.5}
+
+/* ---------- HERITAGE ---------- */
+.heritage{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:64px;align-items:center;
+}
+.heritage-left{
+  position:relative;
+  background:var(--cream-2);
+  border:2px solid var(--ink);
+  border-radius:32px;
+  padding:48px;
+  box-shadow:0 8px 0 var(--ink);
+}
+.heritage-left .big-year{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:clamp(96px,15vw,200px);
+  line-height:.9;letter-spacing:-0.05em;
+  font-variation-settings:"wdth" 92;
+  color:var(--ink);
+}
+.heritage-left .big-year em{font-style:normal;color:var(--coral)}
+.heritage-left .since{
+  font-family:var(--font-hand);
+  font-size:30px;color:var(--ink-soft);
+  transform:rotate(-3deg);display:inline-block;
+  margin-top:-8px;margin-left:8px;
+}
+.heritage-left .timeline{
+  margin-top:32px;display:flex;flex-direction:column;gap:0;
+}
+.timeline-row{
+  display:grid;grid-template-columns:64px 1fr;gap:16px;
+  padding:14px 0;border-top:2px dashed var(--line-strong);
+  font-size:15px;color:var(--ink-soft);align-items:start;
+}
+.timeline-row:last-child{border-bottom:2px dashed var(--line-strong)}
+.timeline-row strong{
+  font-family:var(--font-display);font-weight:800;
+  color:var(--coral);font-size:18px;letter-spacing:-0.02em;
+}
+.heritage-right .section-title{font-size:clamp(36px,5vw,64px)}
+.heritage-right p{
+  font-size:18px;line-height:1.6;
+  margin-bottom:18px;color:var(--ink-soft);
+}
+.heritage-right p strong{color:var(--ink);font-weight:800}
+
+/* polaroid */
+.polaroid{
+  position:absolute;
+  width:170px;
+  background:#fff;
+  border:2px solid var(--ink);
+  padding:8px 8px 14px;
+  box-shadow:0 6px 0 var(--ink);
+  transform:rotate(6deg);
+  top:-30px;right:-30px;
+  z-index:2;
+}
+.polaroid .img{
+  height:140px;
+  background:linear-gradient(135deg,var(--pink),var(--yellow));
+  display:grid;place-items:center;
+  font-family:var(--font-display);font-weight:800;color:#fff;font-size:48px;
+}
+.polaroid .cap{
+  font-family:var(--font-hand);
+  font-size:18px;color:var(--ink);
+  text-align:center;margin-top:6px;
+}
+
+/* ---------- TEACHERS ---------- */
+.teachers{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px;
+}
+.teacher{
+  position:relative;border:2px solid var(--ink);
+  border-radius:24px;overflow:hidden;aspect-ratio:4/5;
+  box-shadow:0 6px 0 var(--ink);
+  transition:all .3s;
+}
+.teacher:hover{transform:translate(-2px,-3px);box-shadow:0 9px 0 var(--ink)}
+.teacher .photo{
+  position:absolute;inset:0;
+}
+.teacher.t-1 .photo{background:linear-gradient(160deg,var(--yellow),var(--coral))}
+.teacher.t-2 .photo{background:linear-gradient(160deg,var(--sky),var(--violet))}
+.teacher.t-3 .photo{background:linear-gradient(160deg,var(--pink),var(--mint))}
+.teacher .photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 45%,rgba(31,27,58,.75) 100%);
+}
+.teacher .badge{
+  position:absolute;top:14px;left:14px;z-index:2;
+  background:#fff;color:var(--ink);
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;
+  padding:6px 10px;border-radius:100px;
+  border:2px solid var(--ink);
+  transform:rotate(-3deg);
+}
+.teacher .smile{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:84px;z-index:1;opacity:.8;
+}
+.teacher .info{
+  position:absolute;left:18px;right:18px;bottom:18px;
+  color:#fff;z-index:2;
+}
+.teacher .info h5{
+  font-family:var(--font-display);font-weight:700;
+  font-size:26px;line-height:1.05;letter-spacing:-0.02em;
+}
+.teacher .info p{font-size:13.5px;opacity:.9;margin-top:4px}
+
+/* ---------- TESTIMONIALS ---------- */
+.testimonials-wrap{
+  background:var(--cream-2);
+  border-radius:32px;
+  padding:80px 56px;
+  max-width:1320px;margin:0 auto 80px;
+  border:2px solid var(--ink);
+  box-shadow:0 8px 0 var(--ink);
+}
+.t-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px;
+}
+.t-card{
+  background:#fff;border:2px solid var(--ink);border-radius:22px;
+  padding:28px;box-shadow:0 5px 0 var(--ink);
+  transition:transform .25s;
+}
+.t-card:nth-child(1){transform:rotate(-1deg)}
+.t-card:nth-child(2){transform:rotate(1.2deg)}
+.t-card:nth-child(3){transform:rotate(.8deg)}
+.t-card:nth-child(4){transform:rotate(-1.4deg)}
+.t-card:hover{transform:rotate(0) translateY(-3px)}
+.t-stars{color:var(--yellow-2);font-size:18px;letter-spacing:.05em;margin-bottom:10px}
+.t-card blockquote{
+  font-family:var(--font-display);font-weight:600;
+  font-size:22px;line-height:1.25;color:var(--ink);
+  letter-spacing:-0.015em;
+}
+.t-card .author{display:flex;align-items:center;gap:12px;margin-top:20px}
+.t-card .a-avatar{
+  width:42px;height:42px;border-radius:50%;
+  display:grid;place-items:center;
+  font-family:var(--font-display);font-weight:800;color:#fff;font-size:18px;
+  border:2px solid var(--ink);
+}
+.t-card:nth-child(1) .a-avatar{background:var(--coral)}
+.t-card:nth-child(2) .a-avatar{background:var(--sky-2)}
+.t-card:nth-child(3) .a-avatar{background:var(--violet)}
+.t-card:nth-child(4) .a-avatar{background:var(--mint)}
+.t-card .author div{font-size:13.5px;color:var(--ink-soft)}
+.t-card .author strong{color:var(--ink);font-weight:800;display:block}
+
+/* ---------- CONTACT ---------- */
+.contact{
+  display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start;
+}
+.contact-info-card{
+  background:var(--yellow);border:2px solid var(--ink);
+  border-radius:28px;padding:40px;
+  box-shadow:0 8px 0 var(--ink);
+  position:relative;overflow:hidden;
+}
+.contact-info-card::before{
+  content:"";position:absolute;
+  top:-60px;right:-60px;width:180px;height:180px;border-radius:50%;
+  background:var(--coral);opacity:.25;
+}
+.contact-info-card h3{
+  font-family:var(--font-display);font-weight:700;
+  font-size:36px;line-height:1.05;letter-spacing:-0.025em;
+  margin-bottom:18px;position:relative;
+}
+.contact-info-card h3 em{font-style:normal;color:var(--coral)}
+.contact-info-card .info-text{
+  font-size:16px;color:var(--ink-soft);margin-bottom:28px;
+  position:relative;
+}
+.info-block{
+  position:relative;
+  padding:14px 0;
+  border-top:2px dashed rgba(31,27,58,.25);
+  display:flex;align-items:center;gap:14px;
+}
+.info-block:last-child{border-bottom:2px dashed rgba(31,27,58,.25)}
+.info-block .ico{
+  width:42px;height:42px;border-radius:12px;
+  background:#fff;border:2px solid var(--ink);
+  display:grid;place-items:center;font-size:18px;
+  flex-shrink:0;
+}
+.info-block .info-text-block{font-size:14.5px;color:var(--ink-soft);line-height:1.4}
+.info-block .info-text-block strong{
+  display:block;font-family:var(--font-display);
+  font-weight:700;color:var(--ink);font-size:17px;
+}
+.info-block a:hover{color:var(--coral)}
+
+.contact-form{
+  background:#fff;border:2px solid var(--ink);
+  border-radius:28px;padding:40px;
+  box-shadow:0 8px 0 var(--ink);
+  position:relative;overflow:hidden;
+}
+.contact-form .scribble-deco{
+  position:absolute;top:18px;right:18px;
+  font-family:var(--font-hand);font-size:22px;color:var(--coral);
+  transform:rotate(8deg);
+}
+.contact-form h3{
+  font-family:var(--font-display);font-weight:700;
+  font-size:32px;line-height:1.05;letter-spacing:-0.025em;
+  margin-bottom:8px;max-width:380px;
+}
+.contact-form h3 em{font-style:normal;color:var(--coral)}
+.contact-form .lead{font-size:15px;color:var(--ink-soft);margin-bottom:24px}
+.field{margin-bottom:18px}
+.field label{
+  font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink);display:block;margin-bottom:6px;
+}
+.field input,.field select,.field textarea{
+  width:100%;background:var(--cream);
+  border:2px solid var(--ink);
+  border-radius:12px;
+  font:inherit;font-size:15px;font-weight:600;color:var(--ink);
+  padding:12px 14px;outline:none;
+  transition:all .2s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  background:#fff;
+  box-shadow:0 0 0 3px var(--yellow);
+}
+.field select{
+  appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%231F1B3A' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
+  background-repeat:no-repeat;background-position:right 14px center;
+  padding-right:36px;
+}
+.btn-submit{
+  width:100%;
+  background:var(--coral);color:#fff;
+  padding:18px;border-radius:14px;
+  font-size:16px;font-weight:800;letter-spacing:-0.01em;
+  border:2px solid var(--ink);
+  box-shadow:0 5px 0 var(--ink);
+  margin-top:10px;
+  transition:all .2s;
+  display:inline-flex;justify-content:center;align-items:center;gap:10px;
+}
+.btn-submit:hover{transform:translate(-1px,-2px);box-shadow:0 7px 0 var(--ink)}
+.btn-submit:active{transform:translate(0,2px);box-shadow:0 3px 0 var(--ink)}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:var(--ink);color:var(--cream);
+  padding:80px 32px 30px;
+  position:relative;overflow:hidden;
+  border-top-left-radius:32px;border-top-right-radius:32px;
+  margin-top:60px;
+}
+.footer-inner{max-width:1320px;margin:0 auto;position:relative;z-index:1}
+.footer-huge{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(60px,11vw,180px);
+  line-height:.85;letter-spacing:-0.05em;
+  font-variation-settings:"wdth" 88;
+  margin-bottom:48px;
+}
+.footer-huge .y{color:var(--yellow)}
+.footer-huge .p{color:var(--pink)}
+.footer-huge .s{color:var(--sky)}
+.footer-huge .c{color:var(--coral)}
+.footer-cols{
+  display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px;
+  padding-top:40px;border-top:2px dashed rgba(255,246,228,.22);
+}
+.footer-col h6{
+  font-family:var(--font-display);font-weight:700;
+  font-size:14px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--yellow);margin-bottom:16px;
+}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:9px;font-size:14.5px;font-weight:600}
+.footer-col ul li a{color:rgba(255,246,228,.75)}
+.footer-col ul li a:hover{color:var(--yellow)}
+.footer-col p{font-size:14.5px;color:rgba(255,246,228,.7);line-height:1.55}
+.footer-socials{display:flex;gap:10px;margin-top:14px}
+.footer-socials a{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,246,228,.1);
+  display:grid;place-items:center;
+  transition:all .25s;border:1.5px solid rgba(255,246,228,.18);
+}
+.footer-socials a:hover{background:var(--coral);transform:translateY(-2px)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:48px;padding-top:24px;
+  border-top:2px dashed rgba(255,246,228,.18);
+  font-size:13px;color:rgba(255,246,228,.55);flex-wrap:wrap;gap:12px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:960px){
+  .nav-links{display:none}
+  .nav-cta .btn-ghost{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-art{max-width:340px;margin:0 auto}
+  .hero{padding:32px 22px 40px}
+  section{padding:64px 22px}
+  .why{grid-template-columns:1fr 1fr;gap:14px}
+  .courses-grid > *{grid-column:span 12 !important}
+  .method{padding:56px 28px;border-radius:24px}
+  .method-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .heritage{grid-template-columns:1fr;gap:40px}
+  .heritage-left{padding:32px}
+  .polaroid{width:130px;top:-20px;right:-10px}
+  .teachers{grid-template-columns:1fr;gap:16px}
+  .testimonials-wrap{padding:56px 28px;border-radius:24px}
+  .t-grid{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr;gap:24px}
+  .contact-info-card,.contact-form{padding:30px}
+  .footer-cols{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media (max-width:520px){
+  .why{grid-template-columns:1fr}
+  .method-grid{grid-template-columns:1fr}
+  .footer-cols{grid-template-columns:1fr}
+  .hero-meta-row{gap:20px}
+  .nav-inner{padding:14px 20px}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-shapes">
+  <span class="blob b1"></span>
+  <span class="blob b2"></span>
+  <span class="blob b3"></span>
+</div>
+
+<!-- =================== NAV =================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo" aria-label="Sprint Idiomes">
+      <span class="lw">Sprint</span>
+      <span class="lr"></span>
+      <span class="lw">Idiomes</span>
+    </a>
+    <div class="nav-links">
+      <a href="#perque">Per què Sprint?</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#metode">Mètode</a>
+      <a href="#equip">Profes</a>
+      <a href="#opinions">Famílies</a>
+      <a href="#contacte">Contacte</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn-lang">CAT · ES · EN</button>
+      <a href="#contacte" class="btn btn-ghost">Prova gratuïta</a>
+      <a href="#contacte" class="btn btn-primary">
+        Matricula't
+        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- =================== HERO =================== -->
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="hero-badge"><span class="pulse"></span>Matrícula oberta 2026 · Sant Cugat</span>
+
+      <h1 class="hero-title">
+        Anglès per a nens<br>
+        que es converteix en<br>
+        <span class="scribble">
+          <span class="hero-rotator">
+            <span class="hero-rotator-track">
+              <span>aventura.</span>
+              <span>amistat.</span>
+              <span>cançó.</span>
+              <span>joc.</span>
+              <span>màgia.</span>
+              <span>aventura.</span>
+            </span>
+          </span>
+        </span>
+      </h1>
+
+      <p class="hero-lead">
+        Som una escola d'anglès <strong>per a nens i joves</strong> al cor de Sant Cugat.
+        Fa <strong>50 anys</strong> que fem una cosa molt senzilla: que els nens aprenguin anglès
+        com qui aprèn a anar amb bicicleta — jugant, equivocant-se i amb molta confiança.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contacte" class="btn btn-primary">
+          Reserva la teva prova
+          <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#cursos" class="btn btn-yellow">Veure cursos</a>
+      </div>
+
+      <div class="hero-meta-row">
+        <div class="meta-stat">
+          <div class="n"><span class="accent">50</span> anys</div>
+          <div class="l">ensenyant a Sant Cugat</div>
+        </div>
+        <div class="meta-stat">
+          <div class="n">+2.000</div>
+          <div class="l">alumnes formats</div>
+        </div>
+        <div class="meta-stat">
+          <div class="n">8</div>
+          <div class="l">màxim per grup</div>
+        </div>
+        <div class="meta-stat">
+          <div class="n">98%</div>
+          <div class="l">aproven Cambridge</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="bg-circle"></div>
+      <div class="char">
+        <!-- Cute character SVG -->
+        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <!-- body -->
+          <ellipse cx="150" cy="200" rx="80" ry="60" fill="#5DC5F0" stroke="#1F1B3A" stroke-width="4"/>
+          <!-- head -->
+          <circle cx="150" cy="120" r="68" fill="#FFD8AE" stroke="#1F1B3A" stroke-width="4"/>
+          <!-- hair -->
+          <path d="M85 105 Q90 55 150 50 Q210 55 215 105 Q210 80 195 85 Q180 65 150 65 Q120 65 105 85 Q90 80 85 105" fill="#3F3960" stroke="#1F1B3A" stroke-width="4" stroke-linejoin="round"/>
+          <!-- eyes -->
+          <circle cx="125" cy="120" r="6" fill="#1F1B3A"/>
+          <circle cx="175" cy="120" r="6" fill="#1F1B3A"/>
+          <circle cx="127" cy="118" r="2" fill="#fff"/>
+          <circle cx="177" cy="118" r="2" fill="#fff"/>
+          <!-- cheeks -->
+          <circle cx="110" cy="140" r="9" fill="#FF7AB6" opacity=".8"/>
+          <circle cx="190" cy="140" r="9" fill="#FF7AB6" opacity=".8"/>
+          <!-- smile -->
+          <path d="M130 148 Q150 168 170 148" stroke="#1F1B3A" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <!-- arm waving -->
+          <path d="M75 195 Q40 170 50 130" stroke="#1F1B3A" stroke-width="4" fill="#5DC5F0" stroke-linejoin="round"/>
+          <circle cx="48" cy="125" r="14" fill="#FFD8AE" stroke="#1F1B3A" stroke-width="4"/>
+          <!-- book -->
+          <rect x="180" y="200" width="60" height="42" rx="4" fill="#FFC83D" stroke="#1F1B3A" stroke-width="4"/>
+          <line x1="210" y1="200" x2="210" y2="242" stroke="#1F1B3A" stroke-width="3"/>
+          <text x="210" y="228" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="14" fill="#1F1B3A">ABC</text>
+        </svg>
+      </div>
+
+      <!-- floaters -->
+      <div class="floater f1 fp"><span class="emoji">✦</span> Hello!</div>
+      <div class="floater f2 fs"><span class="emoji">★</span> How are you?</div>
+      <div class="floater f3 fm"><span class="emoji">♥</span> I love English!</div>
+
+      <!-- sparkles -->
+      <svg class="spark s1" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#FFC83D"/></svg>
+      <svg class="spark s2" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#FF7AB6"/></svg>
+      <svg class="spark s3" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#9B6BFF"/></svg>
+    </div>
+  </div>
+</header>
+
+<!-- =================== WHY US =================== -->
+<section id="perque">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Per què Sprint?</span>
+      <h2 class="section-title">Quatre raons per <span class="hl">enamorar-se</span> de l'anglès.</h2>
+    </div>
+    <p class="section-lead">No fem deures avorrits. Fem que els nens vulguin tornar dimecres.</p>
+  </div>
+
+  <div class="why">
+    <article class="why-card w1">
+      <div class="icon">★</div>
+      <h4>Grups petits</h4>
+      <p>Màxim 8 nens per classe. Tothom parla, tothom riu, ningú s'amaga al fons.</p>
+    </article>
+    <article class="why-card w2">
+      <div class="icon">♥</div>
+      <h4>Profes que es queden</h4>
+      <p>Equip estable amb mitjana de 9 anys a casa. Els nens els reconeixen pel passadís.</p>
+    </article>
+    <article class="why-card w3">
+      <div class="icon">✦</div>
+      <h4>Jugar és aprendre</h4>
+      <p>Cançons, jocs, manualitats i teatre. La gramàtica ve sola quan ja parlen.</p>
+    </article>
+    <article class="why-card w4">
+      <div class="icon">✓</div>
+      <h4>Cambridge garantit</h4>
+      <p>Centre preparador oficial des de 1992. Un 98% dels nostres alumnes aproven.</p>
+    </article>
+  </div>
+</section>
+
+<!-- =================== CURSOS =================== -->
+<section id="cursos">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Cursos i edats</span>
+      <h2 class="section-title">Un curs per <em>cada etapa</em>.</h2>
+    </div>
+    <p class="section-lead">Des dels 3 anys fins als adults. Grups reduïts, materials propis i molta diversió.</p>
+  </div>
+
+  <div class="courses-grid">
+
+    <article class="course c-kids">
+      <span class="c-tag">★ Estrella</span>
+      <div>
+        <div class="c-age">Little Stars</div>
+        <h3 class="c-title">Anglès per a<br>petits</h3>
+        <p class="c-desc">Cançons, contes i jocs. La primera oïda en anglès, sense pressió i amb molta gresca.</p>
+      </div>
+      <div class="c-foot">
+        <div class="c-pills"><span>3–5 anys</span><span>A1</span><span>Grups de 6</span></div>
+        <div class="c-arrow">→</div>
+      </div>
+      <span class="deco">ABC</span>
+    </article>
+
+    <article class="course c-teens">
+      <span class="c-tag">Popular</span>
+      <div>
+        <div class="c-age">Explorers</div>
+        <h3 class="c-title">Anglès per a primària</h3>
+        <p class="c-desc">Lectura, escriptura i molta conversa. Reforç escolar i preparació Starters, Movers, Flyers.</p>
+      </div>
+      <div class="c-foot">
+        <div class="c-pills"><span>6–11 anys</span><span>A1–A2</span></div>
+        <div class="c-arrow">→</div>
+      </div>
+      <span class="deco">Hi!</span>
+    </article>
+
+    <article class="course c-adults">
+      <span class="c-tag">Joves</span>
+      <div>
+        <div class="c-age">Teens</div>
+        <h3 class="c-title">Per a l'ESO</h3>
+        <p class="c-desc">Reforç i Cambridge en paral·lel.</p>
+      </div>
+      <div class="c-foot">
+        <div class="c-pills"><span>12–17</span></div>
+        <div class="c-arrow">→</div>
+      </div>
+      <span class="deco">★</span>
+    </article>
+
+    <article class="course c-cambridge">
+      <span class="c-tag">Oficials</span>
+      <div>
+        <div class="c-age">Cambridge</div>
+        <h3 class="c-title">Cambridge<br>& IELTS</h3>
+        <p class="c-desc">Centre preparador oficial des de 1992. Tres generacions de famílies confien en nosaltres.</p>
+      </div>
+      <div class="c-foot">
+        <div class="c-pills"><span>YLE</span><span>KET</span><span>PET</span><span>FCE</span><span>CAE</span></div>
+        <div class="c-arrow">→</div>
+      </div>
+      <span class="deco">B2</span>
+    </article>
+
+    <article class="course c-summer">
+      <span class="c-tag">★ Estiu 2026</span>
+      <div>
+        <div class="c-age">Summer Camp</div>
+        <h3 class="c-title">Casals d'estiu en anglès</h3>
+        <p class="c-desc">Juliol i Agost. Anglès al matí, jocs i piscina a la tarda. Inclou monitors nadius i sortides.</p>
+      </div>
+      <div class="c-foot">
+        <div class="c-pills"><span>4–14 anys</span><span>Setmanal</span><span>Servei d'acollida</span></div>
+        <div class="c-arrow">→</div>
+      </div>
+      <span class="deco">☀</span>
+    </article>
+
+    <article class="course c-business">
+      <span class="c-tag">Per a mares i pares</span>
+      <div>
+        <div class="c-age">Adults</div>
+        <h3 class="c-title">Anglès<br>per a tu</h3>
+        <p class="c-desc">Mentre els nens fan classe, tu també. Conversa, business o preparació oficial.</p>
+      </div>
+      <div class="c-foot">
+        <div class="c-pills"><span>A1–C2</span><span>FUNDAE</span></div>
+        <div class="c-arrow">→</div>
+      </div>
+      <span class="deco">You!</span>
+    </article>
+
+  </div>
+</section>
+
+<!-- =================== METHOD =================== -->
+<section class="method" id="metode">
+  <span class="eyebrow">Com ho fem</span>
+  <h2 class="section-title">El mètode <span class="hl">Sprint</span> en 4 passos.</h2>
+  <p style="font-size:18px;color:rgba(255,246,228,.78);max-width:540px;margin-top:8px">
+    Provat amb mig segle de nens, joves i famílies de Sant Cugat. Sense miracles, només mètode.
+  </p>
+
+  <div class="method-grid">
+    <div class="method-step">
+      <div class="step-num">01</div>
+      <h4>Coneixem el teu fill</h4>
+      <p>Conversa de 30 minuts amb un professor. Gratuïta, sense compromís i amb un caramel al final.</p>
+    </div>
+    <div class="method-step">
+      <div class="step-num">02</div>
+      <h4>Grup ideal</h4>
+      <p>L'agrupem amb companys del seu nivell i edat. Màxim 8 nens, per nom i amb la seva caixa.</p>
+    </div>
+    <div class="method-step">
+      <div class="step-num">03</div>
+      <h4>Aprèn jugant</h4>
+      <p>Cançons, jocs, manualitats, teatre, lectures. El 80% de la classe és parlar i passar-ho bé.</p>
+    </div>
+    <div class="method-step">
+      <div class="step-num">04</div>
+      <h4>Certifica</h4>
+      <p>Quan estigui llest, el preparem per Cambridge amb proves d'examen i materials propis.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== HERITAGE =================== -->
+<section id="historia">
+  <div class="heritage">
+    <div class="heritage-left">
+      <div class="polaroid">
+        <div class="img">SI</div>
+        <div class="cap">Curs 1989 ✦</div>
+      </div>
+      <div class="big-year">19<em>74</em></div>
+      <div class="since">— l'any que va començar tot</div>
+      <div class="timeline">
+        <div class="timeline-row"><strong>1974</strong><span>Obrim portes amb una aula d'anglès per a nens del barri.</span></div>
+        <div class="timeline-row"><strong>1992</strong><span>Som centre preparador oficial de <strong>Cambridge English</strong>.</span></div>
+        <div class="timeline-row"><strong>2005</strong><span>Estrenem el primer <strong>Summer Camp</strong> en anglès de Sant Cugat.</span></div>
+        <div class="timeline-row"><strong>2024</strong><span>Tres generacions de famílies aprenent amb nosaltres.</span></div>
+      </div>
+    </div>
+
+    <div class="heritage-right">
+      <span class="eyebrow">La nostra història</span>
+      <h2 class="section-title">Mig segle <span class="hl">acompanyant</span> famílies.</h2>
+      <p>
+        Cinquanta anys fent una sola cosa, i fent-la bé: <strong>ensenyar anglès a les famílies de Sant Cugat</strong>.
+        Els nens que un dia van entrar amb cinc anys avui ens porten els seus fills.
+      </p>
+      <p>
+        No som una franquícia ni una app. Som una escola petita, amb nom, amb professors que es queden anys,
+        i amb una metodologia que combina rigor de Cambridge amb la calidesa d'una aula petita on tothom es coneix.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TEACHERS =================== -->
+<section id="equip">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Equip docent</span>
+      <h2 class="section-title">Profes que <em>els nens recorden</em> tota la vida.</h2>
+    </div>
+    <p class="section-lead">12 professors, la meitat nadius, amb formació pedagògica i una mitjana de 9 anys a Sprint.</p>
+  </div>
+
+  <div class="teachers">
+    <article class="teacher t-1">
+      <div class="photo"></div>
+      <span class="badge">English · CPE</span>
+      <div class="smile">☺</div>
+      <div class="info">
+        <h5>Margaret H.</h5>
+        <p>Cap d'estudis · 18 anys a Sprint</p>
+      </div>
+    </article>
+    <article class="teacher t-2">
+      <div class="photo"></div>
+      <span class="badge">Kids specialist</span>
+      <div class="smile">☺</div>
+      <div class="info">
+        <h5>Laura E.</h5>
+        <p>Especialista en infants 3–8</p>
+      </div>
+    </article>
+    <article class="teacher t-3">
+      <div class="photo"></div>
+      <span class="badge">Cambridge</span>
+      <div class="smile">☺</div>
+      <div class="info">
+        <h5>James O'Brien</h5>
+        <p>Examinador oficial Cambridge</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- =================== TESTIMONIALS =================== -->
+<section class="testimonials-wrap" id="opinions">
+  <span class="eyebrow">Famílies que ens estimen</span>
+  <h2 class="section-title">Tres generacions, una <span class="hl">mateixa escola</span>.</h2>
+
+  <div class="t-grid">
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <blockquote>Hi vaig anar jo, hi va anar la meva filla i ara hi ve la meva neta. És com tornar a casa, però en anglès.</blockquote>
+      <div class="author">
+        <div class="a-avatar">M</div>
+        <div><strong>Montse C.</strong>Àvia i alumna des de 1986</div>
+      </div>
+    </div>
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <blockquote>El meu fill plora si no toca dimecres! No m'ho hauria imaginat mai dient-li que té classe d'anglès.</blockquote>
+      <div class="author">
+        <div class="a-avatar">A</div>
+        <div><strong>Anna P.</strong>Mare del Pol (6 anys)</div>
+      </div>
+    </div>
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <blockquote>Vaig treure el First a la primera. No és pel títol, és per la confiança que vaig agafar parlant.</blockquote>
+      <div class="author">
+        <div class="a-avatar">J</div>
+        <div><strong>Jordi V.</strong>FCE B2 · 2024–2025</div>
+      </div>
+    </div>
+    <div class="t-card">
+      <div class="t-stars">★★★★★</div>
+      <blockquote>Al Summer Camp el meu fill va fer amics que encara conserva. I a sobre, va aprendre anglès!</blockquote>
+      <div class="author">
+        <div class="a-avatar">R</div>
+        <div><strong>Roger M.</strong>Pare del Marc (10 anys)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CONTACT =================== -->
+<section id="contacte">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">Vine a conèixer-nos</span>
+      <h2 class="section-title">Reserva la teva <span class="hl">prova gratuïta</span>.</h2>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="contact-info-card">
+      <h3>Som <em>al cor</em> de Sant Cugat.</h3>
+      <p class="info-text">A dos minuts de l'estació. Vine a veure les aules, conèixer els profes i pendre un caramel.</p>
+
+      <div class="info-block">
+        <div class="ico">📍</div>
+        <div class="info-text-block">
+          <strong>On som</strong>
+          C/ Francesc Moragas 4 i 8, 08172 Sant Cugat
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="ico">📞</div>
+        <div class="info-text-block">
+          <strong>Truca'ns</strong>
+          <a href="tel:+34935892264">93 589 22 64</a> · <a href="tel:+34936746635">936 746 635</a>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="ico">✉</div>
+        <div class="info-text-block">
+          <strong>Escriu-nos</strong>
+          <a href="mailto:info@sprintidiomes.com">info@sprintidiomes.com</a>
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="ico">⏰</div>
+        <div class="info-text-block">
+          <strong>Horari secretaria</strong>
+          Dilluns a divendres · 9h – 21h
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.btn-submit').innerHTML='Gràcies! Et truquem aviat ✓';">
+      <span class="scribble-deco">És gratuït!</span>
+      <h3>Parlem? <em>30 minuts</em>, sense compromís.</h3>
+      <p class="lead">Ompla aquest formulari i et truquem en 24h per organitzar la prova.</p>
+
+      <div class="field">
+        <label>El teu nom</label>
+        <input type="text" placeholder="Com et dius?" required>
+      </div>
+      <div class="field">
+        <label>Telèfon</label>
+        <input type="tel" placeholder="600 000 000" required>
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="email" placeholder="tu@email.com" required>
+      </div>
+      <div class="field">
+        <label>Per a qui és la classe?</label>
+        <select required>
+          <option value="">Tria una opció</option>
+          <option>Per al meu fill/a (3–5 anys)</option>
+          <option>Per al meu fill/a (6–11 anys)</option>
+          <option>Per al meu fill/a (12–17 anys)</option>
+          <option>Per a mi (adult)</option>
+          <option>Summer Camp d'estiu</option>
+          <option>Cambridge / IELTS</option>
+          <option>Empresa / in-company</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-submit">
+        Reservar la meva prova
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-huge"><span class="y">Hello,</span> <span class="p">Hi,</span> <span class="s">Hola</span><span class="c">.</span></div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h6>Sprint Idiomes</h6>
+        <p>Escola d'anglès per a nens i famílies a Sant Cugat des de 1974. Cambridge oficial des de 1992.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="#FFF6E4"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 4h-2.5C10 4 9 5.5 9 8v2H6.5v3H9v8h3v-8h2.5l.5-3H12V8c0-.7.3-1 1-1h2V4z" fill="#FFF6E4"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.5-4.5A8 8 0 1 1 9 19.5L4 20z" stroke="#FFF6E4" stroke-width="1.8" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h6>Cursos</h6>
+        <ul>
+          <li><a href="#cursos">Little Stars (3–5)</a></li>
+          <li><a href="#cursos">Explorers (6–11)</a></li>
+          <li><a href="#cursos">Teens (12–17)</a></li>
+          <li><a href="#cursos">Cambridge & IELTS</a></li>
+          <li><a href="#cursos">Summer Camp</a></li>
+          <li><a href="#cursos">Adults & empresa</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>L'escola</h6>
+        <ul>
+          <li><a href="#perque">Per què Sprint?</a></li>
+          <li><a href="#metode">El nostre mètode</a></li>
+          <li><a href="#historia">Història</a></li>
+          <li><a href="#equip">Equip docent</a></li>
+          <li><a href="#opinions">Opinions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Contacte</h6>
+        <ul>
+          <li>C/ Francesc Moragas 4 i 8</li>
+          <li>08172 Sant Cugat</li>
+          <li><a href="tel:+34935892264">93 589 22 64</a></li>
+          <li><a href="mailto:info@sprintidiomes.com">info@sprintidiomes.com</a></li>
+          <li>L–V · 9h–21h</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 1974 – 2026 Sprint Idiomes · Sant Cugat del Vallès</span>
+      <span>Avís legal · Privacitat · Cookies</span>
+    </div>
+    <div style="margin-top:18px;text-align:center;font-size:11px;color:rgba(255,246,228,.35);font-weight:600;letter-spacing:.05em">
+      Prototip confidencial · Disseny i desenvolupament <a href="https://sheisdigitalab.com" style="color:rgba(255,246,228,.5);text-decoration:underline">She's Digital</a> · Tots els drets reservats
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
