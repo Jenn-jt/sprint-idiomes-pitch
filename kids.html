@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kids · Anglès 7–12 anys · Sprint Idiomes Sant Cugat</title>
+<meta name="description" content="Anglès per a nens de 7 a 12 anys a Sant Cugat. Kids 1–6, sis nivells progressius fins a B1. Grups de màxim 12, Young Learners Cambridge. Sprint Idiomes des de 1974." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF5EA;
+  --ink:#15203D;
+  --ink-soft:#4A5878;
+  --blue:#2547D9;
+  --yellow:#FFB800;
+  --line:rgba(21,32,61,.1);
+  --line-strong:rgba(21,32,61,.2);
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Nunito",ui-sans-serif,system-ui,sans-serif;
+  --kp:#FF80AB;
+  --kids:#FF6B35;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:#fff;color:var(--ink);line-height:1.55;font-size:16px;overflow-x:hidden;font-weight:500}
+img{max-width:100%;display:block;border-radius:16px}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* ── CURSO SUBNAV ── */
+.subnav{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;top:78px;z-index:90;
+}
+.subnav-inner{
+  max-width:1320px;margin:0 auto;
+  padding:0 32px;
+  display:flex;gap:0;
+  overflow-x:auto;scrollbar-width:none;
+}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav-link{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 18px;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-soft);
+  border-bottom:3px solid transparent;
+  white-space:nowrap;flex-shrink:0;
+  transition:color .2s,border-color .2s;
+}
+.subnav-link:hover{color:var(--ink)}
+.subnav-link.active{color:var(--ink);border-bottom-color:var(--yellow)}
+.subnav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+/* ── PAGE HERO ── */
+.kids-hero{
+  background:linear-gradient(135deg,#FFF0F6 0%,#FFF8E8 60%,#fff 100%);
+  border-bottom:1px solid var(--line);
+  padding:72px 40px 64px;
+  position:relative;overflow:hidden;
+}
+.kids-hero::before{
+  content:'Kids';
+  position:absolute;right:40px;top:50%;transform:translateY(-50%);
+  font-family:var(--font-display);font-size:clamp(120px,18vw,240px);
+  font-weight:900;letter-spacing:-0.06em;
+  color:rgba(255,128,171,.07);
+  pointer-events:none;user-select:none;line-height:1;
+}
+.kids-hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1}
+.breadcrumb{
+  font-size:13px;font-weight:600;color:var(--ink-soft);
+  margin-bottom:24px;display:flex;align-items:center;gap:8px;
+}
+.breadcrumb a{color:var(--ink-soft);transition:color .2s}
+.breadcrumb a:hover{color:var(--blue)}
+.breadcrumb span{opacity:.4}
+.kids-hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.kids-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--kp);margin-bottom:16px;
+}
+.kids-eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--kp)}
+.kids-hero h1{
+  font-family:var(--font-display);
+  font-size:clamp(36px,5vw,64px);
+  font-weight:800;letter-spacing:-0.04em;line-height:1.06;
+  color:var(--ink);margin-bottom:16px;
+}
+.kids-hero h1 em{font-style:normal;color:var(--kp)}
+.kids-hero-sub{
+  font-size:17px;color:var(--ink-soft);line-height:1.65;
+  max-width:520px;margin-bottom:32px;
+}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn-kp{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--kp);color:#fff;
+  font-family:var(--font-body);font-size:15px;font-weight:800;
+  border-radius:10px;padding:14px 26px;
+  transition:transform .15s,box-shadow .2s;
+  box-shadow:0 4px 20px rgba(255,128,171,.3);
+}
+.btn-kp:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,128,171,.45)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:10px;
+  background:transparent;color:var(--ink);
+  font-family:var(--font-body);font-size:15px;font-weight:700;
+  border-radius:10px;padding:14px 26px;
+  border:1.5px solid var(--line-strong);
+  transition:border-color .2s,background .2s;
+}
+.btn-outline:hover{border-color:var(--ink);background:var(--cream)}
+.hero-badges{
+  display:flex;flex-direction:column;gap:14px;
+  background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:24px 28px;flex-shrink:0;min-width:200px;
+}
+.hero-badge-item{display:flex;align-items:center;gap:12px}
+.hbi-icon{
+  width:38px;height:38px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;
+}
+.hbi-text{font-size:13px;line-height:1.3}
+.hbi-text strong{display:block;font-size:15px;font-weight:800;color:var(--ink)}
+.hbi-text span{color:var(--ink-soft);font-size:12px}
+
+/* ── SECTION SHARED ── */
+.section{padding:80px 40px;border-bottom:1px solid var(--line)}
+.section-inner{max-width:1180px;margin:0 auto}
+.section-label{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:10px;
+}
+.section-label-dot{width:8px;height:8px;border-radius:50%}
+.section h2{
+  font-family:var(--font-display);
+  font-size:clamp(28px,4vw,48px);
+  font-weight:800;letter-spacing:-0.04em;line-height:1.08;
+  color:var(--ink);margin-bottom:12px;
+}
+.section-lead{
+  font-size:16px;color:var(--ink-soft);line-height:1.65;
+  max-width:560px;margin-bottom:48px;
+}
+
+/* ── KIDS PLANET SECTION ── */
+.kp-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+}
+.kp-img-wrap{position:relative}
+.kp-img-wrap img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.kp-img-badge{
+  position:absolute;bottom:-16px;right:-16px;
+  background:#fff;border:1px solid var(--line);border-radius:16px;
+  padding:16px 20px;
+  box-shadow:0 8px 32px rgba(21,32,61,.08);
+}
+.kp-img-badge-num{
+  font-family:var(--font-display);font-size:28px;font-weight:800;
+  letter-spacing:-0.03em;color:var(--kp);line-height:1;
+}
+.kp-img-badge-label{font-size:12px;color:var(--ink-soft);margin-top:3px;font-weight:600}
+.kp-features{display:flex;flex-direction:column;gap:20px;margin-bottom:32px}
+.kp-feature{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:18px;border-radius:14px;
+  background:var(--cream);
+  border-left:3px solid var(--kp);
+}
+.kp-feature-icon{
+  width:40px;height:40px;border-radius:10px;
+  background:rgba(255,128,171,.12);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;
+}
+.kp-feature-title{font-weight:800;font-size:15px;margin-bottom:3px}
+.kp-feature-text{font-size:14px;color:var(--ink-soft);line-height:1.5}
+
+/* ── KIDS 7-12 SECTION ── */
+.k-section{background:var(--cream)}
+.levels-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  margin-bottom:40px;
+}
+.level-card{
+  background:#fff;border:1.5px solid var(--line);border-radius:16px;
+  padding:22px;position:relative;overflow:hidden;
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+}
+.level-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--kids);border-radius:16px 16px 0 0;
+}
+.level-card:hover{
+  border-color:var(--kids);transform:translateY(-3px);
+  box-shadow:0 12px 32px rgba(21,32,61,.08);
+}
+.lc-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.lc-cefr{
+  font-family:var(--font-display);font-size:12px;font-weight:800;
+  background:rgba(255,107,53,.1);color:var(--kids);
+  border-radius:6px;padding:4px 10px;line-height:1;
+}
+.lc-age{
+  font-size:12px;font-weight:700;color:var(--ink-soft);
+  background:var(--cream);border-radius:6px;padding:4px 10px;line-height:1;
+}
+.lc-name{
+  font-family:var(--font-display);font-size:17px;font-weight:800;
+  letter-spacing:-0.02em;color:var(--ink);margin-bottom:6px;
+}
+.lc-desc{font-size:13px;color:var(--ink-soft);line-height:1.5;margin-bottom:12px}
+.lc-pills{display:flex;flex-wrap:wrap;gap:5px}
+.lc-pills span{
+  font-size:11px;font-weight:700;padding:3px 9px;border-radius:5px;
+  background:rgba(255,107,53,.08);
+  color:rgba(200,80,30,.9);
+  border:1px solid rgba(255,107,53,.15);
+}
+
+/* ── HORARIS ── */
+.horaris-wrap{
+  background:var(--ink);border-radius:24px;
+  padding:48px;color:#fff;
+  margin-top:48px;
+}
+.horaris-title{
+  font-family:var(--font-display);
+  font-size:26px;font-weight:800;letter-spacing:-0.03em;
+  color:#fff;margin-bottom:6px;
+}
+.horaris-sub{font-size:14px;color:rgba(255,255,255,.55);margin-bottom:32px}
+.horaris-table{width:100%;border-collapse:collapse}
+.horaris-table th{
+  font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.45);padding:0 16px 14px;text-align:left;
+}
+.horaris-table th:first-child{padding-left:0}
+.horaris-table td{
+  padding:14px 16px;
+  font-size:14px;font-weight:600;color:rgba(255,255,255,.85);
+  border-top:1px solid rgba(255,255,255,.08);
+  vertical-align:middle;
+}
+.horaris-table td:first-child{padding-left:0}
+.horaris-table tr:last-child td{border-bottom:1px solid rgba(255,255,255,.08)}
+.horaris-table .nivel-name{
+  font-weight:800;color:#fff;font-size:15px;
+}
+.hora-pill{
+  display:inline-flex;align-items:center;
+  background:rgba(255,255,255,.08);
+  border-radius:6px;padding:4px 10px;
+  font-size:13px;font-weight:700;
+  white-space:nowrap;
+}
+.horaris-note{
+  margin-top:20px;font-size:13px;color:rgba(255,255,255,.4);
+  display:flex;align-items:center;gap:8px;
+}
+.horaris-cta{
+  margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;
+}
+.btn-white{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;color:var(--ink);
+  font-family:var(--font-body);font-size:14px;font-weight:800;
+  border-radius:10px;padding:13px 24px;
+  transition:transform .15s,box-shadow .2s;
+}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.btn-ghost-white{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:rgba(255,255,255,.65);
+  font-family:var(--font-body);font-size:14px;font-weight:700;
+  border-radius:10px;padding:13px 24px;
+  border:1px solid rgba(255,255,255,.2);
+  transition:border-color .2s,color .2s;
+}
+.btn-ghost-white:hover{border-color:rgba(255,255,255,.6);color:#fff}
+
+/* ── METODOLOGIA ── */
+.metodo-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  margin-top:8px;
+}
+.metodo-card{
+  padding:24px;border-radius:16px;
+  border:1.5px solid var(--line);
+  background:#fff;
+}
+.metodo-num{
+  font-family:var(--font-display);
+  font-size:36px;font-weight:900;letter-spacing:-0.04em;
+  color:rgba(255,128,171,.2);line-height:1;margin-bottom:12px;
+}
+.metodo-title{font-weight:800;font-size:15px;margin-bottom:6px;color:var(--ink)}
+.metodo-text{font-size:13px;color:var(--ink-soft);line-height:1.55}
+
+/* ── CTA BAND ── */
+.cta-band{
+  background:linear-gradient(135deg,#FF80AB 0%,#FF6B35 100%);
+  padding:72px 40px;text-align:center;
+}
+.cta-band-inner{max-width:600px;margin:0 auto}
+.cta-band h2{
+  font-family:var(--font-display);
+  font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-0.04em;
+  color:#fff;margin-bottom:12px;
+}
+.cta-band p{font-size:16px;color:rgba(255,255,255,.8);line-height:1.6;margin-bottom:32px}
+.cta-band-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
+.footer-inner{max-width:1320px;margin:0 auto}
+.footer-huge{
+  font-family:var(--font-display);
+  font-size:clamp(48px,9vw,120px);font-weight:800;letter-spacing:-0.05em;line-height:1;
+  color:rgba(255,246,228,.07);margin-bottom:40px;user-select:none;
+}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:48px}
+.footer-col h6{
+  font-family:var(--font-display);font-size:14px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;
+  color:var(--cream);margin-bottom:16px;
+}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:9px;font-size:14.5px;font-weight:600}
+.footer-col ul li a{color:rgba(255,246,228,.75)}
+.footer-col ul li a:hover{color:var(--yellow)}
+.footer-col ul li:not(:has(a)){color:rgba(255,246,228,.5)}
+.footer-col p{font-size:14.5px;color:rgba(255,246,228,.7);line-height:1.55}
+.footer-socials{display:flex;gap:10px;margin-top:14px}
+.footer-socials a{
+  width:38px;height:38px;border-radius:10px;
+  background:rgba(255,255,255,.06);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s,transform .2s;
+}
+.footer-socials a:hover{background:var(--blue);transform:translateY(-2px)}
+.footer-bottom{
+  border-top:1px solid rgba(255,246,228,.1);padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:13px;color:rgba(255,246,228,.4);font-weight:600;flex-wrap:wrap;gap:12px;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .kids-hero{padding:48px 22px 40px}
+  .kids-hero-grid{grid-template-columns:1fr}
+  .hero-badges{display:none}
+  .section{padding:56px 22px}
+  .kp-grid{grid-template-columns:1fr}
+  .levels-grid{grid-template-columns:1fr 1fr}
+  .metodo-grid{grid-template-columns:1fr 1fr}
+  .horaris-wrap{padding:32px 22px;border-radius:16px}
+  .footer-cols{grid-template-columns:1fr 1fr;gap:28px}
+  .subnav-inner{padding:0 22px}
+}
+@media(max-width:540px){
+  .levels-grid{grid-template-columns:1fr}
+  .metodo-grid{grid-template-columns:1fr}
+  .footer-cols{grid-template-columns:1fr}
+  .cta-band{padding:56px 22px}
+  .horaris-table th:nth-child(3),.horaris-table td:nth-child(3){display:none}
+}
+</style>
+</head>
+<body>
+<script src="nav.js"></script>
+
+<!-- ── SUBNAV CURSOS ── -->
+<div class="subnav">
+  <div class="subnav-inner">
+    <a class="subnav-link" href="kids-planet.html">
+      <span class="subnav-dot" style="background:#FF80AB"></span>Kids Planet
+    </a>
+    <a class="subnav-link active" href="kids.html">
+      <span class="subnav-dot" style="background:#FF6B35"></span>Kids 7–12
+    </a>
+    <a class="subnav-link" href="cursos.html#teens">
+      <span class="subnav-dot" style="background:#4FC3F7"></span>Teens
+    </a>
+    <a class="subnav-link" href="cursos.html#cambridge">
+      <span class="subnav-dot" style="background:#9B72CF"></span>Cambridge
+    </a>
+    <a class="subnav-link" href="cursos.html#adults">
+      <span class="subnav-dot" style="background:#5CBA6A"></span>Adults
+    </a>
+    <a class="subnav-link" href="cursos.html#business">
+      <span class="subnav-dot" style="background:#8B1A4A"></span>Business
+    </a>
+    <a class="subnav-link" href="cursos.html#frances">
+      <span class="subnav-dot" style="background:#2547D9"></span>L'École de Français
+    </a>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<section class="kids-hero">
+  <div class="kids-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <a href="cursos.html">Cursos</a>
+      <span>›</span>
+      <span style="color:var(--ink);font-weight:700">Kids</span>
+    </div>
+    <div class="kids-hero-grid">
+      <div>
+        <div class="kids-eyebrow">
+          <span class="kids-eyebrow-dot"></span>7 – 12 anys
+        </div>
+        <h1>Sis nivells fins al<br><em>B1</em>.</h1>
+        <p class="kids-hero-sub">De Kids 1 a Kids 6, de 7 a 12 anys. Lectoescriptura integrada, preparació Young Learners de Cambridge i grups de màxim 12 alumnes.</p>
+        <div class="hero-ctas">
+          <a href="#contacte" class="btn-kp">Prova una classe gratis →</a>
+          <a href="#horaris" class="btn-outline">Veure horaris</a>
+        </div>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge-item">
+          <div class="hbi-icon" style="background:#FFE4F0">🎨</div>
+          <div class="hbi-text">
+            <strong>Màx. 12</strong>
+            <span>alumnes per grup</span>
+          </div>
+        </div>
+        <div class="hero-badge-item">
+          <div class="hbi-icon" style="background:#FFF3CC">⭐</div>
+          <div class="hbi-text">
+            <strong>Des de 1974</strong>
+            <span>50 anys d'experiència</span>
+          </div>
+        </div>
+        <div class="hero-badge-item">
+          <div class="hbi-icon" style="background:#E8F4FF">🎓</div>
+          <div class="hbi-text">
+            <strong>Young Learners</strong>
+            <span>Cambridge oficial</span>
+          </div>
+        </div>
+        <div class="hero-badge-item">
+          <div class="hbi-icon" style="background:#F0FFE8">🌱</div>
+          <div class="hbi-text">
+            <strong>Adquisició natural</strong>
+            <span>sense memoritzar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── KIDS 7-12 ── -->
+<section class="section k-section" id="kids-712">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--kids)">
+      <span class="section-label-dot" style="background:var(--kids)"></span>
+      Kids · 7–12 anys
+    </div>
+    <h2>Sis nivells, un camí <em style="color:var(--kids);font-style:normal">clar</em>.</h2>
+    <p class="section-lead">Kids 1 a Kids 6. Lectoescriptura integrada des del primer any i preparació Young Learners de Cambridge al ritme de cada alumne. Grups de màxim 12 nens.</p>
+
+    <div class="levels-grid">
+      <div class="level-card">
+        <div class="lc-row">
+          <span class="lc-cefr">A1</span>
+          <span class="lc-age">7 anys</span>
+        </div>
+        <div class="lc-name">Kids 1</div>
+        <p class="lc-desc">Primer contacte real amb la lectoescriptura en anglès. Vocabulari actiu i estructures bàsiques de comunicació oral i escrita.</p>
+        <div class="lc-pills"><span>A1</span><span>90 min</span><span>YLE Starters</span></div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-row">
+          <span class="lc-cefr">A1</span>
+          <span class="lc-age">8 anys</span>
+        </div>
+        <div class="lc-name">Kids 2</div>
+        <p class="lc-desc">Ampliació del vocabulari actiu i consolidació de les estructures orals. Gramàtica contextualitzada. Preparació Starters–Movers.</p>
+        <div class="lc-pills"><span>A1</span><span>90 min</span><span>YLE Movers</span></div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-row">
+          <span class="lc-cefr">A1–A2</span>
+          <span class="lc-age">9 anys</span>
+        </div>
+        <div class="lc-name">Kids 3</div>
+        <p class="lc-desc">Transició cap a l'A2. Textos més llargs, producció escrita guiada i conversa activa. Preparació Movers oficial.</p>
+        <div class="lc-pills"><span>A1–A2</span><span>90 min</span><span>YLE Movers</span></div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-row">
+          <span class="lc-cefr">A2</span>
+          <span class="lc-age">10 anys</span>
+        </div>
+        <div class="lc-name">Kids 4</div>
+        <p class="lc-desc">Consolidació A2. Comprensió lectora i expressió escrita autònoma. Inici preparació Flyers. Vocabulari temàtic.</p>
+        <div class="lc-pills"><span>A2</span><span>90 min</span><span>YLE Flyers</span></div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-row">
+          <span class="lc-cefr">A2</span>
+          <span class="lc-age">11 anys</span>
+        </div>
+        <div class="lc-name">Kids 5</div>
+        <p class="lc-desc">Nivell A2 sòlid. Producció oral i escrita en contextos variats. Preparació Flyers i introducció als continguts pre-B1.</p>
+        <div class="lc-pills"><span>A2</span><span>90 min</span><span>YLE Flyers</span></div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-row">
+          <span class="lc-cefr">A2–B1</span>
+          <span class="lc-age">12 anys</span>
+        </div>
+        <div class="lc-name">Kids 6</div>
+        <p class="lc-desc">Últim nivell Kids. Transició natural cap a Teens. Flyers i primers passos cap al B1 i la preparació KET.</p>
+        <div class="lc-pills"><span>A2–B1</span><span>90 min</span><span>Flyers / KET</span></div>
+      </div>
+    </div>
+
+    <!-- HORARIS -->
+    <div class="horaris-wrap" id="horaris">
+      <div class="horaris-title">Horaris</div>
+      <div class="horaris-sub">Dl–Dv · 9h–21h · Francesc Moragas 4 i 8, Sant Cugat</div>
+      <table class="horaris-table">
+        <thead>
+          <tr>
+            <th>Nivell</th>
+            <th>Dilluns / Dimecres</th>
+            <th>Dimarts / Dijous</th>
+            <th>Divendres</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="nivel-name">Kids Planet</span></td>
+            <td><span class="hora-pill">17:30–18:30</span></td>
+            <td><span class="hora-pill">17:15–18:15</span></td>
+            <td><span class="hora-pill">17:00–18:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="nivel-name">Kids 1</span></td>
+            <td><span class="hora-pill">17:30–18:30</span></td>
+            <td><span class="hora-pill">17:15–18:15</span></td>
+            <td><span class="hora-pill">17:00–18:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="nivel-name">Kids 2 – Kids 4</span></td>
+            <td><span class="hora-pill">17:30–18:30</span></td>
+            <td><span class="hora-pill">17:15–18:15</span></td>
+            <td><span class="hora-pill">17:30–19:30</span></td>
+          </tr>
+          <tr>
+            <td><span class="nivel-name">Kids 5 – Kids 6</span></td>
+            <td><span class="hora-pill">18:00–19:00</span></td>
+            <td><span class="hora-pill">18:15–19:15</span></td>
+            <td><span class="hora-pill">17:30–19:30</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="horaris-note">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(255,255,255,.4)" stroke-width="1.2"/><path d="M7 5v3M7 9.5v.5" stroke="rgba(255,255,255,.4)" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Els horaris poden variar lleugerament. Contacta'ns per confirmar la disponibilitat del curs.
+      </p>
+      <div class="horaris-cta">
+        <a href="#contacte" class="btn-white">Reserva una plaça →</a>
+        <a href="#" class="btn-ghost-white">Descarregar horaris PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── METODOLOGIA ── -->
+<section class="section" id="metode">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--blue)">
+      <span class="section-label-dot" style="background:var(--blue)"></span>
+      El nostre mètode
+    </div>
+    <h2>Com ho fem per que <em style="color:var(--blue);font-style:normal">funcioni</em>.</h2>
+    <p class="section-lead">No memoritzen regles. Aprenen com van aprendre el català o el castellà: envoltat de llengua, de manera natural i progressiva.</p>
+
+    <div class="metodo-grid">
+      <div class="metodo-card">
+        <div class="metodo-num">01</div>
+        <div class="metodo-title">Immersió comunicativa</div>
+        <p class="metodo-text">L'anglès és la llengua exclusiva de l'aula des del primer minut. Els professors mai tradueixen — el context ho explica tot.</p>
+      </div>
+      <div class="metodo-card">
+        <div class="metodo-num">02</div>
+        <div class="metodo-title">Activitats variades</div>
+        <p class="metodo-text">Jocs, cançons, mímica, teatre, contes i jocs de rol. Cada activitat crea un escenari real per comunicar-se en anglès.</p>
+      </div>
+      <div class="metodo-card">
+        <div class="metodo-num">03</div>
+        <div class="metodo-title">Grups reduïts</div>
+        <p class="metodo-text">Màxim 12 alumnes. Cada nen té temps de parlar, participar i ser corregit sense por. El professor els coneix pel nom des del primer dia.</p>
+      </div>
+      <div class="metodo-card">
+        <div class="metodo-num">04</div>
+        <div class="metodo-title">Professors estables</div>
+        <p class="metodo-text">Els mateixos professors any rere any. La continuïtat és clau per a la confiança i el progrés. No hi ha rotació d'interins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-band" id="contacte">
+  <div class="cta-band-inner">
+    <h2>Vine a conèixer l'escola sense compromís.</h2>
+    <p>Primera classe gratuïta per a nous alumnes. Els pares de Kids Planet poden acompanyar fins que el nen es trobi còmode.</p>
+    <div class="cta-band-btns">
+      <a href="index.html#contacte" class="btn-white">Prova una classe gratis →</a>
+      <a href="tel:+34935892264" class="btn-ghost-white">93 589 22 64</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-huge">Kids.</div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h6>Sprint Idiomes</h6>
+        <p>Escola d'anglès i de francès a Sant Cugat des de 1974. Cambridge oficial des de 1992.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/sprintidiomes" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="#FFF6E4"/></svg></a>
+          <a href="https://www.facebook.com/EscolaSprintIdiomes" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 4h-2.5C10 4 9 5.5 9 8v2H6.5v3H9v8h3v-8h2.5l.5-3H12V8c0-.7.3-1 1-1h2V4z" fill="#FFF6E4"/></svg></a>
+          <a href="https://wa.me/34935892264" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.5-4.5A8 8 0 1 1 9 19.5L4 20z" stroke="#FFF6E4" stroke-width="1.8" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h6>Cursos Kids</h6>
+        <ul>
+          <li><a href="#kids-planet">Kids Planet (3–6)</a></li>
+          <li><a href="#kids-712">Kids 1 (7 anys)</a></li>
+          <li><a href="#kids-712">Kids 2 (8 anys)</a></li>
+          <li><a href="#kids-712">Kids 3 (9 anys)</a></li>
+          <li><a href="#kids-712">Kids 4 (10 anys)</a></li>
+          <li><a href="#kids-712">Kids 5 (11 anys)</a></li>
+          <li><a href="#kids-712">Kids 6 (12 anys)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Altres cursos</h6>
+        <ul>
+          <li><a href="cursos.html#teens">Teens (12+)</a></li>
+          <li><a href="cursos.html#cambridge">Cambridge & IELTS</a></li>
+          <li><a href="cursos.html#adults">Adults (18+)</a></li>
+          <li><a href="cursos.html#frances">L'École de Français</a></li>
+          <li><a href="cursos.html#business">BLA Business</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Contacte</h6>
+        <ul>
+          <li>C/ Francesc Moragas 4 i 8</li>
+          <li>08172 Sant Cugat del Vallès</li>
+          <li><a href="tel:+34935892264">93 589 22 64</a></li>
+          <li><a href="tel:+34936746635">93 674 66 35</a></li>
+          <li><a href="mailto:info@sprintidiomes.com">info@sprintidiomes.com</a></li>
+          <li>L–V · 9h–21h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 1974–2026 Sprint Idiomes · Sant Cugat del Vallès</span>
+      <span>Avís legal · Privacitat · Cookies</span>
+    </div>
+    <div style="margin-top:18px;text-align:center;font-size:11px;color:rgba(255,246,228,.35);font-weight:600;letter-spacing:.05em">
+      Prototip confidencial · Disseny i desenvolupament <a href="https://sheisdigitalab.com" style="color:rgba(255,246,228,.5);text-decoration:underline">She's Digital</a> · Tots els drets reservats
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

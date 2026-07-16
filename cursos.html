@@ -1,0 +1,1228 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cursos d'anglès i francès · Sprint Idiomes · Sant Cugat</title>
+<meta name="description" content="Tots els cursos d'anglès i francès a Sprint Idiomes. Kids Planet, Kids, Teens, Cambridge, Adults, Français i BLA Business. Sant Cugat del Vallès des de 1974." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF5EA;
+  --cream-2:#F1E9D5;
+  --ink:#15203D;
+  --ink-soft:#4A5878;
+  --blue:#2547D9;
+  --blue-soft:#3B5DE8;
+  --yellow:#FFB800;
+  --line:rgba(21,32,61,.1);
+  --line-strong:rgba(21,32,61,.22);
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Nunito",ui-sans-serif,system-ui,sans-serif;
+  /* Colors per categoria */
+  --c-kidsplanet:#FF80AB;
+  --c-kids:#FF6B35;
+  --c-teens:#4FC3F7;
+  --c-cambridge:#9B72CF;
+  --c-adults:#5CBA6A;
+  --c-french:#2547D9;
+  --c-business:#8B1A4A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  background:#fff;
+  color:var(--ink);
+  line-height:1.55;
+  font-size:16px;
+  overflow-x:hidden;
+  font-weight:500;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* ── NAV ── */
+.nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1320px;margin:0 auto;
+  padding:18px 32px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.logo{
+  display:inline-flex;flex-direction:column;align-items:stretch;
+  font-family:var(--font-display);font-weight:500;font-size:13px;
+  letter-spacing:.12em;line-height:1;color:var(--ink);
+  text-transform:uppercase;padding:2px 0;
+}
+.logo .lw{display:block;text-align:center}
+.logo .lr{display:block;height:3px;background:var(--ink);margin:4px 0;border-radius:1px}
+.logo:hover{color:var(--blue)}
+.logo:hover .lr{background:var(--blue)}
+.nav-links{display:flex;gap:30px;font-size:15px;font-weight:600}
+.nav-links a{position:relative;padding:4px 0;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:-2px;
+  width:0;height:3px;background:var(--yellow);border-radius:3px;
+  transition:width .3s ease;
+}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{display:flex;gap:12px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 22px;border-radius:100px;
+  font-size:14.5px;font-weight:600;
+  transition:all .25s ease;border:1px solid transparent;
+  font-family:var(--font-body);
+}
+.btn-ghost{color:var(--ink);border-color:var(--line-strong);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(37,71,217,.18)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,71,217,.28);background:var(--blue-soft)}
+.btn-nivel{
+  background:var(--yellow);color:var(--ink);font-weight:700;
+  box-shadow:0 4px 16px rgba(255,184,0,.3);
+}
+.btn-nivel::before{
+  content:'';display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:var(--ink);opacity:.55;flex-shrink:0;
+  animation:nivel-pulse 2s ease-in-out infinite;
+}
+@keyframes nivel-pulse{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+.btn-nivel:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,184,0,.45)}
+.btn-lang{
+  font-size:12px;font-weight:700;letter-spacing:.08em;
+  color:var(--ink-soft);padding:8px 14px;border-radius:8px;
+  border:1px solid var(--line-strong);transition:all .2s;
+}
+.btn-lang:hover{border-color:var(--ink);color:var(--ink)}
+
+/* ── PAGE HERO ── */
+.page-hero{
+  background:linear-gradient(135deg,var(--cream) 0%,#fff 60%);
+  border-bottom:1px solid var(--line);
+  padding:72px 40px 56px;
+}
+.page-hero-inner{max-width:1180px;margin:0 auto}
+.breadcrumb{
+  font-size:13px;font-weight:600;color:var(--ink-soft);
+  margin-bottom:20px;display:flex;align-items:center;gap:8px;
+}
+.breadcrumb a{color:var(--ink-soft)}
+.breadcrumb a:hover{color:var(--blue)}
+.breadcrumb span{opacity:.4}
+.page-hero-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:flex-end}
+.page-hero h1{
+  font-family:var(--font-display);
+  font-size:clamp(36px,5vw,64px);
+  font-weight:800;letter-spacing:-0.04em;line-height:1.05;
+  color:var(--ink);
+}
+.page-hero h1 em{font-style:normal;color:var(--blue)}
+.page-hero-sub{
+  font-size:17px;color:var(--ink-soft);
+  line-height:1.6;margin-top:14px;max-width:520px;
+}
+.page-hero-stats{
+  display:flex;gap:32px;align-items:center;
+  padding:24px 32px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.ph-stat{text-align:center}
+.ph-stat-num{
+  font-family:var(--font-display);font-size:26px;font-weight:800;
+  letter-spacing:-0.03em;color:var(--ink);line-height:1;
+}
+.ph-stat-label{font-size:12px;font-weight:600;color:var(--ink-soft);margin-top:4px}
+
+/* ── FILTER NAV ── */
+.filter-wrap{
+  position:sticky;top:78px;z-index:100;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.filter-nav{
+  max-width:1180px;margin:0 auto;
+  padding:0 40px;
+  display:flex;gap:0;overflow-x:auto;
+  scrollbar-width:none;
+}
+.filter-nav::-webkit-scrollbar{display:none}
+.filter-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 20px;
+  font-size:13px;font-weight:700;
+  color:var(--ink-soft);
+  border-bottom:3px solid transparent;
+  white-space:nowrap;
+  transition:color .2s,border-color .2s;
+  cursor:pointer;
+  flex-shrink:0;
+}
+.filter-pill:hover{color:var(--ink)}
+.filter-pill.active{color:var(--ink);border-bottom-color:var(--yellow)}
+.filter-dot{
+  width:9px;height:9px;border-radius:50%;flex-shrink:0;
+}
+
+/* ── CURS SECTION ── */
+.curs-section{
+  padding:72px 40px;
+  border-bottom:1px solid var(--line);
+  scroll-margin-top:120px;
+}
+.curs-section:last-of-type{border-bottom:none}
+.curs-inner{max-width:1180px;margin:0 auto}
+.curs-head{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  gap:24px;margin-bottom:40px;
+  padding-left:20px;
+  border-left:4px solid var(--cat-color, var(--blue));
+}
+.curs-head-left{}
+.curs-cat-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cat-color, var(--blue));
+  margin-bottom:10px;
+}
+.curs-cat-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--cat-color, var(--blue));
+}
+.curs-head h2{
+  font-family:var(--font-display);
+  font-size:clamp(24px,3vw,36px);
+  font-weight:800;letter-spacing:-0.03em;line-height:1.1;
+  color:var(--ink);margin-bottom:8px;
+}
+.curs-head p{
+  font-size:15px;color:var(--ink-soft);
+  line-height:1.6;max-width:540px;
+}
+.curs-path{
+  display:flex;align-items:center;gap:6px;
+  flex-shrink:0;
+  background:var(--cream);
+  border-radius:12px;padding:14px 18px;
+}
+.curs-path-label{
+  font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-soft);margin-right:4px;
+}
+.curs-path-node{
+  font-size:12px;font-weight:700;
+  padding:4px 10px;border-radius:6px;
+  background:#fff;border:1px solid var(--line);
+  color:var(--ink);white-space:nowrap;
+}
+.curs-path-node.active{
+  background:var(--cat-color, var(--blue));
+  color:#fff;border-color:transparent;
+}
+.curs-path-sep{
+  width:16px;height:1px;
+  background:var(--line-strong);flex-shrink:0;
+}
+
+/* ── LEVEL CARDS GRID ── */
+.level-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.level-card{
+  background:#fff;
+  border:1.5px solid var(--line);
+  border-radius:18px;
+  padding:24px;
+  display:flex;flex-direction:column;gap:12px;
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+  position:relative;overflow:hidden;
+  cursor:pointer;
+}
+.level-card::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--cat-color, var(--blue));
+  border-radius:18px 18px 0 0;
+}
+.level-card:hover{
+  border-color:var(--cat-color, var(--blue));
+  transform:translateY(-3px);
+  box-shadow:0 12px 32px rgba(21,32,61,.08);
+}
+.lc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.lc-cefr{
+  font-family:var(--font-display);
+  font-size:13px;font-weight:800;letter-spacing:.02em;
+  color:var(--cat-color, var(--blue));
+  background:color-mix(in srgb, var(--cat-color, var(--blue)) 12%, white);
+  border-radius:8px;padding:5px 10px;
+  line-height:1;
+}
+.lc-age{
+  font-size:12px;font-weight:700;color:var(--ink-soft);
+  background:var(--cream);border-radius:8px;
+  padding:5px 10px;line-height:1;white-space:nowrap;
+}
+.lc-name{
+  font-family:var(--font-display);
+  font-size:18px;font-weight:800;letter-spacing:-0.02em;
+  color:var(--ink);line-height:1.15;
+}
+.lc-desc{
+  font-size:14px;color:var(--ink-soft);line-height:1.55;
+  flex:1;
+}
+.lc-pills{
+  display:flex;flex-wrap:wrap;gap:6px;
+  margin-top:auto;
+}
+.lc-pills span{
+  font-size:11px;font-weight:700;
+  padding:4px 10px;border-radius:6px;
+  background:color-mix(in srgb, var(--cat-color, var(--blue)) 10%, white);
+  color:color-mix(in srgb, var(--cat-color, var(--blue)) 75%, black);
+  border:1px solid color-mix(in srgb, var(--cat-color, var(--blue)) 20%, white);
+}
+.lc-arrow{
+  position:absolute;bottom:20px;right:20px;
+  width:32px;height:32px;border-radius:50%;
+  background:var(--cream);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:700;
+  transition:background .2s,color .2s;
+}
+.level-card:hover .lc-arrow{
+  background:var(--cat-color, var(--blue));
+  color:#fff;
+}
+
+/* Targeta destacada (Business) */
+.level-card.featured{
+  grid-column:span 3;
+  background:linear-gradient(135deg,#6B0F33 0%,#8B1A4A 60%,#5A0D28 100%);
+  border-color:transparent;color:#fff;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:0;padding:0;
+}
+.level-card.featured::before{display:none}
+.featured-left,.featured-right{padding:32px}
+.featured-left{border-right:1px solid rgba(255,255,255,.1)}
+.featured-left .lc-name,.featured-left .lc-desc{color:rgba(255,255,255,.9)}
+.featured-left .lc-cefr{background:rgba(255,255,255,.12);color:#FFD54F}
+.featured-left .lc-age{background:rgba(255,255,255,.08);color:rgba(255,255,255,.7)}
+.featured-left .lc-pills span{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.15)}
+.featured-right{
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.feat-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.feat-stat-num{
+  font-family:var(--font-display);
+  font-size:28px;font-weight:800;letter-spacing:-0.03em;
+  color:#fff;line-height:1;
+}
+.feat-stat-label{font-size:12px;color:rgba(255,255,255,.55);margin-top:4px}
+.feat-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--yellow);color:var(--ink);
+  font-family:var(--font-body);font-size:14px;font-weight:800;
+  border-radius:10px;padding:13px 24px;
+  align-self:flex-start;transition:background .2s,transform .15s;
+}
+.feat-cta:hover{background:#FFD000;transform:translateY(-2px)}
+
+/* ── CTA BAND ── */
+.cta-band{
+  background:var(--ink);
+  padding:80px 40px;
+  text-align:center;
+}
+.cta-band-inner{max-width:640px;margin:0 auto}
+.cta-band h2{
+  font-family:var(--font-display);
+  font-size:clamp(28px,4vw,44px);
+  font-weight:800;letter-spacing:-0.04em;line-height:1.1;
+  color:#fff;margin-bottom:14px;
+}
+.cta-band p{
+  font-size:16px;color:rgba(255,255,255,.6);
+  line-height:1.6;margin-bottom:32px;
+}
+.cta-band-btns{
+  display:flex;justify-content:center;gap:14px;flex-wrap:wrap;
+}
+.btn-cta-white{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#fff;color:var(--ink);
+  font-family:var(--font-body);font-size:15px;font-weight:800;
+  border-radius:10px;padding:15px 28px;
+  transition:transform .15s,box-shadow .2s;
+}
+.btn-cta-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.btn-cta-ghost-white{
+  display:inline-flex;align-items:center;gap:10px;
+  background:transparent;color:rgba(255,255,255,.75);
+  font-family:var(--font-body);font-size:15px;font-weight:700;
+  border-radius:10px;padding:15px 28px;
+  border:1px solid rgba(255,255,255,.2);
+  transition:border-color .2s,color .2s;
+}
+.btn-cta-ghost-white:hover{border-color:rgba(255,255,255,.6);color:#fff}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--ink);padding:72px 40px 32px;
+  color:var(--cream);
+  position:relative;overflow:hidden;
+}
+.footer-inner{max-width:1320px;margin:0 auto;position:relative;z-index:1}
+.footer-huge{
+  font-family:var(--font-display);
+  font-size:clamp(48px,9vw,120px);
+  font-weight:800;letter-spacing:-0.05em;line-height:1;
+  color:rgba(255,246,228,.07);
+  margin-bottom:40px;user-select:none;
+}
+.footer-huge .y,.footer-huge .p,.footer-huge .s,.footer-huge .c{color:rgba(255,246,228,.07)}
+.footer-cols{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:40px;margin-bottom:48px;
+}
+.footer-col h6{
+  font-family:var(--font-display);font-size:14px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;
+  color:var(--cream);margin-bottom:16px;
+}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:9px;font-size:14.5px;font-weight:600}
+.footer-col ul li a{color:rgba(255,246,228,.75)}
+.footer-col ul li a:hover{color:var(--yellow)}
+.footer-col ul li:not(:has(a)){color:rgba(255,246,228,.5)}
+.footer-col p{font-size:14.5px;color:rgba(255,246,228,.7);line-height:1.55}
+.footer-socials{display:flex;gap:10px;margin-top:14px}
+.footer-socials a{
+  width:38px;height:38px;border-radius:10px;
+  background:rgba(255,255,255,.06);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s,transform .2s;
+}
+.footer-socials a:hover{background:var(--blue);transform:translateY(-2px)}
+.footer-bottom{
+  border-top:1px solid rgba(255,246,228,.1);
+  padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:13px;color:rgba(255,246,228,.4);font-weight:600;
+  flex-wrap:wrap;gap:12px;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1080px){
+  .level-grid{grid-template-columns:repeat(2,1fr)}
+  .level-card.featured{grid-column:span 2}
+}
+@media(max-width:960px){
+  .nav-links{display:none}
+  .nav-cta .btn-nivel{display:none}
+  .page-hero-grid{grid-template-columns:1fr}
+  .page-hero-stats{display:none}
+  .curs-head{flex-direction:column}
+  .curs-path{align-self:flex-start}
+  .footer-cols{grid-template-columns:1fr 1fr;gap:28px}
+  .filter-nav{padding:0 22px}
+  .curs-section{padding:56px 22px}
+  .page-hero{padding:48px 22px 40px}
+}
+@media(max-width:640px){
+  .level-grid{grid-template-columns:1fr}
+  .level-card.featured{grid-column:span 1;grid-template-columns:1fr}
+  .featured-left{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .feat-stats{grid-template-columns:1fr 1fr}
+  .cta-band{padding:56px 22px}
+  .footer-cols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<!-- ── SUBNAV CATEGORIES ── -->
+<style>
+.subnav{background:#fff;border-bottom:1px solid rgba(21,32,61,.1);position:sticky;top:78px;z-index:90}
+.subnav-inner{max-width:1320px;margin:0 auto;padding:0 32px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav-link{display:inline-flex;align-items:center;gap:7px;padding:13px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4A5878;border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:color .2s,border-color .2s;text-decoration:none}
+.subnav-link:hover{color:#15203D}
+.subnav-link.active{color:#15203D;border-bottom-color:#FFB800}
+.subnav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+@media(max-width:960px){.subnav-inner{padding:0 16px}}
+</style>
+<div class="subnav">
+  <div class="subnav-inner">
+    <a class="subnav-link active" href="#tots">
+      <span class="subnav-dot" style="background:#15203D"></span>Tots
+    </a>
+    <a class="subnav-link" href="#kids-planet">
+      <span class="subnav-dot" style="background:#FF80AB"></span>Kids Planet
+    </a>
+    <a class="subnav-link" href="#kids">
+      <span class="subnav-dot" style="background:#FF6B35"></span>Kids
+    </a>
+    <a class="subnav-link" href="#teens">
+      <span class="subnav-dot" style="background:#4FC3F7"></span>Teens
+    </a>
+    <a class="subnav-link" href="#cambridge">
+      <span class="subnav-dot" style="background:#9B72CF"></span>Cambridge
+    </a>
+    <a class="subnav-link" href="#adults">
+      <span class="subnav-dot" style="background:#5CBA6A"></span>Adults
+    </a>
+    <a class="subnav-link" href="#frances">
+      <span class="subnav-dot" style="background:#2547D9"></span>Français
+    </a>
+    <a class="subnav-link" href="#business">
+      <span class="subnav-dot" style="background:#8B1A4A"></span>BLA Business
+    </a>
+  </div>
+</div>
+
+<!-- =================== PAGE HERO =================== -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Inici</a>
+      <span>›</span>
+      <span style="color:var(--ink);font-weight:700">Cursos</span>
+    </div>
+    <div class="page-hero-grid">
+      <div>
+        <h1>Un curs per <em>cada etapa</em> de la vida.</h1>
+        <p class="page-hero-sub">Des dels 3 anys fins als adults. Anglès i francès en grups reduïts, amb professors que es queden any rere any i un camí clar fins al nivell que necessites.</p>
+      </div>
+      <div class="page-hero-stats">
+        <div class="ph-stat">
+          <div class="ph-stat-num">7</div>
+          <div class="ph-stat-label">categories</div>
+        </div>
+        <div class="ph-stat">
+          <div class="ph-stat-num">+20</div>
+          <div class="ph-stat-label">nivells</div>
+        </div>
+        <div class="ph-stat">
+          <div class="ph-stat-num">Màx.12</div>
+          <div class="ph-stat-label">per grup</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FILTER NAV =================== -->
+<div class="filter-wrap">
+  <div class="filter-nav">
+    <a class="filter-pill active" href="#tots">
+      <span class="filter-dot" style="background:var(--ink)"></span>Tots
+    </a>
+    <a class="filter-pill" href="#kids-planet">
+      <span class="filter-dot" style="background:var(--c-kidsplanet)"></span>Kids Planet
+    </a>
+    <a class="filter-pill" href="#kids">
+      <span class="filter-dot" style="background:var(--c-kids)"></span>Kids
+    </a>
+    <a class="filter-pill" href="#teens">
+      <span class="filter-dot" style="background:var(--c-teens)"></span>Teens
+    </a>
+    <a class="filter-pill" href="#cambridge">
+      <span class="filter-dot" style="background:var(--c-cambridge)"></span>Cambridge
+    </a>
+    <a class="filter-pill" href="#adults">
+      <span class="filter-dot" style="background:var(--c-adults)"></span>Adults
+    </a>
+    <a class="filter-pill" href="#frances">
+      <span class="filter-dot" style="background:var(--c-french)"></span>Français
+    </a>
+    <a class="filter-pill" href="#business">
+      <span class="filter-dot" style="background:var(--c-business)"></span>BLA Business
+    </a>
+  </div>
+</div>
+
+<main id="tots">
+
+<!-- =================== KIDS PLANET =================== -->
+<section class="curs-section" id="kids-planet" style="--cat-color:var(--c-kidsplanet)">
+  <div class="curs-inner">
+    <div class="curs-head">
+      <div class="curs-head-left">
+        <div class="curs-cat-badge">
+          <span class="curs-cat-dot"></span>Kids Planet · 3–6 anys
+        </div>
+        <h2>Immersió total des dels 3 anys</h2>
+        <p>Dos professors nadius per grup envolten els més petits de llengua anglesa a través de jocs, cançons i contes. Adquisició natural sense pressió.</p>
+      </div>
+      <div class="curs-path">
+        <span class="curs-path-label">Nivell</span>
+        <span class="curs-path-node active">Pre-A1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node">A1</span>
+      </div>
+    </div>
+
+    <div class="level-grid">
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">Pre-A1</span>
+          <span class="lc-age">3–4 anys</span>
+        </div>
+        <div class="lc-name">Kids Planet</div>
+        <p class="lc-desc">Primers contactes amb l'anglès a través del joc i la música. Dos professors per grup. Rutines orals i reconeixement de vocabulari bàsic.</p>
+        <div class="lc-pills">
+          <span>Pre-A1</span><span>60 min</span><span>2 profs/grup</span><span>Màx. 8</span>
+        </div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">Pre-A1+</span>
+          <span class="lc-age">5–6 anys</span>
+        </div>
+        <div class="lc-name">Kids Planet Plus</div>
+        <p class="lc-desc">Consolidació de les rutines orals. Inici de la lectoescriptura en anglès de manera lúdica i progressiva. Inici preparació Starters.</p>
+        <div class="lc-pills">
+          <span>Pre-A1+</span><span>60 min</span><span>YLE Starters</span><span>Màx. 10</span>
+        </div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card" style="border-style:dashed;opacity:.6;pointer-events:none">
+        <div class="lc-top">
+          <span class="lc-cefr" style="background:var(--cream);color:var(--ink-soft)">Proper</span>
+        </div>
+        <div class="lc-name" style="color:var(--ink-soft)">Summer Kids Planet</div>
+        <p class="lc-desc">Intensiu d'estiu específic per als més petits. Programa lúdic en anglès de 3 setmanes. Juliol 2026.</p>
+        <div class="lc-pills"><span>Estiu 2026</span><span>3 setmanes</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== KIDS =================== -->
+<section class="curs-section" id="kids" style="--cat-color:var(--c-kids)">
+  <div class="curs-inner">
+    <div class="curs-head">
+      <div class="curs-head-left">
+        <div class="curs-cat-badge">
+          <span class="curs-cat-dot"></span>Kids · 7–12 anys
+        </div>
+        <h2>Sis nivells progressius fins a A2-B1</h2>
+        <p>Lectoescriptura integrada des del primer any. Preparació oficial Young Learners (Starters, Movers, Flyers) al ritme de cada alumne.</p>
+      </div>
+      <div class="curs-path">
+        <span class="curs-path-label">Camí</span>
+        <span class="curs-path-node active">A1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">A1+</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">A2</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node">B1</span>
+      </div>
+    </div>
+
+    <div class="level-grid">
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A1</span>
+          <span class="lc-age">7 anys</span>
+        </div>
+        <div class="lc-name">Kids 1</div>
+        <p class="lc-desc">Primer any de lectoescriptura integrada. Vocabulari actiu, estructures bàsiques de comunicació oral i escrita. Inici YLE Starters.</p>
+        <div class="lc-pills"><span>A1</span><span>90 min</span><span>YLE Starters</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A1</span>
+          <span class="lc-age">8 anys</span>
+        </div>
+        <div class="lc-name">Kids 2</div>
+        <p class="lc-desc">Ampliació del vocabulari actiu i consolidació de les estructures orals. Gramàtica contextualitzada. Preparació Starters/Movers.</p>
+        <div class="lc-pills"><span>A1</span><span>90 min</span><span>YLE Movers</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A1–A2</span>
+          <span class="lc-age">9 anys</span>
+        </div>
+        <div class="lc-name">Kids 3</div>
+        <p class="lc-desc">Transició cap a l'A2. Textos més llargs, producció escrita guiada i conversa activa a l'aula. Preparació Movers oficial.</p>
+        <div class="lc-pills"><span>A1–A2</span><span>90 min</span><span>YLE Movers</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A2</span>
+          <span class="lc-age">10 anys</span>
+        </div>
+        <div class="lc-name">Kids 4</div>
+        <p class="lc-desc">Consolidació A2. Comprensió lectora i expressió escrita autònoma. Inici preparació Flyers. Primer contacte amb el vocabulari temàtic.</p>
+        <div class="lc-pills"><span>A2</span><span>90 min</span><span>YLE Flyers</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A2</span>
+          <span class="lc-age">11 anys</span>
+        </div>
+        <div class="lc-name">Kids 5</div>
+        <p class="lc-desc">Nivell A2 sòlid. Producció oral i escrita en contextos variats. Preparació Flyers i introducció als continguts pre-B1.</p>
+        <div class="lc-pills"><span>A2</span><span>90 min</span><span>YLE Flyers</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A2–B1</span>
+          <span class="lc-age">12 anys</span>
+        </div>
+        <div class="lc-name">Kids 6</div>
+        <p class="lc-desc">Últim nivell Kids. Transició natural cap a Teens. Assoliment Flyers i primers passos cap al B1 i la preparació KET.</p>
+        <div class="lc-pills"><span>A2–B1</span><span>90 min</span><span>Flyers / KET</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TEENS =================== -->
+<section class="curs-section" id="teens" style="--cat-color:var(--c-teens)">
+  <div class="curs-inner">
+    <div class="curs-head">
+      <div class="curs-head-left">
+        <div class="curs-cat-badge">
+          <span class="curs-cat-dot"></span>Teens · 12–16 anys
+        </div>
+        <h2>Per a adolescents amb ganes d'avançar</h2>
+        <p>Professors vocacionals i especialitzats en adolescents. Reforç escolar integrat amb preparació Cambridge en paral·lel. De A2 fins a B2.</p>
+      </div>
+      <div class="curs-path">
+        <span class="curs-path-label">Camí</span>
+        <span class="curs-path-node active">A2</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">B1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node">B2</span>
+      </div>
+    </div>
+
+    <div class="level-grid">
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A2–B1</span>
+          <span class="lc-age">12–13 anys</span>
+        </div>
+        <div class="lc-name">Junior</div>
+        <p class="lc-desc">Primer nivell Teens. Consolidació A2 i inici B1. Enfocament comunicatiu adaptat a l'ESO. Preparació KET (A2 Key).</p>
+        <div class="lc-pills"><span>A2–B1</span><span>90 min</span><span>KET</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B1</span>
+          <span class="lc-age">13–14 anys</span>
+        </div>
+        <div class="lc-name">Pre-First 1</div>
+        <p class="lc-desc">Nivell B1 consolidat. Comprensió lectora avançada i expressió oral espontània. Preparació PET (B1 Preliminary).</p>
+        <div class="lc-pills"><span>B1</span><span>90 min</span><span>PET</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B1–B2</span>
+          <span class="lc-age">14–15 anys</span>
+        </div>
+        <div class="lc-name">Pre-First 2</div>
+        <p class="lc-desc">Transició B1-B2. Gramàtica i vocabulari d'alt rendiment. Inici preparació FCE First Certificate. Concurrent amb 3r i 4t ESO.</p>
+        <div class="lc-pills"><span>B1–B2</span><span>90 min</span><span>FCE prep</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B2</span>
+          <span class="lc-age">15–16 anys</span>
+        </div>
+        <div class="lc-name">First Prep</div>
+        <p class="lc-desc">Preparació intensiva FCE. Els 4 skills: Reading, Writing, Listening i Speaking. Simulacres d'examen i estratègies específiques Cambridge.</p>
+        <div class="lc-pills"><span>B2</span><span>90 min</span><span>FCE First</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CAMBRIDGE =================== -->
+<section class="curs-section" id="cambridge" style="--cat-color:var(--c-cambridge)">
+  <div class="curs-inner">
+    <div class="curs-head">
+      <div class="curs-head-left">
+        <div class="curs-cat-badge">
+          <span class="curs-cat-dot"></span>Cambridge &amp; IELTS · Centre oficial des de 1992
+        </div>
+        <h2>Títols oficials amb el 98% d'aprovats</h2>
+        <p>Tres dècades com a centre preparador oficial Cambridge. KET, PET, FCE, CAE, CPE i IELTS. Metodologia provada amb resultats reals.</p>
+      </div>
+      <div class="curs-path">
+        <span class="curs-path-label">Títols</span>
+        <span class="curs-path-node active">A2</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">B1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">B2</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">C1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">C2</span>
+      </div>
+    </div>
+
+    <div class="level-grid">
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A2</span>
+          <span class="lc-age">A partir de 12</span>
+        </div>
+        <div class="lc-name">A2 Key (KET)</div>
+        <p class="lc-desc">Primer títol oficial Cambridge. Preparació intensiva dels 5 papers. Ideal per consolidar el pas de primària a secundària.</p>
+        <div class="lc-pills"><span>A2</span><span>KET</span><span>Cambridge oficial</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B1</span>
+          <span class="lc-age">A partir de 13</span>
+        </div>
+        <div class="lc-name">B1 Preliminary (PET)</div>
+        <p class="lc-desc">Preparació PET per a joves i adults. Gramàtica, vocabulari i destreses comunicatives al nivell B1 del MCER.</p>
+        <div class="lc-pills"><span>B1</span><span>PET</span><span>Cambridge oficial</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B2</span>
+          <span class="lc-age">A partir de 15</span>
+        </div>
+        <div class="lc-name">B2 First (FCE)</div>
+        <p class="lc-desc">El títol Cambridge més reconegut a tot el món. Accés universitari i laboral. Dos grups: First 1 i First 2 per ritme d'aprenentatge.</p>
+        <div class="lc-pills"><span>B2</span><span>FCE</span><span>Cambridge oficial</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">C1</span>
+          <span class="lc-age">Adults i joves</span>
+        </div>
+        <div class="lc-name">C1 Advanced (CAE)</div>
+        <p class="lc-desc">Equivalent universitari en anglès. Requerit per màsters i programes internacionals. Dos grups: Advanced 1 i Advanced 2.</p>
+        <div class="lc-pills"><span>C1</span><span>CAE</span><span>Cambridge oficial</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">C2</span>
+          <span class="lc-age">Adults</span>
+        </div>
+        <div class="lc-name">C2 Proficiency (CPE)</div>
+        <p class="lc-desc">El màxim nivell Cambridge. Anglès perfecte per a professionals i acadèmics. Grup reduït d'alt rendiment amb seguiment personalitzat.</p>
+        <div class="lc-pills"><span>C2</span><span>CPE</span><span>Cambridge oficial</span><span>Màx. 8</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B1–C2</span>
+          <span class="lc-age">Adults i universitaris</span>
+        </div>
+        <div class="lc-name">IELTS</div>
+        <p class="lc-desc">Preparació IELTS Academic i General Training. Essencial per emigrar, estudiar a l'estranger o treballar al Regne Unit, Canadà o Austràlia.</p>
+        <div class="lc-pills"><span>IELTS Academic</span><span>IELTS General</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== ADULTS =================== -->
+<section class="curs-section" id="adults" style="--cat-color:var(--c-adults)">
+  <div class="curs-inner">
+    <div class="curs-head">
+      <div class="curs-head-left">
+        <div class="curs-cat-badge">
+          <span class="curs-cat-dot"></span>Adults · 18+ anys
+        </div>
+        <h2>Anglès per a adults. De zero a expert.</h2>
+        <p>Des d'A1 fins a C1. Grups petits, classes dinàmiques amb molta conversa. Presencial, online i intensiu de juliol. Horaris adaptats als que treballen.</p>
+      </div>
+      <div class="curs-path">
+        <span class="curs-path-label">Camí</span>
+        <span class="curs-path-node active">A1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">A2</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">B1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">B2</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">C1</span>
+      </div>
+    </div>
+
+    <div class="level-grid">
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A1</span>
+          <span class="lc-age">18+ anys</span>
+        </div>
+        <div class="lc-name">Elementary</div>
+        <p class="lc-desc">Punt de partida per a qui comença des de zero o reprèn l'anglès. Vocabulari essencial, estructura bàsica i molta pràctica oral.</p>
+        <div class="lc-pills"><span>A1</span><span>Presencial</span><span>Online</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A2</span>
+          <span class="lc-age">18+ anys</span>
+        </div>
+        <div class="lc-name">Pre-Intermediate</div>
+        <p class="lc-desc">Consolidació de les bases gramaticals. Comunicació en situacions quotidianes amb confiança creixent. Inici preparació KET opcional.</p>
+        <div class="lc-pills"><span>A2</span><span>Presencial</span><span>Online</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B1</span>
+          <span class="lc-age">18+ anys</span>
+        </div>
+        <div class="lc-name">Intermediate</div>
+        <p class="lc-desc">El nivell del turista avançat. Comprensió de converses naturals, redacció de correus i expressió d'opinions. Preparació PET disponible.</p>
+        <div class="lc-pills"><span>B1</span><span>Presencial</span><span>Online</span><span>Màx. 12</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B2</span>
+          <span class="lc-age">18+ anys</span>
+        </div>
+        <div class="lc-name">Upper-Intermediate</div>
+        <p class="lc-desc">Fluïdesa real en contextos professionals i socials. Debat, argumentació i vocabulari específic. Preparació FCE per als qui ho necessiten.</p>
+        <div class="lc-pills"><span>B2</span><span>Presencial</span><span>Online</span><span>FCE opcional</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">C1</span>
+          <span class="lc-age">18+ anys</span>
+        </div>
+        <div class="lc-name">Advanced</div>
+        <p class="lc-desc">Anglès avançat per a professionals. Matisos lingüístics, textos acadèmics i comunicació d'alt nivell. Preparació CAE disponible.</p>
+        <div class="lc-pills"><span>C1</span><span>Presencial</span><span>Online</span><span>CAE opcional</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B2–C1</span>
+          <span class="lc-age">18+ anys</span>
+        </div>
+        <div class="lc-name">Conversa</div>
+        <p class="lc-desc">Grups de conversa per mantenir i millorar el nivell. Debats, actualitat i temes d'interès. El professor facilita, els alumnes parlen.</p>
+        <div class="lc-pills"><span>B2–C1</span><span>Conversa</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FRANÇAIS =================== -->
+<section class="curs-section" id="frances" style="--cat-color:var(--c-french)">
+  <div class="curs-inner">
+    <div class="curs-head">
+      <div class="curs-head-left">
+        <div class="curs-cat-badge">
+          <span class="curs-cat-dot"></span>L'École de Français · Sant Cugat
+        </div>
+        <h2>L'única escola de Sant Cugat amb francès complet</h2>
+        <p>De A1 fins a C1, DELF i DALF amb tres professors nadius. Per a joves des dels 10 anys i per a adults. La branca francesa de Sprint amb la mateixa qualitat de sempre.</p>
+      </div>
+      <div class="curs-path">
+        <span class="curs-path-label">Camí</span>
+        <span class="curs-path-node active">A1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">A2</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">B1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">B2</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">C1</span>
+      </div>
+    </div>
+
+    <div class="level-grid">
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A1</span>
+          <span class="lc-age">Joves i adults</span>
+        </div>
+        <div class="lc-name">Débutant</div>
+        <p class="lc-desc">Primers passos en francès. Pronunciació, rutines orals i estructures bàsiques amb professor nadiu des del primer dia.</p>
+        <div class="lc-pills"><span>A1</span><span>Prof. nadiu</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A2</span>
+          <span class="lc-age">Joves i adults</span>
+        </div>
+        <div class="lc-name">Élémentaire</div>
+        <p class="lc-desc">Comunicació en situacions quotidianes. Comprensió lectora bàsica i expressió oral amb confiança. Vocabulari temàtic ampliat.</p>
+        <div class="lc-pills"><span>A2</span><span>DELF A2 prep</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B1</span>
+          <span class="lc-age">Joves i adults</span>
+        </div>
+        <div class="lc-name">Intermédiaire</div>
+        <p class="lc-desc">Fluïdesa en conversa habitual. Expressió escrita estructurada. Preparació DELF B1, reconegut internacionalment.</p>
+        <div class="lc-pills"><span>B1</span><span>DELF B1</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">B2</span>
+          <span class="lc-age">Adults</span>
+        </div>
+        <div class="lc-name">Indépendant</div>
+        <p class="lc-desc">Francès per a contextos professionals. Debat, textos d'opinió, comprensió de media francesa. Preparació DELF B2.</p>
+        <div class="lc-pills"><span>B2</span><span>DELF B2</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">C1</span>
+          <span class="lc-age">Adults</span>
+        </div>
+        <div class="lc-name">Avancé</div>
+        <p class="lc-desc">Nivell alt de francès. Matisos culturals i lingüístics. Textos literaris i acadèmics. Preparació DALF C1.</p>
+        <div class="lc-pills"><span>C1</span><span>DALF C1</span><span>Màx. 8</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+
+      <div class="level-card">
+        <div class="lc-top">
+          <span class="lc-cefr">A1–C1</span>
+          <span class="lc-age">10+ anys</span>
+        </div>
+        <div class="lc-name">Joves en Français</div>
+        <p class="lc-desc">Grup específic per a joves de 10 a 16 anys. Metodologia adaptada a l'edat amb professors nadius especialitzats en adolescents.</p>
+        <div class="lc-pills"><span>10–16 anys</span><span>Prof. nadiu</span><span>DELF Jeunes</span></div>
+        <div class="lc-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== BLA BUSINESS =================== -->
+<section class="curs-section" id="business" style="--cat-color:var(--c-business)">
+  <div class="curs-inner">
+    <div class="curs-head">
+      <div class="curs-head-left">
+        <div class="curs-cat-badge">
+          <span class="curs-cat-dot"></span>BLA Business Language Academy
+        </div>
+        <h2>Formació lingüística a mida per a empreses</h2>
+        <p>Branca especialitzada en anglès i francès per a professionals i equips. Horaris i continguts adaptats al sector. 100% bonificable per FUNDAE.</p>
+      </div>
+      <div class="curs-path">
+        <span class="curs-path-label">Nivells</span>
+        <span class="curs-path-node active">B1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">B2</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">C1</span>
+        <span class="curs-path-sep"></span>
+        <span class="curs-path-node active">C2</span>
+      </div>
+    </div>
+
+    <div class="level-grid">
+      <div class="level-card featured" style="--cat-color:var(--c-business)">
+        <div class="featured-left">
+          <div class="lc-top" style="margin-bottom:12px">
+            <span class="lc-cefr">B1–C2</span>
+            <span class="lc-age" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7)">Empreses</span>
+          </div>
+          <div class="lc-name" style="color:#fff;font-size:22px">BLA Business Language Academy</div>
+          <p class="lc-desc">Formació lingüística per a equips i professionals. Anglès i francès per a presentacions, negociació, emails i reunions internacionals. Programa fet a mida de cada empresa.</p>
+          <div class="lc-pills" style="margin-top:16px">
+            <span>B1–C2</span><span>FUNDAE 100%</span><span>In-company</span><span>Online</span><span>Intensiu</span>
+          </div>
+        </div>
+        <div class="featured-right">
+          <div class="feat-stats">
+            <div>
+              <div class="feat-stat-num">+50</div>
+              <div class="feat-stat-label">empreses clients</div>
+            </div>
+            <div>
+              <div class="feat-stat-num">100%</div>
+              <div class="feat-stat-label">bonificable FUNDAE</div>
+            </div>
+            <div>
+              <div class="feat-stat-num">A1–C2</div>
+              <div class="feat-stat-label">tots els nivells</div>
+            </div>
+            <div>
+              <div class="feat-stat-num">In-co.</div>
+              <div class="feat-stat-label">o a l'acadèmia</div>
+            </div>
+          </div>
+          <a href="index.html#contacte" class="feat-cta">Demana informació <span>→</span></a>
+        </div>
+        <span class="deco" style="position:absolute;bottom:-10px;right:20px;font-family:var(--font-display);font-size:80px;font-weight:900;color:rgba(255,255,255,.06);line-height:1;user-select:none">B2B</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =================== CTA BAND =================== -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <h2>No saps quin nivell tens?</h2>
+    <p>Fes la prova de nivell gratuïta i et diem exactament on estàs i quin curs és el teu. Sense compromís, resposta en 24h.</p>
+    <div class="cta-band-btns">
+      <a href="index.html#contacte" class="btn-cta-white">Descobreix el teu nivell →</a>
+      <a href="index.html#contacte" class="btn-cta-ghost-white">Prova una classe gratis</a>
+    </div>
+  </div>
+</div>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-huge"><span class="y">Hello,</span> <span class="p">Hi,</span> <span class="s">Hola</span><span class="c">.</span></div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h6>Sprint Idiomes</h6>
+        <p>Escola d'anglès i de francès a Sant Cugat des de 1974. Cambridge oficial des de 1992. DELF/DALF amb professors nadius.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/sprintidiomes" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="#FFF6E4"/></svg></a>
+          <a href="https://www.facebook.com/EscolaSprintIdiomes" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 4h-2.5C10 4 9 5.5 9 8v2H6.5v3H9v8h3v-8h2.5l.5-3H12V8c0-.7.3-1 1-1h2V4z" fill="#FFF6E4"/></svg></a>
+          <a href="https://wa.me/34935892264" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.5-4.5A8 8 0 1 1 9 19.5L4 20z" stroke="#FFF6E4" stroke-width="1.8" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h6>Cursos</h6>
+        <ul>
+          <li><a href="#kids-planet">Kids Planet (3–6)</a></li>
+          <li><a href="#kids">Kids 1–6 (7–12)</a></li>
+          <li><a href="#teens">Teens (12+)</a></li>
+          <li><a href="#cambridge">Cambridge &amp; IELTS</a></li>
+          <li><a href="#adults">Adults (18+)</a></li>
+          <li><a href="#business">BLA Business</a></li>
+          <li><a href="#frances">L'École de Français</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>L'escola</h6>
+        <ul>
+          <li><a href="qui-som.html">Qui som</a></li>
+          <li><a href="index.html#perque">Per què Sprint?</a></li>
+          <li><a href="index.html#metode">El nostre mètode</a></li>
+          <li><a href="index.html#opinions">Opinions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Contacte</h6>
+        <ul>
+          <li>C/ Francesc Moragas 4 i 8</li>
+          <li>08172 Sant Cugat del Vallès</li>
+          <li><a href="tel:+34935892264">93 589 22 64</a></li>
+          <li><a href="tel:+34936746635">93 674 66 35</a></li>
+          <li><a href="mailto:info@sprintidiomes.com">info@sprintidiomes.com</a></li>
+          <li>L–V · 9h–21h</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 1974 – 2026 Sprint Idiomes · Sant Cugat del Vallès</span>
+      <span>Avís legal · Privacitat · Cookies</span>
+    </div>
+    <div style="margin-top:18px;text-align:center;font-size:11px;color:rgba(255,246,228,.35);font-weight:600;letter-spacing:.05em">
+      Prototip confidencial · Disseny i desenvolupament <a href="https://sheisdigitalab.com" style="color:rgba(255,246,228,.5);text-decoration:underline">She's Digital</a> · Tots els drets reservats
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Activa el filter-pill en fer scroll */
+const sections = document.querySelectorAll('.curs-section');
+const pills = document.querySelectorAll('.filter-pill');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const id = e.target.id;
+      pills.forEach(p => {
+        p.classList.toggle('active', p.getAttribute('href') === '#'+id || (id==='tots' && p.getAttribute('href')==='#tots'));
+      });
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px'});
+sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Teens · Anglès 12–17 anys · Sprint Idiomes Sant Cugat</title>
+<meta name="description" content="Anglès per a joves de 12 a 17 anys a Sant Cugat. Junior, Level 2, Level 3, Pre-First i preparació Cambridge First, Advanced i Proficiency. Sprint Idiomes des de 1974." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF5EA;--ink:#15203D;--ink-soft:#4A5878;--blue:#2547D9;--yellow:#FFB800;
+  --teens:#0EA5E9;--teens-dark:#0369A1;--teens-soft:#E0F4FE;
+  --line:rgba(21,32,61,.1);--line-strong:rgba(21,32,61,.2);
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Nunito",ui-sans-serif,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:#fff;color:var(--ink);line-height:1.55;font-size:16px;overflow-x:hidden;font-weight:500}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* SUBNAV */
+.subnav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:78px;z-index:90}
+.subnav-inner{max-width:1320px;margin:0 auto;padding:0 32px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav-link{display:inline-flex;align-items:center;gap:7px;padding:13px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4A5878;border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:color .2s,border-color .2s;text-decoration:none}
+.subnav-link:hover{color:var(--ink)}
+.subnav-link.active{color:var(--ink);border-bottom-color:var(--yellow)}
+.subnav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+@media(max-width:960px){.subnav-inner{padding:0 16px}}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#F0F9FF 0%,#E8F5FF 50%,#fff 100%);
+  border-bottom:1px solid var(--line);
+  padding:72px 40px 64px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'Teens';position:absolute;right:40px;top:50%;transform:translateY(-50%);
+  font-family:var(--font-display);font-size:clamp(100px,17vw,220px);
+  font-weight:900;letter-spacing:-0.06em;color:rgba(14,165,233,.07);
+  pointer-events:none;user-select:none;line-height:1;
+}
+.hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1}
+.breadcrumb{font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:24px;display:flex;align-items:center;gap:8px}
+.breadcrumb a{color:var(--ink-soft);transition:color .2s}.breadcrumb a:hover{color:var(--blue)}
+.breadcrumb span{opacity:.4}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teens);margin-bottom:16px}
+.eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--teens)}
+h1{font-family:var(--font-display);font-size:clamp(40px,5.5vw,72px);font-weight:800;letter-spacing:-0.04em;line-height:1.06;color:var(--ink);margin-bottom:16px}
+h1 em{font-style:normal;color:var(--teens)}
+.hero-sub{font-size:17px;color:var(--ink-soft);line-height:1.65;max-width:540px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn-teens{display:inline-flex;align-items:center;gap:10px;background:var(--teens);color:#fff;font-family:var(--font-body);font-size:15px;font-weight:800;border-radius:10px;padding:14px 26px;transition:transform .15s,box-shadow .2s;box-shadow:0 4px 20px rgba(14,165,233,.3)}
+.btn-teens:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(14,165,233,.45)}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--ink);font-family:var(--font-body);font-size:15px;font-weight:700;border-radius:10px;padding:14px 26px;border:1.5px solid var(--line-strong);transition:border-color .2s,background .2s}
+.btn-outline:hover{border-color:var(--ink);background:var(--cream)}
+.hero-stats{display:flex;gap:32px;margin-top:40px;flex-wrap:wrap}
+.hero-stat{border-left:3px solid var(--teens);padding-left:16px}
+.hero-stat-num{font-family:var(--font-display);font-size:28px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);line-height:1}
+.hero-stat-label{font-size:13px;color:var(--ink-soft);margin-top:3px;font-weight:600}
+
+/* SECTIONS */
+.section{padding:80px 40px;border-bottom:1px solid var(--line)}
+.section-inner{max-width:1180px;margin:0 auto}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.section-label-dot{width:8px;height:8px;border-radius:50%}
+.section h2{font-family:var(--font-display);font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-0.04em;line-height:1.08;color:var(--ink);margin-bottom:12px}
+.section-lead{font-size:16px;color:var(--ink-soft);line-height:1.65;max-width:560px;margin-bottom:48px}
+
+/* NIVELLS GRID */
+.nivells-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:32px}
+.nivel-card{border-radius:18px;padding:26px;border:1.5px solid var(--line);background:#fff;position:relative;overflow:hidden;transition:border-color .2s,transform .2s,box-shadow .2s}
+.nivel-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--teens);border-radius:18px 18px 0 0}
+.nivel-card:hover{border-color:var(--teens);transform:translateY(-3px);box-shadow:0 12px 32px rgba(14,165,233,.1)}
+.nc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.nc-cefr{font-size:12px;font-weight:800;background:var(--teens-soft);color:var(--teens-dark);border-radius:6px;padding:4px 10px}
+.nc-age{font-size:12px;font-weight:700;color:var(--ink-soft);background:var(--cream);border-radius:6px;padding:4px 10px}
+.nc-name{font-family:var(--font-display);font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink)}
+.nc-desc{font-size:13px;color:var(--ink-soft);line-height:1.55;margin-bottom:14px}
+.nc-pills{display:flex;flex-wrap:wrap;gap:6px}
+.nc-pills span{font-size:11px;font-weight:700;padding:3px 9px;border-radius:5px;background:var(--teens-soft);color:var(--teens-dark);border:1px solid rgba(14,165,233,.2)}
+
+/* CAMBRIDGE */
+.cambridge-section{background:var(--cream)}
+.cambridge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
+.camb-card{background:#fff;border-radius:18px;padding:28px;border:1.5px solid var(--line);position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
+.camb-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px}
+.camb-fcae::after{background:linear-gradient(90deg,#9B72CF,#7C3AED)}
+.camb-cae::after{background:linear-gradient(90deg,#2547D9,#1D4ED8)}
+.camb-cpe::after{background:linear-gradient(90deg,#15203D,#374151)}
+.camb-card:hover{transform:translateY(-3px);border-color:rgba(21,32,61,.25)}
+.camb-level{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;border-radius:6px;padding:5px 12px}
+.camb-name{font-family:var(--font-display);font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:4px}
+.camb-fullname{font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:12px}
+.camb-desc{font-size:13px;color:var(--ink-soft);line-height:1.6;margin-bottom:16px}
+.camb-pill{display:inline-flex;font-size:11px;font-weight:800;padding:4px 10px;border-radius:6px}
+
+/* METODOLOGIA */
+.metodo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.metodo-card{padding:24px;border-radius:16px;border:1.5px solid var(--line);background:#fff}
+.metodo-num{font-family:var(--font-display);font-size:36px;font-weight:900;letter-spacing:-0.04em;color:rgba(14,165,233,.2);line-height:1;margin-bottom:12px}
+.metodo-title{font-weight:800;font-size:15px;margin-bottom:6px}
+.metodo-text{font-size:13px;color:var(--ink-soft);line-height:1.55}
+
+/* HORARIS */
+.horaris-wrap{background:var(--ink);border-radius:24px;padding:48px;color:#fff}
+.horaris-title{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:6px}
+.horaris-sub{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:32px}
+.horaris-table{width:100%;border-collapse:collapse}
+.horaris-table th{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);padding:0 16px 14px;text-align:left}
+.horaris-table th:first-child{padding-left:0}
+.horaris-table td{padding:14px 16px;font-size:14px;font-weight:600;color:rgba(255,255,255,.85);border-top:1px solid rgba(255,255,255,.08);vertical-align:middle}
+.horaris-table td:first-child{padding-left:0}
+.nivel-name{font-weight:800;color:#fff;font-size:14px}
+.hora-pill{display:inline-flex;align-items:center;background:rgba(255,255,255,.08);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:700;white-space:nowrap}
+.horaris-note{margin-top:20px;font-size:13px;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:8px}
+.horaris-cta{margin-top:24px;display:flex;gap:14px;flex-wrap:wrap}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-family:var(--font-body);font-size:14px;font-weight:800;border-radius:10px;padding:13px 24px;transition:transform .15s,box-shadow .2s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.btn-ghost-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.6);font-family:var(--font-body);font-size:14px;font-weight:700;border-radius:10px;padding:13px 24px;border:1px solid rgba(255,255,255,.18);transition:border-color .2s,color .2s}
+.btn-ghost-white:hover{border-color:rgba(255,255,255,.55);color:#fff}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--teens) 0%,#2547D9 100%);padding:72px 40px;text-align:center}
+.cta-band-inner{max-width:580px;margin:0 auto}
+.cta-band h2{font-family:var(--font-display);font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-0.04em;color:#fff;margin-bottom:12px}
+.cta-band p{font-size:16px;color:rgba(255,255,255,.8);line-height:1.6;margin-bottom:32px}
+.cta-band-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
+.footer-inner{max-width:1320px;margin:0 auto}
+.footer-huge{font-family:var(--font-display);font-size:clamp(48px,9vw,120px);font-weight:800;letter-spacing:-0.05em;line-height:1;color:rgba(255,246,228,.06);margin-bottom:40px;user-select:none}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:48px}
+.footer-col h6{font-family:var(--font-display);font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--cream);margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:9px;font-size:14.5px;font-weight:600}
+.footer-col ul li a{color:rgba(255,246,228,.7)}
+.footer-col ul li a:hover{color:var(--yellow)}
+.footer-col ul li:not(:has(a)){color:rgba(255,246,228,.45)}
+.footer-col p{font-size:14.5px;color:rgba(255,246,228,.65);line-height:1.55}
+.footer-socials{display:flex;gap:10px;margin-top:14px}
+.footer-socials a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s}
+.footer-socials a:hover{background:var(--blue);transform:translateY(-2px)}
+.footer-bottom{border-top:1px solid rgba(255,246,228,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,246,228,.35);font-weight:600;flex-wrap:wrap;gap:12px}
+
+@media(max-width:960px){
+  .hero{padding:48px 22px 40px}
+  .section{padding:56px 22px}
+  .nivells-grid{grid-template-columns:1fr}
+  .cambridge-grid{grid-template-columns:1fr}
+  .metodo-grid{grid-template-columns:1fr 1fr}
+  .horaris-wrap{padding:32px 22px;border-radius:16px}
+  .footer-cols{grid-template-columns:1fr 1fr;gap:28px}
+  .cta-band{padding:56px 22px}
+}
+@media(max-width:540px){
+  .metodo-grid{grid-template-columns:1fr}
+  .footer-cols{grid-template-columns:1fr}
+  .horaris-table th:nth-child(3),.horaris-table td:nth-child(3){display:none}
+}
+</style>
+</head>
+<body>
+<script src="nav.js"></script>
+
+<!-- SUBNAV -->
+<div class="subnav">
+  <div class="subnav-inner">
+    <a class="subnav-link" href="kids-planet.html"><span class="subnav-dot" style="background:#FF80AB"></span>Kids Planet</a>
+    <a class="subnav-link" href="kids.html"><span class="subnav-dot" style="background:#FF6B35"></span>Kids 7–12</a>
+    <a class="subnav-link active" href="teens.html"><span class="subnav-dot" style="background:#0EA5E9"></span>Teens</a>
+    <a class="subnav-link" href="cursos.html#cambridge"><span class="subnav-dot" style="background:#9B72CF"></span>Cambridge</a>
+    <a class="subnav-link" href="cursos.html#adults"><span class="subnav-dot" style="background:#5CBA6A"></span>Adults</a>
+    <a class="subnav-link" href="cursos.html#business"><span class="subnav-dot" style="background:#8B1A4A"></span>Business</a>
+    <a class="subnav-link" href="cursos.html#frances"><span class="subnav-dot" style="background:#2547D9"></span>Français</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span>
+      <a href="cursos.html">Cursos</a><span>›</span>
+      <span style="color:var(--ink);font-weight:700">Teens</span>
+    </div>
+    <div class="eyebrow"><span class="eyebrow-dot"></span>12 – 17 anys</div>
+    <h1>L'anglès que<br>els obre <em>portes</em>.</h1>
+    <p class="hero-sub">Quatre nivells progressius dissenyats per a joves. Professors que els entenen, mètode que els motiva i preparació per als exàmens Cambridge que el món reconeix.</p>
+    <div class="hero-ctas">
+      <a href="#contacte" class="btn-teens">Prova una classe gratis →</a>
+      <a href="#horaris" class="btn-outline">Veure horaris</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">4</div><div class="hero-stat-label">nivells progressius</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">Màx. 12</div><div class="hero-stat-label">alumnes per grup</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">Cambridge</div><div class="hero-stat-label">oficial des de 1992</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">Des de 1974</div><div class="hero-stat-label">50 anys d'experiència</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NIVELLS -->
+<section class="section" id="nivells">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--teens)"><span class="section-label-dot" style="background:var(--teens)"></span>Nivells Teens</div>
+    <h2>Quatre nivells, un <em style="color:var(--teens);font-style:normal">camí clar</em>.</h2>
+    <p class="section-lead">De Junior a Pre-First. Cada nivell construeix sobre l'anterior fins a deixar el jove llest per superar els exàmens Cambridge amb confiança.</p>
+    <div class="nivells-grid">
+
+      <div class="nivel-card">
+        <div class="nc-top"><span class="nc-cefr">A2–B1</span><span class="nc-age">12–13 anys</span></div>
+        <div class="nc-name">Junior</div>
+        <p class="nc-desc">Primer nivell Teens. Consolidació de les bases gramaticals i comunicatives. Vocabulari actiu en contextos propers als joves: vida quotidiana, aficions, tecnologia i relacions socials.</p>
+        <div class="nc-pills"><span>A2–B1</span><span>90 min</span><span>Màx. 12</span></div>
+      </div>
+
+      <div class="nivel-card">
+        <div class="nc-top"><span class="nc-cefr">B1</span><span class="nc-age">13–14 anys</span></div>
+        <div class="nc-name">Level 2</div>
+        <p class="nc-desc">Consolidació B1. Comprensió lectora i expressió oral en situacions reals. Gramàtica en context, redacció guiada i conversa activa sobre temes d'actualitat.</p>
+        <div class="nc-pills"><span>B1</span><span>90 min</span><span>Màx. 12</span></div>
+      </div>
+
+      <div class="nivel-card">
+        <div class="nc-top"><span class="nc-cefr">B1–B2</span><span class="nc-age">14–15 anys</span></div>
+        <div class="nc-name">Level 3</div>
+        <p class="nc-desc">Transició cap al B2. Textos més llargs i complexos, producció escrita autònoma i debat oral. Inici de la preparació per al Cambridge B2 First.</p>
+        <div class="nc-pills"><span>B1–B2</span><span>90 min</span><span>B2 First prep</span><span>Màx. 12</span></div>
+      </div>
+
+      <div class="nivel-card">
+        <div class="nc-top"><span class="nc-cefr">B2</span><span class="nc-age">15–17 anys</span></div>
+        <div class="nc-name">Pre-First</div>
+        <p class="nc-desc">Preparació intensiva per al Cambridge B2 First Certificate. Totes les competències de l'examen: Reading, Writing, Listening, Speaking i Use of English.</p>
+        <div class="nc-pills"><span>B2</span><span>90–120 min</span><span>FCE prep</span><span>Màx. 12</span></div>
+      </div>
+
+    </div>
+    <p style="font-size:14px;color:var(--ink-soft);text-align:center">
+      Superats els Teens, el pas natural és la <a href="cursos.html#cambridge" style="color:var(--blue);font-weight:700;text-decoration:underline">preparació Cambridge oficial →</a>
+    </p>
+  </div>
+</section>
+
+<!-- CAMBRIDGE -->
+<section class="section cambridge-section" id="cambridge">
+  <div class="section-inner">
+    <div class="section-label" style="color:#7C3AED"><span class="section-label-dot" style="background:#7C3AED"></span>Cambridge English</div>
+    <h2>Certificats que el <em style="color:#7C3AED;font-style:normal">món reconeix</em>.</h2>
+    <p class="section-lead">Sprint Idiomes és centre examinador oficial Cambridge des de 1992. Preparació integrada en el curs o en grups específics d'examen.</p>
+    <div class="cambridge-grid">
+
+      <div class="camb-card camb-fcae">
+        <span class="camb-level" style="background:rgba(124,58,237,.1);color:#7C3AED">B2</span>
+        <div class="camb-name">First (FCE)</div>
+        <div class="camb-fullname">Cambridge B2 First Certificate</div>
+        <p class="camb-desc">El certificat B2 és el nivell d'entrada a la universitat i al mercat laboral internacional. Acreditat per milers d'empreses i universitats de tot el món. Sense data de caducitat.</p>
+        <span class="camb-pill" style="background:rgba(124,58,237,.1);color:#7C3AED">Sense caducitat</span>
+      </div>
+
+      <div class="camb-card camb-cae">
+        <span class="camb-level" style="background:rgba(37,71,217,.1);color:#2547D9">C1</span>
+        <div class="camb-name">Advanced (CAE)</div>
+        <div class="camb-fullname">Cambridge C1 Advanced</div>
+        <p class="camb-desc">El C1 és el nivell que exigeixen les millors universitats i empreses multinacionals. Demostra un domini avançat de l'anglès en entorns professionals i acadèmics exigents.</p>
+        <span class="camb-pill" style="background:rgba(37,71,217,.1);color:#2547D9">Sense caducitat</span>
+      </div>
+
+      <div class="camb-card camb-cpe">
+        <span class="camb-level" style="background:rgba(21,32,61,.08);color:#15203D">C2</span>
+        <div class="camb-name">Proficiency (CPE)</div>
+        <div class="camb-fullname">Cambridge C2 Proficiency</div>
+        <p class="camb-desc">El nivell màxim Cambridge. Equivalent a un parlant nadiu. Obert per a joves excepcionalment avançats i adults que volen el reconeixement més alt possible.</p>
+        <span class="camb-pill" style="background:rgba(21,32,61,.08);color:#15203D">Nivell màxim</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- METODOLOGIA -->
+<section class="section" id="metode">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--teens)"><span class="section-label-dot" style="background:var(--teens)"></span>El nostre mètode</div>
+    <h2>Motivació que <em style="color:var(--teens);font-style:normal">no s'apaga</em>.</h2>
+    <p class="section-lead">Els adolescents aprenen diferent. El nostre mètode ho sap i dissenya cada classe per mantenir-los actius, involucrats i amb ganes de tornar.</p>
+    <div class="metodo-grid">
+      <div class="metodo-card">
+        <div class="metodo-num">01</div>
+        <div class="metodo-title">Professors especialitzats en joves</div>
+        <p class="metodo-text">No tots els professors de adults serveixen per a teenagers. Els nostres estan formats específicament per mantenir l'atenció i la motivació dels 12 als 17 anys.</p>
+      </div>
+      <div class="metodo-card">
+        <div class="metodo-num">02</div>
+        <div class="metodo-title">Temes que els interessen</div>
+        <p class="metodo-text">Xarxes socials, música, cinema, esports, videojocs i debats d'actualitat. L'anglès entra quan el tema importa. No hi ha excuses per no participar.</p>
+      </div>
+      <div class="metodo-card">
+        <div class="metodo-num">03</div>
+        <div class="metodo-title">Grups reduïts i estables</div>
+        <p class="metodo-text">Màxim 12 alumnes. Els mateixos companys any rere any creen un ambient de confiança on s'atreveixen a parlar sense por a equivocar-se.</p>
+      </div>
+      <div class="metodo-card">
+        <div class="metodo-num">04</div>
+        <div class="metodo-title">Preparació d'exàmens integrada</div>
+        <p class="metodo-text">El Cambridge no és un plus: és part del camí. La preparació s'integra al curs regular des del primer dia, sense classes extra ni estrès de darrera hora.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HORARIS -->
+<section class="section" id="horaris" style="background:var(--cream)">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--teens)"><span class="section-label-dot" style="background:var(--teens)"></span>Horaris</div>
+    <h2>Horaris.</h2>
+    <p class="section-lead">De dilluns a divendres, a la tarda. C/ Francesc Moragas 4 i 8, Sant Cugat del Vallès.</p>
+    <div class="horaris-wrap">
+      <div class="horaris-title">Teens · Horaris setmanals</div>
+      <div class="horaris-sub">Dl–Dv · Francesc Moragas 4 i 8, Sant Cugat</div>
+      <table class="horaris-table">
+        <thead>
+          <tr><th>Nivell</th><th>Dl / Dc</th><th>Dt / Dj</th><th>Divendres</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="nivel-name">Junior</span><br><span style="font-size:12px;opacity:.5">12–13 anys · A2–B1</span></td>
+            <td><span class="hora-pill">16:30–18:00</span></td>
+            <td><span class="hora-pill">16:15–17:45</span></td>
+            <td><span class="hora-pill">16:00–17:30</span></td>
+          </tr>
+          <tr>
+            <td><span class="nivel-name">Level 2</span><br><span style="font-size:12px;opacity:.5">13–14 anys · B1</span></td>
+            <td><span class="hora-pill">17:30–19:00</span></td>
+            <td><span class="hora-pill">17:15–18:45</span></td>
+            <td><span class="hora-pill">17:00–18:30</span></td>
+          </tr>
+          <tr>
+            <td><span class="nivel-name">Level 3</span><br><span style="font-size:12px;opacity:.5">14–15 anys · B1–B2</span></td>
+            <td><span class="hora-pill">18:00–19:30</span></td>
+            <td><span class="hora-pill">18:15–19:45</span></td>
+            <td><span class="hora-pill">17:30–19:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="nivel-name">Pre-First</span><br><span style="font-size:12px;opacity:.5">15–17 anys · B2</span></td>
+            <td><span class="hora-pill">18:30–20:00</span></td>
+            <td><span class="hora-pill">18:30–20:00</span></td>
+            <td><span class="hora-pill">18:00–19:30</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="horaris-note">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/><path d="M7 5v3M7 9.5v.5" stroke="rgba(255,255,255,.35)" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Els horaris poden variar. Contacta'ns per confirmar disponibilitat i nivell adequat per al teu fill.
+      </p>
+      <div class="horaris-cta">
+        <a href="#contacte" class="btn-white">Reserva la teva plaça →</a>
+        <a href="tel:+34935892264" class="btn-ghost-white">93 589 22 64</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="contacte">
+  <div class="cta-band-inner">
+    <h2>Descobreix el seu nivell, sense cost.</h2>
+    <p>Test de nivell gratuït online i primera classe sense compromís. En 48h saps a quin grup encaixa millor el teu fill.</p>
+    <div class="cta-band-btns">
+      <a href="index.html#contacte" class="btn-white">Prova una classe gratis →</a>
+      <a href="tel:+34935892264" class="btn-ghost-white">93 589 22 64</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-huge">Teens.</div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h6>Sprint Idiomes</h6>
+        <p>Escola d'anglès i de francès a Sant Cugat des de 1974. Cambridge oficial des de 1992.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/sprintidiomes" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="#FFF6E4"/></svg></a>
+          <a href="https://www.facebook.com/EscolaSprintIdiomes" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 4h-2.5C10 4 9 5.5 9 8v2H6.5v3H9v8h3v-8h2.5l.5-3H12V8c0-.7.3-1 1-1h2V4z" fill="#FFF6E4"/></svg></a>
+          <a href="https://wa.me/34935892264" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.5-4.5A8 8 0 1 1 9 19.5L4 20z" stroke="#FFF6E4" stroke-width="1.8" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h6>Teens</h6>
+        <ul>
+          <li><a href="#nivells">Junior (12–13 anys)</a></li>
+          <li><a href="#nivells">Level 2 (13–14 anys)</a></li>
+          <li><a href="#nivells">Level 3 (14–15 anys)</a></li>
+          <li><a href="#nivells">Pre-First (15–17 anys)</a></li>
+          <li><a href="#cambridge">Cambridge FCE · CAE · CPE</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Altres cursos</h6>
+        <ul>
+          <li><a href="kids-planet.html">Kids Planet (3–6 anys)</a></li>
+          <li><a href="kids.html">Kids (7–12 anys)</a></li>
+          <li><a href="cursos.html#adults">Adults (18+)</a></li>
+          <li><a href="cursos.html#frances">L'École de Français</a></li>
+          <li><a href="cursos.html#business">BLA Business</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Contacte</h6>
+        <ul>
+          <li>C/ Francesc Moragas 4 i 8</li>
+          <li>08172 Sant Cugat del Vallès</li>
+          <li><a href="tel:+34935892264">93 589 22 64</a></li>
+          <li><a href="mailto:info@sprintidiomes.com">info@sprintidiomes.com</a></li>
+          <li>L–V · 9h–21h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 1974–2026 Sprint Idiomes · Sant Cugat del Vallès</span>
+      <span>Avís legal · Privacitat · Cookies</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
