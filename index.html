@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Sprint Idiomes · Escola d'anglès i de francès a Sant Cugat des de 1974</title>
+<title>Sprint Idiomes · Escola d'anglès i de francès a Sant Cugat des de 1973</title>
 <meta name="description" content="Anglès i francès per a nens, joves, adults i empreses a Sant Cugat. Kids, Teens, Adults, Cambridge, IELTS, DELF/DALF i BLA Business. 50 anys formant idiomes." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +32,7 @@
 html{scroll-behavior:smooth}
 body{
   font-family:var(--font-body);
-  background:var(--cream);
+  background:#ffffff;
   color:var(--ink);
   line-height:1.55;
   font-size:16px;
@@ -44,25 +44,17 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
 /* ---------- BG DECORATION ---------- */
-.bg-shapes{
-  position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;
-}
-.bg-shapes .blob{
-  position:absolute;border-radius:50%;filter:blur(40px);opacity:.4;
-}
-.bg-shapes .b1{width:420px;height:420px;background:var(--yellow);opacity:.22;top:-150px;left:-120px}
-.bg-shapes .b2{width:360px;height:360px;background:var(--blue);opacity:.12;top:35%;right:-140px}
-.bg-shapes .b3{width:300px;height:300px;background:var(--cream-2);opacity:.6;bottom:20%;left:-80px}
+.bg-shapes{display:none}
 
 main, nav, footer{position:relative;z-index:1}
 
 /* ---------- NAV ---------- */
 .nav{
-  position:sticky;top:0;z-index:100;
-  background:rgba(255,246,228,.88);
+  position:sticky;top:0;z-index:200;
+  background:rgba(255,255,255,.95);
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
-  border-bottom:2px dashed rgba(31,27,58,.12);
+  border-bottom:1px solid var(--line);
 }
 .nav-inner{
   max-width:1320px;margin:0 auto;
@@ -129,6 +121,24 @@ main, nav, footer{position:relative;z-index:1}
 .btn-primary:active{transform:translateY(0);box-shadow:0 3px 10px rgba(37,71,217,.18)}
 .btn-yellow{background:var(--yellow);color:var(--ink);box-shadow:0 6px 18px rgba(255,184,0,.25)}
 .btn-yellow:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,184,0,.35)}
+.btn-nivel{
+  background:var(--yellow);color:var(--ink);
+  font-weight:700;
+  box-shadow:0 4px 16px rgba(255,184,0,.3);
+  position:relative;
+}
+.btn-nivel::before{
+  content:'';
+  display:inline-block;
+  width:7px;height:7px;
+  border-radius:50%;
+  background:var(--ink);
+  opacity:.55;
+  flex-shrink:0;
+  animation:nivel-pulse 2s ease-in-out infinite;
+}
+@keyframes nivel-pulse{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+.btn-nivel:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,184,0,.45)}
 .btn .arrow{width:16px;height:16px;transition:transform .25s}
 .btn:hover .arrow{transform:translateX(4px)}
 .btn-lang{
@@ -137,6 +147,166 @@ main, nav, footer{position:relative;z-index:1}
   font-weight:600;letter-spacing:.04em;background:transparent;
 }
 .btn-lang:hover{border-color:var(--ink);color:var(--ink)}
+
+/* ---------- PORTADA CAMPANYA ---------- */
+/* CANVIA LA IMATGE AQUÍ ↓ — substitueix la URL cada 3 mesos */
+.portada-img{
+  background-image:url(''); /* ← POSA AQUÍ LA URL DE LA IMATGE */
+  background-size:cover;
+  background-position:center top;
+  position:absolute;inset:0;
+  z-index:0;
+}
+.portada{
+  position:relative;
+  height:95vh;
+  min-height:580px;
+  max-height:980px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  /* Placeholder quan no hi ha imatge: gradient de marca amb profunditat */
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 30%, rgba(37,71,217,.25) 0%, transparent 70%),
+    linear-gradient(160deg, #060F36 0%, #0D1A55 45%, #111E60 100%);
+}
+/* Filigrana "1974" de fons — dona profunditat sense imatge */
+.portada-deco{
+  position:absolute;
+  right:-20px;top:50%;
+  transform:translateY(-55%);
+  font-family:var(--font-display);
+  font-size:clamp(180px,28vw,400px);
+  font-weight:900;letter-spacing:-0.05em;line-height:1;
+  color:rgba(255,255,255,.035);
+  user-select:none;pointer-events:none;
+  z-index:1;
+}
+.portada-overlay{
+  position:absolute;inset:0;z-index:2;
+  background:
+    linear-gradient(to top, rgba(6,15,54,.97) 0%, rgba(6,15,54,.65) 40%, rgba(6,15,54,.08) 80%, transparent 100%),
+    linear-gradient(to right, rgba(6,15,54,.35) 0%, transparent 55%);
+  pointer-events:none;
+}
+.portada-content{
+  position:relative;z-index:3;
+  width:100%;max-width:1180px;
+  margin:0 auto;
+  padding:0 40px 72px;
+}
+/* Línia accent vertical groga */
+.portada-content::before{
+  content:'';
+  display:block;
+  width:3px;height:56px;
+  background:linear-gradient(to bottom, transparent, var(--yellow));
+  border-radius:2px;
+  margin-bottom:20px;
+}
+.portada-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,184,0,.1);
+  border:1px solid rgba(255,184,0,.35);
+  color:#FFD54F;
+  font-family:var(--font-body);
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  border-radius:99px;padding:5px 14px;
+  margin-bottom:18px;
+  backdrop-filter:blur(6px);
+}
+.portada-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:#FFD54F;
+  animation:pd-pulse 2s ease-in-out infinite;
+  flex-shrink:0;
+}
+@keyframes pd-pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.portada-title{
+  font-family:var(--font-display);
+  font-size:clamp(52px,8vw,110px);
+  font-weight:900;letter-spacing:-0.05em;line-height:0.97;
+  color:#fff;
+  margin:0 0 22px;
+  max-width:700px;
+}
+.portada-sub{
+  font-family:var(--font-body);
+  font-size:13px;font-weight:600;
+  color:rgba(255,255,255,.45);
+  letter-spacing:.08em;text-transform:uppercase;
+  margin:0 0 36px;
+}
+/* Grup CTA: botó primari + link secundari */
+.portada-cta-group{
+  display:flex;align-items:center;gap:22px;
+  flex-wrap:wrap;
+  margin-bottom:28px;
+}
+.portada-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--yellow);color:var(--ink);
+  font-family:var(--font-body);font-size:15px;font-weight:800;
+  border-radius:10px;padding:15px 28px;
+  text-decoration:none;
+  transition:background .2s,transform .15s,box-shadow .2s;
+  box-shadow:0 4px 24px rgba(255,184,0,.3);
+  white-space:nowrap;
+}
+.portada-cta span{display:inline-block;transition:transform .2s}
+.portada-cta:hover{background:#FFD000;transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,184,0,.45)}
+.portada-cta:hover span{transform:translateX(4px)}
+.portada-cta-sec{
+  font-family:var(--font-body);font-size:14px;font-weight:600;
+  color:rgba(255,255,255,.55);
+  text-decoration:none;
+  display:inline-flex;align-items:center;gap:6px;
+  transition:color .2s;
+  white-space:nowrap;
+}
+.portada-cta-sec:hover{color:rgba(255,255,255,.9)}
+/* Tira de confiança sota el CTA */
+.portada-trust{
+  display:flex;align-items:center;
+  flex-wrap:wrap;gap:0;
+}
+.portada-trust-item{
+  font-family:var(--font-body);
+  font-size:12px;
+  color:rgba(255,255,255,.4);
+  display:flex;align-items:center;gap:5px;
+  line-height:1;
+}
+.portada-trust-item strong{color:rgba(255,255,255,.7);font-weight:700}
+.portada-trust-sep{
+  width:1px;height:14px;
+  background:rgba(255,255,255,.12);
+  margin:0 14px;
+}
+/* Indicador de scroll */
+.portada-scroll{
+  position:absolute;
+  bottom:24px;left:50%;
+  transform:translateX(-50%);
+  z-index:4;
+  display:flex;flex-direction:column;align-items:center;gap:5px;
+  animation:pd-scroll 2.4s ease-in-out infinite;
+  cursor:pointer;
+}
+.portada-scroll-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:rgba(255,255,255,.5);
+}
+.portada-scroll svg{
+  width:18px;height:18px;
+  stroke:rgba(255,255,255,.35);
+  display:block;
+}
+@keyframes pd-scroll{
+  0%,100%{transform:translateX(-50%) translateY(0);opacity:.6}
+  50%{transform:translateX(-50%) translateY(6px);opacity:.9}
+}
 
 /* ---------- HERO ---------- */
 .hero{
@@ -212,7 +382,7 @@ main, nav, footer{position:relative;z-index:1}
 .hero-actions .btn{font-size:16px;padding:16px 26px}
 .hero-meta-row{
   display:flex;gap:36px;flex-wrap:wrap;
-  padding-top:28px;border-top:2px dashed var(--line);
+  padding-top:28px;border-top:1px solid var(--line);
 }
 .meta-stat .n{
   font-family:var(--font-display);
@@ -271,15 +441,16 @@ main, nav, footer{position:relative;z-index:1}
 .floater .emoji{font-size:10px;color:var(--blue)}
 
 /* ---------- SECTION ---------- */
-section{padding:90px 32px;max-width:1320px;margin:0 auto;position:relative}
+section{padding:80px 32px;max-width:1320px;margin:0 auto;position:relative}
 .eyebrow{
-  font-family:var(--font-hand);
-  font-size:26px;
+  font-family:var(--font-body);
+  font-size:12px;
   color:var(--blue);
   font-weight:700;
-  display:inline-block;
-  transform:rotate(-2deg);
-  margin-bottom:8px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:8px;
+  margin-bottom:14px;
 }
 .section-title{
   font-family:var(--font-display);
@@ -308,13 +479,13 @@ section{padding:90px 32px;max-width:1320px;margin:0 auto;position:relative}
 .section-lead{font-size:18px;color:var(--ink-soft);max-width:580px;line-height:1.55}
 .section-head{
   display:flex;justify-content:space-between;align-items:flex-end;
-  gap:40px;margin-bottom:56px;flex-wrap:wrap;
+  gap:40px;margin-bottom:44px;flex-wrap:wrap;
 }
 
 /* ---------- AUDIENCE BUBBLES ---------- */
 .audience{
   display:grid;
-  grid-template-columns:repeat(6,1fr);
+  grid-template-columns:repeat(5,1fr);
   gap:18px;
   margin-top:32px;
 }
@@ -322,31 +493,28 @@ section{padding:90px 32px;max-width:1320px;margin:0 auto;position:relative}
   position:relative;
   aspect-ratio:1/1;
   border-radius:50%;
-  background:#fff;
-  border:1px solid var(--line);
+  background:#FFE566;
+  border:none;
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
   text-align:center;padding:18px 10px;
-  box-shadow:0 6px 18px rgba(21,32,61,.05);
-  transition:all .3s ease;
+  box-shadow:0 8px 24px rgba(21,32,61,.13);
+  transition:transform .3s ease, box-shadow .3s ease;
   cursor:pointer;
   overflow:hidden;
 }
 .bubble::before{
   content:"";position:absolute;
-  inset:auto -30% -50% -30%;
-  height:70%;
-  background:var(--cream-2);
+  inset:0;
+  background:radial-gradient(circle at 35% 30%, rgba(255,255,255,.45) 0%, transparent 65%);
   border-radius:50%;
-  transition:transform .4s ease;
   z-index:0;
+  pointer-events:none;
 }
 .bubble:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 40px rgba(21,32,61,.12);
-  border-color:var(--ink);
+  transform:translateY(-10px) scale(1.04);
+  box-shadow:0 28px 52px rgba(21,32,61,.18);
 }
-.bubble:hover::before{transform:translateY(-12px)}
 .bubble > *{position:relative;z-index:1}
 .bubble .b-age{
   font-family:var(--font-display);
@@ -385,18 +553,20 @@ section{padding:90px 32px;max-width:1320px;margin:0 auto;position:relative}
   transition:transform .25s, background .25s;
 }
 .bubble:hover .b-arrow{background:var(--blue);transform:rotate(-45deg)}
-/* per-bubble accent — keep all sober, vary via a single tint inside */
-.bubble.a1::before{background:var(--yellow-soft)}
-.bubble.a2::before{background:var(--pink)}
-.bubble.a3::before{background:var(--sky)}
-.bubble.a4::before{background:var(--mint)}
-.bubble.a5::before{background:var(--violet)}
-.bubble.a6::before{background:var(--cream-2)}
+.bubble.a1{background:#FF80AB}  /* Kids Planet — rosa */
+.bubble.a2{background:#FF6B35}  /* Kids — taronja */
+.bubble.a3{background:#4FC3F7}  /* Teens — blau cel */
+.bubble.a4{background:#5CBA6A}  /* Adults — verd */
+.bubble.a5{background:#9B72CF}  /* Cambridge — lila */
+.bubble.a6{background:#2547D9}  /* Français — blau fosc */
+.bubble.a7{background:#8B1A4A}  /* Business — bordo */
+.bubble.a8{background:#FFB800}  /* Summer — groc */
+.bubble.a9{background:#26A69A}  /* Particular — verd aigua */
+.bubble.a10{background:#E53935} /* Altres idiomes — vermell */
+.bubble .b-age,.bubble .b-name,.bubble .b-sub{color:#fff}
+.bubble .b-arrow{background:rgba(255,255,255,.3);color:#fff}
 .bubble.a6{background:var(--blue);border-color:var(--blue)}
 .bubble.a6::before{background:rgba(255,255,255,.08)}
-.bubble.a6 .b-age{color:#fff}
-.bubble.a6 .b-name{color:#fff}
-.bubble.a6 .b-sub{color:rgba(255,255,255,.75)}
 .bubble.a6 .b-arrow{background:#fff;color:var(--blue)}
 .bubble.a6:hover .b-arrow{background:var(--yellow);color:var(--ink)}
 
@@ -410,32 +580,38 @@ section{padding:90px 32px;max-width:1320px;margin:0 auto;position:relative}
   border-radius:20px;padding:28px;
   box-shadow:0 4px 14px rgba(21,32,61,.04);
   transition:transform .25s, box-shadow .25s, border-color .25s;
+  border-top:3px solid transparent;
 }
-.why-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(21,32,61,.08);border-color:var(--line-strong)}
+.why-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(21,32,61,.09);border-color:var(--line-strong)}
+.why-card.w1{border-top-color:#FFB800}
+.why-card.w2{border-top-color:var(--blue)}
+.why-card.w3{border-top-color:#4FC3F7}
+.why-card.w4{border-top-color:#9B72CF}
 .why-card .icon{
-  width:48px;height:48px;border-radius:12px;
+  width:52px;height:52px;border-radius:14px;
   display:grid;place-items:center;
   background:var(--cream-2);
   color:var(--blue);
-  margin-bottom:20px;
-  font-size:22px;
+  margin-bottom:22px;
+  font-size:24px;
 }
-.why-card.w1 .icon{background:var(--yellow-soft);color:var(--ink)}
-.why-card.w2 .icon{background:var(--cream-2);color:var(--blue)}
-.why-card.w3 .icon{background:var(--sky);color:var(--ink)}
-.why-card.w4 .icon{background:var(--blue);color:#fff}
+.why-card.w1 .icon{background:#FFF3CC;color:#B8860B}
+.why-card.w2 .icon{background:#EEF1FF;color:var(--blue)}
+.why-card.w3 .icon{background:#E0F5FF;color:#1880A8}
+.why-card.w4 .icon{background:#F0EBFF;color:#6B3FAA}
+.why-card:hover .icon{transform:scale(1.05);transition:transform .25s}
 .why-card h4{
   font-family:var(--font-display);
-  font-weight:700;font-size:22px;line-height:1.1;
-  letter-spacing:-0.02em;margin-bottom:8px;
+  font-weight:700;font-size:21px;line-height:1.1;
+  letter-spacing:-0.02em;margin-bottom:10px;
 }
-.why-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.5}
+.why-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.55}
 
 /* ---------- COURSES ---------- */
 .courses-grid{
   display:grid;
   grid-template-columns:repeat(12,1fr);
-  gap:18px;
+  gap:20px;
 }
 .course{
   position:relative;
@@ -461,9 +637,11 @@ section{padding:90px 32px;max-width:1320px;margin:0 auto;position:relative}
 .course .c-age{
   font-family:var(--font-display);
   font-style:italic;
-  font-size:24px;font-weight:500;color:var(--blue);
-  margin-top:10px;line-height:1;
-  letter-spacing:-0.02em;
+  font-size:17px;font-weight:600;color:var(--blue);
+  margin-top:12px;line-height:1;
+  letter-spacing:-0.01em;
+  text-transform:uppercase;
+  opacity:.85;
 }
 .course .c-title{
   font-family:var(--font-display);
@@ -475,7 +653,6 @@ section{padding:90px 32px;max-width:1320px;margin:0 auto;position:relative}
 }
 .course .c-desc{
   margin-top:14px;font-size:15px;color:var(--ink-soft);line-height:1.55;
-  max-width:320px;
 }
 .course .c-foot{
   display:flex;justify-content:space-between;align-items:flex-end;
@@ -495,36 +672,107 @@ section{padding:90px 32px;max-width:1320px;margin:0 auto;position:relative}
   transition:all .25s;
 }
 .course:hover .c-arrow{background:var(--blue);color:#fff;border-color:var(--blue);transform:rotate(-45deg)}
-.c-kids{grid-column:span 5;background:linear-gradient(180deg,#FFF8E5 0%,#fff 100%)}
-.c-teens{grid-column:span 4}
-.c-adults{grid-column:span 3}
-.c-cambridge{grid-column:span 4;background:var(--ink);color:#fff;border-color:var(--ink)}
+/* Cards — colores alineados con globos */
+.c-kids{
+  grid-column:span 4;
+  background:linear-gradient(160deg,#FFE4F0 0%,#fff 55%);
+  border-top:4px solid #FF80AB;
+}
+.c-kids .c-age{color:#FF80AB}
+.c-kids .c-pills span{background:#FFE4F0;color:#C4507A}
+.c-kids:hover .c-arrow{background:#FF80AB;border-color:#FF80AB;color:#fff}
+
+.c-teens{
+  grid-column:span 4;
+  background:linear-gradient(160deg,#FFE8DE 0%,#fff 55%);
+  border-top:4px solid #FF6B35;
+}
+.c-teens .c-age{color:#FF6B35}
+.c-teens .c-pills span{background:#FFE8DE;color:#C44E1A}
+.c-teens:hover .c-arrow{background:#FF6B35;border-color:#FF6B35;color:#fff}
+
+.c-adults{
+  grid-column:span 4;
+  background:linear-gradient(160deg,#DDF4FF 0%,#fff 55%);
+  border-top:4px solid #4FC3F7;
+}
+.c-adults .c-age{color:#2AABE0}
+.c-adults .c-pills span{background:#DDF4FF;color:#1880A8}
+.c-adults:hover .c-arrow{background:#4FC3F7;border-color:#4FC3F7;color:#fff}
+
+.c-cambridge{
+  grid-column:span 4;
+  background:linear-gradient(135deg,#6B3FAA 0%,#3D2080 100%);
+  color:#fff;border-color:transparent;
+}
 .c-cambridge .c-tag{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.18)}
 .c-cambridge .c-desc{color:rgba(255,255,255,.72)}
 .c-cambridge .c-title{color:#fff}
-.c-cambridge .c-pills span{background:rgba(255,255,255,.1);color:rgba(255,255,255,.85)}
+.c-cambridge .c-pills span{background:rgba(212,184,255,.15);color:#D4B8FF;border:1px solid rgba(212,184,255,.2)}
 .c-cambridge .c-arrow{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff}
-.c-cambridge .c-age{color:var(--yellow)}
-.c-cambridge:hover{border-color:var(--ink);box-shadow:0 16px 36px rgba(21,32,61,.18)}
-.c-cambridge:hover .c-arrow{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
-.c-adults-main{grid-column:span 5;background:linear-gradient(180deg,#EEF3FB 0%,#fff 100%)}
-.c-business{grid-column:span 3}
-.c-french{
+.c-cambridge .c-age{color:#D4B8FF}
+.c-cambridge:hover{box-shadow:0 16px 36px rgba(107,63,170,.4)}
+.c-cambridge:hover .c-arrow{background:#D4B8FF;color:#3D2080;border-color:#D4B8FF}
+.c-cambridge .deco{color:rgba(255,255,255,.06)}
+
+.c-adults-main{
+  grid-column:span 4;
+  background:linear-gradient(160deg,#DFF3E0 0%,#fff 55%);
+  border-top:4px solid #5CBA6A;
+}
+.c-adults-main .c-age{color:#5CBA6A}
+.c-adults-main .c-pills span{background:#DFF3E0;color:#2E7D3A}
+.c-adults-main:hover .c-arrow{background:#5CBA6A;border-color:#5CBA6A;color:#fff}
+
+.c-business{
   grid-column:span 12;
-  background:linear-gradient(135deg,#15203D 0%,#1a2d5a 60%,#243580 100%);
-  color:#fff;border-color:transparent;
+  background:linear-gradient(135deg,#6B0F33 0%,#8B1A4A 60%,#5A0D28 100%);
+  color:#fff;
+  border-color:transparent;
   min-height:220px;
+  display:flex;flex-direction:row;align-items:stretch;gap:0;
+}
+.c-bla-left{flex:1;display:flex;flex-direction:column;justify-content:space-between;padding-right:40px}
+.c-bla-right{
+  display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;
+  min-width:280px;border-left:1px solid rgba(255,255,255,.12);padding-left:40px;
+}
+.c-bla-stats{display:flex;flex-direction:column;gap:24px;width:100%}
+.c-bla-stat{border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:16px}
+.c-bla-stat:last-child{border-bottom:none;padding-bottom:0}
+.c-bla-num{font-family:var(--font-display);font-size:32px;font-weight:700;color:#fff;letter-spacing:-0.03em;line-height:1}
+.c-bla-label{font-size:12px;color:rgba(255,255,255,.55);margin-top:4px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.c-bla-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  color:#fff;font-weight:700;font-size:15px;
+  padding:14px 22px;border-radius:100px;
+  text-decoration:none;transition:all .25s;margin-top:28px;
+}
+.c-bla-cta:hover{background:#FFAAC8;color:#6B0F33;border-color:#FFAAC8}
+.c-business .c-tag{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.18)}
+.c-business .c-age{color:#FFAAC8;opacity:1}
+.c-business .c-title{color:#fff}
+.c-business .c-desc{color:rgba(255,255,255,.75)}
+.c-business .c-pills span{background:rgba(255,170,200,.15);color:#FFAAC8;border:1px solid rgba(255,170,200,.25)}
+.c-business .c-arrow{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff;width:52px;height:52px;font-size:20px}
+.c-business:hover{box-shadow:0 16px 40px rgba(107,15,51,.45)}
+.c-business:hover .c-arrow{background:#FFAAC8;color:#6B0F33;border-color:#FFAAC8}
+.c-business .deco{color:rgba(255,255,255,.06)}
+.c-french{
+  grid-column:span 4;
+  background:linear-gradient(135deg,#1220A0 0%,#2547D9 65%,#1A38C4 100%);
+  color:#fff;border-color:transparent;
 }
 .c-french .c-tag{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.18)}
-.c-french .c-age{color:#FFEFA8;font-size:20px}
-.c-french .c-title{color:#fff;font-size:clamp(28px,4vw,52px)}
-.c-french .c-desc{color:rgba(255,255,255,.75);max-width:640px}
-.c-french .c-pills span{background:rgba(255,255,255,.1);color:rgba(255,255,255,.85)}
-.c-french .c-arrow{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff;width:52px;height:52px;font-size:20px}
-.c-french:hover{box-shadow:0 20px 48px rgba(21,32,61,.22);border-color:transparent}
+.c-french .c-age{color:#FFEFA8}
+.c-french .c-title{color:#fff}
+.c-french .c-desc{color:rgba(255,255,255,.78)}
+.c-french .c-pills span{background:rgba(255,255,255,.1);color:rgba(255,255,255,.9)}
+.c-french .c-arrow{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff}
+.c-french:hover{box-shadow:0 20px 48px rgba(18,32,160,.4);border-color:transparent}
 .c-french:hover .c-arrow{background:#FFEFA8;color:var(--ink);border-color:#FFEFA8}
-.c-french .deco{color:rgba(255,255,255,.04);font-size:200px}
-.c-french .c-foot{margin-top:auto}
+.c-french .deco{color:rgba(255,255,255,.055);font-size:160px}
 .c-french-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:20px}
 .c-french-pill{
   background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
@@ -537,14 +785,15 @@ section{padding:90px 32px;max-width:1320px;margin:0 auto;position:relative}
 .course .deco{
   position:absolute;
   font-family:var(--font-display);
-  font-weight:600;
+  font-weight:700;
   font-size:160px;
   letter-spacing:-0.05em;
-  color:rgba(21,32,61,.04);
-  bottom:-55px;right:-15px;
+  color:rgba(21,32,61,.055);
+  bottom:-50px;right:-10px;
   pointer-events:none;
   line-height:1;
   font-style:italic;
+  user-select:none;
 }
 .c-cambridge .deco{color:rgba(255,255,255,.05)}
 
@@ -906,13 +1155,18 @@ footer{
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width:960px){
+  .portada{height:85vh;min-height:520px}
+  .portada-content{padding:0 22px 56px}
+  .portada-content::before{height:40px;margin-bottom:16px}
+  .portada-deco{font-size:clamp(120px,22vw,260px);right:-10px}
+  .portada-trust{gap:0}
   .nav-links{display:none}
   .nav-cta .btn-ghost{display:none}
   .hero-grid{grid-template-columns:1fr;gap:32px}
   .hero-art{max-width:340px;margin:0 auto}
   .hero{padding:32px 22px 40px}
   section{padding:64px 22px}
-  .audience{grid-template-columns:repeat(3,1fr);gap:14px}
+  .audience{grid-template-columns:repeat(5,1fr);gap:12px}
   .bubble .b-age{font-size:22px}
   .bubble .b-name{font-size:15px}
   .why{grid-template-columns:1fr 1fr;gap:14px}
@@ -930,6 +1184,11 @@ footer{
   .footer-cols{grid-template-columns:1fr 1fr;gap:28px}
 }
 @media (max-width:520px){
+  .portada{height:88vh}
+  .portada-cta-group{flex-direction:column;align-items:flex-start;gap:14px}
+  .portada-trust-sep{margin:0 10px}
+  .portada-trust-item{font-size:11px}
+  .portada-deco{display:none}
   .audience{grid-template-columns:1fr 1fr}
   .why{grid-template-columns:1fr}
   .method-grid{grid-template-columns:1fr}
@@ -947,32 +1206,35 @@ footer{
   <span class="blob b3"></span>
 </div>
 
-<!-- =================== NAV =================== -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="#" class="logo" aria-label="Sprint Idiomes">
-      <span class="lw">Sprint</span>
-      <span class="lr"></span>
-      <span class="lw">Idiomes</span>
-    </a>
-    <div class="nav-links">
-      <a href="#per-a-qui">Qui som</a>
-      <a href="#cursos">Cursos</a>
-      <a href="#metode">Mètode</a>
-      <a href="#equip">Profes</a>
-      <a href="#opinions">Opinions</a>
-      <a href="#contacte">Contacte</a>
-    </div>
-    <div class="nav-cta">
-      <button class="btn-lang">CAT · ES · EN</button>
-      <a href="#contacte" class="btn btn-ghost">Prova gratuïta</a>
-      <a href="#contacte" class="btn btn-primary">
-        Matricula't
-        <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-    </div>
+<script src="nav.js"></script>
+
+<!-- =================== PORTADA CAMPANYA ===================
+     Per canviar la imatge cada 3 mesos:
+       1. Obre aquest fitxer
+       2. Busca "CANVIA LA IMATGE AQUÍ" (Ctrl+F)
+       3. Substitueix la URL per la nova imatge
+     Campanyes: Setembre 2026 / Gener 2027 / Abril 2027
+     ===================================================== -->
+<div class="portada">
+  <div class="portada-img">
+    <!-- CANVIA LA IMATGE AQUÍ ↓ — substitueix l'src per la nova imatge de campanya -->
+    <!-- <img src="img/campanya-setembre-2026.jpg" alt="Matriculació oberta setembre 2026"> -->
   </div>
-</nav>
+  <div class="portada-deco">1974</div>
+  <div class="portada-overlay"></div>
+  <div class="portada-content">
+    <span class="portada-badge"><span class="portada-dot"></span>Inscripcions obertes · Setembre 2026</span>
+    <h1 class="portada-title">Matricula't<br>al setembre.</h1>
+    <p class="portada-sub">Anglès · Francès · Sant Cugat · Des de 1974</p>
+    <a href="#contacte" class="portada-cta">Reserva la teva plaça <span>→</span></a>
+  </div>
+  <div class="portada-scroll" onclick="document.querySelector('.hero').scrollIntoView({behavior:'smooth'})">
+    <div class="portada-scroll-dot"></div>
+    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 7l5 5 5-5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</div>
 
 <!-- =================== HERO =================== -->
 <header class="hero">
@@ -998,8 +1260,8 @@ footer{
       </h1>
 
       <p class="hero-lead">
-        Som una escola d'anglès i de <strong>francès</strong> al cor de <strong>Sant Cugat</strong>, des de 1974.
-        Fem classes per a <strong>petits, joves, adults i empreses</strong>: Kids Planet, Teens, Cambridge, IELTS, DELF/DALF i BLA Business. Mig segle ensenyant idiomes amb cor i mètode.
+        Ensenyem anglès i <strong>francès</strong> al cor de <strong>Sant Cugat</strong> des de 1974.
+        De 3 anys fins a adults. Grups petits, professors que es queden, i resultats que es veuen.
       </p>
 
       <div class="hero-actions">
@@ -1060,7 +1322,7 @@ footer{
   </div>
 
   <div class="audience">
-    <a href="#cursos" class="bubble a1">
+    <a href="kids-planet.html" class="bubble a1">
       <div class="b-age">3–6</div>
       <div class="b-name">Kids Planet</div>
       <div class="b-sub">Infantil</div>
@@ -1068,7 +1330,7 @@ footer{
     </a>
     <a href="#cursos" class="bubble a2">
       <div class="b-age">7–12</div>
-      <div class="b-name">Kids 1–6</div>
+      <div class="b-name">Kids</div>
       <div class="b-sub">Primària</div>
       <span class="b-arrow">→</span>
     </a>
@@ -1096,6 +1358,30 @@ footer{
       <div class="b-sub">DELF · DALF</div>
       <span class="b-arrow">→</span>
     </a>
+    <a href="#cursos" class="bubble a7">
+      <div class="b-age">B2B</div>
+      <div class="b-name">Business</div>
+      <div class="b-sub">BLA · FUNDAE</div>
+      <span class="b-arrow">→</span>
+    </a>
+    <a href="#cursos" class="bubble a8">
+      <div class="b-age"><svg viewBox="0 0 44 44" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="22" r="8" fill="white"/><line x1="22" y1="1" x2="22" y2="10" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="22" y1="34" x2="22" y2="43" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="1" y1="22" x2="10" y2="22" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="34" y1="22" x2="43" y2="22" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="6.2" y1="6.2" x2="12.9" y2="12.9" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="31.1" y1="31.1" x2="37.8" y2="37.8" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="37.8" y1="6.2" x2="31.1" y2="12.9" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="12.9" y1="31.1" x2="6.2" y2="37.8" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>
+      <div class="b-name">Summer</div>
+      <div class="b-sub">Estiu 2026</div>
+      <span class="b-arrow">→</span>
+    </a>
+    <a href="#contacte" class="bubble a9">
+      <div class="b-age">1·1</div>
+      <div class="b-name">Particular</div>
+      <div class="b-sub">A mida</div>
+      <span class="b-arrow">→</span>
+    </a>
+    <a href="#contacte" class="bubble a10">
+      <div class="b-age">+</div>
+      <div class="b-name">Altres</div>
+      <div class="b-sub">Idiomes</div>
+      <span class="b-arrow">→</span>
+    </a>
   </div>
 </section>
 
@@ -1104,9 +1390,9 @@ footer{
   <div class="section-head">
     <div>
       <span class="eyebrow">Per què Sprint?</span>
-      <h2 class="section-title">Quatre raons per <span class="hl">confiar-nos</span> el teu anglès.</h2>
+      <h2 class="section-title">Per què els pares de Sant Cugat<br>tornen <span class="hl">any rere any</span>.</h2>
     </div>
-    <p class="section-lead">Cinquanta anys d'experiència en una sola idea: grups petits, mètode propi i molt rigor.</p>
+    <p class="section-lead">Cinquanta anys fent una sola cosa bé: grups petits, professors que es queden i mètode que funciona.</p>
   </div>
 
   <div class="why">
@@ -1123,7 +1409,7 @@ footer{
     <article class="why-card w3">
       <div class="icon">✦</div>
       <h4>Anglès i Francès</h4>
-      <p>L'única escola de Sant Cugat amb un programa complet de français (A1–C1, DELF/DALF) amb tres professors nadius.</p>
+      <p>L'única escola de Sant Cugat amb francès complet: A1–C1, DELF/DALF i tres professors nadius.</p>
     </article>
     <article class="why-card w4">
       <div class="icon">✓</div>
@@ -1140,7 +1426,7 @@ footer{
       <span class="eyebrow">Cursos i edats</span>
       <h2 class="section-title">Un curs per <em>cada etapa</em>.</h2>
     </div>
-    <p class="section-lead">Des dels 3 anys fins als adults. Grups reduïts, materials propis i molta diversió.</p>
+    <p class="section-lead">Des dels 3 anys fins als adults. Grups petits, professors estables i un camí clar cap als teus objectius.</p>
   </div>
 
   <div class="courses-grid">
@@ -1162,7 +1448,7 @@ footer{
     <article class="course c-teens">
       <span class="c-tag">Primària</span>
       <div>
-        <div class="c-age">Kids 1–6 · 7–12 anys</div>
+        <div class="c-age">Kids · 7–12 anys</div>
         <h3 class="c-title">Sis nivells progressius</h3>
         <p class="c-desc">De la comunicació oral a la lectoescriptura integrada. Preparació oficial Young Learners (Starters, Movers, Flyers).</p>
       </div>
@@ -1206,7 +1492,7 @@ footer{
       <div>
         <div class="c-age">Adults · 18+ · Tots els nivells</div>
         <h3 class="c-title">Anglès per a adults</h3>
-        <p class="c-desc">Des de principiant fins a Proficiency. Grups reduïts, classes dinàmiques i conversa com a eix central. Presencial i online. Intensiu de juliol disponible.</p>
+        <p class="c-desc">Des de zero fins a Proficiency. Grups petits, classes dinàmiques amb molta conversa. Presencial, online i intensiu de juliol disponible.</p>
       </div>
       <div class="c-foot">
         <div class="c-pills"><span>A1–C1</span><span>Presencial</span><span>Online</span><span>Intensiu</span></div>
@@ -1215,46 +1501,39 @@ footer{
       <span class="deco">You</span>
     </article>
 
-    <article class="course c-business">
-      <span class="c-tag">Empresa · BLA</span>
-      <div>
-        <div class="c-age">BLA Business Language Academy</div>
-        <h3 class="c-title">Formació<br>a mida</h3>
-        <p class="c-desc">Branca especialitzada en empresa. Horaris i continguts adaptats. Bonificable per FUNDAE.</p>
-      </div>
-      <div class="c-foot">
-        <div class="c-pills"><span>B1–C2</span><span>FUNDAE</span></div>
-        <div class="c-arrow">→</div>
-      </div>
-      <span class="deco">B2B</span>
-    </article>
-
     <article class="course c-french">
       <span class="c-tag">Exclusiu a Sant Cugat</span>
       <div>
-        <div class="c-age">L'École de Français · 50è aniversari Sprint</div>
+        <div class="c-age">L'École de Français</div>
         <h3 class="c-title">Francès per a totes les edats</h3>
-        <p class="c-desc">L'única escola de Sant Cugat amb un programa complet de francès, des de A1 fins a C1. Tres professors nadius, grups de màxim 10 alumnes, preparació DELF/DALF i classes de conversa. Per a joves (6è–ESO) i adults.</p>
+        <p class="c-desc">L'única escola de Sant Cugat amb francès complet: A1–C1, DELF/DALF i tres professors nadius. Per a joves i adults.</p>
       </div>
-      <div class="c-french-inner">
-        <div class="c-french-pill">
-          <div class="fp-label">Nivells</div>
-          <div class="fp-val">A1 · A2 · B1 · B2 · C1</div>
-        </div>
-        <div class="c-french-pill">
-          <div class="fp-label">Certificació oficial</div>
-          <div class="fp-val">DELF · DALF</div>
-        </div>
-        <div class="c-french-pill">
-          <div class="fp-label">Professors nadius</div>
-          <div class="fp-val">3 especialistes</div>
-        </div>
-      </div>
-      <div class="c-foot" style="margin-top:24px">
-        <div class="c-pills"><span>Joves 12+</span><span>Adults</span><span>Màx. 10/grup</span><span>Presencial · Online</span></div>
+      <div class="c-foot">
+        <div class="c-pills"><span>A1–C1</span><span>DELF · DALF</span><span>Màx. 10</span></div>
         <div class="c-arrow">→</div>
       </div>
       <span class="deco">FR</span>
+    </article>
+
+    <article class="course c-business">
+      <div class="c-bla-left">
+        <span class="c-tag">Empresa · BLA</span>
+        <div class="c-age">BLA Business Language Academy</div>
+        <h3 class="c-title">Formació a mida<br>per a empreses</h3>
+        <p class="c-desc">Branca especialitzada en formació lingüística per a empreses i professionals. Horaris i continguts adaptats al sector i al nivell de cada equip. Bonificable per FUNDAE.</p>
+        <div class="c-foot" style="margin-top:28px">
+          <div class="c-pills"><span>B1–C2</span><span>FUNDAE</span><span>In-company</span><span>Online</span></div>
+        </div>
+      </div>
+      <div class="c-bla-right">
+        <div class="c-bla-stats">
+          <div class="c-bla-stat"><div class="c-bla-num">+50</div><div class="c-bla-label">empreses clients</div></div>
+          <div class="c-bla-stat"><div class="c-bla-num">A1–C2</div><div class="c-bla-label">tots els nivells</div></div>
+          <div class="c-bla-stat"><div class="c-bla-num">100%</div><div class="c-bla-label">bonificable FUNDAE</div></div>
+        </div>
+        <a href="#contacte" class="c-bla-cta">Demana informació <span>→</span></a>
+      </div>
+      <span class="deco">B2B</span>
     </article>
 
   </div>
@@ -1336,7 +1615,7 @@ footer{
       <span class="eyebrow">Equip docent</span>
       <h2 class="section-title">Professors que <em>t'acompanyen</em> de veritat.</h2>
     </div>
-    <p class="section-lead">Equip estable de professors nadius i especialitzats, seleccionats per vocació. La meitat nadius, amb formació pedagògica i anys de continuïtat.</p>
+    <p class="section-lead">Professors seleccionats per vocació, no per currículum. La meitat nadius, tots amb formació pedagògica especialitzada i anys de continuïtat a l'escola.</p>
   </div>
 
   <div class="teachers">
@@ -1457,8 +1736,8 @@ footer{
 
     <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.btn-submit').innerHTML='Gràcies! Et truquem aviat ✓';">
       <span class="scribble-deco">És gratuït!</span>
-      <h3>Parlem? <em>30 minuts</em>, sense compromís.</h3>
-      <p class="lead">Ompla aquest formulari i et truquem en 24h per organitzar la prova.</p>
+      <h3>Parlem? <em>30 minuts</em> i ho veus clar.</h3>
+      <p class="lead">Ompla el formulari i et truquem en menys de 24h per organitzar la teva prova gratuïta.</p>
 
       <div class="field">
         <label>El teu nom</label>
