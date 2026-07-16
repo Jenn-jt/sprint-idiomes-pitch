@@ -317,53 +317,8 @@ main, nav, footer{position:relative;z-index:1}
 }
 .hero-grid{
   display:grid;
-  grid-template-columns:1.15fr 1fr;
-  gap:48px;
-  align-items:center;
+  grid-template-columns:1fr;
 }
-
-/* ── HERO BENTO ── */
-.hero-bento{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:12px;align-self:center}
-.hb{border-radius:20px;padding:26px 28px;position:relative;overflow:hidden}
-
-/* Paraules */
-.hb-words{grid-column:span 2;background:var(--cream-2);border:1px solid var(--line);min-height:152px;display:flex;flex-direction:column;justify-content:space-between}
-.hb-words-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
-.hb-cycler{position:relative;height:66px;display:flex;align-items:center}
-.hb-word{
-  position:absolute;left:0;
-  font-family:var(--font-display);font-size:clamp(34px,4.5vw,56px);
-  font-weight:800;letter-spacing:-0.04em;line-height:1;
-  opacity:0;transform:translateY(14px);
-  animation:hb-cycle 9s infinite;
-}
-.hb-word.w1{color:#2547D9;animation-delay:0s}
-.hb-word.w2{color:#15203D;animation-delay:3s}
-.hb-word.w3{color:#B07E00;animation-delay:6s}
-@keyframes hb-cycle{
-  0%{opacity:0;transform:translateY(14px)}
-  8%{opacity:1;transform:translateY(0)}
-  27%{opacity:1;transform:translateY(0)}
-  35%{opacity:0;transform:translateY(-14px)}
-  100%{opacity:0;transform:translateY(-14px)}
-}
-.hb-words-sub{font-size:12px;font-weight:600;color:var(--ink-soft);letter-spacing:.03em}
-
-/* 50 anys */
-.hb-anys{background:var(--ink);border:none;display:flex;flex-direction:column;justify-content:space-between;gap:8px}
-.hb-anys::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(255,184,0,.14) 0%,transparent 65%);pointer-events:none}
-.hb-anys-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,184,0,.12);border:1px solid rgba(255,184,0,.2);color:#FFB800;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;width:fit-content}
-.hb-anys-num{font-family:var(--font-display);font-size:clamp(48px,5.5vw,74px);font-weight:900;letter-spacing:-0.05em;line-height:1;color:#FFB800}
-.hb-anys-num sup{font-size:.42em;vertical-align:super;letter-spacing:0}
-.hb-anys-label{font-size:13px;font-weight:600;color:rgba(255,255,255,.5);line-height:1.4}
-
-/* Cambridge */
-.hb-cambridge{background:linear-gradient(145deg,#F2EEFF 0%,#E8DFFF 100%);border:1px solid rgba(107,63,170,.1);display:flex;flex-direction:column;justify-content:space-between;gap:14px}
-.hb-cam-icon{width:46px;height:46px;background:#6B3FAA;border-radius:13px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:900;font-family:var(--font-display);position:relative;flex-shrink:0}
-.hb-cam-icon::after{content:'';position:absolute;inset:-4px;border-radius:16px;border:1.5px solid rgba(107,63,170,.3);animation:hb-ring 3s ease-in-out infinite}
-@keyframes hb-ring{0%,100%{transform:scale(1);opacity:.4}50%{transform:scale(1.1);opacity:1}}
-.hb-cam-title{font-family:var(--font-display);font-size:16px;font-weight:700;color:#3D1F80;line-height:1.2;margin-bottom:4px}
-.hb-cam-sub{font-size:11.5px;font-weight:600;color:rgba(61,31,128,.5);line-height:1.4}
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
   background:var(--cream-2);
@@ -385,12 +340,12 @@ main, nav, footer{position:relative;z-index:1}
 .hero-title{
   font-family:var(--font-display);
   font-weight:700;
-  font-size:clamp(48px,8vw,108px);
-  line-height:.96;
-  letter-spacing:-0.035em;
+  font-size:clamp(56px,9vw,128px);
+  line-height:.93;
+  letter-spacing:-0.04em;
   font-variation-settings:"wdth" 90;
   color:var(--ink);
-  margin-bottom:24px;
+  margin-bottom:28px;
 }
 .hero-title .scribble{
   position:relative;display:inline-block;color:var(--blue);
@@ -416,17 +371,30 @@ main, nav, footer{position:relative;z-index:1}
   80%,98%{transform:translateY(-4em)}
   100%{transform:translateY(-5em)}
 }
+.hero-body-row{
+  display:flex;align-items:center;gap:56px;
+  margin-bottom:40px;
+}
 .hero-lead{
-  font-size:19px;line-height:1.55;color:var(--ink-soft);max-width:520px;
-  margin-bottom:32px;
+  font-size:19px;line-height:1.6;color:var(--ink-soft);
+  flex:1;margin-bottom:0;
 }
 .hero-lead strong{color:var(--ink);font-weight:800}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0;margin-bottom:0}
 .hero-actions .btn{font-size:16px;padding:16px 26px}
 .hero-meta-row{
-  display:flex;gap:36px;flex-wrap:wrap;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
   padding-top:28px;border-top:1px solid var(--line);
+  margin-top:8px;
 }
+.meta-stat{
+  padding:0 32px;
+  border-right:1px solid var(--line);
+}
+.meta-stat:first-child{padding-left:0}
+.meta-stat:last-child{border-right:none;padding-right:0}
 .meta-stat .n{
   font-family:var(--font-display);
   font-weight:800;
@@ -1142,8 +1110,11 @@ footer{
   .portada-trust{gap:0}
   .nav-links{display:none}
   .nav-cta .btn-ghost{display:none}
-  .hero-grid{grid-template-columns:1fr;gap:32px}
-  .hero-bento{display:none}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-body-row{flex-direction:column;align-items:flex-start;gap:24px}
+  .hero-meta-row{grid-template-columns:repeat(2,1fr)}
+  .meta-stat:nth-child(2){border-right:none;padding-right:0}
+  .meta-stat:nth-child(3){padding-left:0;border-right:1px solid var(--line)}
   .hero{padding:32px 22px 40px}
   section{padding:64px 22px}
   .audience{grid-template-columns:repeat(5,1fr);gap:12px}
@@ -1239,17 +1210,18 @@ footer{
         </span>
       </h1>
 
-      <p class="hero-lead">
-        Ensenyem anglès i <strong>francès</strong> al cor de <strong>Sant Cugat</strong> des de 1974.
-        De 3 anys fins a adults. Grups petits, professors que es queden, i resultats que es veuen.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#contacte" class="btn btn-primary">
-          Reserva la teva prova
-          <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <a href="#cursos" class="btn btn-yellow">Veure cursos</a>
+      <div class="hero-body-row">
+        <p class="hero-lead">
+          Ensenyem anglès i <strong>francès</strong> al cor de <strong>Sant Cugat</strong> des de 1974.
+          De 3 anys fins a adults. Grups petits, professors que es queden, i resultats que es veuen.
+        </p>
+        <div class="hero-actions">
+          <a href="#contacte" class="btn btn-primary">
+            Reserva la teva prova
+            <svg class="arrow" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#cursos" class="btn btn-yellow">Veure cursos</a>
+        </div>
       </div>
 
       <div class="hero-meta-row">
@@ -1268,31 +1240,6 @@ footer{
         <div class="meta-stat">
           <div class="n">98%</div>
           <div class="l">aproven Cambridge</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HERO BENTO -->
-    <div class="hero-bento">
-      <div class="hb hb-words">
-        <div class="hb-words-label">Com dius en anglès...?</div>
-        <div class="hb-cycler">
-          <span class="hb-word w1">Hello.</span>
-          <span class="hb-word w2">Bonjour.</span>
-          <span class="hb-word w3">Aprèn.</span>
-        </div>
-        <div class="hb-words-sub">Anglès &nbsp;·&nbsp; Francès &nbsp;·&nbsp; Des de 1974</div>
-      </div>
-      <div class="hb hb-anys">
-        <span class="hb-anys-tag">· Fundació</span>
-        <div class="hb-anys-num">50<sup>+</sup></div>
-        <div class="hb-anys-label">anys formant idiomes<br>a Sant Cugat</div>
-      </div>
-      <div class="hb hb-cambridge">
-        <div class="hb-cam-icon">C</div>
-        <div>
-          <div class="hb-cam-title">Cambridge English<br>Centre Oficial</div>
-          <div class="hb-cam-sub">Centre examinador des de 1992 · B2, C1, C2</div>
         </div>
       </div>
     </div>
