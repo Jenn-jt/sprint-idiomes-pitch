@@ -317,9 +317,8 @@ main, nav, footer{position:relative;z-index:1}
 }
 .hero-grid{
   display:grid;
-  grid-template-columns:1.3fr 1fr;
-  gap:48px;
-  align-items:center;
+  grid-template-columns:1fr;
+  max-width:780px;
 }
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
@@ -396,49 +395,6 @@ main, nav, footer{position:relative;z-index:1}
   margin-top:6px;
 }
 
-/* HERO ART */
-.hero-art{
-  position:relative;
-  aspect-ratio:1/1;
-  width:100%;
-  max-width:520px;
-  margin-left:auto;
-}
-.hero-art .bg-circle{
-  position:absolute;inset:0;
-  background:radial-gradient(circle at 35% 30%,#FFF8E5 0%,var(--cream-2) 55%,#E8DFC8 100%);
-  border-radius:50%;
-  box-shadow:0 18px 50px rgba(21,32,61,.1);
-  border:1px solid var(--line);
-}
-.hero-art .char{
-  position:absolute;inset:6%;
-  display:grid;place-items:center;
-}
-.hero-art .char svg{width:100%;height:auto;animation:bob 5s ease-in-out infinite}
-@keyframes bob{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-10px)}
-}
-.hero-art .floater{
-  position:absolute;
-  background:#fff;
-  border:1px solid var(--line-strong);
-  border-radius:100px;
-  padding:9px 16px;
-  font-weight:600;
-  font-size:13px;
-  box-shadow:0 8px 24px rgba(21,32,61,.08);
-  display:flex;align-items:center;gap:8px;
-  color:var(--ink);
-}
-.floater .emoji{color:var(--blue)}
-.floater.f1{top:6%;right:-6%;animation:float1 5s ease-in-out infinite}
-.floater.f2{bottom:14%;left:-8%;animation:float2 6s ease-in-out infinite}
-.floater.f3{bottom:-4%;right:6%;animation:float1 5.5s ease-in-out infinite reverse}
-@keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.floater .emoji{font-size:10px;color:var(--blue)}
 
 /* ---------- SECTION ---------- */
 section{padding:80px 32px;max-width:1320px;margin:0 auto;position:relative}
@@ -1272,22 +1228,6 @@ footer{
       </div>
     </div>
 
-    <div class="hero-art">
-      <div class="bg-circle"></div>
-      <div class="char">
-        <!-- Editorial typographic composition -->
-        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-          <text x="150" y="200" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="600" font-size="220" font-style="italic" fill="#2547D9" letter-spacing="-12">Aa</text>
-          <line x1="60" y1="240" x2="240" y2="240" stroke="#15203D" stroke-width="2"/>
-          <text x="70" y="262" font-family="Nunito, sans-serif" font-weight="700" font-size="13" fill="#15203D" letter-spacing="3">A1 · A2 · B1 · B2 · C1 · C2</text>
-        </svg>
-      </div>
-
-      <!-- floaters -->
-      <div class="floater f1"><span class="emoji">●</span> Hello!</div>
-      <div class="floater f2"><span class="emoji">●</span> Cambridge oficial</div>
-      <div class="floater f3"><span class="emoji">●</span> Des de 1974</div>
-    </div>
   </div>
 </header>
 
