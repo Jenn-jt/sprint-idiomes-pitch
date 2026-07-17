@@ -30,8 +30,8 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .subnav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 @media(max-width:960px){.subnav-inner{padding:0 16px}}
 
-.kp-hero{background:linear-gradient(135deg,#FFF0F6 0%,#FFF8F0 60%,#fff 100%);border-bottom:1px solid var(--line);padding:72px 40px 64px;position:relative;overflow:hidden}
-.kp-hero::before{content:'3–6';position:absolute;right:40px;top:50%;transform:translateY(-50%);font-family:var(--font-display);font-size:clamp(120px,20vw,260px);font-weight:900;letter-spacing:-0.06em;color:rgba(255,128,171,.07);pointer-events:none;user-select:none;line-height:1}
+.kp-hero{background:linear-gradient(135deg,#FFF0F6 0%,#FFF3E0 25%,#F3E5F5 50%,#E8F5E9 75%,#E3F2FD 100%);border-bottom:1px solid var(--line);padding:72px 40px 64px;position:relative;overflow:hidden}
+.kp-hero::before{content:'3–6';position:absolute;right:40px;top:50%;transform:translateY(-50%);font-family:var(--font-display);font-size:clamp(120px,20vw,260px);font-weight:900;letter-spacing:-0.06em;color:rgba(255,128,171,.12);pointer-events:none;user-select:none;line-height:1}
 .kp-hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1}
 .breadcrumb{font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:24px;display:flex;align-items:center;gap:8px}
 .breadcrumb a{color:var(--ink-soft);transition:color .2s}
@@ -60,13 +60,13 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .section-lead{font-size:16px;color:var(--ink-soft);line-height:1.65;max-width:560px;margin-bottom:48px}
 
 .metodo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.metodo-card{padding:28px;border-radius:18px;border:1.5px solid var(--line);background:#fff;transition:border-color .2s,transform .2s}
+.metodo-card{padding:28px;border-radius:24px;border:1.5px solid transparent;background:#fff;transition:border-color .2s,transform .2s}
 .metodo-card:hover{border-color:var(--kp);transform:translateY(-2px)}
-.metodo-icon{font-size:28px;margin-bottom:14px}
-.metodo-title{font-weight:800;font-size:16px;margin-bottom:8px;color:var(--ink)}
+.metodo-icon{font-size:40px;margin-bottom:14px}
+.metodo-title{font-weight:800;font-size:18px;margin-bottom:8px;color:var(--kp)}
 .metodo-text{font-size:14px;color:var(--ink-soft);line-height:1.6}
 
-.rainbow-section{background:linear-gradient(135deg,#FFF0F6,#FFF8F0)}
+.rainbow-section{background:linear-gradient(135deg,#FFF0F6,#FFF8E1)}
 .rainbow-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .rainbow-visual{background:linear-gradient(135deg,#FFE4F0,#FFD0E8);border-radius:24px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:80px;position:relative}
 .rainbow-badge{position:absolute;bottom:-16px;right:-16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;box-shadow:0 8px 24px rgba(21,32,61,.08)}
@@ -79,7 +79,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .rf-text{font-size:13px;color:var(--ink-soft);line-height:1.5}
 
 .nivells-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:24px}
-.nivel-card{background:var(--cream);border-radius:16px;padding:24px;border:1.5px solid transparent;transition:border-color .2s,transform .2s}
+.nivel-card{background:var(--cream);border-radius:20px;padding:24px;border:1.5px solid transparent;transition:border-color .2s,transform .2s}
 .nivel-card:hover{border-color:var(--kp);transform:translateY(-2px)}
 .nc-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
 .nc-badge{font-size:11px;font-weight:800;background:rgba(255,128,171,.15);color:var(--kp);border-radius:6px;padding:4px 10px}
@@ -106,7 +106,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .btn-ghost-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.6);font-family:var(--font-body);font-size:14px;font-weight:700;border-radius:10px;padding:13px 24px;border:1px solid rgba(255,255,255,.18);transition:border-color .2s,color .2s}
 .btn-ghost-white:hover{border-color:rgba(255,255,255,.55);color:#fff}
 
-.cta-band{background:linear-gradient(135deg,var(--kp) 0%,#FF6B35 100%);padding:72px 40px;text-align:center}
+.cta-band{background:linear-gradient(135deg,#FF80AB 0%,#FFB347 50%,#FF80AB 100%);padding:72px 40px;text-align:center}
 .cta-band-inner{max-width:580px;margin:0 auto}
 .cta-band h2{font-family:var(--font-display);font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-0.04em;color:#fff;margin-bottom:12px}
 .cta-band p{font-size:16px;color:rgba(255,255,255,.8);line-height:1.6;margin-bottom:32px}
@@ -142,6 +142,18 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
   .footer-cols{grid-template-columns:1fr}
   .horaris-table th:nth-child(3),.horaris-table td:nth-child(3){display:none}
 }
+
+.kp-blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
+.kp-blob-1{width:350px;height:350px;background:radial-gradient(circle,rgba(255,128,171,.18),transparent 70%);top:-80px;right:10%}
+.kp-blob-2{width:250px;height:250px;background:radial-gradient(circle,rgba(255,200,0,.15),transparent 70%);bottom:-60px;right:25%}
+.kp-blob-3{width:200px;height:200px;background:radial-gradient(circle,rgba(100,180,255,.15),transparent 70%);top:30%;left:-60px}
+.mc-1{background:#FFF0F6}
+.mc-2{background:#FFF3E0}
+.mc-3{background:#F3F9F0}
+.mc-4{background:#F0F4FF}
+.nivel-card:first-child{background:linear-gradient(135deg,#FFF0F6,#FFE4EE);border:2px solid rgba(255,128,171,.25)}
+.nivel-card:last-child{background:linear-gradient(135deg,#F0F4FF,#E8F0FF);border:2px solid rgba(100,130,255,.2)}
+#nivells.section{background:#FAFBFF}
 </style>
 </head>
 <body>
@@ -180,6 +192,9 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
       <div class="hero-stat"><div class="hero-stat-num">Des de 1974</div><div class="hero-stat-label">50 anys d'experiència</div></div>
     </div>
   </div>
+  <div class="kp-blob kp-blob-1"></div>
+  <div class="kp-blob kp-blob-2"></div>
+  <div class="kp-blob kp-blob-3"></div>
 </section>
 
 <section class="section">
@@ -188,22 +203,22 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
     <h2>El mètode que fa que l'anglès <em style="color:var(--kp);font-style:normal">surti sol</em>.</h2>
     <p class="section-lead">Els nens no aprenen anglès: l'adquireixen. Igual que el català o el castellà. Sense memoritzar, sense pressió, amb ganes de tornar cada dia.</p>
     <div class="metodo-grid">
-      <div class="metodo-card">
+      <div class="metodo-card mc-1">
         <div class="metodo-icon">👩‍🏫</div>
         <div class="metodo-title">Sempre dos professors nadius</div>
         <p class="metodo-text">Un professor dirigeix la sessió, l'altre dona suport individual. Cap nen es perd. L'input és constant, personalitzat i en anglès des del primer segon.</p>
       </div>
-      <div class="metodo-card">
+      <div class="metodo-card mc-2">
         <div class="metodo-icon">🎭</div>
         <div class="metodo-title">Joc, cançons i contes</div>
         <p class="metodo-text">Cada activitat crea un context real per comunicar-se en anglès. Mímica, teatre, rutines cantades i jocs de rol activen la llengua de manera natural.</p>
       </div>
-      <div class="metodo-card">
+      <div class="metodo-card mc-3">
         <div class="metodo-icon">💛</div>
         <div class="metodo-title">Adaptació emocional</div>
         <p class="metodo-text">Els pares poden acompanyar els primers dies fins que el nen o nena es trobi còmode. Sense presses, sense plors, sense pressió de cap tipus.</p>
       </div>
-      <div class="metodo-card">
+      <div class="metodo-card mc-4">
         <div class="metodo-icon">📈</div>
         <div class="metodo-title">Progressió natural</div>
         <p class="metodo-text">De Kids Planet (3–4 anys) a Kids Planet Plus (5–6 anys). A 7 anys, el pas natural és als <a href="kids.html" style="color:var(--blue);font-weight:800">cursos Kids 7–12 →</a></p>

@@ -11,7 +11,7 @@
 <style>
 :root{
   --cream:#FAF5EA;--ink:#15203D;--ink-soft:#4A5878;--blue:#2547D9;--yellow:#FFB800;
-  --teens:#0EA5E9;--teens-dark:#0369A1;--teens-soft:#E0F4FE;
+  --teens:#38BDF8;--teens-dark:#0369A1;--teens-soft:#E0F4FE;
   --line:rgba(21,32,61,.1);--line-strong:rgba(21,32,61,.2);
   --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
   --font-body:"Nunito",ui-sans-serif,system-ui,sans-serif;
@@ -34,34 +34,40 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
 /* HERO */
 .hero{
-  background:linear-gradient(135deg,#F0F9FF 0%,#E8F5FF 50%,#fff 100%);
-  border-bottom:1px solid var(--line);
+  background-image:
+    linear-gradient(rgba(37,71,217,.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(37,71,217,.08) 1px,transparent 1px),
+    linear-gradient(160deg,#060F36 0%,#0D1855 45%,#0A1440 100%);
+  background-color:#060F36;
+  background-size:40px 40px,40px 40px,100% 100%;
+  border-bottom:1px solid rgba(255,255,255,.06);
   padding:72px 40px 64px;position:relative;overflow:hidden;
 }
 .hero::before{
   content:'Teens';position:absolute;right:40px;top:50%;transform:translateY(-50%);
   font-family:var(--font-display);font-size:clamp(100px,17vw,220px);
-  font-weight:900;letter-spacing:-0.06em;color:rgba(14,165,233,.07);
+  font-weight:900;letter-spacing:-0.06em;color:rgba(56,189,248,.06);
   pointer-events:none;user-select:none;line-height:1;
 }
 .hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1}
-.breadcrumb{font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:24px;display:flex;align-items:center;gap:8px}
-.breadcrumb a{color:var(--ink-soft);transition:color .2s}.breadcrumb a:hover{color:var(--blue)}
+.breadcrumb{font-size:13px;font-weight:600;color:rgba(255,255,255,.45);margin-bottom:24px;display:flex;align-items:center;gap:8px}
+.breadcrumb a{color:rgba(255,255,255,.45);transition:color .2s}.breadcrumb a:hover{color:rgba(255,255,255,.85)}
 .breadcrumb span{opacity:.4}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teens);margin-bottom:16px}
 .eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--teens)}
-h1{font-family:var(--font-display);font-size:clamp(40px,5.5vw,72px);font-weight:800;letter-spacing:-0.04em;line-height:1.06;color:var(--ink);margin-bottom:16px}
+h1{font-family:var(--font-display);font-size:clamp(40px,5.5vw,72px);font-weight:800;letter-spacing:-0.04em;line-height:1.06;color:#fff;margin-bottom:16px}
 h1 em{font-style:normal;color:var(--teens)}
-.hero-sub{font-size:17px;color:var(--ink-soft);line-height:1.65;max-width:540px;margin-bottom:32px}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.72);line-height:1.65;max-width:540px;margin-bottom:32px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-.btn-teens{display:inline-flex;align-items:center;gap:10px;background:var(--teens);color:#fff;font-family:var(--font-body);font-size:15px;font-weight:800;border-radius:10px;padding:14px 26px;transition:transform .15s,box-shadow .2s;box-shadow:0 4px 20px rgba(14,165,233,.3)}
+.btn-teens{display:inline-flex;align-items:center;gap:10px;background:#38BDF8;color:#060F36;font-family:var(--font-body);font-size:15px;font-weight:800;border-radius:10px;padding:14px 26px;transition:transform .15s,box-shadow .2s;box-shadow:0 4px 20px rgba(14,165,233,.3)}
 .btn-teens:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(14,165,233,.45)}
 .btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--ink);font-family:var(--font-body);font-size:15px;font-weight:700;border-radius:10px;padding:14px 26px;border:1.5px solid var(--line-strong);transition:border-color .2s,background .2s}
 .btn-outline:hover{border-color:var(--ink);background:var(--cream)}
+.hero .btn-outline{color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.35)}.hero .btn-outline:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.6);color:#fff}
 .hero-stats{display:flex;gap:32px;margin-top:40px;flex-wrap:wrap}
-.hero-stat{border-left:3px solid var(--teens);padding-left:16px}
-.hero-stat-num{font-family:var(--font-display);font-size:28px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);line-height:1}
-.hero-stat-label{font-size:13px;color:var(--ink-soft);margin-top:3px;font-weight:600}
+.hero-stat{border-left:3px solid #38BDF8;padding-left:16px}
+.hero-stat-num{font-family:var(--font-display);font-size:28px;font-weight:800;letter-spacing:-0.03em;color:#38BDF8;line-height:1}
+.hero-stat-label{font-size:13px;color:rgba(255,255,255,.55);margin-top:3px;font-weight:600}
 
 /* SECTIONS */
 .section{padding:80px 40px;border-bottom:1px solid var(--line)}
@@ -73,11 +79,11 @@ h1 em{font-style:normal;color:var(--teens)}
 
 /* NIVELLS GRID */
 .nivells-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:32px}
-.nivel-card{border-radius:18px;padding:26px;border:1.5px solid var(--line);background:#fff;position:relative;overflow:hidden;transition:border-color .2s,transform .2s,box-shadow .2s}
-.nivel-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--teens);border-radius:18px 18px 0 0}
-.nivel-card:hover{border-color:var(--teens);transform:translateY(-3px);box-shadow:0 12px 32px rgba(14,165,233,.1)}
+.nivel-card{border-radius:18px;padding:26px;border:1px solid rgba(14,165,233,.2);border-left:4px solid #0EA5E9;background:#fff;position:relative;overflow:hidden;transition:border-left-color .2s,transform .2s,box-shadow .2s}
+.nivel-card::before{content:'';position:absolute;top:0;left:0;right:0;height:0;background:transparent}
+.nivel-card:hover{border-left-color:#38BDF8;transform:translateY(-3px);box-shadow:0 12px 32px rgba(14,165,233,.1)}
 .nc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.nc-cefr{font-size:12px;font-weight:800;background:var(--teens-soft);color:var(--teens-dark);border-radius:6px;padding:4px 10px}
+.nc-cefr{font-size:12px;font-weight:800;background:rgba(14,165,233,.12);color:#0369A1;border-radius:6px;padding:4px 10px}
 .nc-age{font-size:12px;font-weight:700;color:var(--ink-soft);background:var(--cream);border-radius:6px;padding:4px 10px}
 .nc-name{font-family:var(--font-display);font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:6px;color:var(--ink)}
 .nc-desc{font-size:13px;color:var(--ink-soft);line-height:1.55;margin-bottom:14px}
@@ -85,7 +91,7 @@ h1 em{font-style:normal;color:var(--teens)}
 .nc-pills span{font-size:11px;font-weight:700;padding:3px 9px;border-radius:5px;background:var(--teens-soft);color:var(--teens-dark);border:1px solid rgba(14,165,233,.2)}
 
 /* CAMBRIDGE */
-.cambridge-section{background:var(--cream)}
+.cambridge-section{background:#F0F9FF}
 .cambridge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
 .camb-card{background:#fff;border-radius:18px;padding:28px;border:1.5px solid var(--line);position:relative;overflow:hidden;transition:border-color .2s,transform .2s}
 .camb-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px}
@@ -101,13 +107,14 @@ h1 em{font-style:normal;color:var(--teens)}
 
 /* METODOLOGIA */
 .metodo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.metodo-card{padding:24px;border-radius:16px;border:1.5px solid var(--line);background:#fff}
+.metodo-card{padding:24px;border-radius:16px;border:1px solid rgba(56,189,248,.15);border-top:3px solid #0EA5E9;background:#fff;transition:box-shadow .2s}
+.metodo-card:hover{box-shadow:0 8px 24px rgba(56,189,248,.12)}
 .metodo-num{font-family:var(--font-display);font-size:36px;font-weight:900;letter-spacing:-0.04em;color:rgba(14,165,233,.2);line-height:1;margin-bottom:12px}
 .metodo-title{font-weight:800;font-size:15px;margin-bottom:6px}
 .metodo-text{font-size:13px;color:var(--ink-soft);line-height:1.55}
 
 /* HORARIS */
-.horaris-wrap{background:var(--ink);border-radius:24px;padding:48px;color:#fff}
+.horaris-wrap{background:linear-gradient(135deg,#060F36,#0D1855);border-radius:24px;padding:48px;color:#fff}
 .horaris-title{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:6px}
 .horaris-sub{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:32px}
 .horaris-table{width:100%;border-collapse:collapse}
@@ -116,7 +123,7 @@ h1 em{font-style:normal;color:var(--teens)}
 .horaris-table td{padding:14px 16px;font-size:14px;font-weight:600;color:rgba(255,255,255,.85);border-top:1px solid rgba(255,255,255,.08);vertical-align:middle}
 .horaris-table td:first-child{padding-left:0}
 .nivel-name{font-weight:800;color:#fff;font-size:14px}
-.hora-pill{display:inline-flex;align-items:center;background:rgba(255,255,255,.08);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:700;white-space:nowrap}
+.hora-pill{display:inline-flex;align-items:center;background:rgba(56,189,248,.15);color:#38BDF8;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:700;white-space:nowrap}
 .horaris-note{margin-top:20px;font-size:13px;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:8px}
 .horaris-cta{margin-top:24px;display:flex;gap:14px;flex-wrap:wrap}
 .btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-family:var(--font-body);font-size:14px;font-weight:800;border-radius:10px;padding:13px 24px;transition:transform .15s,box-shadow .2s}
@@ -125,11 +132,14 @@ h1 em{font-style:normal;color:var(--teens)}
 .btn-ghost-white:hover{border-color:rgba(255,255,255,.55);color:#fff}
 
 /* CTA BAND */
-.cta-band{background:linear-gradient(135deg,var(--teens) 0%,#2547D9 100%);padding:72px 40px;text-align:center}
+.cta-band{background:linear-gradient(135deg,#060F36 0%,#0D1855 60%,#0A1440 100%);padding:72px 40px;text-align:center}
 .cta-band-inner{max-width:580px;margin:0 auto}
 .cta-band h2{font-family:var(--font-display);font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-0.04em;color:#fff;margin-bottom:12px}
-.cta-band p{font-size:16px;color:rgba(255,255,255,.8);line-height:1.6;margin-bottom:32px}
+.cta-band p{font-size:16px;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:32px}
 .cta-band-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.cta-band .btn-white{background:#38BDF8;color:#060F36;box-shadow:0 4px 20px rgba(56,189,248,.35)}
+.cta-band .btn-white:hover{background:#7DD3FC;box-shadow:0 8px 28px rgba(56,189,248,.5)}
+.cta-band .btn-ghost-white{border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.8)}
 
 /* FOOTER */
 footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
@@ -187,7 +197,7 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
     <div class="breadcrumb">
       <a href="index.html">Home</a><span>›</span>
       <a href="cursos.html">Cursos</a><span>›</span>
-      <span style="color:var(--ink);font-weight:700">Teens</span>
+      <span style="color:rgba(255,255,255,.9);font-weight:700;opacity:1">Teens</span>
     </div>
     <div class="eyebrow"><span class="eyebrow-dot"></span>12 – 17 anys</div>
     <h1>L'anglès que<br>els obre <em>portes</em>.</h1>
@@ -316,7 +326,7 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 </section>
 
 <!-- HORARIS -->
-<section class="section" id="horaris" style="background:var(--cream)">
+<section class="section" id="horaris" style="background:#F0F9FF">
   <div class="section-inner">
     <div class="section-label" style="color:var(--teens)"><span class="section-label-dot" style="background:var(--teens)"></span>Horaris</div>
     <h2>Horaris.</h2>

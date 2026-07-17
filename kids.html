@@ -57,7 +57,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
 /* ── PAGE HERO ── */
 .kids-hero{
-  background:linear-gradient(135deg,#FFF0F6 0%,#FFF8E8 60%,#fff 100%);
+  background:linear-gradient(160deg, #0D1B3E 0%, #1A2F5A 50%, #0F2242 100%);
   border-bottom:1px solid var(--line);
   padding:72px 40px 64px;
   position:relative;overflow:hidden;
@@ -67,33 +67,33 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   position:absolute;right:40px;top:50%;transform:translateY(-50%);
   font-family:var(--font-display);font-size:clamp(120px,18vw,240px);
   font-weight:900;letter-spacing:-0.06em;
-  color:rgba(255,128,171,.07);
+  color:rgba(255,107,53,.12);
   pointer-events:none;user-select:none;line-height:1;
 }
 .kids-hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1}
 .breadcrumb{
-  font-size:13px;font-weight:600;color:var(--ink-soft);
+  font-size:13px;font-weight:600;color:rgba(255,255,255,.5);
   margin-bottom:24px;display:flex;align-items:center;gap:8px;
 }
-.breadcrumb a{color:var(--ink-soft);transition:color .2s}
-.breadcrumb a:hover{color:var(--blue)}
+.breadcrumb a{color:rgba(255,255,255,.5);transition:color .2s}
+.breadcrumb a:hover{color:#fff}
 .breadcrumb span{opacity:.4}
 .kids-hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
 .kids-eyebrow{
   display:inline-flex;align-items:center;gap:8px;
   font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--kp);margin-bottom:16px;
+  color:#FF6B35;margin-bottom:16px;
 }
-.kids-eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--kp)}
+.kids-eyebrow-dot{width:8px;height:8px;border-radius:50%;background:#FF6B35}
 .kids-hero h1{
   font-family:var(--font-display);
   font-size:clamp(36px,5vw,64px);
   font-weight:800;letter-spacing:-0.04em;line-height:1.06;
-  color:var(--ink);margin-bottom:16px;
+  color:#fff;margin-bottom:16px;
 }
-.kids-hero h1 em{font-style:normal;color:var(--kp)}
+.kids-hero h1 em{font-style:normal;color:#FF6B35}
 .kids-hero-sub{
-  font-size:17px;color:var(--ink-soft);line-height:1.65;
+  font-size:17px;color:rgba(255,255,255,.75);line-height:1.65;
   max-width:520px;margin-bottom:32px;
 }
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
@@ -190,7 +190,8 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   margin-bottom:40px;
 }
 .level-card{
-  background:#fff;border:1.5px solid var(--line);border-radius:16px;
+  background:linear-gradient(135deg,#fff,#FFF5F0);border:1.5px solid var(--line);
+  border-left:4px solid #FF6B35;border-radius:16px;
   padding:22px;position:relative;overflow:hidden;
   transition:border-color .2s,transform .2s,box-shadow .2s;
 }
@@ -227,7 +228,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
 /* ── HORARIS ── */
 .horaris-wrap{
-  background:var(--ink);border-radius:24px;
+  background:linear-gradient(135deg,#0D1B3E,#1A2F5A);border-radius:24px;
   padding:48px;color:#fff;
   margin-top:48px;
 }
@@ -293,20 +294,26 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 }
 .metodo-card{
   padding:24px;border-radius:16px;
-  border:1.5px solid var(--line);
+  border:1.5px solid rgba(255,107,53,.2);
+  border-top:3px solid #FF6B35;
   background:#fff;
+  transition:background .2s,box-shadow .2s;
 }
+.metodo-card:hover{background:rgba(255,107,53,.04);}
 .metodo-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:52px;height:52px;border-radius:14px;
+  background:rgba(255,107,53,.1);
   font-family:var(--font-display);
-  font-size:36px;font-weight:900;letter-spacing:-0.04em;
-  color:rgba(255,128,171,.2);line-height:1;margin-bottom:12px;
+  font-size:20px;font-weight:900;letter-spacing:-0.04em;
+  color:#FF6B35;line-height:1;margin-bottom:16px;
 }
 .metodo-title{font-weight:800;font-size:15px;margin-bottom:6px;color:var(--ink)}
 .metodo-text{font-size:13px;color:var(--ink-soft);line-height:1.55}
 
 /* ── CTA BAND ── */
 .cta-band{
-  background:linear-gradient(135deg,#FF80AB 0%,#FF6B35 100%);
+  background:linear-gradient(135deg, #FF6B35 0%, #FF8C00 60%, #FF6B35 100%);
   padding:72px 40px;text-align:center;
 }
 .cta-band-inner{max-width:600px;margin:0 auto}
@@ -372,6 +379,10 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
   .cta-band{padding:56px 22px}
   .horaris-table th:nth-child(3),.horaris-table td:nth-child(3){display:none}
 }
+
+/* ── HERO DARK BTN OVERRIDE ── */
+.kids-hero .btn-outline{color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.28);}
+.kids-hero .btn-outline:hover{border-color:rgba(255,255,255,.65);background:rgba(255,255,255,.07);color:#fff;}
 </style>
 </head>
 <body>
