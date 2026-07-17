@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cambridge & IELTS · Sprint Idiomes · Sant Cugat</title>
+<meta name="description" content="Centre preparador oficial Cambridge des de 1992. KET, PET, FCE, CAE, CPE i IELTS a Sant Cugat. 98% d'aprovats. Grups reduïts, professors especialitzats." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF5EA;
+  --ink:#15203D;
+  --ink-soft:#4A5878;
+  --blue:#2547D9;
+  --yellow:#FFB800;
+  --line:rgba(21,32,61,.1);
+  --line-strong:rgba(21,32,61,.22);
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Nunito",ui-sans-serif,system-ui,sans-serif;
+  --camb:#4C1D95;
+  --camb-mid:#6D28D9;
+  --camb-light:#8B5CF6;
+  --camb-pale:#F5F0FF;
+  --gold:#D4AF37;
+  --gold-light:#F5E396;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  background:#F8F7FF;
+  color:var(--ink);
+  line-height:1.55;
+  font-size:16px;
+  overflow-x:hidden;
+  font-weight:500;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* ── HERO ── */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#1A0842 0%,#2D1070 45%,#170835 100%);
+  padding:96px 40px 80px;
+}
+.hero::before{
+  content:'';position:absolute;
+  width:900px;height:700px;
+  background:radial-gradient(ellipse at center,rgba(109,40,217,.28) 0%,rgba(139,92,246,.1) 45%,transparent 70%);
+  top:-200px;right:-150px;pointer-events:none;
+}
+.hero::after{
+  content:'';position:absolute;
+  width:560px;height:560px;
+  background:radial-gradient(circle,rgba(212,175,55,.14) 0%,transparent 65%);
+  bottom:-120px;left:-80px;pointer-events:none;
+}
+.hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(212,175,55,.14);
+  border:1px solid rgba(212,175,55,.28);
+  border-radius:100px;padding:7px 16px;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:#F5E396;margin-bottom:24px;
+}
+.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:#D4AF37;flex-shrink:0}
+h1{
+  font-family:var(--font-display);
+  font-size:clamp(48px,7vw,88px);
+  font-weight:800;letter-spacing:-0.04em;line-height:0.96;
+  color:#fff;max-width:820px;margin-bottom:24px;
+}
+h1 em{
+  font-style:normal;
+  background:linear-gradient(135deg,#D4AF37 0%,#F5E396 50%,#B8960C 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-sub{
+  font-size:17px;color:rgba(255,255,255,.62);
+  line-height:1.6;max-width:580px;margin-bottom:36px;
+}
+.hero-stats{
+  display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px;
+}
+.hero-stat{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:14px;padding:14px 22px;text-align:center;min-width:110px;
+}
+.hero-stat-num{
+  font-family:var(--font-display);font-size:24px;font-weight:800;
+  letter-spacing:-0.02em;color:#D4AF37;line-height:1;
+}
+.hero-stat-label{
+  font-size:11px;font-weight:700;color:rgba(255,255,255,.48);
+  margin-top:4px;letter-spacing:.04em;
+}
+.btn-camb{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,#D4AF37 0%,#B8960C 100%);
+  color:#1A0842;
+  font-family:var(--font-body);font-size:15px;font-weight:800;
+  border-radius:50px;padding:16px 34px;
+  transition:transform .2s,box-shadow .2s;
+  box-shadow:0 6px 28px rgba(212,175,55,.35);
+  text-decoration:none;
+}
+.btn-camb:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(212,175,55,.5)}
+.hero-titles-strip{
+  display:flex;gap:8px;flex-wrap:wrap;margin-top:24px;
+}
+.htitle{
+  font-size:12px;font-weight:700;padding:6px 14px;
+  border-radius:100px;
+  background:rgba(139,92,246,.16);
+  border:1px solid rgba(139,92,246,.28);
+  color:#C4B5FD;letter-spacing:.04em;
+}
+
+/* ── SUBNAV ── */
+.subnav{
+  background:rgba(248,247,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(76,29,149,.1);
+  position:sticky;top:78px;z-index:90;
+}
+.subnav-inner{
+  max-width:1180px;margin:0 auto;
+  padding:0 40px;
+  display:flex;overflow-x:auto;scrollbar-width:none;
+}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav-link{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:14px 18px;font-size:12px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-soft);border-bottom:3px solid transparent;
+  white-space:nowrap;flex-shrink:0;
+  transition:color .2s,border-color .2s;text-decoration:none;
+}
+.subnav-link:hover{color:var(--camb)}
+.subnav-link.active{color:var(--camb);border-bottom-color:var(--gold)}
+
+/* ── SECTIONS ── */
+.section{
+  padding:80px 40px;
+  border-bottom:1px solid var(--line);
+  scroll-margin-top:130px;
+}
+.section-inner{max-width:1180px;margin:0 auto}
+.section-label{
+  font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--camb);margin-bottom:12px;
+  display:flex;align-items:center;gap:8px;
+}
+.section-label::before{content:'';width:24px;height:2px;background:var(--camb);border-radius:2px}
+.section h2{
+  font-family:var(--font-display);
+  font-size:clamp(28px,4vw,48px);
+  font-weight:800;letter-spacing:-0.04em;line-height:1.05;
+  color:var(--ink);margin-bottom:12px;
+}
+.section h2 em{font-style:normal;color:var(--camb-mid)}
+.section-lead{
+  font-size:17px;color:var(--ink-soft);
+  line-height:1.6;max-width:580px;margin-bottom:48px;
+}
+
+/* ── LEVEL CARDS ── */
+.level-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.lc{
+  background:#fff;
+  border:1.5px solid rgba(76,29,149,.1);
+  border-radius:20px;padding:28px;
+  display:flex;flex-direction:column;gap:14px;
+  position:relative;overflow:hidden;
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+  cursor:pointer;
+}
+.lc::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--camb),var(--camb-mid));
+  border-radius:20px 20px 0 0;
+}
+.lc:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 48px rgba(76,29,149,.12);
+  border-color:rgba(76,29,149,.28);
+}
+.lc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.lc-cefr{
+  font-family:var(--font-display);font-size:13px;font-weight:800;
+  letter-spacing:.02em;padding:5px 12px;border-radius:8px;line-height:1;
+  background:var(--camb-pale);color:var(--camb);
+}
+.lc-cert{
+  font-size:11px;font-weight:700;letter-spacing:.06em;
+  padding:5px 10px;border-radius:8px;line-height:1;
+  background:#FFFBEB;color:#92400E;border:1px solid #FDE68A;
+}
+.lc-name{
+  font-family:var(--font-display);
+  font-size:19px;font-weight:800;letter-spacing:-0.02em;
+  color:var(--ink);line-height:1.2;
+}
+.lc-desc{font-size:14px;color:var(--ink-soft);line-height:1.6;flex:1}
+.lc-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.lc-pills span{
+  font-size:11px;font-weight:700;
+  padding:4px 10px;border-radius:6px;
+  background:var(--camb-pale);color:var(--camb);
+  border:1px solid rgba(76,29,149,.12);
+}
+.lc-arrow{
+  position:absolute;bottom:22px;right:22px;
+  width:32px;height:32px;border-radius:50%;
+  background:var(--camb-pale);color:var(--camb);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:700;
+  transition:background .2s,color .2s;
+}
+.lc:hover .lc-arrow{background:var(--camb);color:#fff}
+
+/* ── PROOF SECTION ── */
+.proof-section{
+  background:var(--ink);
+}
+.proof-section .section-label{color:rgba(212,175,55,.75)}
+.proof-section .section-label::before{background:rgba(212,175,55,.75)}
+.proof-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:rgba(255,255,255,.07);
+  border-radius:20px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.07);
+}
+.proof-item{
+  padding:40px 28px;background:rgba(255,255,255,.03);text-align:center;
+}
+.proof-num{
+  font-family:var(--font-display);
+  font-size:52px;font-weight:800;letter-spacing:-0.04em;
+  color:#D4AF37;line-height:1;margin-bottom:10px;
+}
+.proof-label{font-size:14px;color:rgba(255,255,255,.55);font-weight:600;line-height:1.4}
+
+/* ── METHODOLOGY CARDS ── */
+.metodo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.metodo-card{
+  background:#fff;
+  border:1.5px solid rgba(76,29,149,.08);
+  border-radius:20px;padding:28px;
+  border-top:3px solid var(--mc-top,var(--camb));
+  transition:transform .2s,box-shadow .2s;
+}
+.metodo-card:nth-child(1){--mc-top:#4C1D95}
+.metodo-card:nth-child(2){--mc-top:#6D28D9}
+.metodo-card:nth-child(3){--mc-top:#D4AF37}
+.metodo-card:nth-child(4){--mc-top:#7C3AED}
+.metodo-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(76,29,149,.1)}
+.mc-num{
+  font-family:var(--font-display);font-size:56px;font-weight:900;
+  letter-spacing:-0.06em;color:rgba(76,29,149,.1);line-height:1;margin-bottom:14px;
+}
+.mc-title{
+  font-family:var(--font-display);font-size:17px;font-weight:800;
+  letter-spacing:-0.01em;color:var(--ink);margin-bottom:8px;
+}
+.mc-desc{font-size:14px;color:var(--ink-soft);line-height:1.6}
+
+/* ── CALENDAR ── */
+.cal-section{background:var(--camb-pale)}
+.cal-section .section-label::before{background:var(--camb)}
+.cal-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cal-row{
+  background:#fff;border-radius:16px;padding:24px 28px;
+  border:1.5px solid rgba(76,29,149,.12);
+  display:flex;align-items:center;gap:20px;
+}
+.cal-month{
+  font-family:var(--font-display);font-size:13px;font-weight:800;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:#fff;background:var(--camb);
+  border-radius:10px;padding:10px 18px;min-width:90px;text-align:center;flex-shrink:0;
+}
+.cal-exams{flex:1}
+.cal-exam-name{font-weight:700;font-size:15px;color:var(--ink);margin-bottom:3px}
+.cal-exam-certs{font-size:12px;color:var(--ink-soft)}
+
+/* ── HORARIS ── */
+.horaris-wrap{
+  background:linear-gradient(135deg,var(--camb) 0%,var(--camb-mid) 100%);
+  border-radius:24px;padding:44px;color:#fff;
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;
+}
+.hor-block-label{
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.48);margin-bottom:14px;
+}
+.hor-block-time{
+  font-family:var(--font-display);font-size:30px;font-weight:800;
+  color:#fff;margin-bottom:6px;
+}
+.hor-block-sub{font-size:15px;color:rgba(255,255,255,.62)}
+
+/* ── CTA BAND ── */
+.cta-band{
+  background:linear-gradient(135deg,#1A0842 0%,#2D1070 50%,#1A0842 100%);
+  padding:80px 40px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-band::before{
+  content:'';position:absolute;
+  width:600px;height:600px;
+  background:radial-gradient(circle,rgba(212,175,55,.15) 0%,transparent 65%);
+  top:-120px;left:50%;transform:translateX(-50%);
+  pointer-events:none;
+}
+.cta-band-inner{max-width:620px;margin:0 auto;position:relative;z-index:1}
+.cta-band h2{
+  font-family:var(--font-display);
+  font-size:clamp(28px,4vw,48px);
+  font-weight:800;letter-spacing:-0.04em;line-height:1.05;
+  color:#fff;margin-bottom:14px;
+}
+.cta-band h2 em{
+  font-style:normal;
+  background:linear-gradient(135deg,#D4AF37 0%,#F5E396 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.cta-band p{font-size:16px;color:rgba(255,255,255,.58);line-height:1.6;margin-bottom:32px}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-ghost-white{
+  display:inline-flex;align-items:center;gap:10px;
+  color:rgba(255,255,255,.65);
+  font-family:var(--font-body);font-size:15px;font-weight:700;
+  border-radius:50px;padding:16px 28px;
+  border:1px solid rgba(255,255,255,.2);
+  transition:border-color .2s,color .2s;text-decoration:none;
+}
+.btn-ghost-white:hover{border-color:rgba(255,255,255,.55);color:#fff}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--ink);padding:72px 40px 32px;
+  color:var(--cream);position:relative;overflow:hidden;
+}
+.footer-inner{max-width:1320px;margin:0 auto;position:relative;z-index:1}
+.footer-huge{
+  font-family:var(--font-display);
+  font-size:clamp(48px,9vw,120px);
+  font-weight:800;letter-spacing:-0.05em;line-height:1;
+  color:rgba(255,246,228,.07);margin-bottom:40px;user-select:none;
+}
+.footer-cols{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:40px;margin-bottom:48px;
+}
+.footer-col h6{
+  font-family:var(--font-display);font-size:14px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;
+  color:var(--cream);margin-bottom:16px;
+}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:9px;font-size:14.5px;font-weight:600}
+.footer-col ul li a{color:rgba(255,246,228,.75)}
+.footer-col ul li a:hover{color:var(--yellow)}
+.footer-col ul li:not(:has(a)){color:rgba(255,246,228,.5)}
+.footer-col p{font-size:14.5px;color:rgba(255,246,228,.7);line-height:1.55}
+.footer-socials{display:flex;gap:10px;margin-top:14px}
+.footer-socials a{
+  width:38px;height:38px;border-radius:10px;
+  background:rgba(255,255,255,.06);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s,transform .2s;
+}
+.footer-socials a:hover{background:var(--blue);transform:translateY(-2px)}
+.footer-bottom{
+  border-top:1px solid rgba(255,246,228,.1);
+  padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:13px;color:rgba(255,246,228,.4);font-weight:600;
+  flex-wrap:wrap;gap:12px;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1080px){
+  .level-grid{grid-template-columns:repeat(2,1fr)}
+  .metodo-grid{grid-template-columns:repeat(2,1fr)}
+  .proof-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:960px){
+  .section{padding:56px 22px}
+  .hero{padding:72px 22px 60px}
+  .horaris-wrap{grid-template-columns:1fr;gap:24px}
+  .cal-grid{grid-template-columns:1fr}
+  .footer-cols{grid-template-columns:1fr 1fr;gap:28px}
+  .subnav-inner{padding:0 16px}
+}
+@media(max-width:640px){
+  .level-grid{grid-template-columns:1fr}
+  .cta-band{padding:56px 22px}
+  .footer-cols{grid-template-columns:1fr}
+  .proof-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<div class="subnav">
+  <div class="subnav-inner">
+    <a class="subnav-link active" href="#titols">Els títols</a>
+    <a class="subnav-link" href="#perque">Per què Sprint?</a>
+    <a class="subnav-link" href="#metode">El mètode</a>
+    <a class="subnav-link" href="#examens">Examens 2026</a>
+    <a class="subnav-link" href="#horaris">Horaris</a>
+  </div>
+</div>
+
+<!-- =================== HERO =================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>Centre oficial Cambridge des de 1992
+    </div>
+    <h1>Títols oficials Cambridge.<br><em>98% d'aprovats.</em></h1>
+    <p class="hero-sub">Tres dècades preparant alumnes per als exàmens Cambridge més reconeguts del món. KET, PET, FCE, CAE, CPE i IELTS. Metodologia provada. Resultats reals.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">98%</div>
+        <div class="hero-stat-label">aprovats</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">1992</div>
+        <div class="hero-stat-label">centre oficial</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">6</div>
+        <div class="hero-stat-label">títols oficials</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">Màx.10</div>
+        <div class="hero-stat-label">per grup</div>
+      </div>
+    </div>
+    <a href="index.html#contacte" class="btn-camb">Consulta la propera convocatòria &#8594;</a>
+    <div class="hero-titles-strip">
+      <span class="htitle">A2 Key</span>
+      <span class="htitle">B1 Preliminary</span>
+      <span class="htitle">B2 First</span>
+      <span class="htitle">C1 Advanced</span>
+      <span class="htitle">C2 Proficiency</span>
+      <span class="htitle">IELTS</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<!-- =================== TITOLS =================== -->
+<section class="section" id="titols">
+  <div class="section-inner">
+    <div class="section-label">Els títols</div>
+    <h2>Sis certificats per a cada <em>nivell</em> i objectiu</h2>
+    <p class="section-lead">Des del primer títol oficial fins al màxim reconegut per universitats i empreses arreu del món. Un certificat Cambridge té validesa per sempre.</p>
+    <div class="level-grid">
+
+      <div class="lc">
+        <div class="lc-top">
+          <span class="lc-cefr">A2</span>
+          <span class="lc-cert">KET</span>
+        </div>
+        <div class="lc-name">A2 Key</div>
+        <p class="lc-desc">Primer títol oficial Cambridge. Demostra que pots comunicar-te en situacions quotidianes senzilles. Ideal per consolidar el pas de primària a secundària.</p>
+        <div class="lc-pills"><span>A2</span><span>Cambridge oficial</span><span>Des de 12 anys</span></div>
+        <div class="lc-arrow">&#8594;</div>
+      </div>
+
+      <div class="lc">
+        <div class="lc-top">
+          <span class="lc-cefr">B1</span>
+          <span class="lc-cert">PET</span>
+        </div>
+        <div class="lc-name">B1 Preliminary</div>
+        <p class="lc-desc">El B1 acreditat mundialment. Comunicació fluïda en situacions quotidianes i professionals. Reconegut per empreses i universitats de tot el món.</p>
+        <div class="lc-pills"><span>B1</span><span>Cambridge oficial</span><span>Des de 13 anys</span></div>
+        <div class="lc-arrow">&#8594;</div>
+      </div>
+
+      <div class="lc">
+        <div class="lc-top">
+          <span class="lc-cefr">B2</span>
+          <span class="lc-cert">FCE</span>
+        </div>
+        <div class="lc-name">B2 First</div>
+        <p class="lc-desc">El títol Cambridge més sol·licitat al món. Accés universitari i laboral. A Sprint tenim dos grups: First 1 i First 2 per adaptar-nos al ritme de cada alumne.</p>
+        <div class="lc-pills"><span>B2</span><span>Cambridge oficial</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">&#8594;</div>
+      </div>
+
+      <div class="lc">
+        <div class="lc-top">
+          <span class="lc-cefr">C1</span>
+          <span class="lc-cert">CAE</span>
+        </div>
+        <div class="lc-name">C1 Advanced</div>
+        <p class="lc-desc">Nivell universitari en anglès. Requerit per a màsters internacionals, doctorats i posicions de lideratge. Dos grups: Advanced 1 i Advanced 2.</p>
+        <div class="lc-pills"><span>C1</span><span>Cambridge oficial</span><span>Màx. 10</span></div>
+        <div class="lc-arrow">&#8594;</div>
+      </div>
+
+      <div class="lc">
+        <div class="lc-top">
+          <span class="lc-cefr">C2</span>
+          <span class="lc-cert">CPE</span>
+        </div>
+        <div class="lc-name">C2 Proficiency</div>
+        <p class="lc-desc">El cim Cambridge. Anglès perfecte per a professionals i acadèmics. Grup reduït d'alt rendiment amb seguiment personal intensiu durant tot el curs.</p>
+        <div class="lc-pills"><span>C2</span><span>Cambridge oficial</span><span>Màx. 8</span></div>
+        <div class="lc-arrow">&#8594;</div>
+      </div>
+
+      <div class="lc" style="--camb:#0284C7">
+        <div class="lc-top">
+          <span class="lc-cefr" style="background:#E0F2FE;color:#0284C7">B1–C2</span>
+          <span class="lc-cert" style="background:#E0F2FE;color:#0369A1;border-color:#BAE6FD">IELTS</span>
+        </div>
+        <div class="lc-name">IELTS</div>
+        <p class="lc-desc">L'examen global per emigrar, estudiar o treballar al Regne Unit, Canadà i Austràlia. Preparació Academic i General Training. Puntuació de 0 a 9 bandes.</p>
+        <div class="lc-pills" style="--camb:#0284C7"><span style="background:#E0F2FE;color:#0284C7;border-color:#BAE6FD">IELTS Academic</span><span style="background:#E0F2FE;color:#0284C7;border-color:#BAE6FD">IELTS General</span><span style="background:#E0F2FE;color:#0284C7;border-color:#BAE6FD">Màx. 10</span></div>
+        <div class="lc-arrow" style="background:#E0F2FE;color:#0284C7">&#8594;</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =================== PER QUE =================== -->
+<section class="section proof-section" id="perque">
+  <div class="section-inner">
+    <div class="section-label">Per què Sprint?</div>
+    <h2 style="color:#fff;margin-bottom:36px">Tres dècades de <em style="background:linear-gradient(135deg,#D4AF37,#F5E396);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:normal">resultats reals</em></h2>
+    <div class="proof-grid">
+      <div class="proof-item">
+        <div class="proof-num">98%</div>
+        <div class="proof-label">d'alumnes aproven al primer intent</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">1992</div>
+        <div class="proof-label">centre preparador oficial Cambridge</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">+30</div>
+        <div class="proof-label">anys d'experiència en exàmens oficials</div>
+      </div>
+      <div class="proof-item">
+        <div class="proof-num">Màx.10</div>
+        <div class="proof-label">alumnes per grup per màxima atenció</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== METODE =================== -->
+<section class="section" id="metode">
+  <div class="section-inner">
+    <div class="section-label">El mètode</div>
+    <h2>Preparat per <em>superar l'examen</em>,<br>no per passar el curs</h2>
+    <p class="section-lead">La preparació Cambridge a Sprint integra tots els skills des del primer dia, amb simulacres reals i estratègies específiques per a cada paper de l'examen.</p>
+    <div class="metodo-grid">
+      <div class="metodo-card">
+        <div class="mc-num">01</div>
+        <div class="mc-title">Tots els skills integrats</div>
+        <p class="mc-desc">Reading, Writing, Listening i Speaking treballats des del primer dia. Cada classe reprodueix el format i el nivell d'exigència real de Cambridge.</p>
+      </div>
+      <div class="metodo-card">
+        <div class="mc-num">02</div>
+        <div class="mc-title">Simulacres reals</div>
+        <p class="mc-desc">Examens pràctics periòdics en condicions reals. L'alumne arriba al dia de l'examen oficial sabent exactament que l'espera. Sense sorpreses.</p>
+      </div>
+      <div class="metodo-card">
+        <div class="mc-num">03</div>
+        <div class="mc-title">Estratègia per a cada paper</div>
+        <p class="mc-desc">Tècniques específiques per a Use of English, Writing tasks i Speaking. Aprendre a llegir les preguntes correctament és la meitat de l'examen.</p>
+      </div>
+      <div class="metodo-card">
+        <div class="mc-num">04</div>
+        <div class="mc-title">Professors acreditats</div>
+        <p class="mc-desc">Tots els professors de preparació Cambridge han obtingut les acreditacions corresponents i coneixen el sistema per dins. Saben exactament on fallen els alumnes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== EXAMENS =================== -->
+<section class="section cal-section" id="examens">
+  <div class="section-inner">
+    <div class="section-label">Calendari oficial</div>
+    <h2>Convocatòries <em>2025–2026</em></h2>
+    <p class="section-lead">Cambridge celebra exàmens vàries vegades l'any. A Sprint et preparem per a la convocatòria que s'adapta millor al teu objectiu i el teu nivell actual.</p>
+    <div class="cal-grid">
+      <div class="cal-row">
+        <span class="cal-month">Març</span>
+        <div class="cal-exams">
+          <div class="cal-exam-name">Sessió d'hivern</div>
+          <div class="cal-exam-certs">KET · PET · FCE · CAE · CPE · IELTS</div>
+        </div>
+      </div>
+      <div class="cal-row">
+        <span class="cal-month">Juny</span>
+        <div class="cal-exams">
+          <div class="cal-exam-name">Sessió final de curs</div>
+          <div class="cal-exam-certs">KET · PET · FCE · CAE · CPE · IELTS</div>
+        </div>
+      </div>
+      <div class="cal-row">
+        <span class="cal-month">Novembre</span>
+        <div class="cal-exams">
+          <div class="cal-exam-name">Sessió de tardor</div>
+          <div class="cal-exam-certs">FCE · CAE · CPE · IELTS</div>
+        </div>
+      </div>
+      <div class="cal-row" style="border-style:dashed;opacity:.65">
+        <span class="cal-month" style="background:var(--ink-soft)">IELTS</span>
+        <div class="cal-exams">
+          <div class="cal-exam-name">IELTS · Convocatòries mensuals</div>
+          <div class="cal-exam-certs">Disponible tots els mesos de l'any. Consulta dates específiques.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== HORARIS =================== -->
+<section class="section" id="horaris">
+  <div class="section-inner">
+    <div class="section-label">Horaris</div>
+    <h2>Grups de tarda i <em>cap de setmana</em></h2>
+    <p class="section-lead">Tots els grups Cambridge funcionen de dilluns a divendres a la tarda. Grups FCE i CAE amb opcions intensives de dissabte. Màxim 10 alumnes per grup.</p>
+    <div class="horaris-wrap">
+      <div>
+        <div class="hor-block-label">Dilluns a divendres</div>
+        <div class="hor-block-time">17:00 – 20:30</div>
+        <div class="hor-block-sub">C/ Francesc Moragas 4 i 8, Sant Cugat del Vallès</div>
+      </div>
+      <div>
+        <div class="hor-block-label">Dissabte (FCE / CAE intensiu)</div>
+        <div class="hor-block-time">09:30 – 12:30</div>
+        <div class="hor-block-sub">Grups intensius de preparació per a la convocatòria de juny</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =================== CTA BAND =================== -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Prepara't per a la propera<br><em>convocatòria Cambridge</em></h2>
+    <p>Fes la prova de nivell gratuïta i t'orientem sobre quin curs Cambridge és el teu i quina convocatòria és la més realista. Sense compromís.</p>
+    <div class="cta-btns">
+      <a href="index.html#contacte" class="btn-camb">Inscriu-te ara &#8594;</a>
+      <a href="index.html#contacte" class="btn-ghost-white">Prova de nivell gratis</a>
+    </div>
+  </div>
+</div>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-huge">Cambridge.</div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h6>Sprint Idiomes</h6>
+        <p>Escola d'anglès i de francès a Sant Cugat des de 1974. Cambridge oficial des de 1992. DELF/DALF amb professors nadius.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/sprintidiomes" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="#FFF6E4"/></svg></a>
+          <a href="https://www.facebook.com/EscolaSprintIdiomes" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 4h-2.5C10 4 9 5.5 9 8v2H6.5v3H9v8h3v-8h2.5l.5-3H12V8c0-.7.3-1 1-1h2V4z" fill="#FFF6E4"/></svg></a>
+          <a href="https://wa.me/34935892264" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.5-4.5A8 8 0 1 1 9 19.5L4 20z" stroke="#FFF6E4" stroke-width="1.8" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h6>Cursos</h6>
+        <ul>
+          <li><a href="kids-planet.html">Kids Planet (3–6)</a></li>
+          <li><a href="kids.html">Kids 1–6 (7–12)</a></li>
+          <li><a href="teens.html">Teens (12+)</a></li>
+          <li><a href="cambridge.html">Cambridge &amp; IELTS</a></li>
+          <li><a href="adults.html">Adults (18+)</a></li>
+          <li><a href="business.html">BLA Business</a></li>
+          <li><a href="frances.html">L'École de Français</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>L'escola</h6>
+        <ul>
+          <li><a href="qui-som.html">Qui som</a></li>
+          <li><a href="index.html#perque">Per què Sprint?</a></li>
+          <li><a href="index.html#metode">El nostre mètode</a></li>
+          <li><a href="index.html#opinions">Opinions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Contacte</h6>
+        <ul>
+          <li>C/ Francesc Moragas 4 i 8</li>
+          <li>08172 Sant Cugat del Vallès</li>
+          <li><a href="tel:+34935892264">93 589 22 64</a></li>
+          <li><a href="tel:+34936746635">93 674 66 35</a></li>
+          <li><a href="mailto:info@sprintidiomes.com">info@sprintidiomes.com</a></li>
+          <li>L–V · 9h–21h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 1974 – 2026 Sprint Idiomes · Sant Cugat del Vallès</span>
+      <span>Avís legal · Privacitat · Cookies</span>
+    </div>
+    <div style="margin-top:18px;text-align:center;font-size:11px;color:rgba(255,246,228,.35);font-weight:600;letter-spacing:.05em">
+      Prototip confidencial · Disseny i desenvolupament <a href="https://sheisdigitalab.com" style="color:rgba(255,246,228,.5);text-decoration:underline">She's Digital</a> · Tots els drets reservats
+    </div>
+  </div>
+</footer>
+
+<script>
+const links = document.querySelectorAll('.subnav-link');
+const sections = document.querySelectorAll('.section[id]');
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+id));
+    }
+  });
+},{rootMargin:'-25% 0px -65% 0px'});
+sections.forEach(s=>obs.observe(s));
+</script>
+
+</body>
+</html>
