@@ -804,74 +804,85 @@ section{padding:80px 32px;max-width:1320px;margin:0 auto;position:relative}
 /* ---------- HERITAGE ---------- */
 .heritage{
   display:grid;
-  grid-template-columns:1fr 1.1fr;
-  gap:64px;align-items:center;
+  grid-template-columns:1fr 1.3fr;
+  gap:56px;align-items:start;
 }
 .heritage-left{
   position:relative;
-  background:var(--cream-2);
-  border:1px solid var(--line-strong);
+  background:var(--ink);
+  border:none;
   border-radius:28px;
-  padding:56px;
-  box-shadow:0 10px 30px rgba(21,32,61,.06);
+  padding:52px 48px;
+  box-shadow:0 24px 64px rgba(21,32,61,.22);
+  overflow:hidden;
+}
+.heritage-left::after{
+  content:'';position:absolute;
+  top:-80px;right:-80px;width:260px;height:260px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,184,0,.1) 0%,transparent 70%);
+  pointer-events:none;
 }
 .heritage-left .big-year{
   font-family:var(--font-display);
-  font-weight:500;
-  font-size:clamp(96px,15vw,200px);
+  font-weight:700;
+  font-size:clamp(72px,10vw,130px);
   line-height:.9;letter-spacing:-0.05em;
-  font-variation-settings:"wdth" 92;
-  color:var(--ink);
+  color:#fff;position:relative;z-index:1;
 }
-.heritage-left .big-year em{font-style:italic;color:var(--blue);font-weight:500}
+.heritage-left .big-year em{font-style:normal;color:#FFB800;font-weight:700}
 .heritage-left .since{
   font-family:var(--font-display);
   font-style:italic;font-weight:400;
-  font-size:18px;color:var(--ink-soft);
-  display:block;margin-top:4px;
-  letter-spacing:.02em;
+  font-size:15px;color:rgba(255,255,255,.38);
+  display:block;margin-top:10px;letter-spacing:.02em;
 }
 .heritage-left .timeline{
-  margin-top:36px;display:flex;flex-direction:column;gap:0;
+  margin-top:40px;display:flex;flex-direction:column;
+  position:relative;padding-left:22px;
+}
+.heritage-left .timeline::before{
+  content:'';position:absolute;left:5px;top:16px;bottom:16px;
+  width:1px;background:rgba(255,255,255,.1);
 }
 .timeline-row{
-  display:grid;grid-template-columns:64px 1fr;gap:16px;
-  padding:16px 0;border-top:1px solid var(--line);
-  font-size:15px;color:var(--ink-soft);align-items:start;line-height:1.5;
+  display:grid;grid-template-columns:54px 1fr;gap:12px;
+  padding:12px 0;border:none;
+  font-size:13px;color:rgba(255,255,255,.5);
+  align-items:start;line-height:1.5;position:relative;
 }
-.timeline-row:last-child{border-bottom:1px solid var(--line)}
+.timeline-row::before{
+  content:'';position:absolute;
+  left:-22px;top:17px;
+  width:7px;height:7px;border-radius:50%;
+  background:rgba(255,184,0,.45);
+}
+.timeline-row:last-child::before{background:#FFB800;box-shadow:0 0 0 3px rgba(255,184,0,.2)}
 .timeline-row strong{
-  font-family:var(--font-display);font-weight:600;
-  color:var(--blue);font-size:17px;letter-spacing:-0.01em;
+  font-family:var(--font-display);font-weight:700;
+  color:#FFB800;font-size:14px;letter-spacing:-0.01em;
 }
-.heritage-right .section-title{font-size:clamp(36px,5vw,64px)}
+.heritage-right{display:flex;flex-direction:column;padding-top:6px}
+.heritage-right .section-title{font-size:clamp(32px,4vw,50px);margin-bottom:18px}
 .heritage-right p{
-  font-size:18px;line-height:1.6;
-  margin-bottom:18px;color:var(--ink-soft);
+  font-size:17px;line-height:1.65;
+  margin-bottom:16px;color:var(--ink-soft);
 }
 .heritage-right p strong{color:var(--ink);font-weight:700}
-
-/* polaroid → quoted card */
-.polaroid{
-  position:absolute;
-  width:180px;
-  background:#fff;
+.heritage-quote{
+  background:var(--cream-2);
   border:1px solid var(--line-strong);
-  padding:14px 16px;
-  box-shadow:0 12px 28px rgba(21,32,61,.1);
-  top:-28px;right:-22px;
-  z-index:2;
-  border-radius:14px;
+  border-left:3px solid #FFB800;
+  border-radius:0 14px 14px 0;
+  padding:18px 22px;
+  margin-top:6px;
 }
-.polaroid .img{
-  display:none;
-}
-.polaroid .cap{
+.heritage-quote p{
   font-family:var(--font-display);
-  font-style:italic;
-  font-size:15px;color:var(--ink);line-height:1.35;
-  text-align:center;margin-top:6px;
+  font-style:italic;font-size:17px;
+  color:var(--ink);margin-bottom:0;
+  font-weight:500;line-height:1.4;
 }
+.polaroid{display:none}
 
 /* ---------- TEACHERS ---------- */
 .teachers{
@@ -1503,17 +1514,14 @@ footer{
 <section id="historia">
   <div class="heritage">
     <div class="heritage-left">
-      <div class="polaroid">
-        <div class="cap">“Tres generacions de famílies aprenent amb nosaltres.”</div>
-      </div>
       <div class="big-year">19<em>74</em></div>
       <span class="since">l'any que va començar tot</span>
       <div class="timeline">
         <div class="timeline-row"><strong>1974</strong><span>Obrim portes amb una aula d'anglès per a nens al cor de Sant Cugat.</span></div>
-        <div class="timeline-row"><strong>1992</strong><span>Som centre preparador oficial de <strong>Cambridge English</strong>.</span></div>
-        <div class="timeline-row"><strong>2005</strong><span>Estrenem el primer <strong>Summer Camp</strong> intensiu en anglès de Sant Cugat.</span></div>
-        <div class="timeline-row"><strong>2019</strong><span>Neix <strong>L'École de Français</strong>: programa de francès amb professors nadius.</span></div>
-        <div class="timeline-row"><strong>2024</strong><span><strong>50è aniversari</strong>. Tres generacions de famílies aprenent amb nosaltres.</span></div>
+        <div class="timeline-row"><strong>1992</strong><span>Som centre preparador oficial de Cambridge English.</span></div>
+        <div class="timeline-row"><strong>2005</strong><span>Estrenem el primer Summer Camp intensiu en anglès de Sant Cugat.</span></div>
+        <div class="timeline-row"><strong>2019</strong><span>Neix L'École de Français: programa de francès amb professors nadius.</span></div>
+        <div class="timeline-row"><strong>2024</strong><span style="color:#FFB800;font-weight:700">50è aniversari.</span><span style="color:rgba(255,255,255,.5)"> Tres generacions de famílies aprenent amb nosaltres.</span></div>
       </div>
     </div>
 
@@ -1532,6 +1540,9 @@ footer{
       <p>
         I des de 2019, també som <strong>L'École de Français</strong>: l'única proposta de francès completa de Sant Cugat, amb tres professors nadius i preparació oficial DELF i DALF.
       </p>
+      <div class="heritage-quote">
+        <p>Tres generacions de famílies aprenent amb nosaltres.</p>
+      </div>
     </div>
   </div>
 </section>
