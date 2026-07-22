@@ -11,8 +11,8 @@
 <style>
 /* ── TOKENS ── */
 :root{
-  --cobalt:#005FCC;
-  --sun:#FFDC00;
+  --cobalt:#CC8800;
+  --sun:#FFB800;
   --coral:#FF4934;
   --sand:#F4F1EA;
   --ink:#0D1B2A;
@@ -42,7 +42,7 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .hero{
   position:relative;
   overflow:hidden;
-  background:var(--cobalt);
+  background:#3A2200;
   padding:108px 48px 96px;
 }
 
@@ -126,10 +126,10 @@ button{font:inherit;cursor:pointer;border:none;background:none}
   background:var(--sun);color:var(--ink);
   font-family:var(--font-b);font-size:15px;font-weight:800;
   border-radius:50px;padding:15px 32px;
-  box-shadow:0 4px 24px rgba(255,220,0,.35);
+  box-shadow:0 4px 24px rgba(255,184,0,.35);
   transition:transform .2s,box-shadow .2s;
 }
-.btn-sun:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(255,220,0,.55)}
+.btn-sun:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(255,184,0,.55)}
 .btn-ghost-w{
   display:inline-flex;align-items:center;gap:9px;
   color:rgba(255,255,255,.7);
@@ -215,7 +215,7 @@ button{font:inherit;cursor:pointer;border:none;background:none}
   gap:32px;align-items:center;
   transition:box-shadow .22s;
 }
-.camp-card:hover{box-shadow:0 20px 64px rgba(0,95,204,.28)}
+.camp-card:hover{box-shadow:0 20px 64px rgba(204,136,0,.28)}
 .camp-sun-deco{
   position:absolute;right:-30px;bottom:-30px;
   width:200px;height:200px;border-radius:50%;
@@ -343,14 +343,14 @@ button{font:inherit;cursor:pointer;border:none;background:none}
   flex-shrink:0;
   font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
   padding:4px 11px;border-radius:8px;
-  background:rgba(0,95,204,.1);color:var(--cobalt);
+  background:rgba(204,136,0,.1);color:var(--cobalt);
   margin-left:20px;white-space:nowrap;
 }
 
 /* ── DATES (cobalt bg) ── */
 .dates-sec{background:var(--cobalt)}
-.dates-sec .sec-label{color:rgba(255,220,0,.65)}
-.dates-sec .sec-label::before{background:rgba(255,220,0,.55)}
+.dates-sec .sec-label{color:rgba(255,184,0,.65)}
+.dates-sec .sec-label::before{background:rgba(255,184,0,.55)}
 .dates-sec .sec h2{color:var(--white)}
 .dates-sec .sec h2 em{color:var(--sun);font-style:normal}
 .dates-sec .sec-lead{color:rgba(255,255,255,.5)}
@@ -378,14 +378,14 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .dc-prog{
   font-size:10px;font-weight:700;
   padding:3px 8px;border-radius:5px;
-  background:rgba(0,95,204,.07);color:var(--cobalt);
+  background:rgba(204,136,0,.07);color:var(--cobalt);
 }
 
 .places-warn{
   display:flex;align-items:flex-start;gap:14px;
   margin-top:32px;padding:16px 22px;
-  background:rgba(255,220,0,.11);
-  border:1px solid rgba(255,220,0,.22);
+  background:rgba(255,184,0,.11);
+  border:1px solid rgba(255,184,0,.22);
   border-radius:12px;
 }
 .pw-ico{font-size:18px;flex-shrink:0;margin-top:1px}
@@ -394,7 +394,7 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 
 /* ── ESTADES ── */
 .estades-card{
-  background:linear-gradient(135deg,#1E3A5F,#1E40AF);
+  background:linear-gradient(135deg,#1A0C00,#3A2200);
   border-radius:22px;padding:48px;
   color:var(--white);
   display:grid;grid-template-columns:1fr 1fr;gap:48px;
@@ -403,13 +403,13 @@ button{font:inherit;cursor:pointer;border:none;background:none}
 .estades-card::before{
   content:'';position:absolute;
   width:380px;height:380px;border-radius:50%;
-  background:radial-gradient(circle,rgba(255,220,0,.09) 0%,transparent 70%);
+  background:radial-gradient(circle,rgba(255,184,0,.09) 0%,transparent 70%);
   top:-80px;right:-60px;pointer-events:none;
 }
 .ec-left{position:relative;z-index:1}
 .ec-badge{
   display:inline-flex;align-items:center;gap:7px;
-  background:rgba(255,220,0,.1);border:1px solid rgba(255,220,0,.2);
+  background:rgba(255,184,0,.1);border:1px solid rgba(255,184,0,.2);
   border-radius:6px;padding:4px 12px;
   font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
   color:var(--sun);margin-bottom:18px;
@@ -427,9 +427,9 @@ button{font:inherit;cursor:pointer;border:none;background:none}
   font-family:var(--font-b);font-size:14px;font-weight:800;
   border-radius:50px;padding:13px 26px;
   transition:transform .2s,box-shadow .2s;
-  box-shadow:0 4px 20px rgba(255,220,0,.22);
+  box-shadow:0 4px 20px rgba(255,184,0,.22);
 }
-.ec-btn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,220,0,.38)}
+.ec-btn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,184,0,.38)}
 .ec-right{display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
 .dest{
   display:flex;align-items:center;gap:14px;
@@ -472,10 +472,10 @@ button{font:inherit;cursor:pointer;border:none;background:none}
   background:var(--cobalt);color:var(--white);
   font-family:var(--font-b);font-size:15px;font-weight:800;
   border-radius:50px;padding:16px 28px;
-  box-shadow:0 4px 22px rgba(0,95,204,.2);
+  box-shadow:0 4px 22px rgba(204,136,0,.2);
   transition:transform .2s,box-shadow .2s;
 }
-.btn-blue:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(0,95,204,.35)}
+.btn-blue:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(204,136,0,.35)}
 
 /* ── FOOTER ── */
 footer{background:var(--ink);padding:72px 48px 32px;color:#FAF5EA}
@@ -505,7 +505,7 @@ footer{background:var(--ink);padding:72px 48px 32px;color:#FAF5EA}
   display:flex;align-items:center;justify-content:center;
   transition:background .2s,transform .2s;
 }
-.f-socials a:hover{background:#2547D9;transform:translateY(-2px)}
+.f-socials a:hover{background:var(--cobalt);transform:translateY(-2px)}
 .footer-bottom{
   border-top:1px solid rgba(250,245,234,.1);padding-top:24px;
   display:flex;justify-content:space-between;align-items:center;
