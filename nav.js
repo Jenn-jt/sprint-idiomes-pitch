@@ -198,6 +198,7 @@
       <div class="nav-links">
         <a href="index.html"${page==='index.html'||page===''?' class="active"':''}>Home</a>
         <a href="qui-som.html"${page==='qui-som.html'?' class="active"':''}>Qui som</a>
+        <a href="equip.html"${page==='equip.html'?' class="active"':''}>Equip</a>
         ${cursosDropdown}
       </div>
       <div class="nav-cta">

@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>El nostre equip · Sprint Idiomes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF5EA;
+  --cream-2:#F1E9D5;
+  --ink:#15203D;
+  --ink-soft:#4A5878;
+  --blue:#2547D9;
+  --blue-soft:#3B5DE8;
+  --yellow:#FFB800;
+  --yellow-soft:#FFEFA8;
+  --line:rgba(21,32,61,.1);
+  --line-strong:rgba(21,32,61,.22);
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Nunito",ui-sans-serif,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  background:#fff;
+  color:var(--ink);
+  line-height:1.55;
+  font-size:16px;
+  overflow-x:hidden;
+  font-weight:500;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+section{padding:80px 32px;max-width:1320px;margin:0 auto;position:relative}
+
+.eyebrow{
+  font-family:var(--font-body);
+  font-size:14px;color:var(--blue);font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:8px;
+  margin-bottom:14px;
+}
+.section-title{
+  font-family:var(--font-display);
+  font-weight:700;font-size:clamp(36px,5vw,64px);
+  line-height:1;letter-spacing:-0.03em;
+  max-width:880px;margin-bottom:20px;
+}
+.section-title em{font-style:normal;color:var(--blue)}
+.section-title .hl{
+  position:relative;display:inline-block;font-style:normal;color:var(--blue);
+}
+.section-title .hl::after{
+  content:"";position:absolute;left:0;right:0;bottom:.06em;
+  height:.18em;background:var(--yellow-soft);z-index:-1;
+}
+
+/* ── HERO ── */
+.hero{
+  background:
+    radial-gradient(ellipse 60% 80% at 75% 20%, rgba(37,71,217,.3) 0%, transparent 60%),
+    linear-gradient(160deg, #060F36 0%, #0D1A55 55%, #0A1648 100%);
+  padding:120px 32px 80px;
+  position:relative;overflow:hidden;
+}
+.hero-deco{
+  position:absolute;right:-60px;top:50%;transform:translateY(-55%);
+  font-family:var(--font-display);
+  font-size:clamp(200px,30vw,460px);
+  font-weight:900;letter-spacing:-0.05em;
+  color:rgba(255,255,255,.022);
+  line-height:1;user-select:none;pointer-events:none;z-index:1;
+}
+.hero-inner{
+  max-width:1320px;margin:0 auto;
+  display:grid;grid-template-columns:1.1fr 1fr;
+  gap:64px;align-items:center;position:relative;z-index:2;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,184,0,.1);border:1px solid rgba(255,184,0,.3);
+  color:#FFD54F;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  border-radius:99px;padding:5px 14px;margin-bottom:18px;
+}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:#FFD54F;animation:dot-p 2s ease-in-out infinite}
+@keyframes dot-p{0%,100%{opacity:1}50%{opacity:.25}}
+.hero h1{
+  font-family:var(--font-display);
+  font-size:clamp(52px,7vw,100px);font-weight:900;
+  letter-spacing:-0.05em;line-height:.92;
+  color:#fff;margin-bottom:24px;
+}
+.hero h1 em{font-style:italic;color:var(--yellow);font-weight:500}
+.hero-lead{font-size:18px;line-height:1.65;color:rgba(255,255,255,.78);max-width:480px}
+.hero-lead strong{color:#fff}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hero-stat{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;padding:26px 22px;transition:background .2s;
+}
+.hero-stat:hover{background:rgba(255,255,255,.08)}
+.hero-stat .n{
+  font-family:var(--font-display);font-weight:900;font-size:40px;
+  line-height:1;letter-spacing:-0.04em;color:var(--yellow);margin-bottom:6px;
+}
+.hero-stat .l{font-size:13px;font-weight:600;color:rgba(255,255,255,.6);line-height:1.35}
+
+/* ── TEAM SECTIONS ── */
+.team-dept{margin-bottom:64px}
+.team-dept:last-child{margin-bottom:0}
+.dept-header{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:28px;padding-bottom:18px;
+  border-bottom:2px solid var(--line);
+}
+.dept-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.dept-title{
+  font-family:var(--font-display);font-weight:700;
+  font-size:21px;letter-spacing:-0.02em;color:var(--ink);
+}
+.dept-count{font-size:13px;font-weight:600;color:var(--ink-soft);margin-left:auto}
+
+.teachers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.teachers-grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.teachers-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+
+.teacher-card{
+  border-radius:22px;overflow:hidden;
+  border:1px solid var(--line);background:#fff;
+  box-shadow:0 4px 16px rgba(21,32,61,.05);
+  transition:transform .3s, box-shadow .3s, border-color .3s;
+}
+.teacher-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 16px 40px rgba(21,32,61,.1);
+  border-color:var(--line-strong);
+}
+.teacher-photo{
+  aspect-ratio:3/4;position:relative;overflow:hidden;
+}
+.teacher-photo .photo-bg{position:absolute;inset:0}
+.teacher-photo .photo-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.6) 100%);
+}
+.photo-badge{
+  position:absolute;top:14px;left:14px;z-index:2;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
+  font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);padding:5px 10px;border-radius:99px;
+  border:1px solid rgba(255,255,255,.6);
+}
+.native-badge{
+  position:absolute;top:14px;right:14px;z-index:2;
+  background:var(--yellow);
+  font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink);padding:4px 9px;border-radius:99px;
+}
+.teacher-info{padding:20px}
+.teacher-name{
+  font-family:var(--font-display);font-weight:700;
+  font-size:18px;letter-spacing:-0.02em;color:var(--ink);margin-bottom:4px;
+}
+.teacher-role{font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:14px}
+.teacher-tags{display:flex;gap:6px;flex-wrap:wrap}
+.teacher-tag{
+  background:var(--cream-2);
+  font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-soft);padding:4px 9px;border-radius:99px;
+}
+
+/* Featured (wider) card */
+.teacher-card.featured{grid-column:span 2;display:flex;flex-direction:row}
+.teacher-card.featured .teacher-photo{aspect-ratio:auto;width:240px;flex-shrink:0}
+.teacher-card.featured .teacher-info{
+  padding:30px 26px;display:flex;flex-direction:column;justify-content:center;
+}
+.teacher-card.featured .teacher-name{font-size:24px;margin-bottom:6px}
+.teacher-card.featured .teacher-role{font-size:14px;margin-bottom:14px}
+.featured-bio{font-size:14px;color:var(--ink-soft);line-height:1.6;margin-bottom:16px}
+.featured-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--cream-2);border:1px solid var(--line-strong);
+  border-radius:99px;padding:6px 14px;
+  font-size:12px;font-weight:700;color:var(--ink);
+}
+
+/* ── VALORS ── */
+.values-wrap{
+  background:var(--ink);border-radius:28px;
+  padding:72px;position:relative;overflow:hidden;
+}
+.values-wrap::before{
+  content:"";position:absolute;top:-120px;right:-80px;
+  width:400px;height:400px;border-radius:50%;
+  background:var(--blue);opacity:.2;filter:blur(40px);pointer-events:none;
+}
+.values-wrap .eyebrow{color:var(--yellow)}
+.values-title{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(28px,4vw,50px);line-height:1.05;
+  letter-spacing:-0.03em;color:#fff;margin-bottom:0;
+}
+.values-title em{font-style:italic;color:var(--yellow);font-weight:500}
+.values-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+  margin-top:44px;position:relative;z-index:1;
+}
+.value-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;padding:28px;transition:background .25s,transform .25s;
+}
+.value-card:hover{background:rgba(255,255,255,.08);transform:translateY(-4px)}
+.value-icon{font-size:26px;margin-bottom:16px;display:block}
+.value-card h4{
+  font-family:var(--font-display);font-weight:700;
+  font-size:19px;letter-spacing:-0.02em;color:#fff;margin-bottom:10px;line-height:1.1;
+}
+.value-card p{font-size:14px;color:rgba(255,246,228,.65);line-height:1.55}
+
+/* ── CTA ── */
+.cta-band{
+  background:linear-gradient(135deg,#0D1A55 0%,#1A2E80 55%,#0A1648 100%);
+  border-radius:24px;padding:64px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-band::before{
+  content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:500px;height:300px;border-radius:50%;
+  background:var(--blue);opacity:.2;filter:blur(40px);
+}
+.cta-band h2{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(28px,4vw,48px);letter-spacing:-0.04em;
+  color:#fff;margin-bottom:12px;position:relative;
+}
+.cta-band p{font-size:17px;color:rgba(255,255,255,.75);margin-bottom:30px;position:relative}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-yellow{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--yellow);color:var(--ink);
+  font-family:var(--font-body);font-size:15px;font-weight:800;
+  border-radius:100px;padding:16px 30px;
+  transition:transform .2s,box-shadow .2s,background .2s;
+  box-shadow:0 4px 20px rgba(255,184,0,.3);
+}
+.btn-yellow:hover{background:#FFD000;transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,184,0,.45)}
+.btn-ghost-white{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.1);color:#fff;
+  font-family:var(--font-body);font-size:15px;font-weight:600;
+  border-radius:100px;padding:16px 26px;
+  border:1px solid rgba(255,255,255,.22);
+  transition:background .2s,border-color .2s;
+}
+.btn-ghost-white:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4)}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--ink);color:var(--cream);
+  padding:80px 32px 30px;
+  position:relative;overflow:hidden;
+  border-top-left-radius:32px;border-top-right-radius:32px;
+  margin-top:60px;
+}
+.footer-inner{max-width:1320px;margin:0 auto;position:relative;z-index:1}
+.footer-huge{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(60px,11vw,180px);
+  line-height:.85;letter-spacing:-0.05em;margin-bottom:48px;
+}
+.footer-huge em{font-style:italic;color:var(--yellow);font-weight:500}
+.footer-cols{
+  display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px;
+  padding-top:40px;border-top:2px dashed rgba(255,246,228,.22);
+}
+.footer-col h6{
+  font-family:var(--font-display);font-weight:700;
+  font-size:14px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--yellow);margin-bottom:16px;
+}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:9px;font-size:14.5px;font-weight:600}
+.footer-col ul li a{color:rgba(255,246,228,.75)}
+.footer-col ul li a:hover{color:var(--yellow)}
+.footer-col p{font-size:14.5px;color:rgba(255,246,228,.7);line-height:1.55}
+.footer-socials{display:flex;gap:10px;margin-top:14px}
+.footer-socials a{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,246,228,.1);display:grid;place-items:center;
+  transition:all .25s;border:1.5px solid rgba(255,246,228,.18);
+}
+.footer-socials a:hover{background:var(--blue);transform:translateY(-2px)}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:48px;padding-top:24px;
+  border-top:2px dashed rgba(255,246,228,.18);
+  font-size:13px;color:rgba(255,246,228,.55);flex-wrap:wrap;gap:12px;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .hero{padding:80px 22px 60px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .teachers-grid{grid-template-columns:1fr 1fr !important}
+  .teacher-card.featured{flex-direction:column;grid-column:span 1}
+  .teacher-card.featured .teacher-photo{width:100%;aspect-ratio:3/2}
+  .values-wrap{padding:44px 24px}
+  .values-grid{grid-template-columns:1fr}
+  .cta-band{padding:40px 24px}
+  section{padding:60px 22px}
+  .footer-cols{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media(max-width:520px){
+  .teachers-grid{grid-template-columns:1fr !important}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .footer-cols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<script src="nav.js"></script>
+
+<!-- =================== HERO =================== -->
+<div class="hero">
+  <div class="hero-deco">Team</div>
+  <div class="hero-inner">
+    <div>
+      <span class="hero-badge"><span class="hero-dot"></span>Sprint Idiomes · Sant Cugat des de 1974</span>
+      <h1>El nostre <em>equip</em>.</h1>
+      <p class="hero-lead">
+        Professors que van venir i es van quedar. La meitat nadius, tots amb formació pedagògica especialitzada.
+        <strong>La continuïtat és el nostre secret</strong> — el teu fill no canvia de professor cada any.
+      </p>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="n">50%</div>
+        <div class="l">professors nadius d'anglès i francès</div>
+      </div>
+      <div class="hero-stat">
+        <div class="n">8+</div>
+        <div class="l">anys de permanència mitjana al centre</div>
+      </div>
+      <div class="hero-stat">
+        <div class="n">3</div>
+        <div class="l">professors nadius exclusius de francès</div>
+      </div>
+      <div class="hero-stat">
+        <div class="n">12</div>
+        <div class="l">alumnes màxim per classe</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =================== TEAM =================== -->
+<section>
+
+  <!-- Direcció -->
+  <div class="team-dept">
+    <div class="dept-header">
+      <span class="dept-dot" style="background:var(--yellow)"></span>
+      <span class="dept-title">Direcció</span>
+      <span class="dept-count">3 persones</span>
+    </div>
+    <div class="teachers-grid" style="grid-template-columns:1fr 1fr">
+      <div class="teacher-card featured">
+        <div class="teacher-photo">
+          <div class="photo-bg" style="background:linear-gradient(155deg,#1A2E80 0%,#060F36 100%)"></div>
+          <div class="photo-overlay"></div>
+          <span class="photo-badge">Director general</span>
+        </div>
+        <div class="teacher-info">
+          <div class="teacher-name">Jordi van Campen</div>
+          <div class="teacher-role">Director general · Director financer · Adults</div>
+          <p class="featured-bio">
+            Fundador i ànima de Sprint Idiomes des de 1974. Jordi dirigeix l'escola, coordina les finances i imparteix classes als grups d'Adults. Tres generacions de famílies de Sant Cugat han après amb ell.
+          </p>
+          <span class="featured-chip">
+            <span style="color:var(--yellow)">★</span>
+            50 anys a Sprint Idiomes
+          </span>
+        </div>
+      </div>
+      <div class="teacher-card featured">
+        <div class="teacher-photo">
+          <div class="photo-bg" style="background:linear-gradient(155deg,#2547D9 0%,#0D1A55 100%)"></div>
+          <div class="photo-overlay"></div>
+          <span class="photo-badge">Directora d'Estudis</span>
+        </div>
+        <div class="teacher-info">
+          <div class="teacher-name">Asun Ricart</div>
+          <div class="teacher-role">Directora d'Estudis · Cap del Departament d'Anglès</div>
+          <p class="featured-bio">
+            Responsable del currículum acadèmic i coordinadora de tots els caps de departament. Garanteix que la metodologia i el nivell d'exigència siguin consistents a tots els grups i nivells.
+          </p>
+          <span class="featured-chip">
+            <span style="color:var(--yellow)">★</span>
+            Coordinadora de tots els departaments
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="teachers-grid" style="grid-template-columns:repeat(3,1fr);margin-top:18px">
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <div class="photo-bg" style="background:linear-gradient(155deg,#4A5878 0%,#15203D 100%)"></div>
+          <div class="photo-overlay"></div>
+          <span class="photo-badge">Subdirectora</span>
+        </div>
+        <div class="teacher-info">
+          <div class="teacher-name">Àngels Reche</div>
+          <div class="teacher-role">Subdirectora · Gestió i coordinació</div>
+          <div class="teacher-tags">
+            <span class="teacher-tag">Administració</span>
+            <span class="teacher-tag">Coordinació</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Anglès: Kids Planet -->
+  <div class="team-dept">
+    <div class="dept-header">
+      <span class="dept-dot" style="background:#FF80AB"></span>
+      <span class="dept-title">Kids Planet — Anglès infantil (3–6 anys)</span>
+    </div>
+    <div class="teachers-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <div class="photo-bg" style="background:linear-gradient(155deg,#FF80AB 0%,#C4507A 100%)"></div>
+          <div class="photo-overlay"></div>
+          <span class="photo-badge">Kids Planet</span>
+        </div>
+        <div class="teacher-info">
+          <div class="teacher-name">Anna Kanalas</div>
+          <div class="teacher-role">Cap de departament · Kids Planet</div>
+          <div class="teacher-tags">
+            <span class="teacher-tag">3–6 anys</span>
+            <span class="teacher-tag">Immersió</span>
+            <span class="teacher-tag">TEYL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Anglès: Kids & Teens -->
+  <div class="team-dept">
+    <div class="dept-header">
+      <span class="dept-dot" style="background:#FF6B35"></span>
+      <span class="dept-title">Kids &amp; Teens — Anglès (7–17 anys)</span>
+    </div>
+    <div class="teachers-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <div class="photo-bg" style="background:linear-gradient(155deg,#FF6B35 0%,#BF4A1A 100%)"></div>
+          <div class="photo-overlay"></div>
+          <span class="photo-badge">Kids &amp; Teens</span>
+        </div>
+        <div class="teacher-info">
+          <div class="teacher-name">Yolanda Navarro</div>
+          <div class="teacher-role">Cap de departament · Kids &amp; Teens</div>
+          <div class="teacher-tags">
+            <span class="teacher-tag">7–17 anys</span>
+            <span class="teacher-tag">Kids</span>
+            <span class="teacher-tag">Teens</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Anglès: Adults & Cambridge -->
+  <div class="team-dept">
+    <div class="dept-header">
+      <span class="dept-dot" style="background:#9B72CF"></span>
+      <span class="dept-title">Adults &amp; Cambridge — Anglès</span>
+      <span class="dept-count">2 professors</span>
+    </div>
+    <div class="teachers-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <div class="photo-bg" style="background:linear-gradient(155deg,#5CBA6A 0%,#2E7D3A 100%)"></div>
+          <div class="photo-overlay"></div>
+          <span class="photo-badge">FCE · First Certificate</span>
+          <span class="native-badge">Natiu</span>
+        </div>
+        <div class="teacher-info">
+          <div class="teacher-name">George Goode</div>
+          <div class="teacher-role">Cap de departament · FCE</div>
+          <div class="teacher-tags">
+            <span class="teacher-tag">Natiu</span>
+            <span class="teacher-tag">FCE · B2</span>
+            <span class="teacher-tag">Adults</span>
+          </div>
+        </div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <div class="photo-bg" style="background:linear-gradient(155deg,#7E57C2 0%,#3D2080 100%)"></div>
+          <div class="photo-overlay"></div>
+          <span class="photo-badge">CAE · CPE</span>
+          <span class="native-badge">Natiu</span>
+        </div>
+        <div class="teacher-info">
+          <div class="teacher-name">Joe Harrison</div>
+          <div class="teacher-role">Cap de departament · CAE &amp; CPE</div>
+          <div class="teacher-tags">
+            <span class="teacher-tag">Natiu</span>
+            <span class="teacher-tag">CAE · C1</span>
+            <span class="teacher-tag">CPE · C2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- L'École de Français -->
+  <div class="team-dept">
+    <div class="dept-header">
+      <span class="dept-dot" style="background:var(--blue)"></span>
+      <span class="dept-title">L'École de Français</span>
+    </div>
+    <div class="teachers-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <div class="photo-bg" style="background:linear-gradient(155deg,#1565C0 0%,#2547D9 100%)"></div>
+          <div class="photo-overlay"></div>
+          <span class="photo-badge">L'École de Français</span>
+          <span class="native-badge">Native</span>
+        </div>
+        <div class="teacher-info">
+          <div class="teacher-name">Silvaine Tatin</div>
+          <div class="teacher-role">Codirectora · L'École de Français</div>
+          <div class="teacher-tags">
+            <span class="teacher-tag">Nativa</span>
+            <span class="teacher-tag">DELF · DALF</span>
+            <span class="teacher-tag">Tots els nivells</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sprint Trade -->
+  <div class="team-dept">
+    <div class="dept-header">
+      <span class="dept-dot" style="background:#8B1A4A"></span>
+      <span class="dept-title">Sprint Trade — Classes en empresa &amp; particulars</span>
+    </div>
+    <div class="teachers-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <div class="photo-bg" style="background:linear-gradient(155deg,#8B1A4A 0%,#5A0D28 100%)"></div>
+          <div class="photo-overlay"></div>
+          <span class="photo-badge">Sprint Trade</span>
+        </div>
+        <div class="teacher-info">
+          <div class="teacher-name">Laura Ortiz</div>
+          <div class="teacher-role">Cap de departament · Sprint Trade</div>
+          <div class="teacher-tags">
+            <span class="teacher-tag">Empreses</span>
+            <span class="teacher-tag">Particulars</span>
+            <span class="teacher-tag">In-company</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- =================== VALORS =================== -->
+<section style="padding-top:0">
+  <div class="values-wrap">
+    <span class="eyebrow">La nostra filosofia</span>
+    <h2 class="values-title">Per què els nostres professors<br>es <em>queden anys</em>.</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="value-icon">🎯</span>
+        <h4>Continuïtat real</h4>
+        <p>El professor que comença amb el teu fill el segueix curs rere curs. No canviem l'equip cada any — la continuïtat és el nostre mètode.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🗣️</span>
+        <h4>50% professors nadius</h4>
+        <p>La meitat de l'equip és parlant natiu d'anglès o de francès. L'accent i la naturalitat s'aprenen per immersió, no per gramàtica.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">📚</span>
+        <h4>Formació especialitzada</h4>
+        <p>Tots els professors tenen titulació pedagògica específica (CELTA, DELTA, TEYL o equivalent) a més del seu domini de l'idioma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CTA =================== -->
+<section style="padding-top:0">
+  <div class="cta-band">
+    <h2>Prova una classe gratis.</h2>
+    <p>Vine a conèixer l'equip en persona. En 48h tens plaça confirmada.</p>
+    <div class="cta-btns">
+      <a href="index.html#contacte" class="btn-yellow">Prova una classe gratis →</a>
+      <a href="tel:+34935892264" class="btn-ghost-white">93 589 22 64</a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-huge">Hello, <em>Hi</em>, Hola.</div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h6>Sprint Idiomes</h6>
+        <p>Escola d'anglès i de francès a Sant Cugat des de 1974. Cambridge oficial des de 1992. DELF/DALF amb professors nadius.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/sprintidiomes" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="#FFF6E4"/></svg></a>
+          <a href="https://www.facebook.com/EscolaSprintIdiomes" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 4h-2.5C10 4 9 5.5 9 8v2H6.5v3H9v8h3v-8h2.5l.5-3H12V8c0-.7.3-1 1-1h2V4z" fill="#FFF6E4"/></svg></a>
+          <a href="https://wa.me/34935892264" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.5-4.5A8 8 0 1 1 9 19.5L4 20z" stroke="#FFF6E4" stroke-width="1.8" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h6>Cursos</h6>
+        <ul>
+          <li><a href="kids-planet.html">Kids Planet (3–6)</a></li>
+          <li><a href="kids.html">Kids 1–6 (7–12)</a></li>
+          <li><a href="teens.html">Teens (12+)</a></li>
+          <li><a href="cambridge.html">Cambridge &amp; IELTS</a></li>
+          <li><a href="adults.html">Adults (18+)</a></li>
+          <li><a href="business.html">BLA Business</a></li>
+          <li><a href="frances.html">L'École de Français</a></li>
+          <li><a href="summer.html">Intensius d'estiu</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>L'escola</h6>
+        <ul>
+          <li><a href="qui-som.html">Qui som</a></li>
+          <li><a href="equip.html">El nostre equip</a></li>
+          <li><a href="index.html#perque">Per què Sprint?</a></li>
+          <li><a href="index.html#metode">El nostre mètode</a></li>
+          <li><a href="index.html#opinions">Opinions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Contacte</h6>
+        <ul>
+          <li>C/ Francesc Moragas 4 i 8</li>
+          <li>08172 Sant Cugat del Vallès</li>
+          <li><a href="tel:+34935892264">93 589 22 64</a></li>
+          <li><a href="tel:+34936746635">93 674 66 35</a></li>
+          <li><a href="mailto:info@sprintidiomes.com">info@sprintidiomes.com</a></li>
+          <li>L–V · 9h–21h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 1974 – 2026 Sprint Idiomes · Sant Cugat del Vallès</span>
+      <span>Avís legal · Privacitat · Cookies</span>
+    </div>
+    <div style="margin-top:18px;text-align:center;font-size:11px;color:rgba(255,246,228,.35);font-weight:600;letter-spacing:.05em">
+      Prototip confidencial · Disseny i desenvolupament <a href="https://sheisdigitalab.com" style="color:rgba(255,246,228,.5);text-decoration:underline">She's Digital</a> · Tots els drets reservats
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
