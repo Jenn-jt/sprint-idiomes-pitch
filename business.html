@@ -97,7 +97,7 @@ h1 em{
   letter-spacing:-0.03em;color:#D4AF37;line-height:1;
 }
 .hero-stat-label{
-  font-size:11px;font-weight:700;color:rgba(255,255,255,.42);
+  font-size:11px;font-weight:700;color:rgba(255,255,255,.78);
   margin-top:5px;letter-spacing:.04em;
 }
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
@@ -208,7 +208,7 @@ h1 em{
   font-family:var(--font-display);font-size:32px;font-weight:800;
   letter-spacing:-0.03em;color:#fff;line-height:1;
 }
-.fc-stat-label{font-size:12px;color:rgba(255,255,255,.45);margin-top:5px}
+.fc-stat-label{font-size:12px;color:rgba(255,255,255,.80);margin-top:5px}
 .fc-cta{
   display:inline-flex;align-items:center;gap:10px;
   background:var(--yellow);color:var(--ink);
@@ -284,7 +284,7 @@ h1 em{
   padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07);
 }
 .fr-stat:last-child{border-bottom:none}
-.fr-stat-label{font-size:14px;color:rgba(255,255,255,.55);font-weight:600}
+.fr-stat-label{font-size:14px;color:rgba(255,255,255,.82);font-weight:600}
 .fr-stat-val{
   font-family:var(--font-display);font-size:20px;font-weight:800;
   color:#D4AF37;
@@ -311,7 +311,7 @@ h1 em{
 }
 .hor-block-label{
   font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:rgba(255,255,255,.4);margin-bottom:12px;
+  color:rgba(255,255,255,.80);margin-bottom:12px;
 }
 .hor-block-time{
   font-family:var(--font-display);font-size:22px;font-weight:800;
@@ -348,7 +348,7 @@ h1 em{
   background:linear-gradient(135deg,#D4AF37 0%,#F5E396 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
-.cta-band p{font-size:16px;color:rgba(255,255,255,.55);line-height:1.6;margin-bottom:32px}
+.cta-band p{font-size:16px;color:rgba(255,255,255,.82);line-height:1.6;margin-bottom:32px}
 .cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
 
 /* ── FOOTER ── */
@@ -411,6 +411,84 @@ footer{
   .footer-cols{grid-template-columns:1fr}
 }
 </style>
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ca_ES">
+  <meta property="og:site_name" content="Sprint Idiomes">
+  <meta property="og:url" content="https://www.sprintidiomes.com/business/">
+  <meta property="og:title" content="BLA Business Language Academy · Anglès Empreses Sant Cugat · FUNDAE">
+  <meta property="og:description" content="Formació lingüística a mida per a empreses i professionals a Sant Cugat. Anglès i francès corporatiu, bonificable al 100% per FUNDAE. +50 empreses clients.">
+  <meta property="og:image" content="https://www.sprintidiomes.com/assets/images/og-sprint-idiomes.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BLA Business Language Academy · Anglès Empreses Sant Cugat · FUNDAE">
+  <meta name="twitter:description" content="Anglès empreses Sant Cugat. 100% bonificable FUNDAE, in-company i online. +50 empreses clients.">
+  <meta name="twitter:image" content="https://www.sprintidiomes.com/assets/images/og-sprint-idiomes.jpg">
+  <!-- SEO: Canonical -->
+  <link rel="canonical" href="https://www.sprintidiomes.com/business/">
+  <!-- SEO: Robots -->
+  <meta name="robots" content="index, follow">
+  <!-- SEO: Schema.org JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "name": "BLA Business Language Academy — Anglès i Francès per a Empreses",
+      "description": "Formació lingüística corporativa a mida per a empreses i professionals. Anglès i francès de negocis, bonificable al 100% per FUNDAE, modalitat in-company i online.",
+      "url": "https://www.sprintidiomes.com/business/",
+      "provider": {
+        "@id": "https://www.sprintidiomes.com/#school"
+      },
+      "audience": {
+        "@type": "EducationalAudience",
+        "audienceType": "Business professionals"
+      },
+      "teaches": "Business English, Business French, Corporate Communication",
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "onsite"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "online"
+        },
+        {
+          "@type": "CourseInstance",
+          "courseMode": "blended"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inici",
+          "item": "https://www.sprintidiomes.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cursos",
+          "item": "https://www.sprintidiomes.com/cursos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BLA Business"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -505,7 +583,7 @@ footer{
 <section class="section" id="programes" style="background:#F0EEF5">
   <div class="section-inner">
     <div class="section-label">Programes</div>
-    <h2>Tres formats per a qualsevol<br><em>realitat d'empresa</em></h2>
+    <h2>3 formats per a qualsevol<br><em>realitat d'empresa</em></h2>
     <p class="section-lead">Tant si necessites formar un equip sencer com un directiu concret, tenim el format adequat. Sempre amb el contingut adaptat al sector i als objectius reals.</p>
     <div class="prog-grid">
 
@@ -658,7 +736,7 @@ footer{
     <p>Diagnosi gratuïta del nivell de l'equip, proposta de programa a mida i gestió completa de la bonificació FUNDAE. Sense compromís. Resposta en 24h.</p>
     <div class="cta-btns">
       <a href="index.html#contacte" class="btn-biz">Sol·licita la diagnosi gratuïta &#8594;</a>
-      <a href="index.html#contacte" class="btn-biz-ghost">Truca'ns: 93 589 22 64</a>
+      <a href="index.html#contacte" class="btn-biz-ghost">Prova una classe gratis</a>
     </div>
   </div>
 </div>

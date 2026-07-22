@@ -98,7 +98,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
 .horaris-wrap{background:linear-gradient(135deg,#7C3AED,#A855F7,#C084FC);border-radius:32px;padding:48px;color:#fff;margin-top:48px;box-shadow:0 20px 60px rgba(124,58,237,.35)}
 .horaris-title{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:6px}
-.horaris-sub{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:32px}
+.horaris-sub{font-size:14px;color:rgba(255,255,255,.80);margin-bottom:32px}
 .horaris-table{width:100%;border-collapse:collapse}
 .horaris-table th{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);padding:0 16px 14px;text-align:left}
 .horaris-table th:first-child{padding-left:0}
@@ -113,7 +113,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .btn-ghost-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.6);font-family:var(--font-body);font-size:14px;font-weight:700;border-radius:10px;padding:13px 24px;border:1px solid rgba(255,255,255,.18);transition:border-color .2s,color .2s}
 .btn-ghost-white:hover{border-color:rgba(255,255,255,.55);color:#fff}
 
-.cta-band{background:linear-gradient(135deg,#FF4D8D 0%,#FF8C42 22%,#FFD93D 44%,#3DB8F5 66%,#A855F7 88%,#FF4D8D 100%);padding:88px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-band{background:linear-gradient(135deg,#C2005A 0%,#FF4D8D 55%,#FF7A5C 100%);padding:88px 40px;text-align:center;position:relative;overflow:hidden}
 .cta-band-inner{max-width:580px;margin:0 auto}
 .cta-band h2{font-family:var(--font-display);font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-0.04em;color:#fff;margin-bottom:12px}
 .cta-band p{font-size:16px;color:rgba(255,255,255,.8);line-height:1.6;margin-bottom:32px}
@@ -157,9 +157,6 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
   .horaris-table th:nth-child(3),.horaris-table td:nth-child(3){display:none}
 }
 
-@keyframes kp-float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(8deg)}}
-@keyframes kp-float2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-10px) rotate(-6deg)}}
-.kp-deco{position:absolute;pointer-events:none;user-select:none;z-index:0;line-height:1;animation:kp-float 3s ease-in-out infinite}
 .kp-blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
 .kp-blob-1{width:350px;height:350px;background:radial-gradient(circle,rgba(255,128,171,.18),transparent 70%);top:-80px;right:10%}
 .kp-blob-2{width:250px;height:250px;background:radial-gradient(circle,rgba(255,200,0,.15),transparent 70%);bottom:-60px;right:25%}
@@ -172,6 +169,75 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 .nivel-card:last-child{background:linear-gradient(135deg,#3DB8F5,#6EC6FF);border:none;color:#fff;box-shadow:0 12px 32px rgba(61,184,245,.3)}
 #nivells.section{background:#F0FBFF}
 </style>
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ca_ES">
+  <meta property="og:site_name" content="Sprint Idiomes">
+  <meta property="og:url" content="https://www.sprintidiomes.com/kids-planet/">
+  <meta property="og:title" content="Kids Planet · Anglès 3–6 anys · Sprint Idiomes Sant Cugat">
+  <meta property="og:description" content="Anglès per a nens de 3 a 6 anys a Sant Cugat. Dos professors nadius per aula, grups de màxim 8 alumnes i immersió total des dels 3 anys.">
+  <meta property="og:image" content="https://www.sprintidiomes.com/assets/images/og-sprint-idiomes.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kids Planet · Anglès 3–6 anys · Sprint Idiomes Sant Cugat">
+  <meta name="twitter:description" content="Anglès des dels 3 anys a Sant Cugat. Immersió total, 2 professors nadius, grups de 8.">
+  <meta name="twitter:image" content="https://www.sprintidiomes.com/assets/images/og-sprint-idiomes.jpg">
+  <!-- SEO: Canonical -->
+  <link rel="canonical" href="https://www.sprintidiomes.com/kids-planet/">
+  <!-- SEO: Robots -->
+  <meta name="robots" content="index, follow">
+  <!-- SEO: Schema.org JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "name": "Kids Planet — Anglès per a Nens de 3 a 6 anys",
+      "description": "Programa d'immersió total en anglès per a nens de 3 a 6 anys a Sant Cugat. Dos professors nadius per grup, grups de màxim 8 alumnes, metodologia basada en el joc.",
+      "url": "https://www.sprintidiomes.com/kids-planet/",
+      "provider": {
+        "@id": "https://www.sprintidiomes.com/#school"
+      },
+      "educationalLevel": "Preschool",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "audienceType": "Children (3-6 years)"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "onsite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inici",
+          "item": "https://www.sprintidiomes.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cursos",
+          "item": "https://www.sprintidiomes.com/cursos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kids Planet"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 <script src="nav.js"></script>
@@ -212,12 +278,6 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
   <div class="kp-blob kp-blob-1"></div>
   <div class="kp-blob kp-blob-2"></div>
   <div class="kp-blob kp-blob-3"></div>
-  <span class="kp-deco" style="font-size:56px;top:12%;left:4%;animation-delay:0s">&#11088;</span>
-  <span class="kp-deco" style="font-size:44px;top:18%;right:6%;animation-delay:.6s;animation-name:kp-float2">&#127880;</span>
-  <span class="kp-deco" style="font-size:50px;bottom:18%;left:8%;animation-delay:1.1s">&#127775;</span>
-  <span class="kp-deco" style="font-size:38px;top:8%;right:18%;animation-delay:1.7s;animation-name:kp-float2">&#10024;</span>
-  <span class="kp-deco" style="font-size:46px;bottom:22%;right:4%;animation-delay:.4s">&#127881;</span>
-  <span class="kp-deco" style="font-size:40px;top:55%;left:2%;animation-delay:2s;animation-name:kp-float2">&#127752;</span>
 </section>
 
 <section class="section" style="background:#FFF5F9">
@@ -289,7 +349,7 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 <section class="section" id="nivells">
   <div class="section-inner">
     <div class="section-label" style="color:var(--kp)"><span class="section-label-dot" style="background:var(--kp)"></span>Els grups</div>
-    <h2>Dos grups, un camí <em style="color:var(--kp);font-style:normal">continu</em>.</h2>
+    <h2>2 grups, un camí <em style="color:var(--kp);font-style:normal">continu</em>.</h2>
     <p class="section-lead">Kids Planet (3–4) i Kids Planet Plus (5–6). Als 7 anys, el pas natural és als cursos Kids 1–6.</p>
     <div class="nivells-grid">
       <div class="nivel-card">
@@ -355,7 +415,7 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
     <h2>Primera classe gratuïta, sense compromís.</h2>
     <p>Els pares de Kids Planet poden acompanyar els fills fins que es trobin còmodes. Vine a conèixer l'aula Rainbow.</p>
     <div class="cta-band-btns">
-      <a href="index.html#contacte" class="btn-white">Reservar la classe →</a>
+      <a href="index.html#contacte" class="btn-white">Prova una classe gratis →</a>
       <a href="tel:+34935892264" class="btn-ghost-white">93 589 22 64</a>
     </div>
   </div>

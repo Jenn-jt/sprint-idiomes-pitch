@@ -56,10 +56,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .subnav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 
 /* ── PAGE HERO ── */
-@keyframes k-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-@keyframes k-float2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-10px) rotate(-10deg)}}
-.k-deco{position:absolute;pointer-events:none;user-select:none;z-index:0;line-height:1;animation:k-float 4s ease-in-out infinite;opacity:.72}
-
 .kids-hero{
   background:linear-gradient(160deg, #003ACC 0%, #0055EE 38%, #0088FF 100%);
   border-bottom:1px solid var(--line);
@@ -82,7 +78,11 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .breadcrumb a{color:rgba(255,255,255,.5);transition:color .2s}
 .breadcrumb a:hover{color:#fff}
 .breadcrumb span{opacity:.4}
-.kids-hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.kids-hero-grid{max-width:640px}
+.hero-stats{display:flex;gap:16px;margin-top:44px;flex-wrap:wrap}
+.hero-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:14px 20px}
+.hero-stat-num{font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-0.02em;color:#fff;line-height:1}
+.hero-stat-label{font-size:12px;color:rgba(255,255,255,.78);margin-top:3px;font-weight:600}
 .kids-eyebrow{
   display:inline-flex;align-items:center;gap:8px;
   font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
@@ -123,22 +123,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   transition:border-color .2s,background .2s;
 }
 .btn-outline:hover{border-color:var(--ink);background:var(--cream)}
-.hero-badges{
-  display:flex;flex-direction:column;gap:14px;
-  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
-  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border-radius:20px;
-  padding:24px 28px;flex-shrink:0;min-width:200px;
-}
-.hero-badge-item{display:flex;align-items:center;gap:12px}
-.hbi-icon{
-  width:44px;height:44px;border-radius:14px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:22px;flex-shrink:0;
-}
-.hbi-text{font-size:13px;line-height:1.3}
-.hbi-text strong{display:block;font-size:15px;font-weight:800;color:#fff}
-.hbi-text span{color:rgba(255,255,255,.72);font-size:12px}
 
 /* ── SECTION SHARED ── */
 .section{padding:80px 40px;border-bottom:1px solid var(--line)}
@@ -251,7 +235,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .horaris-table{width:100%;border-collapse:collapse}
 .horaris-table th{
   font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:rgba(255,255,255,.45);padding:0 16px 14px;text-align:left;
+  color:rgba(255,255,255,.80);padding:0 16px 14px;text-align:left;
 }
 .horaris-table th:first-child{padding-left:0}
 .horaris-table td{
@@ -273,7 +257,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   white-space:nowrap;
 }
 .horaris-note{
-  margin-top:20px;font-size:13px;color:rgba(255,255,255,.4);
+  margin-top:20px;font-size:13px;color:rgba(255,255,255,.78);
   display:flex;align-items:center;gap:8px;
 }
 .horaris-cta{
@@ -385,10 +369,6 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 .level-card:nth-child(6){--lc:#B45309;--lc-light:#FFFBEB}
 
 @media(max-width:960px){
-  @keyframes k-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-@keyframes k-float2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-10px) rotate(-10deg)}}
-.k-deco{position:absolute;pointer-events:none;user-select:none;z-index:0;line-height:1;animation:k-float 4s ease-in-out infinite;opacity:.72}
-
 .kids-hero{padding:48px 22px 40px}
   .kids-hero-grid{grid-template-columns:1fr}
   .hero-badges{display:none}
@@ -413,9 +393,77 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 /* --- kids orange btn override --- */
 .kids-hero .btn-kp,.cta-band .btn-kp{background:var(--kids);box-shadow:0 8px 28px rgba(255,107,53,.4)}
 .kids-hero .btn-kp:hover,.cta-band .btn-kp:hover{box-shadow:0 14px 40px rgba(255,107,53,.55)}
-.btn-outline{color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.28);}
+.kids-hero .btn-outline{color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.28);}
 .kids-hero .btn-outline:hover{border-color:rgba(255,255,255,.65);background:rgba(255,255,255,.07);color:#fff;}
 </style>
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ca_ES">
+  <meta property="og:site_name" content="Sprint Idiomes">
+  <meta property="og:url" content="https://www.sprintidiomes.com/kids/">
+  <meta property="og:title" content="Kids 7–12 anys · Anglès per a Nens · Sprint Idiomes Sant Cugat">
+  <meta property="og:description" content="Anglès per a nens de 7 a 12 anys a Sant Cugat. 6 nivells progressius fins al B1, preparació Young Learners de Cambridge, grups de màxim 12 alumnes.">
+  <meta property="og:image" content="https://www.sprintidiomes.com/assets/images/og-sprint-idiomes.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kids 7–12 anys · Anglès per a Nens · Sprint Idiomes Sant Cugat">
+  <meta name="twitter:description" content="Anglès 7-12 anys a Sant Cugat. 6 nivells fins al B1, Cambridge Young Learners, grups de 12.">
+  <meta name="twitter:image" content="https://www.sprintidiomes.com/assets/images/og-sprint-idiomes.jpg">
+  <!-- SEO: Canonical -->
+  <link rel="canonical" href="https://www.sprintidiomes.com/kids/">
+  <!-- SEO: Robots -->
+  <meta name="robots" content="index, follow">
+  <!-- SEO: Schema.org JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "name": "Kids — Anglès per a Nens de 7 a 12 anys",
+      "description": "Anglès per a nens de 7 a 12 anys a Sant Cugat. Sis nivells progressius fins al B1, preparació Young Learners de Cambridge, grups de màxim 12 alumnes.",
+      "url": "https://www.sprintidiomes.com/kids/",
+      "provider": {
+        "@id": "https://www.sprintidiomes.com/#school"
+      },
+      "educationalLevel": "A1 to B1",
+      "audience": {
+        "@type": "EducationalAudience",
+        "audienceType": "Children (7-12 years)"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "onsite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inici",
+          "item": "https://www.sprintidiomes.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cursos",
+          "item": "https://www.sprintidiomes.com/cursos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kids 7–12"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 <script src="nav.js"></script>
@@ -455,57 +503,26 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
       <span>›</span>
       <a href="cursos.html">Cursos</a>
       <span>›</span>
-      <span style="color:var(--ink);font-weight:700">Kids</span>
+      <span style="color:rgba(255,255,255,.9);font-weight:700">Kids</span>
     </div>
     <div class="kids-hero-grid">
-      <div>
-        <div class="kids-eyebrow">
-          <span class="kids-eyebrow-dot"></span>7 – 12 anys
-        </div>
-        <h1>Sis nivells fins al<br><em>B1</em>.</h1>
-        <p class="kids-hero-sub">De Kids 1 a Kids 6, de 7 a 12 anys. Lectoescriptura integrada, preparació Young Learners de Cambridge i grups de màxim 12 alumnes.</p>
-        <div class="hero-ctas">
-          <a href="#contacte" class="btn-kp">Prova una classe gratis →</a>
-          <a href="#horaris" class="btn-outline">Veure horaris</a>
-        </div>
+      <div class="kids-eyebrow">
+        <span class="kids-eyebrow-dot"></span>7 – 12 anys
       </div>
-      <div class="hero-badges">
-        <div class="hero-badge-item">
-          <div class="hbi-icon" style="background:rgba(255,107,53,.3)">🏆</div>
-          <div class="hbi-text">
-            <strong>Màx. 12</strong>
-            <span>alumnes per grup</span>
-          </div>
-        </div>
-        <div class="hero-badge-item">
-          <div class="hbi-icon" style="background:rgba(255,210,0,.25)">⭐</div>
-          <div class="hbi-text">
-            <strong>Des de 1974</strong>
-            <span>50 anys d'experiència</span>
-          </div>
-        </div>
-        <div class="hero-badge-item">
-          <div class="hbi-icon" style="background:rgba(0,136,255,.25)">🎯</div>
-          <div class="hbi-text">
-            <strong>Young Learners</strong>
-            <span>Cambridge oficial</span>
-          </div>
-        </div>
-        <div class="hero-badge-item">
-          <div class="hbi-icon" style="background:rgba(22,163,74,.25)">🚀</div>
-          <div class="hbi-text">
-            <strong>Adquisició natural</strong>
-            <span>sense memoritzar</span>
-          </div>
-        </div>
+      <h1>6 nivells fins al<br><em>B1</em>.</h1>
+      <p class="kids-hero-sub">De Kids 1 a Kids 6, de 7 a 12 anys. Lectoescriptura integrada, preparació Young Learners de Cambridge i grups de màxim 12 alumnes.</p>
+      <div class="hero-ctas">
+        <a href="#contacte" class="btn-kp">Prova una classe gratis →</a>
+        <a href="#horaris" class="btn-outline">Veure horaris</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-num">Màx. 12</div><div class="hero-stat-label">alumnes per grup</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">B1</div><div class="hero-stat-label">nivell màxim</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">Young Learners</div><div class="hero-stat-label">Cambridge oficial</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">Des de 1974</div><div class="hero-stat-label">50 anys d'experiència</div></div>
       </div>
     </div>
   </div>
-  <span class="k-deco" style="font-size:52px;top:12%;left:3%;animation-delay:0s">&#127942;</span>
-  <span class="k-deco" style="font-size:44px;top:10%;right:7%;animation-delay:.7s;animation-name:k-float2">&#9889;</span>
-  <span class="k-deco" style="font-size:46px;bottom:18%;left:5%;animation-delay:1.4s">&#128640;</span>
-  <span class="k-deco" style="font-size:38px;bottom:22%;right:4%;animation-delay:.3s;animation-name:k-float2">&#11088;</span>
-  <span class="k-deco" style="font-size:42px;top:48%;left:1%;animation-delay:2.1s">&#127919;</span>
 </section>
 
 <!-- ── KIDS 7-12 ── -->
@@ -515,7 +532,7 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
       <span class="section-label-dot" style="background:var(--kids)"></span>
       Kids · 7–12 anys
     </div>
-    <h2>Sis nivells, un camí <em style="color:var(--kids);font-style:normal">clar</em>.</h2>
+    <h2>6 nivells, un camí <em style="color:var(--kids);font-style:normal">clar</em>.</h2>
     <p class="section-lead">Kids 1 a Kids 6. Lectoescriptura integrada des del primer any i preparació Young Learners de Cambridge al ritme de cada alumne. Grups de màxim 12 nens.</p>
 
     <div class="levels-grid">

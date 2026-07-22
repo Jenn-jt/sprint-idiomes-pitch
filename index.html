@@ -234,7 +234,7 @@ main, nav, footer{position:relative;z-index:1}
 .portada-sub{
   font-family:var(--font-body);
   font-size:13px;font-weight:600;
-  color:rgba(255,255,255,.45);
+  color:rgba(255,255,255,.80);
   letter-spacing:.08em;text-transform:uppercase;
   margin:0 0 36px;
 }
@@ -259,7 +259,7 @@ main, nav, footer{position:relative;z-index:1}
 .portada-cta:hover span{transform:translateX(4px)}
 .portada-cta-sec{
   font-family:var(--font-body);font-size:14px;font-weight:600;
-  color:rgba(255,255,255,.55);
+  color:rgba(255,255,255,.88);
   text-decoration:none;
   display:inline-flex;align-items:center;gap:6px;
   transition:color .2s;
@@ -274,7 +274,7 @@ main, nav, footer{position:relative;z-index:1}
 .portada-trust-item{
   font-family:var(--font-body);
   font-size:12px;
-  color:rgba(255,255,255,.4);
+  color:rgba(255,255,255,.82);
   display:flex;align-items:center;gap:5px;
   line-height:1;
 }
@@ -467,27 +467,35 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
   text-align:center;padding:18px 10px;
-  box-shadow:0 8px 24px rgba(21,32,61,.13);
-  transition:transform .3s ease, box-shadow .3s ease;
+  box-shadow:0 8px 24px rgba(21,32,61,.12);
+  outline:3px solid rgba(255,255,255,.38);
+  outline-offset:-4px;
+  transition:transform .3s ease, box-shadow .3s ease, outline-color .25s;
   cursor:pointer;
   overflow:hidden;
 }
 .bubble::before{
-  content:"";position:absolute;
-  inset:0;
-  background:radial-gradient(circle at 35% 30%, rgba(255,255,255,.45) 0%, transparent 65%);
-  border-radius:50%;
-  z-index:0;
-  pointer-events:none;
+  content:"";
+  position:absolute;
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:130px;
+  color:rgba(255,255,255,.17);
+  letter-spacing:-0.05em;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  line-height:1;white-space:nowrap;
+  z-index:0;pointer-events:none;
 }
 .bubble:hover{
   transform:translateY(-10px) scale(1.04);
-  box-shadow:0 28px 52px rgba(21,32,61,.18);
+  box-shadow:0 24px 48px rgba(21,32,61,.2);
+  outline-color:rgba(255,255,255,.9);
 }
 .bubble > *{position:relative;z-index:1}
 .bubble .b-age{
   font-family:var(--font-display);
-  font-weight:600;
+  font-weight:800;
   font-size:32px;
   line-height:1;
   letter-spacing:-0.03em;
@@ -496,7 +504,7 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
 }
 .bubble .b-name{
   font-family:var(--font-display);
-  font-weight:600;
+  font-weight:700;
   font-size:18px;
   line-height:1.05;
   letter-spacing:-0.02em;
@@ -522,22 +530,36 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
   transition:transform .25s, background .25s;
 }
 .bubble:hover .b-arrow{background:var(--blue);transform:rotate(-45deg)}
-.bubble.a1{background:#FF80AB}  /* Kids Planet — rosa */
-.bubble.a2{background:#FF6B35}  /* Kids — taronja */
-.bubble.a3{background:#4FC3F7}  /* Teens — blau cel */
-.bubble.a4{background:#5CBA6A}  /* Adults — verd */
-.bubble.a5{background:#9B72CF}  /* Cambridge — lila */
-.bubble.a6{background:#2547D9}  /* Français — blau fosc */
-.bubble.a7{background:#8B1A4A}  /* Business — bordo */
-.bubble.a8{background:#FFB800}  /* Summer — groc */
-.bubble.a9{background:#26A69A}  /* Particular — verd aigua */
-.bubble.a10{background:#E53935} /* Altres idiomes — vermell */
+.bubble.a1{background:#FF80AB}
+.bubble.a2{background:#FF6B35}
+.bubble.a3{background:#4FC3F7}
+.bubble.a4{background:#5CBA6A}
+.bubble.a5{background:#9B72CF}
+.bubble.a6{background:#2547D9}
+.bubble.a7{background:#8B1A4A}
+.bubble.a8{background:#FFB800}
+.bubble.a9{background:#26A69A}
+.bubble.a10{background:#E53935}
 .bubble .b-age,.bubble .b-name,.bubble .b-sub{color:#fff}
 .bubble .b-arrow{background:rgba(255,255,255,.3);color:#fff}
-.bubble.a6{background:var(--blue);border-color:var(--blue)}
-.bubble.a6::before{background:rgba(255,255,255,.08)}
+.bubble.a6{border-color:var(--blue)}
 .bubble.a6 .b-arrow{background:#fff;color:var(--blue)}
 .bubble.a6:hover .b-arrow{background:var(--yellow);color:var(--ink)}
+.bubble.a1::before{content:"3+"}
+.bubble.a2::before{content:"7"}
+.bubble.a3::before{content:"12"}
+.bubble.a4::before{content:"18"}
+.bubble.a5::before{content:"B1"}
+.bubble.a6::before{content:"FR"}
+.bubble.a7::before{content:"B2"}
+.bubble.a8::before{content:"26"}
+.bubble.a9::before{content:"1:1"}
+.bubble.a10::before{content:"+"}
+.bubble .b-age{display:none}
+.bubble .b-name{margin-top:0;font-size:19px;font-weight:800}
+.bubble .b-sub{font-size:12px}
+.bubble .b-arrow{display:none}
+
 
 /* ---------- WHY US ---------- */
 .why{
@@ -677,7 +699,7 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
 .c-cambridge .c-tag{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.18)}
 .c-cambridge .c-desc{color:rgba(255,255,255,.72)}
 .c-cambridge .c-title{color:#fff}
-.c-cambridge .c-pills span{background:rgba(212,184,255,.15);color:#D4B8FF;border:1px solid rgba(212,184,255,.2)}
+.c-cambridge .c-pills span{background:rgba(255,255,255,.18);color:#D4B8FF;border:1px solid rgba(212,184,255,.2)}
 .c-cambridge .c-arrow{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff}
 .c-cambridge .c-age{color:#D4B8FF}
 .c-cambridge:hover{box-shadow:0 16px 36px rgba(107,63,170,.4)}
@@ -703,7 +725,7 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
 .c-business .c-age{color:#FFAAC8;opacity:1}
 .c-business .c-title{color:#fff}
 .c-business .c-desc{color:rgba(255,255,255,.75)}
-.c-business .c-pills span{background:rgba(255,170,200,.15);color:#FFAAC8;border:1px solid rgba(255,170,200,.25)}
+.c-business .c-pills span{background:rgba(255,255,255,.18);color:#FFAAC8;border:1px solid rgba(255,170,200,.25)}
 .c-business .c-arrow{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#fff;width:52px;height:52px;font-size:20px}
 .c-business:hover{box-shadow:0 16px 40px rgba(107,15,51,.45)}
 .c-business:hover .c-arrow{background:#FFAAC8;color:#6B0F33;border-color:#FFAAC8}
@@ -1158,6 +1180,92 @@ footer{
   .nav-inner{padding:14px 20px}
 }
 </style>
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ca_ES">
+  <meta property="og:site_name" content="Sprint Idiomes">
+  <meta property="og:url" content="https://www.sprintidiomes.com/">
+  <meta property="og:title" content="Sprint Idiomes · Escola d'anglès i de francès a Sant Cugat des de 1974">
+  <meta property="og:description" content="Anglès i francès per a nens, joves, adults i empreses a Sant Cugat del Vallès. Kids, Teens, Cambridge, Adults, Business i cursos d'estiu.">
+  <meta property="og:image" content="https://www.sprintidiomes.com/assets/images/og-sprint-idiomes.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sprint Idiomes · Escola d'anglès i de francès a Sant Cugat des de 1974">
+  <meta name="twitter:description" content="Anglès i francès a Sant Cugat des de 1974. Kids, Teens, Cambridge, Adults, Business i Summer.">
+  <meta name="twitter:image" content="https://www.sprintidiomes.com/assets/images/og-sprint-idiomes.jpg">
+  <!-- SEO: Canonical -->
+  <link rel="canonical" href="https://www.sprintidiomes.com/">
+  <!-- SEO: Robots -->
+  <meta name="robots" content="index, follow">
+  <!-- SEO: Schema.org JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LanguageSchool",
+      "@id": "https://www.sprintidiomes.com/#school",
+      "name": "Sprint Idiomes",
+      "description": "Escola d'anglès i de francès a Sant Cugat del Vallès des de 1974. Kids Planet, Kids, Teens, Cambridge, Adults, Business i cursos d'estiu.",
+      "url": "https://www.sprintidiomes.com",
+      "telephone": "+34935892264",
+      "email": "info@sprintidiomes.com",
+      "foundingDate": "1974",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C/ Francesc Moragas 4 i 8",
+        "addressLocality": "Sant Cugat del Vallès",
+        "postalCode": "08172",
+        "addressRegion": "Catalunya",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.4728,
+        "longitude": 2.085
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "21:00"
+        }
+      ],
+      "availableLanguage": [
+        {
+          "@type": "Language",
+          "name": "English"
+        },
+        {
+          "@type": "Language",
+          "name": "French"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/sprintidiomes",
+        "https://www.facebook.com/sprintidiomes"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.sprintidiomes.com/#website",
+      "url": "https://www.sprintidiomes.com",
+      "name": "Sprint Idiomes",
+      "inLanguage": "ca"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -1203,7 +1311,7 @@ footer{
     <div class="hero-text">
       <span class="hero-badge"><span class="pulse"></span>Matrícula oberta 2026 · Sant Cugat</span>
 
-      <h1 class="hero-title">
+      <h2 class="hero-title">
         L'anglès que t'acompanya<br>
         <span class="scribble">
           <span class="hero-rotator">
@@ -1217,7 +1325,7 @@ footer{
             </span>
           </span>
         </span>
-      </h1>
+      </h2>
 
       <div class="hero-body-row">
         <p class="hero-lead">
@@ -1273,43 +1381,43 @@ footer{
       <div class="b-sub">Infantil</div>
       <span class="b-arrow">→</span>
     </a>
-    <a href="#cursos" class="bubble a2">
+    <a href="kids.html" class="bubble a2">
       <div class="b-age">7–12</div>
       <div class="b-name">Kids</div>
       <div class="b-sub">Primària</div>
       <span class="b-arrow">→</span>
     </a>
-    <a href="#cursos" class="bubble a3">
+    <a href="teens.html" class="bubble a3">
       <div class="b-age">12+</div>
       <div class="b-name">Teens</div>
       <div class="b-sub">ESO &amp; Batx</div>
       <span class="b-arrow">→</span>
     </a>
-    <a href="#cursos" class="bubble a4">
+    <a href="adults.html" class="bubble a4">
       <div class="b-age">18+</div>
       <div class="b-name">Adults</div>
       <div class="b-sub">A1 fins a C1</div>
       <span class="b-arrow">→</span>
     </a>
-    <a href="#cursos" class="bubble a5">
+    <a href="cambridge.html" class="bubble a5">
       <div class="b-age">B1–C2</div>
       <div class="b-name">Cambridge</div>
       <div class="b-sub">Oficial 1992</div>
       <span class="b-arrow">→</span>
     </a>
-    <a href="#cursos" class="bubble a6">
+    <a href="frances.html" class="bubble a6">
       <div class="b-age">FR</div>
       <div class="b-name">Français</div>
       <div class="b-sub">DELF · DALF</div>
       <span class="b-arrow">→</span>
     </a>
-    <a href="#cursos" class="bubble a7">
+    <a href="business.html" class="bubble a7">
       <div class="b-age">B2B</div>
       <div class="b-name">Business</div>
       <div class="b-sub">BLA · FUNDAE</div>
       <span class="b-arrow">→</span>
     </a>
-    <a href="#cursos" class="bubble a8">
+    <a href="summer.html" class="bubble a8">
       <div class="b-age"><svg viewBox="0 0 44 44" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="22" cy="22" r="8" fill="white"/><line x1="22" y1="1" x2="22" y2="10" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="22" y1="34" x2="22" y2="43" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="1" y1="22" x2="10" y2="22" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="34" y1="22" x2="43" y2="22" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="6.2" y1="6.2" x2="12.9" y2="12.9" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="31.1" y1="31.1" x2="37.8" y2="37.8" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="37.8" y1="6.2" x2="31.1" y2="12.9" stroke="white" stroke-width="3" stroke-linecap="round"/><line x1="12.9" y1="31.1" x2="6.2" y2="37.8" stroke="white" stroke-width="3" stroke-linecap="round"/></svg></div>
       <div class="b-name">Summer</div>
       <div class="b-sub">Estiu 2026</div>
@@ -1394,7 +1502,7 @@ footer{
       <span class="c-tag">Primària</span>
       <div>
         <div class="c-age">Kids · 7–12 anys</div>
-        <h3 class="c-title">Sis nivells progressius</h3>
+        <h3 class="c-title">6 nivells progressius</h3>
         <p class="c-desc">De la comunicació oral a la lectoescriptura integrada. Preparació oficial Young Learners (Starters, Movers, Flyers).</p>
       </div>
       <div class="c-foot">
@@ -1423,7 +1531,7 @@ footer{
       <div>
         <div class="c-age">Cambridge &amp; IELTS</div>
         <h3 class="c-title">Preparació de títols<br>oficials</h3>
-        <p class="c-desc">Centre preparador oficial Cambridge des de 1992. Tres generacions d'alumnes. Un 98% aproven.</p>
+        <p class="c-desc">Centre preparador oficial Cambridge des de 1992. 3 generacions d'alumnes. Un 98% aproven.</p>
       </div>
       <div class="c-foot">
         <div class="c-pills"><span>KET</span><span>PET</span><span>FCE</span><span>CAE</span><span>IELTS</span></div>
@@ -1593,7 +1701,7 @@ footer{
 <section id="opinions">
 <div class="testimonials-wrap">
   <span class="eyebrow">Famílies que ens estimen</span>
-  <h2 class="section-title">Tres generacions, una <span class="hl">mateixa escola</span>.</h2>
+  <h2 class="section-title">3 generacions, una <span class="hl">mateixa escola</span>.</h2>
 
   <div class="t-grid">
     <div class="t-card">

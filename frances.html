@@ -87,7 +87,7 @@ h1 em{
 }
 .hero-tagline{
   font-family:var(--font-display);font-size:20px;font-weight:600;
-  color:rgba(255,255,255,.4);font-style:italic;
+  color:rgba(255,255,255,.80);font-style:italic;
   margin-bottom:20px;letter-spacing:.02em;
 }
 .hero-sub{
@@ -105,7 +105,7 @@ h1 em{
   letter-spacing:-0.02em;color:#93C5FD;line-height:1;
 }
 .hero-stat-label{
-  font-size:11px;font-weight:700;color:rgba(255,255,255,.48);
+  font-size:11px;font-weight:700;color:rgba(255,255,255,.78);
   margin-top:4px;letter-spacing:.04em;
 }
 .btn-franc{
@@ -256,7 +256,7 @@ h1 em{
   color:#fff;margin-bottom:4px;
 }
 .delf-level{font-size:12px;font-weight:700;letter-spacing:.08em;color:#93C5FD;margin-bottom:12px}
-.delf-desc{font-size:14px;color:rgba(255,255,255,.6);line-height:1.5}
+.delf-desc{font-size:14px;color:rgba(255,255,255,.85);line-height:1.5}
 
 /* ── PROFESSORS ── */
 .profs-section{background:#F0F4F8}
@@ -292,13 +292,13 @@ h1 em{
 }
 .hor-block-label{
   font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:rgba(255,255,255,.48);margin-bottom:12px;
+  color:rgba(255,255,255,.78);margin-bottom:12px;
 }
 .hor-block-time{
   font-family:var(--font-display);font-size:28px;font-weight:800;
   color:#fff;margin-bottom:6px;
 }
-.hor-block-sub{font-size:15px;color:rgba(255,255,255,.6)}
+.hor-block-sub{font-size:15px;color:rgba(255,255,255,.85)}
 
 /* ── CTA BAND ── */
 .cta-band{
@@ -395,6 +395,72 @@ footer{
   .footer-cols{grid-template-columns:1fr}
 }
 </style>
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ca_ES">
+  <meta property="og:site_name" content="Sprint Idiomes">
+  <meta property="og:url" content="https://www.sprintidiomes.com/frances/">
+  <meta property="og:title" content="L'École de Français · Sprint Idiomes · Escola de Francès Sant Cugat">
+  <meta property="og:description" content="L'única escola de Sant Cugat amb programa complet de francès de A1 a C1. DELF i DALF, professors nadius, grups de màxim 10 alumnes.">
+  <meta property="og:image" content="https://www.sprintidiomes.com/assets/images/og-sprint-idiomes.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- SEO: Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="L'École de Français · Sprint Idiomes · Escola de Francès Sant Cugat">
+  <meta name="twitter:description" content="Escola de francès a Sant Cugat. A1-C1, DELF, DALF, professors nadius, grups de 10.">
+  <meta name="twitter:image" content="https://www.sprintidiomes.com/assets/images/og-sprint-idiomes.jpg">
+  <!-- SEO: Canonical -->
+  <link rel="canonical" href="https://www.sprintidiomes.com/frances/">
+  <!-- SEO: Robots -->
+  <meta name="robots" content="index, follow">
+  <!-- SEO: Schema.org JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      "name": "L'École de Français — Francès A1 fins a C1",
+      "description": "Programa complet de francès de A1 a C1 a Sant Cugat. Preparació DELF i DALF, professors nadius francesos, grups de màxim 10 alumnes.",
+      "url": "https://www.sprintidiomes.com/frances/",
+      "provider": {
+        "@id": "https://www.sprintidiomes.com/#school"
+      },
+      "educationalLevel": "A1 to C1",
+      "inLanguage": "fr",
+      "teaches": "French language, DELF, DALF",
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "onsite"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inici",
+          "item": "https://www.sprintidiomes.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cursos",
+          "item": "https://www.sprintidiomes.com/cursos/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "L'École de Français"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -453,7 +519,7 @@ footer{
 <section class="section" id="nivells">
   <div class="section-inner">
     <div class="section-label">Els nivells</div>
-    <h2>Cinc nivells i un grup <em>específic per a joves</em></h2>
+    <h2>5 nivells i un grup <em>específic per a joves</em></h2>
     <p class="section-lead">De principiant absolut fins al nivell avançat. Professors nadius des del primer dia. Tots els grups treballen cap a una certificació DELF o DALF oficial.</p>
     <div class="level-grid">
 
@@ -562,7 +628,7 @@ footer{
 <section class="section profs-section" id="professors">
   <div class="section-inner">
     <div class="section-label">Professors nadius</div>
-    <h2>Tres professors nadius.<br><em>Des del primer dia.</em></h2>
+    <h2>3 professors nadius.<br><em>Des del primer dia.</em></h2>
     <p class="section-lead">No s'aprèn bé una llengua sense sentir-la de debò. A l'École de Français tots els professors són nadius francòfons. L'accent i la cultura formen part del programa.</p>
     <div class="prof-grid">
       <div class="prof-card">

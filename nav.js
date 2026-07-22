@@ -144,7 +144,7 @@
   const home = page === 'index.html' || page === '';
   const contactHref = home ? '#contacte' : 'index.html#contacte';
 
-  const cursosPages = ['cursos.html','kids-planet.html','kids.html','teens.html','cambridge.html','adults.html','frances.html','business.html'];
+  const cursosPages = ['cursos.html','kids-planet.html','kids.html','teens.html','cambridge.html','adults.html','frances.html','business.html','summer.html'];
   const cursosActive = cursosPages.includes(page);
 
   const cursosDropdown = `
@@ -178,6 +178,10 @@
         <a href="business.html"${page==='business.html'?' class="active"':''}>
           <span class="nav-dd-dot" style="background:#8B1A4A"></span>BLA Business
         </a>
+        <div class="nav-dd-sep"></div>
+        <a href="summer.html"${page==='summer.html'?' class="active"':''}>
+          <span class="nav-dd-dot" style="background:#EA580C"></span>Summer 2026 <span style="font-size:11px;opacity:.55;font-weight:600">&#9728; Estiu</span>
+        </a>
       </div>
     </div>
   `;
@@ -197,7 +201,6 @@
         ${cursosDropdown}
       </div>
       <div class="nav-cta">
-        <button class="btn-lang">CAT · ES · EN</button>
         <a href="${contactHref}" class="btn-nivel">Descobreix el teu nivell</a>
         <a href="${contactHref}" class="btn-primary">
           Matricula't
