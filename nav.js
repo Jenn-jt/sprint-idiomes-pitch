@@ -157,26 +157,26 @@
       </a>
       <div class="nav-dropdown">
         <a href="kids-planet.html"${page==='kids-planet.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#FF80AB"></span>Kids Planet <span style="font-size:11px;opacity:.55;font-weight:600">3–6 anys</span>
+          <span class="nav-dd-dot" style="background:#EC1E8C"></span>Kids Planet <span style="font-size:11px;opacity:.55;font-weight:600">3–6 anys</span>
         </a>
         <a href="kids.html"${page==='kids.html'?' class="active"':''}>
           <span class="nav-dd-dot" style="background:#FF6B35"></span>Kids <span style="font-size:11px;opacity:.55;font-weight:600">7–12 anys</span>
         </a>
         <a href="teens.html"${page==='teens.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#4FC3F7"></span>Teens <span style="font-size:11px;opacity:.55;font-weight:600">13–17 anys</span>
+          <span class="nav-dd-dot" style="background:#26A69A"></span>Teens <span style="font-size:11px;opacity:.55;font-weight:600">13–17 anys</span>
         </a>
         <a href="cambridge.html"${page==='cambridge.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#9B72CF"></span>Cambridge &amp; IELTS
+          <span class="nav-dd-dot" style="background:#E53935"></span>Cambridge &amp; IELTS
         </a>
         <a href="adults.html"${page==='adults.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#5CBA6A"></span>Adults <span style="font-size:11px;opacity:.55;font-weight:600">18+</span>
+          <span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults <span style="font-size:11px;opacity:.55;font-weight:600">18+</span>
         </a>
         <div class="nav-dd-sep"></div>
         <a href="frances.html"${page==='frances.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#2547D9"></span>L'École de Français
+          <span class="nav-dd-dot" style="background:#FFB800"></span>L'École de Français
         </a>
         <a href="business.html"${page==='business.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#8B1A4A"></span>BLA Business
+          <span class="nav-dd-dot" style="background:#9B72CF"></span>BLA Business
         </a>
         <div class="nav-dd-sep"></div>
         <a href="summer.html"${page==='summer.html'?' class="active"':''}>
