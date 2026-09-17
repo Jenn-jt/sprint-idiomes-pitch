@@ -103,6 +103,45 @@ a{color:inherit;text-decoration:none}
 .pc h4{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--ink);line-height:1.2}
 .pc .role{font-size:13px;color:var(--ink-soft);line-height:1.55}
 .badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:100px;margin-top:2px}
+.teachers{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px;
+}
+.teacher{
+  position:relative;border:1px solid var(--line);
+  border-radius:20px;overflow:hidden;aspect-ratio:4/5;
+  box-shadow:0 6px 18px rgba(21,32,61,.05);
+  transition:all .3s;
+}
+.teacher:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(21,32,61,.1);border-color:var(--line-strong)}
+.teacher .photo{
+  position:absolute;inset:0;
+}
+.teacher.t-1 .photo{background:linear-gradient(160deg,#3B5DE8,#15203D)}
+.teacher.t-2 .photo{background:linear-gradient(160deg,#4A5878,#15203D)}
+.teacher.t-3 .photo{background:linear-gradient(160deg,#2547D9,#0E1530)}
+.teacher .photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.7) 100%);
+}
+.teacher .badge{
+  position:absolute;top:16px;left:16px;z-index:2;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(8px);
+  color:var(--ink);
+  font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
+  padding:6px 10px;border-radius:100px;
+  border:1px solid rgba(255,255,255,.5);
+}
+.teacher .smile{display:none}
+.teacher .info{
+  position:absolute;left:22px;right:22px;bottom:22px;
+  color:#fff;z-index:2;
+}
+.teacher .info h5{
+  font-family:var(--fd);font-weight:600;
+  font-size:24px;line-height:1.05;letter-spacing:-0.02em;
+}
+.teacher .info p{font-size:13px;opacity:.85;margin-top:6px}
 
 /* ── FITES ── */
 .fites-section{padding-bottom:80px}
@@ -351,6 +390,36 @@ footer{background:var(--ink);color:var(--cream);padding:56px 32px 28px}
           <div class="role">Coordinadora administrativa</div>
           <span class="badge" style="background:rgba(232,75,122,.1);color:#C0305A">Administració</span>
         </div>
+      </div>
+      <div class="e-divider"><h3>Professorat</h3></div>
+      <div class="teachers">
+        <article class="teacher t-1">
+          <div class="photo"></div>
+          <span class="badge">Anglès · CPE · Nativa</span>
+          <div class="smile">☺</div>
+          <div class="info">
+            <h5>Cap d'estudis</h5>
+            <p>Professora nativa · Adults &amp; Cambridge</p>
+          </div>
+        </article>
+        <article class="teacher t-2">
+          <div class="photo"></div>
+          <span class="badge">Kids Planet · Especialista</span>
+          <div class="smile">☺</div>
+          <div class="info">
+            <h5>Especialista Kids</h5>
+            <p>Infants 3–12 · Anna &amp; Mya · Aula Rainbow</p>
+          </div>
+        </article>
+        <article class="teacher t-3">
+          <div class="photo"></div>
+          <span class="badge">Français · Natiu · DELF</span>
+          <div class="smile">☺</div>
+          <div class="info">
+            <h5>L'École de Français</h5>
+            <p>3 professors nadius · A1 fins a C1</p>
+          </div>
+        </article>
       </div>
     </div>
   </div>

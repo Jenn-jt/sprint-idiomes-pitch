@@ -778,46 +778,6 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
 
 .polaroid{display:none}
 
-/* ---------- TEACHERS ---------- */
-.teachers{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px;
-}
-.teacher{
-  position:relative;border:1px solid var(--line);
-  border-radius:20px;overflow:hidden;aspect-ratio:4/5;
-  box-shadow:0 6px 18px rgba(21,32,61,.05);
-  transition:all .3s;
-}
-.teacher:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(21,32,61,.1);border-color:var(--line-strong)}
-.teacher .photo{
-  position:absolute;inset:0;
-}
-.teacher.t-1 .photo{background:linear-gradient(160deg,#3B5DE8,#15203D)}
-.teacher.t-2 .photo{background:linear-gradient(160deg,#4A5878,#15203D)}
-.teacher.t-3 .photo{background:linear-gradient(160deg,#2547D9,#0E1530)}
-.teacher .photo::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.7) 100%);
-}
-.teacher .badge{
-  position:absolute;top:16px;left:16px;z-index:2;
-  background:rgba(255,255,255,.95);
-  backdrop-filter:blur(8px);
-  color:var(--ink);
-  font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;
-  padding:6px 10px;border-radius:100px;
-  border:1px solid rgba(255,255,255,.5);
-}
-.teacher .smile{display:none}
-.teacher .info{
-  position:absolute;left:22px;right:22px;bottom:22px;
-  color:#fff;z-index:2;
-}
-.teacher .info h5{
-  font-family:var(--font-display);font-weight:600;
-  font-size:24px;line-height:1.05;letter-spacing:-0.02em;
-}
-.teacher .info p{font-size:13px;opacity:.85;margin-top:6px}
 
 /* ---------- TESTIMONIALS ---------- */
 .testimonials-wrap{
@@ -1307,46 +1267,6 @@ footer{
 </div>
 </section>
 
-<!-- =================== TEACHERS =================== -->
-<section id="equip">
-  <div class="section-head">
-    <div>
-      <span class="eyebrow">Equip docent</span>
-      <h2 class="section-title">Professors que <em>t'acompanyen</em> de veritat.</h2>
-    </div>
-    <p class="section-lead">La meitat nadius, formació especialitzada i anys de continuïtat a l'escola.</p>
-  </div>
-
-  <div class="teachers">
-    <article class="teacher t-1">
-      <div class="photo"></div>
-      <span class="badge">Anglès · CPE · Nativa</span>
-      <div class="smile">☺</div>
-      <div class="info">
-        <h5>Cap d'estudis</h5>
-        <p>Professora nativa · Adults &amp; Cambridge</p>
-      </div>
-    </article>
-    <article class="teacher t-2">
-      <div class="photo"></div>
-      <span class="badge">Kids Planet · Especialista</span>
-      <div class="smile">☺</div>
-      <div class="info">
-        <h5>Especialista Kids</h5>
-        <p>Infants 3–12 · Anna &amp; Mya · Aula Rainbow</p>
-      </div>
-    </article>
-    <article class="teacher t-3">
-      <div class="photo"></div>
-      <span class="badge">Français · Natif · DELF</span>
-      <div class="smile">☺</div>
-      <div class="info">
-        <h5>L'École de Français</h5>
-        <p>3 professors nadius · A1 fins a C1</p>
-      </div>
-    </article>
-  </div>
-</section>
 
 <!-- =================== TESTIMONIALS =================== -->
 <section id="opinions">
@@ -1506,11 +1426,11 @@ footer{
       <div class="footer-col">
         <h6>L'escola</h6>
         <ul>
-          <li><a href="#per-a-qui">Qui som</a></li>
+          <li><a href="qui-som.html">Qui som</a></li>
           <li><a href="#perque">Per què Sprint?</a></li>
           <li><a href="#metode">El nostre mètode</a></li>
           <li><a href="qui-som.html#historia">Història des de 1974</a></li>
-          <li><a href="#equip">Equip docent</a></li>
+          <li><a href="qui-som.html#equip">Equip docent</a></li>
           <li><a href="#opinions">Opinions</a></li>
         </ul>
       </div>
