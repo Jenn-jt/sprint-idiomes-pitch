@@ -11,7 +11,7 @@
 <style>
 :root{
   --cream:#FAF5EA;--ink:#15203D;--ink-soft:#4A5878;--blue:#2547D9;--yellow:#FFB800;
-  --kp:#EC1E8C;--kp-dark:#B0125F;--line:rgba(21,32,61,.1);--line-strong:rgba(21,32,61,.2);
+  --kp:#EC1E8C;--kp-dark:#B0125F;--kp-pale:#FFF0F8;--line:rgba(21,32,61,.1);--line-strong:rgba(21,32,61,.2);
   --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
   --font-body:"Nunito",ui-sans-serif,system-ui,sans-serif;
 }
@@ -29,11 +29,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .subnav-link.active{color:var(--ink);border-bottom-color:var(--kp)}
 .subnav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 
-.nivel-card:first-child .nc-badge,.nivel-card:last-child .nc-badge{background:rgba(255,255,255,.3);color:#fff;border:none}
-.nivel-card:first-child .nc-age,.nivel-card:last-child .nc-age{background:rgba(255,255,255,.25);color:#fff}
-.nivel-card:first-child .nc-name,.nivel-card:last-child .nc-name{color:#fff}
-.nivel-card:first-child .nc-desc,.nivel-card:last-child .nc-desc{color:rgba(255,255,255,.88)}
-.nivel-card:first-child .nc-pills span,.nivel-card:last-child .nc-pills span{background:rgba(255,255,255,.22);color:#fff;border-color:rgba(255,255,255,.3)}
 
 @media(max-width:960px){.subnav-inner{padding:0 16px}}
 
@@ -67,11 +62,11 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .section-lead{font-size:16px;color:var(--ink-soft);line-height:1.65;max-width:560px;margin-bottom:48px}
 
 .metodo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.metodo-card{padding:32px;border-radius:28px;border:none;background:#fff;transition:transform .25s,box-shadow .25s}
-.metodo-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 48px rgba(0,0,0,.14)}
-.metodo-icon{font-size:52px;margin-bottom:18px;line-height:1}
-.metodo-title{font-weight:800;font-size:18px;margin-bottom:10px;color:inherit}
-.metodo-text{font-size:14.5px;color:inherit;opacity:.85;line-height:1.6}
+.metodo-card{padding:32px;border-radius:28px;border:1.5px solid rgba(21,32,61,.06);border-top:4px solid var(--mc-color,var(--kp));background:#fff;transition:transform .25s,box-shadow .25s}
+.metodo-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 48px rgba(0,0,0,.1)}
+.metodo-icon{font-size:30px;margin-bottom:18px;line-height:1;width:60px;height:60px;border-radius:16px;background:var(--mc-bg,rgba(236,30,140,.1));display:flex;align-items:center;justify-content:center}
+.metodo-title{font-weight:800;font-size:18px;margin-bottom:10px;color:var(--ink)}
+.metodo-text{font-size:14.5px;color:var(--ink-soft);line-height:1.6}
 
 .rainbow-section{background:linear-gradient(135deg,#FFF0F9,#FFFAE0)}
 .rainbow-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
@@ -96,22 +91,22 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .nc-pills{display:flex;flex-wrap:wrap;gap:6px}
 .nc-pills span{font-size:11px;font-weight:700;padding:3px 9px;border-radius:5px;background:rgba(236,30,140,.1);color:var(--kp-dark);border:1px solid rgba(236,30,140,.2)}
 
-.horaris-wrap{background:linear-gradient(135deg,#4C1D95 0%,#7C3AED 100%);border-radius:32px;padding:48px;color:#fff;margin-top:48px;box-shadow:0 20px 60px rgba(124,58,237,.35)}
-.horaris-title{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:6px}
-.horaris-sub{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:32px}
+.horaris-wrap{background:var(--kp-pale);border:1.5px solid rgba(236,30,140,.14);border-radius:32px;padding:48px;color:var(--ink);margin-top:48px;box-shadow:none}
+.horaris-title{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);margin-bottom:6px}
+.horaris-sub{font-size:14px;color:var(--ink-soft);margin-bottom:32px}
 .horaris-table{width:100%;border-collapse:collapse}
-.horaris-table th{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);padding:0 16px 14px;text-align:left}
+.horaris-table th{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--kp-dark);padding:0 16px 14px;text-align:left}
 .horaris-table th:first-child{padding-left:0}
-.horaris-table td{padding:14px 16px;font-size:14px;font-weight:600;color:rgba(255,255,255,.92);border-top:1px solid rgba(255,255,255,.08);vertical-align:middle}
+.horaris-table td{padding:14px 16px;font-size:14px;font-weight:600;color:var(--ink);border-top:1px solid rgba(21,32,61,.08);vertical-align:middle}
 .horaris-table td:first-child{padding-left:0}
-.nivel-name{font-weight:800;color:#fff;font-size:15px}
-.hora-pill{display:inline-flex;align-items:center;background:rgba(255,255,255,.28);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:800;white-space:nowrap}
-.horaris-note{margin-top:20px;font-size:13px;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:8px}
+.nivel-name{font-weight:800;color:var(--ink);font-size:15px}
+.hora-pill{display:inline-flex;align-items:center;background:rgba(236,30,140,.12);color:var(--kp-dark);border-radius:20px;padding:6px 14px;font-size:13px;font-weight:800;white-space:nowrap}
+.horaris-note{margin-top:20px;font-size:13px;color:var(--ink-soft);opacity:.75;display:flex;align-items:center;gap:8px}
 .horaris-cta{margin-top:24px;display:flex;gap:14px;flex-wrap:wrap}
-.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--kp-dark);font-family:var(--font-body);font-size:16px;font-weight:800;border-radius:50px;padding:16px 32px;transition:transform .15s,box-shadow .2s}
-.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
-.btn-ghost-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.6);font-family:var(--font-body);font-size:14px;font-weight:700;border-radius:10px;padding:13px 24px;border:1px solid rgba(255,255,255,.18);transition:border-color .2s,color .2s}
-.btn-ghost-white:hover{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:var(--kp);color:#fff;font-family:var(--font-body);font-size:16px;font-weight:800;border-radius:50px;padding:16px 32px;transition:transform .15s,box-shadow .2s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(236,30,140,.3)}
+.btn-ghost-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink-soft);font-family:var(--font-body);font-size:14px;font-weight:700;border-radius:10px;padding:13px 24px;border:1px solid rgba(21,32,61,.15);transition:border-color .2s,color .2s}
+.btn-ghost-white:hover{border-color:var(--ink);color:var(--ink)}
 
 .cta-band{background:linear-gradient(135deg,#4C0836 0%,#8A0F4A 50%,#4C0836 100%);padding:88px 40px;text-align:center;position:relative;overflow:hidden}
 .cta-band-inner{max-width:580px;margin:0 auto}
@@ -136,11 +131,6 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 .footer-bottom{border-top:1px solid rgba(255,246,228,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,246,228,.35);font-weight:600;flex-wrap:wrap;gap:12px}
 
 
-.nivel-card:first-child .nc-badge,.nivel-card:last-child .nc-badge{background:rgba(255,255,255,.3);color:#fff;border:none}
-.nivel-card:first-child .nc-age,.nivel-card:last-child .nc-age{background:rgba(255,255,255,.25);color:#fff}
-.nivel-card:first-child .nc-name,.nivel-card:last-child .nc-name{color:#fff}
-.nivel-card:first-child .nc-desc,.nivel-card:last-child .nc-desc{color:rgba(255,255,255,.88)}
-.nivel-card:first-child .nc-pills span,.nivel-card:last-child .nc-pills span{background:rgba(255,255,255,.22);color:#fff;border-color:rgba(255,255,255,.3)}
 
 @media(max-width:960px){
   .kp-hero{padding:48px 22px 40px}
@@ -161,12 +151,12 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 .kp-blob-1{width:350px;height:350px;background:radial-gradient(circle,rgba(236,30,140,.18),transparent 70%);top:-80px;right:10%}
 .kp-blob-2{width:250px;height:250px;background:radial-gradient(circle,rgba(255,200,0,.15),transparent 70%);bottom:-60px;right:25%}
 .kp-blob-3{width:200px;height:200px;background:radial-gradient(circle,rgba(100,180,255,.15),transparent 70%);top:30%;left:-60px}
-.mc-1{background:#EC1E8C;color:#fff}
-.mc-2{background:#FFB800;color:#1A1A2E}
-.mc-3{background:#3DB8F5;color:#fff}
-.mc-4{background:#5DD179;color:#fff}
-.nivel-card:first-child{background:linear-gradient(135deg,#EC1E8C,#EC1E8C);border:none;color:#fff;box-shadow:0 12px 32px rgba(236,30,140,.3)}
-.nivel-card:last-child{background:linear-gradient(135deg,#3DB8F5,#6EC6FF);border:none;color:#fff;box-shadow:0 12px 32px rgba(61,184,245,.3)}
+.mc-1{--mc-color:#EC1E8C;--mc-bg:rgba(236,30,140,.1)}
+.mc-2{--mc-color:#F5A300;--mc-bg:rgba(255,184,0,.14)}
+.mc-3{--mc-color:#3DB8F5;--mc-bg:rgba(61,184,245,.12)}
+.mc-4{--mc-color:#3FAE63;--mc-bg:rgba(93,209,121,.14)}
+.nivel-card:first-child{background:#fff;border:1.5px solid rgba(236,30,140,.16);border-top:4px solid var(--kp);box-shadow:none}
+.nivel-card:last-child{background:#fff;border:1.5px solid rgba(176,18,95,.16);border-top:4px solid var(--kp-dark);box-shadow:none}
 #nivells.section{background:#F0FBFF}
 </style>
 
