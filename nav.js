@@ -45,7 +45,7 @@
     .nav-links a.active::after{width:100%}
     .nav-links a.active{color:#15203D}
 
-    /* ── DROPDOWN CURSOS ── */
+    /* ── DROPDOWN CURSOS (escriptori) ── */
     .nav-dropdown-wrap{position:relative}
     .nav-dropdown-wrap > a{display:flex;align-items:center;gap:6px}
     .nav-chevron{
@@ -96,7 +96,8 @@
       transition:all .2s;
     }
     .nav .btn-lang:hover{border-color:#15203D;color:#15203D}
-    .nav .btn-nivel{
+    .nav .btn-nivel,
+    .nav-mobile-panel .btn-nivel{
       display:inline-flex;align-items:center;gap:8px;
       background:#FFB800;color:#15203D;
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
@@ -117,8 +118,10 @@
       0%,100%{opacity:.5;transform:scale(1)}
       50%{opacity:1;transform:scale(1.3)}
     }
-    .nav .btn-nivel:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,184,0,.45);background:#FFD000}
-    .nav .btn-primary{
+    .nav .btn-nivel:hover,
+    .nav-mobile-panel .btn-nivel:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,184,0,.45);background:#FFD000}
+    .nav .btn-primary,
+    .nav-mobile-panel .btn-primary{
       display:inline-flex;align-items:center;gap:10px;
       background:#2547D9;color:#fff;
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
@@ -129,13 +132,73 @@
       box-shadow:0 6px 18px rgba(37,71,217,.18);
       transition:all .25s ease;
     }
-    .nav .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,71,217,.28);background:#3B5DE8}
-    .nav .btn-primary svg{width:16px;height:16px;flex-shrink:0;transition:transform .2s}
-    .nav .btn-primary:hover svg{transform:translateX(3px)}
+    .nav .btn-primary:hover,
+    .nav-mobile-panel .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,71,217,.28);background:#3B5DE8}
+    .nav .btn-primary svg,
+    .nav-mobile-panel .btn-primary svg{width:16px;height:16px;flex-shrink:0;transition:transform .2s}
+    .nav .btn-primary:hover svg,
+    .nav-mobile-panel .btn-primary:hover svg{transform:translateX(3px)}
+
+    /* ── BOTÓ HAMBURGUESA (només mòbil) ── */
+    .nav-burger{
+      display:none;
+      width:40px;height:40px;border-radius:10px;
+      border:1px solid rgba(21,32,61,.18);
+      background:#fff;
+      align-items:center;justify-content:center;
+      cursor:pointer;flex-shrink:0;padding:0;
+    }
+    .nav-burger svg{width:20px;height:20px;color:#15203D}
+
+    /* ── PANEL MÒBIL ── */
+    .nav-mobile-backdrop{
+      display:none;position:fixed;inset:0;
+      background:rgba(21,32,61,.4);z-index:399;
+      opacity:0;transition:opacity .25s ease;
+    }
+    .nav-mobile-backdrop.open{opacity:1}
+    .nav-mobile-panel{
+      display:none;position:fixed;top:0;right:0;bottom:0;
+      width:min(320px,86vw);background:#fff;
+      box-shadow:-16px 0 48px rgba(21,32,61,.2);
+      z-index:400;padding:20px 22px 32px;overflow-y:auto;
+      transform:translateX(100%);transition:transform .3s ease;
+    }
+    .nav-mobile-panel.open{transform:translateX(0)}
+    .nav-mobile-close{
+      width:36px;height:36px;border-radius:50%;
+      border:1px solid rgba(21,32,61,.18);background:#fff;
+      display:flex;align-items:center;justify-content:center;
+      margin-left:auto;margin-bottom:14px;cursor:pointer;
+    }
+    .nav-mobile-panel a{
+      display:block;padding:12px 4px;
+      font-size:16px;font-weight:700;color:#15203D;
+      text-decoration:none;border-bottom:1px solid rgba(21,32,61,.08);
+    }
+    .nav-mobile-heading{
+      font-size:12px;font-weight:700;text-transform:uppercase;
+      letter-spacing:.06em;color:#4A5878;
+      padding:16px 4px 4px;
+    }
+    .nav-mobile-sub{padding-left:4px}
+    .nav-mobile-sub a{
+      font-size:14.5px;font-weight:600;color:#4A5878;
+      display:flex;align-items:center;gap:10px;
+      border-bottom:none;padding:9px 4px;
+    }
+    .nav-mobile-cta{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+    .nav-mobile-cta a{border-bottom:none;padding:0}
+    .nav-mobile-cta .btn-primary,
+    .nav-mobile-cta .btn-nivel{
+      display:flex;justify-content:center;width:100%;box-sizing:border-box;
+    }
+
     @media(max-width:960px){
       .nav-links{display:none}
-      .nav .btn-nivel{display:none}
+      .nav > .nav-inner > .nav-cta > .btn-nivel{display:none}
       .nav-inner{padding:14px 20px}
+      .nav-burger{display:flex}
     }
   `;
   document.head.appendChild(style);
@@ -201,6 +264,9 @@
 ${cursosDropdown}
       </div>
       <div class="nav-cta">
+        <button class="nav-burger" type="button" aria-label="Obrir menú" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
         <a href="${contactHref}" class="btn-nivel">Descobreix el teu nivell</a>
         <a href="${contactHref}" class="btn-primary">
           Matricula't
@@ -214,7 +280,7 @@ ${cursosDropdown}
 
   document.body.insertBefore(nav, document.body.firstChild);
 
-  /* ── DROPDOWN amb delay per no tancar-se al instant ── */
+  /* ── DROPDOWN escriptori amb delay per no tancar-se al instant ── */
   const wrap = nav.querySelector('.nav-dropdown-wrap');
   if (wrap) {
     let closeTimer;
@@ -228,5 +294,71 @@ ${cursosDropdown}
       }, 200);
     });
   }
+
+  /* ── MENÚ MÒBIL ── */
+  const backdrop = document.createElement('div');
+  backdrop.className = 'nav-mobile-backdrop';
+
+  const mobilePanel = document.createElement('div');
+  mobilePanel.className = 'nav-mobile-panel';
+  mobilePanel.innerHTML = `
+    <div class="nav-mobile-close" role="button" aria-label="Tancar menú">
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3l10 10M13 3L3 13" stroke="#15203D" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </div>
+    <a href="index.html"${page==='index.html'||page===''?' class="active"':''}>Home</a>
+    <a href="qui-som.html"${page==='qui-som.html'?' class="active"':''}>Qui som</a>
+    <div class="nav-mobile-heading">Cursos</div>
+    <div class="nav-mobile-sub">
+      <a href="kids-planet.html"><span class="nav-dd-dot" style="background:#EC1E8C"></span>Kids Planet · 3–6 anys</a>
+      <a href="kids.html"><span class="nav-dd-dot" style="background:#FF6B35"></span>Kids · 7–12 anys</a>
+      <a href="teens.html"><span class="nav-dd-dot" style="background:#26A69A"></span>Teens · 13–17 anys</a>
+      <a href="cambridge.html"><span class="nav-dd-dot" style="background:#E53935"></span>Cambridge &amp; IELTS</a>
+      <a href="adults.html"><span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults · 18+</a>
+      <a href="frances.html"><span class="nav-dd-dot" style="background:#FFB800"></span>L'École de Français</a>
+      <a href="business.html"><span class="nav-dd-dot" style="background:#9B72CF"></span>BLA Business</a>
+      <a href="summer.html"><span class="nav-dd-dot" style="background:#EA580C"></span>Summer 2026</a>
+    </div>
+    <a href="${contactHref}">Contacte</a>
+    <div class="nav-mobile-cta">
+      <a href="${contactHref}" class="btn-nivel">Descobreix el teu nivell</a>
+      <a href="${contactHref}" class="btn-primary">Matricula't</a>
+    </div>
+  `;
+
+  document.body.appendChild(backdrop);
+  document.body.appendChild(mobilePanel);
+
+  const burgerBtn = nav.querySelector('.nav-burger');
+
+  function openMobileMenu(){
+    backdrop.style.display = 'block';
+    mobilePanel.style.display = 'block';
+    requestAnimationFrame(function(){
+      backdrop.classList.add('open');
+      mobilePanel.classList.add('open');
+    });
+    burgerBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu(){
+    backdrop.classList.remove('open');
+    mobilePanel.classList.remove('open');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    setTimeout(function(){
+      backdrop.style.display = 'none';
+      mobilePanel.style.display = 'none';
+    }, 300);
+  }
+
+  burgerBtn.addEventListener('click', openMobileMenu);
+  mobilePanel.querySelector('.nav-mobile-close').addEventListener('click', closeMobileMenu);
+  backdrop.addEventListener('click', closeMobileMenu);
+  mobilePanel.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeMobileMenu);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') closeMobileMenu();
+  });
 
 })();
