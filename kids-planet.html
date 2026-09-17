@@ -21,16 +21,22 @@ body{font-family:var(--font-body);background:#FEF8FF;color:var(--ink);line-heigh
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
-.subnav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:78px;z-index:90}
+.course-nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:78px;z-index:91}
+.course-nav-inner{max-width:1320px;margin:0 auto;padding:0 32px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.course-nav-inner::-webkit-scrollbar{display:none}
+.course-nav-link{display:inline-flex;align-items:center;gap:7px;padding:13px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4A5878;border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:color .2s,border-color .2s;text-decoration:none}
+.course-nav-link:hover{color:var(--ink)}
+.course-nav-link.active{color:var(--ink);border-bottom-color:var(--kp)}
+.course-nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+.subnav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:126px;z-index:90}
 .subnav-inner{max-width:1320px;margin:0 auto;padding:0 32px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
 .subnav-inner::-webkit-scrollbar{display:none}
 .subnav-link{display:inline-flex;align-items:center;gap:7px;padding:13px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4A5878;border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:color .2s,border-color .2s;text-decoration:none}
 .subnav-link:hover{color:var(--ink)}
-.subnav-link.active{color:var(--ink);border-bottom-color:var(--kp)}
-.subnav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.subnav-link.active{color:var(--ink);border-bottom-color:var(--yellow)}
 
-
-@media(max-width:960px){.subnav-inner{padding:0 16px}}
+@media(max-width:960px){.course-nav-inner{padding:0 16px}.subnav-inner{padding:0 16px}}
 
 .kp-hero{background:linear-gradient(160deg,#FFD6EC 0%,#FFEDD6 28%,#D6F0FF 58%,#D6FFE2 82%,#F5D6FF 100%);border-bottom:4px solid #fff;padding:88px 40px 80px;position:relative;overflow:hidden}
 .kp-hero::before{content:'3–6';position:absolute;right:40px;top:50%;transform:translateY(-50%);font-family:var(--font-display);font-size:clamp(120px,20vw,260px);font-weight:900;letter-spacing:-0.06em;color:rgba(236,30,140,.12);pointer-events:none;user-select:none;line-height:1}
@@ -232,15 +238,24 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 <body>
 <script src="nav.js"></script>
 
+<div class="course-nav">
+  <div class="course-nav-inner">
+    <a class="course-nav-link active" href="kids-planet.html"><span class="course-nav-dot" style="background:#EC1E8C"></span>Kids Planet</a>
+    <a class="course-nav-link" href="kids.html"><span class="course-nav-dot" style="background:#FF6B35"></span>Kids 7–12</a>
+    <a class="course-nav-link" href="teens.html"><span class="course-nav-dot" style="background:#26A69A"></span>Teens</a>
+    <a class="course-nav-link" href="cambridge.html"><span class="course-nav-dot" style="background:#E53935"></span>Cambridge</a>
+    <a class="course-nav-link" href="adults.html"><span class="course-nav-dot" style="background:#1B5E3A"></span>Adults</a>
+    <a class="course-nav-link" href="business.html"><span class="course-nav-dot" style="background:#9B72CF"></span>Business</a>
+    <a class="course-nav-link" href="frances.html"><span class="course-nav-dot" style="background:#FFB800"></span>Français</a>
+  </div>
+</div>
+
 <div class="subnav">
   <div class="subnav-inner">
-    <a class="subnav-link active" href="kids-planet.html"><span class="subnav-dot" style="background:#EC1E8C"></span>Kids Planet</a>
-    <a class="subnav-link" href="kids.html"><span class="subnav-dot" style="background:#FF6B35"></span>Kids 7–12</a>
-    <a class="subnav-link" href="teens.html"><span class="subnav-dot" style="background:#26A69A"></span>Teens</a>
-    <a class="subnav-link" href="cambridge.html"><span class="subnav-dot" style="background:#E53935"></span>Cambridge</a>
-    <a class="subnav-link" href="adults.html"><span class="subnav-dot" style="background:#1B5E3A"></span>Adults</a>
-    <a class="subnav-link" href="business.html"><span class="subnav-dot" style="background:#9B72CF"></span>Business</a>
-    <a class="subnav-link" href="frances.html"><span class="subnav-dot" style="background:#FFB800"></span>Français</a>
+    <a class="subnav-link active" href="#metode">El mètode</a>
+    <a class="subnav-link" href="#rainbow">Aula Rainbow</a>
+    <a class="subnav-link" href="#nivells">2 grups</a>
+    <a class="subnav-link" href="#horaris">Horaris</a>
   </div>
 </div>
 
@@ -270,7 +285,7 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
   <div class="kp-blob kp-blob-3"></div>
 </section>
 
-<section class="section" style="background:#FFF5F9">
+<section class="section" id="metode" style="background:#FFF5F9">
   <div class="section-inner">
     <div class="section-label" style="color:var(--kp-dark)"><span class="section-label-dot" style="background:var(--kp-dark)"></span>Com funciona</div>
     <h2>El mètode que fa que l'anglès <em style="color:var(--kp);font-style:normal">surti sol</em>.</h2>
@@ -300,7 +315,7 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
   </div>
 </section>
 
-<section class="section rainbow-section">
+<section class="section rainbow-section" id="rainbow">
   <div class="section-inner">
     <div class="section-label" style="color:var(--kp-dark)"><span class="section-label-dot" style="background:var(--kp-dark)"></span>L'espai</div>
     <h2>L'aula <em style="color:var(--kp);font-style:normal">Rainbow</em>.</h2>

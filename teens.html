@@ -22,13 +22,22 @@ body{font-family:var(--font-body);background:#07091A;color:#CBD5E1;line-height:1
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
+/* COURSE NAV */
+.course-nav{background:rgba(7,9,26,.92);border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:78px;z-index:91;backdrop-filter:blur(12px)}
+.course-nav-inner{max-width:1320px;margin:0 auto;padding:0 32px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.course-nav-inner::-webkit-scrollbar{display:none}
+.course-nav-link{display:inline-flex;align-items:center;gap:7px;padding:13px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:color .2s,border-color .2s;text-decoration:none}
+.course-nav-link:hover{color:#fff}
+.course-nav-link.active{color:#fff;border-bottom-color:var(--teens)}
+.course-nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
 /* SUBNAV */
-.subnav{background:rgba(7,9,26,.92);border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:78px;z-index:90;backdrop-filter:blur(12px)}
+.subnav{background:rgba(7,9,26,.92);border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:126px;z-index:90;backdrop-filter:blur(12px)}
 .subnav-inner{max-width:1320px;margin:0 auto;padding:0 32px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
 .subnav-inner::-webkit-scrollbar{display:none}
 .subnav-link{display:inline-flex;align-items:center;gap:7px;padding:13px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:color .2s,border-color .2s;text-decoration:none}
 .subnav-link:hover{color:#fff}
-.subnav-link.active{color:#fff;border-bottom-color:var(--teens)}
+.subnav-link.active{color:#fff;border-bottom-color:var(--yellow)}
 .subnav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 
 .nivel-card:nth-child(1){--tc:rgba(38,166,154,.5);background:rgba(38,166,154,.05)}
@@ -44,7 +53,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .nivel-card:nth-child(3):hover{border-color:rgba(255,111,96,.4);box-shadow:0 24px 56px rgba(0,0,0,.5),0 0 24px rgba(255,111,96,.15)}
 .nivel-card:nth-child(4):hover{border-color:rgba(232,121,249,.4);box-shadow:0 24px 56px rgba(0,0,0,.5),0 0 24px rgba(232,121,249,.15)}
 
-@media(max-width:960px){.subnav-inner{padding:0 16px}}
+@media(max-width:960px){.course-nav-inner{padding:0 16px}.subnav-inner{padding:0 16px}}
 
 /* HERO */
 @keyframes t-glow{0%,100%{text-shadow:0 0 30px rgba(38,166,154,.3)}50%{text-shadow:0 0 70px rgba(38,166,154,.7),0 0 140px rgba(38,166,154,.18)}}
@@ -299,15 +308,24 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 <script src="nav.js"></script>
 
 <!-- SUBNAV -->
+<div class="course-nav">
+  <div class="course-nav-inner">
+    <a class="course-nav-link" href="kids-planet.html"><span class="course-nav-dot" style="background:#EC1E8C"></span>Kids Planet</a>
+    <a class="course-nav-link" href="kids.html"><span class="course-nav-dot" style="background:#FF6B35"></span>Kids 7–12</a>
+    <a class="course-nav-link active" href="teens.html"><span class="course-nav-dot" style="background:#26A69A"></span>Teens</a>
+    <a class="course-nav-link" href="cambridge.html"><span class="course-nav-dot" style="background:#E53935"></span>Cambridge</a>
+    <a class="course-nav-link" href="adults.html"><span class="course-nav-dot" style="background:#1B5E3A"></span>Adults</a>
+    <a class="course-nav-link" href="business.html"><span class="course-nav-dot" style="background:#9B72CF"></span>Business</a>
+    <a class="course-nav-link" href="frances.html"><span class="course-nav-dot" style="background:#FFB800"></span>Français</a>
+  </div>
+</div>
+
 <div class="subnav">
   <div class="subnav-inner">
-    <a class="subnav-link" href="kids-planet.html"><span class="subnav-dot" style="background:#EC1E8C"></span>Kids Planet</a>
-    <a class="subnav-link" href="kids.html"><span class="subnav-dot" style="background:#FF6B35"></span>Kids 7–12</a>
-    <a class="subnav-link active" href="teens.html"><span class="subnav-dot" style="background:#26A69A"></span>Teens</a>
-    <a class="subnav-link" href="cambridge.html"><span class="subnav-dot" style="background:#E53935"></span>Cambridge</a>
-    <a class="subnav-link" href="adults.html"><span class="subnav-dot" style="background:#1B5E3A"></span>Adults</a>
-    <a class="subnav-link" href="business.html"><span class="subnav-dot" style="background:#9B72CF"></span>Business</a>
-    <a class="subnav-link" href="frances.html"><span class="subnav-dot" style="background:#FFB800"></span>Français</a>
+    <a class="subnav-link active" href="#nivells">Els nivells</a>
+    <a class="subnav-link" href="#cambridge">Cambridge</a>
+    <a class="subnav-link" href="#metode">El mètode</a>
+    <a class="subnav-link" href="#horaris">Horaris</a>
   </div>
 </div>
 
