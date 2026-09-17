@@ -123,11 +123,33 @@ h1 em{
 .btn-biz-ghost:hover{border-color:rgba(255,255,255,.5);color:#fff}
 
 /* ── SUBNAV ── */
+.course-nav{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;top:78px;z-index:91;
+}
+.course-nav-inner{
+  max-width:1180px;margin:0 auto;padding:0 40px;
+  display:flex;overflow-x:auto;scrollbar-width:none;
+}
+.course-nav-inner::-webkit-scrollbar{display:none}
+.course-nav-link{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 18px;font-size:12px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-soft);border-bottom:3px solid transparent;
+  white-space:nowrap;flex-shrink:0;
+  transition:color .2s,border-color .2s;text-decoration:none;
+}
+.course-nav-link:hover{color:var(--ink)}
+.course-nav-link.active{color:var(--ink);border-bottom-color:var(--biz-bord)}
+.course-nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+@media(max-width:960px){.course-nav-inner{padding:0 16px}}
 .subnav{
   background:rgba(249,248,246,.97);
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(15,26,53,.12);
-  position:sticky;top:78px;z-index:90;
+  position:sticky;top:126px;z-index:90;
 }
 .subnav-inner{
   max-width:1180px;margin:0 auto;
@@ -493,6 +515,18 @@ footer{
 <body>
 
 <script src="nav.js"></script>
+
+<div class="course-nav">
+  <div class="course-nav-inner">
+    <a class="course-nav-link" href="kids-planet.html"><span class="course-nav-dot" style="background:#EC1E8C"></span>Kids Planet</a>
+    <a class="course-nav-link" href="kids.html"><span class="course-nav-dot" style="background:#FF6B35"></span>Kids 7–12</a>
+    <a class="course-nav-link" href="teens.html"><span class="course-nav-dot" style="background:#26A69A"></span>Teens</a>
+    <a class="course-nav-link" href="cambridge.html"><span class="course-nav-dot" style="background:#E53935"></span>Cambridge</a>
+    <a class="course-nav-link" href="adults.html"><span class="course-nav-dot" style="background:#1B5E3A"></span>Adults</a>
+    <a class="course-nav-link active" href="business.html"><span class="course-nav-dot" style="background:#9B72CF"></span>Business</a>
+    <a class="course-nav-link" href="frances.html"><span class="course-nav-dot" style="background:#FFB800"></span>L'École de Français</a>
+  </div>
+</div>
 
 <div class="subnav">
   <div class="subnav-inner">
