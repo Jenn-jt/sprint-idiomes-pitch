@@ -149,14 +149,19 @@ main, nav, footer{position:relative;z-index:1}
 .btn-lang:hover{border-color:var(--ink);color:var(--ink)}
 
 /* ---------- PORTADA CAMPANYA ---------- */
-/* CANVIA LA IMATGE AQUÍ ↓ — substitueix la URL cada 3 mesos */
-.portada-img{
-  background-image:url(''); /* ← POSA AQUÍ LA URL DE LA IMATGE */
-  background-size:cover;
-  background-position:center top;
+/* Carrusel de fotos — per canviar-les, substitueix els fitxers a img-portada/ */
+.portada-slideshow{
   position:absolute;inset:0;
   z-index:0;
 }
+.portada-slide{
+  position:absolute;inset:0;
+  background-size:cover;
+  background-position:center 35%;
+  opacity:0;
+  transition:opacity 1.8s ease-in-out;
+}
+.portada-slide.is-active{opacity:1}
 .portada{
   position:relative;
   height:95vh;
@@ -1132,16 +1137,19 @@ footer{
 <script src="nav.js"></script>
 
 <!-- =================== PORTADA CAMPANYA ===================
-     Per canviar la imatge cada 3 mesos:
-       1. Obre aquest fitxer
-       2. Busca "CANVIA LA IMATGE AQUÍ" (Ctrl+F)
-       3. Substitueix la URL per la nova imatge
+     Carrusel de fotos reals de l'escola (carpeta img-portada/).
+     Per canviar-les o reordenar-les: edita els divs .portada-slide d'aquí sota.
      Campanyes: Setembre 2026 / Gener 2027 / Abril 2027
      ===================================================== -->
 <div class="portada">
-  <div class="portada-img">
-    <!-- CANVIA LA IMATGE AQUÍ ↓ — substitueix l'src per la nova imatge de campanya -->
-    <!-- <img src="img/campanya-setembre-2026.jpg" alt="Matriculació oberta setembre 2026"> -->
+  <div class="portada-slideshow" aria-hidden="true">
+    <div class="portada-slide is-active" style="background-image:url('img-portada/sprint-entrada.jpg')"></div>
+    <div class="portada-slide" style="background-image:url('img-portada/adults-1.jpg')"></div>
+    <div class="portada-slide" style="background-image:url('img-portada/kids-2.jpg')"></div>
+    <div class="portada-slide" style="background-image:url('img-portada/teens-1.jpg')"></div>
+    <div class="portada-slide" style="background-image:url('img-portada/adults-2.jpg')"></div>
+    <div class="portada-slide" style="background-image:url('img-portada/kids-3.jpg')"></div>
+    <div class="portada-slide" style="background-image:url('img-portada/teens-4.jpg')"></div>
   </div>
   <div class="portada-deco">1974</div>
   <div class="portada-overlay"></div>
@@ -1158,6 +1166,18 @@ footer{
     </svg>
   </div>
 </div>
+<script>
+(function(){
+  var slides = document.querySelectorAll('.portada-slide');
+  if(slides.length < 2) return;
+  var current = 0;
+  setInterval(function(){
+    slides[current].classList.remove('is-active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('is-active');
+  }, 5000);
+})();
+</script>
 
 <!-- =================== AUDIENCE BUBBLES =================== -->
 <section id="per-a-qui">
