@@ -206,6 +206,7 @@
   const page = location.pathname.split('/').pop() || 'index.html';
   const home = page === 'index.html' || page === '';
   const contactHref = home ? '#contacte' : 'index.html#contacte';
+  const nivellHref = home ? '#contacte-nivell' : 'index.html#contacte-nivell';
 
   const cursosPages = ['cursos.html','kids-planet.html','kids.html','teens.html','cambridge.html','adults.html','frances.html','business.html','summer.html'];
   const cursosActive = cursosPages.includes(page);
@@ -267,7 +268,7 @@ ${cursosDropdown}
         <button class="nav-burger" type="button" aria-label="Obrir menú" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </button>
-        <a href="${contactHref}" class="btn-nivel">Descobreix el teu nivell</a>
+        <a href="${nivellHref}" class="btn-nivel">Descobreix el teu nivell</a>
         <a href="${contactHref}" class="btn-primary">
           Matricula't
           <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -320,7 +321,7 @@ ${cursosDropdown}
     </div>
     <a href="${contactHref}">Contacte</a>
     <div class="nav-mobile-cta">
-      <a href="${contactHref}" class="btn-nivel">Descobreix el teu nivell</a>
+      <a href="${nivellHref}" class="btn-nivel">Descobreix el teu nivell</a>
       <a href="${contactHref}" class="btn-primary">Matricula't</a>
     </div>
   `;
