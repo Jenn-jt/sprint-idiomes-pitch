@@ -298,17 +298,45 @@ h1 em{
 .horaris-wrap{
   background:linear-gradient(135deg,#5C1015 0%,#24070A 100%);
   border-radius:24px;padding:44px;color:#fff;
-  display:grid;grid-template-columns:1fr 1fr;gap:40px;
 }
-.hor-block-label{
-  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:rgba(255,255,255,.85);margin-bottom:14px;
+.horaris-title{
+  font-family:var(--font-display);font-size:26px;font-weight:800;
+  letter-spacing:-0.03em;color:#fff;margin-bottom:6px;
 }
-.hor-block-time{
-  font-family:var(--font-display);font-size:30px;font-weight:800;
-  color:#fff;margin-bottom:6px;
+.horaris-sub{font-size:14px;color:rgba(255,255,255,.78);margin-bottom:32px}
+.horaris-table-wrap{overflow-x:auto}
+.horaris-table{width:100%;border-collapse:collapse;min-width:680px}
+.horaris-table th{
+  font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.85);padding:0 14px 14px;text-align:left;white-space:nowrap;
 }
-.hor-block-sub{font-size:15px;color:rgba(255,255,255,.78)}
+.horaris-table th:first-child{padding-left:0}
+.horaris-table td{
+  padding:14px;font-size:13px;font-weight:600;color:rgba(255,255,255,.92);
+  border-top:1px solid rgba(255,255,255,.08);vertical-align:middle;
+}
+.horaris-table td:first-child{padding-left:0}
+.horaris-table tr:last-child td{border-bottom:1px solid rgba(255,255,255,.08)}
+.horaris-table .nivel-name{font-weight:800;color:#fff;font-size:15px;white-space:nowrap}
+.hora-pill{
+  display:inline-flex;align-items:center;
+  background:rgba(255,255,255,.3);
+  border-radius:20px;padding:5px 12px;
+  font-size:12px;font-weight:800;white-space:nowrap;
+}
+.horaris-note{
+  margin-top:20px;font-size:13px;color:rgba(255,255,255,.78);
+  display:flex;align-items:center;gap:8px;
+}
+.horaris-cta{margin-top:24px;display:flex;gap:14px;flex-wrap:wrap}
+.btn-white{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#fff;color:var(--camb-mid);
+  font-family:var(--font-body);font-size:15px;font-weight:800;
+  border-radius:50px;padding:15px 30px;
+  transition:transform .15s,box-shadow .2s;
+}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
 
 /* ── CTA BAND ── */
 .cta-band{
@@ -710,17 +738,86 @@ footer{
   <div class="section-inner">
     <div class="section-label">Horaris</div>
     <h2>Grups de tarda i <em>cap de setmana</em></h2>
-    <p class="section-lead">Tots els grups Cambridge funcionen de dilluns a divendres a la tarda. Grups FCE i CAE amb opcions intensives de dissabte. Màxim 10 alumnes per grup.</p>
+    <p class="section-lead">Grups de FCE, CAE i CPE a la tarda, de dilluns a divendres. Màxim 10 alumnes per grup.</p>
     <div class="horaris-wrap">
-      <div>
-        <div class="hor-block-label">Dilluns a divendres</div>
-        <div class="hor-block-time">17:00 – 20:30</div>
-        <div class="hor-block-sub">C/ Francesc Moragas 4 i 8, Sant Cugat del Vallès</div>
+      <div class="horaris-title">Cambridge · Horaris setmanals</div>
+      <div class="horaris-sub">C/ Francesc Moragas 4 i 8, Sant Cugat del Vallès</div>
+      <div class="horaris-table-wrap">
+      <table class="horaris-table">
+        <thead>
+          <tr><th>Nivell</th><th>Dilluns</th><th>Dl / Dc</th><th>Dimecres</th><th>Dt / Dj</th><th>Divendres</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="nivel-name">FCE 1</span></td>
+            <td><span class="hora-pill">18:30–21:30</span></td>
+            <td>
+              <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start">
+                <span class="hora-pill">16:00–18:00</span>
+                <span class="hora-pill">18:00–19:30</span>
+              </div>
+            </td>
+            <td><span style="opacity:.4">—</span></td>
+            <td>
+              <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start">
+                <span class="hora-pill">15:45–17:45</span>
+                <span class="hora-pill">18:15–19:45</span>
+              </div>
+            </td>
+            <td><span class="hora-pill">16:30–19:30</span></td>
+          </tr>
+          <tr>
+            <td><span class="nivel-name">FCE 2</span></td>
+            <td><span style="opacity:.4">—</span></td>
+            <td><span class="hora-pill">18:00–19:30</span></td>
+            <td><span class="hora-pill">18:30–21:30</span></td>
+            <td>
+              <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start">
+                <span class="hora-pill">15:45–17:45</span>
+                <span class="hora-pill">18:15–19:45</span>
+              </div>
+            </td>
+            <td><span class="hora-pill">16:30–19:30</span></td>
+          </tr>
+          <tr>
+            <td><span class="nivel-name">CAE 1</span></td>
+            <td><span class="hora-pill">18:30–21:30</span></td>
+            <td><span style="opacity:.4">—</span></td>
+            <td><span style="opacity:.4">—</span></td>
+            <td>
+              <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start">
+                <span class="hora-pill">15:45–17:45</span>
+                <span class="hora-pill">19:15–20:45</span>
+              </div>
+            </td>
+            <td><span class="hora-pill">16:30–19:30</span></td>
+          </tr>
+          <tr>
+            <td><span class="nivel-name">CAE 2</span></td>
+            <td><span style="opacity:.4">—</span></td>
+            <td><span class="hora-pill">16:00–18:00</span></td>
+            <td><span class="hora-pill">18:30–21:30</span></td>
+            <td><span class="hora-pill">19:15–20:45</span></td>
+            <td><span style="opacity:.4">—</span></td>
+          </tr>
+          <tr>
+            <td><span class="nivel-name">CPE</span></td>
+            <td><span style="opacity:.4">—</span></td>
+            <td><span class="hora-pill">19:30–21:00</span></td>
+            <td><span style="opacity:.4">—</span></td>
+            <td><span class="hora-pill">19:15–20:45</span></td>
+            <td><span class="hora-pill">16:30–19:30</span></td>
+          </tr>
+        </tbody>
+      </table>
       </div>
-      <div>
-        <div class="hor-block-label">Dissabte (FCE / CAE intensiu)</div>
-        <div class="hor-block-time">09:30 – 12:30</div>
-        <div class="hor-block-sub">Grups intensius de preparació per a la convocatòria de juny</div>
+      <p class="horaris-note">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(255,255,255,.4)" stroke-width="1.2"/><path d="M7 5v3M7 9.5v.5" stroke="rgba(255,255,255,.4)" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Els horaris poden variar. Contacta'ns per confirmar disponibilitat i nivell adequat.
+      </p>
+      <div class="horaris-cta">
+        <a href="index.html#contacte" class="btn-white">Reserva la teva prova →</a>
+        <a href="tel:+34935892264" class="btn-ghost-white">93 589 22 64</a>
       </div>
     </div>
   </div>
