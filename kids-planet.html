@@ -70,19 +70,19 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .metodo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .metodo-card{padding:32px;border-radius:28px;border:1.5px solid rgba(21,32,61,.06);border-top:4px solid var(--mc-color,var(--kp));background:#fff;transition:transform .25s,box-shadow .25s}
 .metodo-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 48px rgba(0,0,0,.1)}
-.metodo-icon{font-size:30px;margin-bottom:18px;line-height:1;width:60px;height:60px;border-radius:16px;background:var(--mc-bg,rgba(236,30,140,.1));display:flex;align-items:center;justify-content:center}
+.metodo-icon{margin-bottom:18px;line-height:1;width:60px;height:60px;border-radius:16px;background:var(--mc-bg,rgba(236,30,140,.1));color:var(--mc-color,var(--kp));display:flex;align-items:center;justify-content:center}
 .metodo-title{font-weight:800;font-size:18px;margin-bottom:10px;color:var(--ink)}
 .metodo-text{font-size:14.5px;color:var(--ink-soft);line-height:1.6}
 
 .rainbow-section{background:linear-gradient(135deg,#FFF0F9,#FFFAE0)}
 .rainbow-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.rainbow-visual{background:linear-gradient(135deg,#FFB7D5,#FFCF86,#A8E6CF,#87CEEB,#D4A8E8);border-radius:32px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:100px;position:relative;box-shadow:0 16px 48px rgba(236,30,140,.2)}
+.rainbow-visual{background:linear-gradient(135deg,#FFB7D5,#FFCF86,#A8E6CF,#87CEEB,#D4A8E8);border-radius:32px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 16px 48px rgba(236,30,140,.2)}
 .rainbow-badge{position:absolute;bottom:-16px;right:-16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;box-shadow:0 8px 24px rgba(21,32,61,.08)}
 .rb-text{font-size:13px;color:var(--ink-soft);font-weight:600}
 .rb-addr{font-weight:800;font-size:14px;color:var(--ink);margin-top:2px}
 .rainbow-features{display:flex;flex-direction:column;gap:16px}
 .rf-item{display:flex;align-items:flex-start;gap:14px;padding:16px;border-radius:14px;background:#fff;border-left:3px solid var(--kp)}
-.rf-icon{width:48px;height:48px;border-radius:16px;background:rgba(236,30,140,.12);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.rf-icon{width:48px;height:48px;border-radius:16px;background:rgba(236,30,140,.12);color:var(--kp);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .rf-title{font-weight:800;font-size:14px;margin-bottom:3px}
 .rf-text{font-size:13px;color:var(--ink-soft);line-height:1.5}
 
@@ -291,22 +291,22 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
     <p class="section-lead">Els nens no aprenen anglès: l'adquireixen. Igual que el català o el castellà. Sense memoritzar, sense pressió, amb ganes de tornar cada dia.</p>
     <div class="metodo-grid">
       <div class="metodo-card mc-1">
-        <div class="metodo-icon">👩‍🏫</div>
+        <div class="metodo-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 20v-1a6 6 0 0 1 6-6h0a6 6 0 0 1 6 6v1"/><circle cx="18" cy="8" r="2.3"/><path d="M15.5 20v-.7a4 4 0 0 1 4-4h0"/></svg></div>
         <div class="metodo-title">Sempre dos professors nadius</div>
         <p class="metodo-text">Un professor dirigeix la sessió, l'altre dona suport individual. Cap nen es perd. L'input és constant, personalitzat i en anglès des del primer segon.</p>
       </div>
       <div class="metodo-card mc-2">
-        <div class="metodo-icon">🎭</div>
+        <div class="metodo-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></div>
         <div class="metodo-title">Joc, cançons i contes</div>
         <p class="metodo-text">Cada activitat crea un context real per comunicar-se en anglès. Mímica, teatre, rutines cantades i jocs de rol activen la llengua de manera natural.</p>
       </div>
       <div class="metodo-card mc-3">
-        <div class="metodo-icon">💛</div>
+        <div class="metodo-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7-4.35-9.5-8.5C1 9.5 2 6 5.5 6c1.9 0 3.4 1 4.5 2.5C11.1 7 12.6 6 14.5 6 18 6 19 9.5 21.5 12c-2.5 4.15-9.5 8.5-9.5 8.5z"/></svg></div>
         <div class="metodo-title">Adaptació emocional</div>
         <p class="metodo-text">Els pares poden acompanyar els primers dies fins que el nen o nena es trobi còmode. Sense presses, sense plors, sense pressió de cap tipus.</p>
       </div>
       <div class="metodo-card mc-4">
-        <div class="metodo-icon">📈</div>
+        <div class="metodo-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg></div>
         <div class="metodo-title">Progressió natural</div>
         <p class="metodo-text">De Kids Planet (3–4 anys) a Kids Planet Plus (5–6 anys). A 7 anys, el pas natural és als <a href="kids.html" style="color:var(--blue);font-weight:800">cursos Kids 7–12 →</a></p>
       </div>
@@ -321,7 +321,11 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
     <p class="section-lead">Un espai dissenyat exclusivament per als més petits. Colorit, estimulant i 100% en anglès. Quan entren per la porta, el món canvia.</p>
     <div class="rainbow-grid">
       <div class="rainbow-visual">
-        🌈
+        <svg width="120" height="72" viewBox="0 0 120 72" fill="none" stroke-linecap="round">
+          <path d="M6 72a54 54 0 0 1 108 0" stroke="#EC1E8C" stroke-width="10"/>
+          <path d="M20 72a40 40 0 0 1 80 0" stroke="#FFB800" stroke-width="10"/>
+          <path d="M34 72a26 26 0 0 1 52 0" stroke="#3DB8F5" stroke-width="10"/>
+        </svg>
         <!-- Substitueix per foto real de l'aula Rainbow -->
         <div class="rainbow-badge">
           <div class="rb-text">C/ Francesc Moragas 8, 1ª planta</div>
@@ -330,19 +334,19 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
       </div>
       <div class="rainbow-features">
         <div class="rf-item">
-          <div class="rf-icon">🎨</div>
+          <div class="rf-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1 0 1.8-.8 1.8-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.8 1.8-1.8H16a5 5 0 0 0 5-5c0-4-4-7-9-7z"/><circle cx="7.5" cy="10.5" r="1" fill="currentColor" stroke="none"/><circle cx="10.5" cy="7.5" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="8" r="1" fill="currentColor" stroke="none"/></svg></div>
           <div><div class="rf-title">Entorn 100% immersiu</div><p class="rf-text">Tot a l'aula —cartells, materials, rutines— és en anglès. El cervell del nen s'activa de forma natural.</p></div>
         </div>
         <div class="rf-item">
-          <div class="rf-icon">🧸</div>
+          <div class="rf-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></div>
           <div><div class="rf-title">Materials per a 3–6 anys</div><p class="rf-text">Flashcards, titelles, jocs de taula i recursos audiovisuals pensats específicament per a la seva edat.</p></div>
         </div>
         <div class="rf-item">
-          <div class="rf-icon">🔒</div>
+          <div class="rf-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
           <div><div class="rf-title">Grups molt reduïts</div><p class="rf-text">Màxim 8 alumnes per grup. Cada nen té la seva atenció i el professor el coneix pel nom des del primer dia.</p></div>
         </div>
         <div class="rf-item">
-          <div class="rf-icon">📍</div>
+          <div class="rf-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
           <div><div class="rf-title">Al cor de Sant Cugat</div><p class="rf-text">C/ Francesc Moragas 8, 1ª planta. Fàcil accés, aparcament proper i parada de bus davant.</p></div>
         </div>
       </div>
