@@ -18,152 +18,141 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--font-body);background:#07091A;color:#CBD5E1;line-height:1.55;font-size:16px;overflow-x:hidden;font-weight:500}
+body{font-family:var(--font-body);background:var(--cream);color:var(--ink);line-height:1.55;font-size:16px;overflow-x:hidden;font-weight:500}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
 /* COURSE NAV */
-.course-nav{background:rgba(7,9,26,.92);border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:78px;z-index:91;backdrop-filter:blur(12px)}
+.course-nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:78px;z-index:91}
 .course-nav-inner{max-width:1320px;margin:0 auto;padding:0 32px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
 .course-nav-inner::-webkit-scrollbar{display:none}
-.course-nav-link{display:inline-flex;align-items:center;gap:7px;padding:13px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:color .2s,border-color .2s;text-decoration:none}
-.course-nav-link:hover{color:#fff}
-.course-nav-link.active{color:#fff;border-bottom-color:var(--teens)}
+.course-nav-link{display:inline-flex;align-items:center;gap:7px;padding:13px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:color .2s,border-color .2s;text-decoration:none}
+.course-nav-link:hover{color:var(--ink)}
+.course-nav-link.active{color:var(--ink);border-bottom-color:var(--teens)}
 .course-nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 
 /* SUBNAV */
-.subnav{background:rgba(7,9,26,.92);border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:126px;z-index:90;backdrop-filter:blur(12px)}
+.subnav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:126px;z-index:90}
 .subnav-inner{max-width:1320px;margin:0 auto;padding:0 32px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
 .subnav-inner::-webkit-scrollbar{display:none}
-.subnav-link{display:inline-flex;align-items:center;gap:7px;padding:13px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:color .2s,border-color .2s;text-decoration:none}
-.subnav-link:hover{color:#fff}
-.subnav-link.active{color:#fff;border-bottom-color:var(--yellow)}
+.subnav-link{display:inline-flex;align-items:center;gap:7px;padding:13px 18px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0;transition:color .2s,border-color .2s;text-decoration:none}
+.subnav-link:hover{color:var(--ink)}
+.subnav-link.active{color:var(--ink);border-bottom-color:var(--yellow)}
 .subnav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 
-.nivel-card:nth-child(1){--tc:rgba(38,166,154,.5);background:rgba(38,166,154,.05)}
-.nivel-card:nth-child(2){--tc:rgba(139,92,246,.5);background:rgba(139,92,246,.05)}
-.nivel-card:nth-child(3){--tc:rgba(255,111,96,.5);background:rgba(255,111,96,.05)}
-.nivel-card:nth-child(4){--tc:rgba(232,121,249,.5);background:rgba(232,121,249,.05)}
-.nivel-card:nth-child(1) .nc-cefr{background:rgba(38,166,154,.18);color:#26A69A;font-size:14px}
-.nivel-card:nth-child(2) .nc-cefr{background:rgba(139,92,246,.18);color:#8B5CF6;font-size:14px}
-.nivel-card:nth-child(3) .nc-cefr{background:rgba(255,111,96,.18);color:#FF8A80;font-size:14px}
-.nivel-card:nth-child(4) .nc-cefr{background:rgba(232,121,249,.18);color:#E879F9;font-size:14px}
-.nivel-card:nth-child(1):hover{border-color:rgba(38,166,154,.4);box-shadow:0 24px 56px rgba(0,0,0,.5),0 0 24px rgba(38,166,154,.15)}
-.nivel-card:nth-child(2):hover{border-color:rgba(139,92,246,.4);box-shadow:0 24px 56px rgba(0,0,0,.5),0 0 24px rgba(139,92,246,.15)}
-.nivel-card:nth-child(3):hover{border-color:rgba(255,111,96,.4);box-shadow:0 24px 56px rgba(0,0,0,.5),0 0 24px rgba(255,111,96,.15)}
-.nivel-card:nth-child(4):hover{border-color:rgba(232,121,249,.4);box-shadow:0 24px 56px rgba(0,0,0,.5),0 0 24px rgba(232,121,249,.15)}
+.nivel-card:nth-child(1){background:#fff}
+.nivel-card:nth-child(2){background:#fff}
+.nivel-card:nth-child(3){background:#fff}
+.nivel-card:nth-child(4){background:#fff}
+.nivel-card:nth-child(1) .nc-cefr{background:rgba(38,166,154,.12);color:var(--teens-dark);font-size:14px}
+.nivel-card:nth-child(2) .nc-cefr{background:rgba(124,58,237,.12);color:#7C3AED;font-size:14px}
+.nivel-card:nth-child(3) .nc-cefr{background:rgba(194,65,12,.12);color:#C2410C;font-size:14px}
+.nivel-card:nth-child(4) .nc-cefr{background:rgba(162,28,175,.12);color:#A21CAF;font-size:14px}
+.nivel-card:nth-child(1):hover{border-color:rgba(38,166,154,.35);box-shadow:0 20px 44px rgba(21,32,61,.1)}
+.nivel-card:nth-child(2):hover{border-color:rgba(124,58,237,.35);box-shadow:0 20px 44px rgba(21,32,61,.1)}
+.nivel-card:nth-child(3):hover{border-color:rgba(194,65,12,.35);box-shadow:0 20px 44px rgba(21,32,61,.1)}
+.nivel-card:nth-child(4):hover{border-color:rgba(162,28,175,.35);box-shadow:0 20px 44px rgba(21,32,61,.1)}
 
 @media(max-width:960px){.course-nav-inner{padding:0 16px}.subnav-inner{padding:0 16px}}
 
 /* HERO */
-@keyframes t-glow{0%,100%{text-shadow:0 0 30px rgba(38,166,154,.3)}50%{text-shadow:0 0 70px rgba(38,166,154,.7),0 0 140px rgba(38,166,154,.18)}}
-@keyframes t-pulse{0%,100%{box-shadow:0 4px 36px rgba(38,166,154,.28)}50%{box-shadow:0 4px 60px rgba(229,57,53,.5),0 0 80px rgba(38,166,154,.2)}}
-.hero::after{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(229,57,53,.2) 0%,rgba(38,166,154,.08) 45%,transparent 70%);top:-140px;right:-100px;pointer-events:none;z-index:0;border-radius:50%}
-
 .hero{
-  background-image:
-    radial-gradient(ellipse 900px 600px at 92% 10%, rgba(229,57,53,.22) 0%, transparent 60%),
-    radial-gradient(ellipse 700px 500px at 5% 90%, rgba(38,166,154,.14) 0%, transparent 60%),
-    linear-gradient(160deg,#0D0A2E 0%,#0D1855 50%,#071528 100%);
-  background-color:#07091A;
-  background-size:100% 100%,100% 100%,100% 100%;
-  border-bottom:1px solid rgba(255,255,255,.06);
+  background:linear-gradient(180deg,var(--teens-soft) 0%,var(--cream) 100%);
+  border-bottom:1px solid var(--line);
   padding:72px 40px 64px;position:relative;overflow:hidden;
 }
-.hero::before{
-  content:'Teens';position:absolute;right:40px;top:50%;transform:translateY(-50%);
-  font-family:var(--font-display);font-size:clamp(100px,17vw,220px);
-  font-weight:900;letter-spacing:-0.06em;color:rgba(38,166,154,.06);
-  pointer-events:none;user-select:none;line-height:1;
-}
 .hero-inner{max-width:1180px;margin:0 auto;position:relative;z-index:1}
-.breadcrumb{font-size:13px;font-weight:600;color:rgba(255,255,255,.45);margin-bottom:24px;display:flex;align-items:center;gap:8px}
-.breadcrumb a{color:rgba(255,255,255,.45);transition:color .2s}.breadcrumb a:hover{color:rgba(255,255,255,.85)}
+.breadcrumb{font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:24px;display:flex;align-items:center;gap:8px}
+.breadcrumb a{color:var(--ink-soft);transition:color .2s}.breadcrumb a:hover{color:var(--ink)}
 .breadcrumb span{opacity:.4}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teens);margin-bottom:16px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teens-dark);margin-bottom:16px}
 .eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--teens)}
-h1{font-family:var(--font-display);font-size:clamp(54px,7.5vw,96px);font-weight:800;letter-spacing:-0.03em;line-height:0.98;color:#fff;margin-bottom:22px}
-h1 em{font-style:normal;background:linear-gradient(135deg,#26A69A 0%,#7FE0D3 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:none}
-.hero-sub{font-size:18px;color:rgba(255,255,255,.68);line-height:1.65;max-width:560px;margin-bottom:36px}
+h1{font-family:var(--font-display);font-size:clamp(46px,6.4vw,76px);font-weight:800;letter-spacing:-0.03em;line-height:1.02;color:var(--ink);margin-bottom:22px}
+h1 em{font-style:normal;color:var(--teens-dark)}
+.hero-sub{font-size:18px;color:var(--ink-soft);line-height:1.65;max-width:560px;margin-bottom:36px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-.btn-teens{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#26A69A 0%,#0F766E 100%);color:#060F36;font-family:var(--font-body);font-size:16px;font-weight:800;border-radius:50px;padding:17px 34px;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 36px rgba(38,166,154,.28)}
-.btn-teens:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 8px 52px rgba(38,166,154,.45)}
-.btn-teens{animation:t-pulse 3s ease-in-out infinite}
-.btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:rgba(255,255,255,.8);font-family:var(--font-body);font-size:15px;font-weight:700;border-radius:50px;padding:17px 34px;border:1.5px solid rgba(255,255,255,.2);transition:border-color .2s,background .2s}
-.btn-outline:hover{border-color:rgba(255,255,255,.82);background:rgba(255,255,255,.06);color:#fff}
+.btn-teens{display:inline-flex;align-items:center;gap:10px;background:var(--teens);color:var(--ink);font-family:var(--font-body);font-size:16px;font-weight:800;border-radius:50px;padding:17px 34px;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 24px rgba(38,166,154,.32)}
+.btn-teens:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(38,166,154,.42)}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--ink);font-family:var(--font-body);font-size:15px;font-weight:700;border-radius:50px;padding:17px 34px;border:2px solid var(--line-strong);transition:border-color .2s,background .2s}
+.btn-outline:hover{border-color:var(--ink);background:var(--cream)}
 
 .hero-stats{display:flex;gap:14px;margin-top:46px;flex-wrap:wrap}
-.hero-stat{background:rgba(38,166,154,.1);border:1px solid rgba(38,166,154,.28);border-radius:16px;padding:14px 22px}
-.hero-stat-num{font-family:var(--font-display);font-size:24px;font-weight:800;letter-spacing:-0.02em;color:#5EEAD4;line-height:1}
-.hero-stat-label{font-size:12px;color:rgba(255,255,255,.78);margin-top:5px;font-weight:600}
+.hero-stat{background:#fff;border:1px solid rgba(15,118,110,.14);box-shadow:0 4px 16px rgba(15,118,110,.07);border-radius:16px;padding:14px 22px}
+.hero-stat-num{font-family:var(--font-display);font-size:24px;font-weight:800;letter-spacing:-0.02em;color:var(--teens-dark);line-height:1}
+.hero-stat-label{font-size:12px;color:var(--ink-soft);margin-top:5px;font-weight:600}
 
 /* SECTIONS */
-.section{padding:80px 40px;border-bottom:1px solid rgba(255,255,255,.06)}
+.section{padding:80px 40px;border-bottom:1px solid var(--line)}
 .section-inner{max-width:1180px;margin:0 auto}
 .section-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
 .section-label-dot{width:8px;height:8px;border-radius:50%}
-.section h2{font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;color:#fff;margin-bottom:14px}
-.section-lead{font-size:16px;color:rgba(255,255,255,.58);line-height:1.65;max-width:560px;margin-bottom:48px}
+.section h2{font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:800;letter-spacing:-0.03em;line-height:1.05;color:var(--ink);margin-bottom:14px}
+.section-lead{font-size:16px;color:var(--ink-soft);line-height:1.65;max-width:560px;margin-bottom:48px}
 
 /* NIVELLS GRID */
 .nivells-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:32px}
-.nivel-card{border-radius:22px;padding:28px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.04);position:relative;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s}
-.nivel-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--tc,rgba(38,166,154,.8)) 0%,rgba(255,255,255,.1) 100%)}
-.nivel-card:hover{border-color:rgba(var(--tc-rgb,56,189,248),.25);transform:translateY(-6px);box-shadow:0 24px 56px rgba(0,0,0,.5)}
+.nivel-card{border-radius:22px;padding:28px;border:1px solid var(--line);background:#fff;position:relative;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s}
+.nivel-card:hover{transform:translateY(-6px)}
 .nc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.nc-cefr{font-size:13px;font-weight:800;background:rgba(38,166,154,.12);color:#26A69A;border-radius:20px;padding:6px 14px}
-.nc-age{font-size:12px;font-weight:700;color:rgba(255,255,255,.45);background:rgba(255,255,255,.07);border-radius:20px;padding:6px 12px}
-.nc-name{font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px;color:#fff}
-.nc-desc{font-size:13.5px;color:rgba(255,255,255,.56);line-height:1.6;margin-bottom:16px}
+.nc-cefr{font-size:13px;font-weight:800;border-radius:20px;padding:6px 14px}
+.nc-age{font-size:12px;font-weight:700;color:var(--ink-soft);background:var(--cream);border-radius:20px;padding:6px 12px}
+.nc-name{font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-0.02em;margin-bottom:8px;color:var(--ink)}
+.nc-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin-bottom:16px}
 .nc-pills{display:flex;flex-wrap:wrap;gap:6px}
-.nc-pills span{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.82);border:none}
+.nc-pills span{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;background:var(--cream);color:var(--ink-soft);border:none}
 
 /* CAMBRIDGE */
-.cambridge-section{background:linear-gradient(160deg,#0B0B28 0%,#0B1228 50%,#0D1530 100%)}
+.cambridge-section{background:#fff}
 .cambridge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:40px}
-.camb-card{background:rgba(255,255,255,.04);border-radius:22px;padding:32px;border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s}
+.camb-card{background:var(--cream);border-radius:22px;padding:32px;border:1px solid var(--line);position:relative;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s}
 .camb-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px}
 .camb-fcae::after{background:linear-gradient(90deg,#FF8A80,#E53935)}
 .camb-cae::after{background:linear-gradient(90deg,#2547D9,#1D4ED8)}
 .camb-cpe::after{background:linear-gradient(90deg,#15203D,#374151)}
-.camb-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.16);box-shadow:0 24px 56px rgba(0,0,0,.45)}
+.camb-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(21,32,61,.08)}
 .camb-level{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;border-radius:20px;padding:5px 14px}
-.camb-name{font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-0.02em;margin-bottom:4px;color:#fff}
-.camb-fullname{font-size:13px;font-weight:600;color:rgba(255,255,255,.48);margin-bottom:14px}
-.camb-desc{font-size:13px;color:rgba(255,255,255,.56);line-height:1.6;margin-bottom:18px}
+.camb-name{font-family:var(--font-display);font-size:22px;font-weight:800;letter-spacing:-0.02em;margin-bottom:4px;color:var(--ink)}
+.camb-fullname{font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:14px}
+.camb-desc{font-size:13px;color:var(--ink-soft);line-height:1.6;margin-bottom:18px}
 .camb-pill{display:inline-flex;font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px}
 
 /* METODOLOGIA */
 .metodo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.metodo-card{padding:32px;border-radius:22px;border:1px solid rgba(255,255,255,.07);border-top:3px solid;background:rgba(255,255,255,.04);transition:transform .25s,box-shadow .25s}
-.metodo-card:hover{transform:translateY(-5px);box-shadow:0 24px 52px rgba(0,0,0,.4)}
+.metodo-card{padding:32px;border-radius:22px;border:1px solid var(--line);border-top:3px solid;background:#fff;transition:transform .25s,box-shadow .25s}
+.metodo-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(21,32,61,.08)}
 
-.metodo-card:nth-child(1){border-top-color:#26A69A;background:linear-gradient(135deg,rgba(38,166,154,.07),rgba(255,255,255,.03))}
-.metodo-card:nth-child(2){border-top-color:#8B5CF6;background:linear-gradient(135deg,rgba(139,92,246,.07),rgba(255,255,255,.03))}
-.metodo-card:nth-child(3){border-top-color:#E879F9;background:linear-gradient(135deg,rgba(232,121,249,.07),rgba(255,255,255,.03))}
-.metodo-card:nth-child(4){border-top-color:#4ADE80;background:linear-gradient(135deg,rgba(74,222,128,.07),rgba(255,255,255,.03))}
+.metodo-card:nth-child(1){border-top-color:var(--teens)}
+.metodo-card:nth-child(2){border-top-color:#7C3AED}
+.metodo-card:nth-child(3){border-top-color:#A21CAF}
+.metodo-card:nth-child(4){border-top-color:#16A34A}
 
-.metodo-num{font-family:var(--font-display);font-size:72px;font-weight:900;letter-spacing:-0.06em;color:rgba(38,166,154,.15);line-height:1;margin-bottom:18px}
-.metodo-title{font-weight:800;font-size:16px;margin-bottom:8px;color:#fff}
-.metodo-text{font-size:13.5px;color:rgba(255,255,255,.56);line-height:1.6}
+.metodo-num{font-family:var(--font-display);font-size:72px;font-weight:900;letter-spacing:-0.06em;color:rgba(21,32,61,.08);line-height:1;margin-bottom:18px}
+.metodo-title{font-weight:800;font-size:16px;margin-bottom:8px;color:var(--ink)}
+.metodo-text{font-size:13.5px;color:var(--ink-soft);line-height:1.6}
 
 /* HORARIS */
-.horaris-wrap{background:linear-gradient(135deg,#080E28,#0D1855);border-radius:28px;padding:48px;color:#fff;border:1px solid rgba(38,166,154,.14);box-shadow:inset 0 1px 0 rgba(38,166,154,.08),0 0 80px rgba(38,166,154,.05)}
-.horaris-title{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:6px}
-.horaris-sub{font-size:14px;color:rgba(255,255,255,.82);margin-bottom:32px}
+.horaris-wrap{background:var(--teens-soft);border-radius:28px;padding:48px;color:var(--ink);border:1px solid rgba(15,118,110,.14)}
+.horaris-title{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);margin-bottom:6px}
+.horaris-sub{font-size:14px;color:var(--ink-soft);margin-bottom:32px}
 .horaris-table{width:100%;border-collapse:collapse}
-.horaris-table th{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);padding:0 16px 14px;text-align:left}
+.horaris-table th{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding:0 16px 14px;text-align:left}
 .horaris-table th:first-child{padding-left:0}
-.horaris-table td{padding:14px 16px;font-size:14px;font-weight:600;color:rgba(255,255,255,.85);border-top:1px solid rgba(255,255,255,.08);vertical-align:middle}
+.horaris-table td{padding:14px 16px;font-size:14px;font-weight:600;color:var(--ink);border-top:1px solid rgba(15,118,110,.14);vertical-align:middle}
 .horaris-table td:first-child{padding-left:0}
-.nivel-name{font-weight:800;color:#fff;font-size:14px}
-.hora-pill{display:inline-flex;align-items:center;background:rgba(38,166,154,.15);color:#5EEAD4;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:700;white-space:nowrap}
-.horaris-note{margin-top:20px;font-size:13px;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:8px}
+.nivel-name{font-weight:800;color:var(--ink);font-size:14px}
+.hora-pill{display:inline-flex;align-items:center;background:#fff;color:var(--teens-dark);border-radius:20px;padding:6px 14px;font-size:12px;font-weight:700;white-space:nowrap}
+.horaris-note{margin-top:20px;font-size:13px;color:var(--ink-soft);display:flex;align-items:center;gap:8px}
 .horaris-cta{margin-top:24px;display:flex;gap:14px;flex-wrap:wrap}
-.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-family:var(--font-body);font-size:14px;font-weight:800;border-radius:50px;padding:14px 28px;transition:transform .15s,box-shadow .2s}
-.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
-.btn-ghost-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.6);font-family:var(--font-body);font-size:14px;font-weight:700;border-radius:50px;padding:14px 28px;border:1px solid rgba(255,255,255,.18);transition:border-color .2s,color .2s}
-.btn-ghost-white:hover{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;font-family:var(--font-body);font-size:14px;font-weight:800;border-radius:50px;padding:14px 28px;transition:transform .15s,box-shadow .2s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(21,32,61,.25)}
+.btn-ghost-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink-soft);font-family:var(--font-body);font-size:14px;font-weight:700;border-radius:50px;padding:14px 28px;border:1px solid var(--line-strong);transition:border-color .2s,color .2s}
+.btn-ghost-white:hover{border-color:var(--ink);color:var(--ink)}
+
+/* dins la banda fosca final, els botons blancs/ghost recuperen l'estil fosc original */
+.cta-band .btn-white{background:linear-gradient(135deg,#26A69A,#0F766E);color:#060F36}
+.cta-band .btn-white:hover{box-shadow:0 0 40px rgba(38,166,154,.4)}
+.cta-band .btn-ghost-white{color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.3)}
+.cta-band .btn-ghost-white:hover{color:#fff;border-color:rgba(255,255,255,.55)}
 
 /* CTA BAND */
 .cta-band{background:linear-gradient(135deg,#0D0A2E 0%,#0D1855 35%,#1A0A3E 70%,#0D0A2E 100%);padding:92px 40px;text-align:center;position:relative;overflow:hidden}
@@ -201,26 +190,8 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 .footer-socials a:hover{background:var(--teens);transform:translateY(-2px)}
 .footer-bottom{border-top:1px solid rgba(255,246,228,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,246,228,.35);font-weight:600;flex-wrap:wrap;gap:12px}
 
-
-.nivel-card:nth-child(1){--tc:rgba(38,166,154,.5);background:rgba(38,166,154,.05)}
-.nivel-card:nth-child(2){--tc:rgba(139,92,246,.5);background:rgba(139,92,246,.05)}
-.nivel-card:nth-child(3){--tc:rgba(255,111,96,.5);background:rgba(255,111,96,.05)}
-.nivel-card:nth-child(4){--tc:rgba(232,121,249,.5);background:rgba(232,121,249,.05)}
-.nivel-card:nth-child(1) .nc-cefr{background:rgba(38,166,154,.18);color:#26A69A;font-size:14px}
-.nivel-card:nth-child(2) .nc-cefr{background:rgba(139,92,246,.18);color:#8B5CF6;font-size:14px}
-.nivel-card:nth-child(3) .nc-cefr{background:rgba(255,111,96,.18);color:#FF8A80;font-size:14px}
-.nivel-card:nth-child(4) .nc-cefr{background:rgba(232,121,249,.18);color:#E879F9;font-size:14px}
-.nivel-card:nth-child(1):hover{border-color:rgba(38,166,154,.4);box-shadow:0 24px 56px rgba(0,0,0,.5),0 0 24px rgba(38,166,154,.15)}
-.nivel-card:nth-child(2):hover{border-color:rgba(139,92,246,.4);box-shadow:0 24px 56px rgba(0,0,0,.5),0 0 24px rgba(139,92,246,.15)}
-.nivel-card:nth-child(3):hover{border-color:rgba(255,111,96,.4);box-shadow:0 24px 56px rgba(0,0,0,.5),0 0 24px rgba(255,111,96,.15)}
-.nivel-card:nth-child(4):hover{border-color:rgba(232,121,249,.4);box-shadow:0 24px 56px rgba(0,0,0,.5),0 0 24px rgba(232,121,249,.15)}
-
 @media(max-width:960px){
-  @keyframes t-glow{0%,100%{text-shadow:0 0 30px rgba(38,166,154,.3)}50%{text-shadow:0 0 70px rgba(38,166,154,.7),0 0 140px rgba(38,166,154,.18)}}
-@keyframes t-pulse{0%,100%{box-shadow:0 4px 36px rgba(38,166,154,.28)}50%{box-shadow:0 4px 60px rgba(229,57,53,.5),0 0 80px rgba(38,166,154,.2)}}
-.hero::after{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(229,57,53,.2) 0%,rgba(38,166,154,.08) 45%,transparent 70%);top:-140px;right:-100px;pointer-events:none;z-index:0;border-radius:50%}
-
-.hero{padding:48px 22px 40px}
+  .hero{padding:48px 22px 40px}
   .section{padding:56px 22px}
   .nivells-grid{grid-template-columns:1fr}
   .cambridge-grid{grid-template-columns:1fr}
@@ -334,7 +305,7 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
     <div class="breadcrumb">
       <a href="index.html">Home</a><span>›</span>
       <a href="cursos.html">Cursos</a><span>›</span>
-      <span style="color:rgba(255,255,255,.9);font-weight:700;opacity:1">Teens</span>
+      <span style="color:var(--ink);font-weight:700;opacity:1">Teens</span>
     </div>
     <div class="eyebrow"><span class="eyebrow-dot"></span>12 – 17 anys</div>
     <h1>L'anglès que<br>t'obre <em>portes</em>.</h1>
@@ -355,8 +326,8 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 <!-- NIVELLS -->
 <section class="section" id="nivells">
   <div class="section-inner">
-    <div class="section-label" style="color:var(--teens)"><span class="section-label-dot" style="background:var(--teens)"></span>Nivells Teens</div>
-    <h2>4 nivells, un <em style="color:var(--teens);font-style:normal">camí clar</em>.</h2>
+    <div class="section-label" style="color:var(--teens-dark)"><span class="section-label-dot" style="background:var(--teens)"></span>Nivells Teens</div>
+    <h2>4 nivells, un <em style="color:var(--teens-dark);font-style:normal">camí clar</em>.</h2>
     <p class="section-lead">De Junior a Pre-First. Cada nivell construeix sobre l'anterior fins a deixar-te llest per superar els exàmens Cambridge amb confiança.</p>
     <div class="nivells-grid">
 
@@ -389,8 +360,8 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
       </div>
 
     </div>
-    <p style="font-size:14px;color:rgba(255,255,255,.78);text-align:center">
-      Quan acabes els Teens, el pas natural és la <a href="cambridge.html" style="color:var(--teens);font-weight:700;text-decoration:underline">preparació Cambridge oficial →</a>
+    <p style="font-size:14px;color:var(--ink-soft);text-align:center">
+      Quan acabes els Teens, el pas natural és la <a href="cambridge.html" style="color:var(--teens-dark);font-weight:700;text-decoration:underline">preparació Cambridge oficial →</a>
     </p>
   </div>
 </section>
@@ -398,17 +369,17 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 <!-- CAMBRIDGE -->
 <section class="section cambridge-section" id="cambridge">
   <div class="section-inner">
-    <div class="section-label" style="color:#E53935"><span class="section-label-dot" style="background:#E53935"></span>Cambridge English</div>
-    <h2>Certificats que el <em style="color:#E53935;font-style:normal">món reconeix</em>.</h2>
+    <div class="section-label" style="color:#C62828"><span class="section-label-dot" style="background:#E53935"></span>Cambridge English</div>
+    <h2>Certificats que el <em style="color:#C62828;font-style:normal">món reconeix</em>.</h2>
     <p class="section-lead">Sprint Idiomes és centre examinador oficial Cambridge des de 1992. Preparació integrada en el curs o en grups específics d'examen.</p>
     <div class="cambridge-grid">
 
       <div class="camb-card camb-fcae">
-        <span class="camb-level" style="background:rgba(229,57,53,.1);color:#E53935">B2</span>
+        <span class="camb-level" style="background:rgba(229,57,53,.1);color:#C62828">B2</span>
         <div class="camb-name">First (FCE)</div>
         <div class="camb-fullname">Cambridge B2 First Certificate</div>
         <p class="camb-desc">El certificat B2 és el nivell d'entrada a la universitat i al mercat laboral internacional. Acreditat per milers d'empreses i universitats de tot el món. Sense data de caducitat.</p>
-        <span class="camb-pill" style="background:rgba(229,57,53,.1);color:#E53935">Sense caducitat</span>
+        <span class="camb-pill" style="background:rgba(229,57,53,.1);color:#C62828">Sense caducitat</span>
       </div>
 
       <div class="camb-card camb-cae">
@@ -420,11 +391,11 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
       </div>
 
       <div class="camb-card camb-cpe">
-        <span class="camb-level" style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.85)">C2</span>
+        <span class="camb-level" style="background:rgba(21,32,61,.07);color:var(--ink)">C2</span>
         <div class="camb-name">Proficiency (CPE)</div>
         <div class="camb-fullname">Cambridge C2 Proficiency</div>
         <p class="camb-desc">El nivell màxim Cambridge. Equivalent a un parlant nadiu. Obert per a joves excepcionalment avançats i adults que volen el reconeixement més alt possible.</p>
-        <span class="camb-pill" style="background:rgba(255,255,255,.07);color:rgba(255,255,255,.6)">Nivell màxim</span>
+        <span class="camb-pill" style="background:rgba(21,32,61,.06);color:var(--ink-soft)">Nivell màxim</span>
       </div>
 
     </div>
@@ -434,8 +405,8 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 <!-- METODOLOGIA -->
 <section class="section" id="metode">
   <div class="section-inner">
-    <div class="section-label" style="color:var(--teens)"><span class="section-label-dot" style="background:var(--teens)"></span>El nostre mètode</div>
-    <h2>Fet <em style="color:var(--teens);font-style:normal">per a tu</em>.</h2>
+    <div class="section-label" style="color:var(--teens-dark)"><span class="section-label-dot" style="background:var(--teens)"></span>El nostre mètode</div>
+    <h2>Fet <em style="color:var(--teens-dark);font-style:normal">per a tu</em>.</h2>
     <p class="section-lead">Tu aprens diferent. El nostre mètode ho sap i dissenya cada classe per mantenir-te actiu, involucrat i amb ganes de tornar.</p>
     <div class="metodo-grid">
       <div class="metodo-card">
@@ -463,9 +434,9 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
 </section>
 
 <!-- HORARIS -->
-<section class="section" id="horaris" style="background:#0B0E25">
+<section class="section" id="horaris">
   <div class="section-inner">
-    <div class="section-label" style="color:var(--teens)"><span class="section-label-dot" style="background:var(--teens)"></span>Horaris</div>
+    <div class="section-label" style="color:var(--teens-dark)"><span class="section-label-dot" style="background:var(--teens)"></span>Horaris</div>
     <h2>Horaris.</h2>
     <p class="section-lead">De dilluns a divendres, a la tarda. Tria l'horari que et va millor.</p>
     <div class="horaris-wrap">
@@ -517,7 +488,7 @@ footer{background:var(--ink);padding:72px 40px 32px;color:var(--cream)}
         </tbody>
       </table>
       <p class="horaris-note">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(255,255,255,.35)" stroke-width="1.2"/><path d="M7 5v3M7 9.5v.5" stroke="rgba(255,255,255,.35)" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(21,32,61,.35)" stroke-width="1.2"/><path d="M7 5v3M7 9.5v.5" stroke="rgba(21,32,61,.35)" stroke-width="1.2" stroke-linecap="round"/></svg>
         Els horaris poden variar. Contacta'ns per confirmar disponibilitat i nivell adequat per al teu fill.
       </p>
       <div class="horaris-cta">
