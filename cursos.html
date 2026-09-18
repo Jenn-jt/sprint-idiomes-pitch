@@ -28,7 +28,7 @@
   --c-teens:#0F766E;
   --c-cambridge:#C62828;
   --c-adults:#1B5E3A;
-  --c-french:#92400E;
+  --c-french:#FFB800;
   --c-business:#7C3AED;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -315,6 +315,14 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .level-card:hover .lc-arrow{
   background:var(--cat-color, var(--blue));
   color:#fff;
+}
+/* Français: el groc no funciona com a text (il·legible) ni com a marró fosc (no és groc de veritat).
+   Mateix criteri que a frances.html: tinta fosca al text, groc real només als fons amb text fosc a sobre. */
+#frances .curs-cat-badge,#frances .curs-more,#frances .lc-cefr,#frances .lc-pills span{
+  color:var(--ink);
+}
+#frances .curs-path-node.active,#frances .level-card:hover .lc-arrow{
+  color:var(--ink);
 }
 
 /* Targeta destacada (Business) */
