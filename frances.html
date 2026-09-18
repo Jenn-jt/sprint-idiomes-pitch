@@ -138,7 +138,7 @@ h1 em{
   transition:color .2s,border-color .2s;text-decoration:none;
 }
 .course-nav-link:hover{color:var(--ink)}
-.course-nav-link.active{color:var(--ink);border-bottom-color:var(--franc)}
+.course-nav-link.active{color:var(--ink);border-bottom-color:var(--yellow)}
 .course-nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 @media(max-width:960px){.course-nav-inner{padding:0 16px}}
 .subnav{
@@ -161,8 +161,8 @@ h1 em{
   white-space:nowrap;flex-shrink:0;
   transition:color .2s,border-color .2s;text-decoration:none;
 }
-.subnav-link:hover{color:var(--franc)}
-.subnav-link.active{color:var(--franc);border-bottom-color:var(--blue)}
+.subnav-link:hover{color:var(--ink)}
+.subnav-link.active{color:var(--ink);border-bottom-color:var(--blue)}
 
 /* ── SECTIONS ── */
 .section{
@@ -173,24 +173,24 @@ h1 em{
 .section-inner{max-width:1180px;margin:0 auto}
 .section-label{
   font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--franc);margin-bottom:12px;
+  color:var(--ink-soft);margin-bottom:12px;
   display:flex;align-items:center;gap:8px;
 }
-.section-label::before{content:'';width:24px;height:2px;background:var(--franc);border-radius:2px}
+.section-label::before{content:'';width:24px;height:2px;background:var(--yellow);border-radius:2px}
 .section h2{
   font-family:var(--font-display);
   font-size:clamp(28px,4vw,48px);
   font-weight:800;letter-spacing:-0.04em;line-height:1.05;
   color:var(--ink);margin-bottom:12px;
 }
-.section h2 em{font-style:normal;color:var(--franc)}
+.section h2 em{font-style:normal;color:var(--ink)}
 .section-lead{font-size:17px;color:var(--ink-soft);line-height:1.6;max-width:580px;margin-bottom:48px}
 
 /* ── LEVEL CARDS ── */
 .level-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .lc{
   background:#fff;
-  border:1.5px solid rgba(120,53,15,.1);
+  border:1.5px solid var(--line);
   border-radius:20px;padding:28px;
   display:flex;flex-direction:column;gap:14px;
   position:relative;overflow:hidden;
@@ -200,19 +200,19 @@ h1 em{
 .lc::before{
   content:'';position:absolute;
   top:0;left:0;right:0;height:4px;
-  background:linear-gradient(90deg,var(--franc),var(--franc-mid));
+  background:linear-gradient(90deg,var(--yellow),#FFCA42);
   border-radius:20px 20px 0 0;
 }
 .lc:hover{
   transform:translateY(-4px);
-  box-shadow:0 16px 48px rgba(120,53,15,.1);
-  border-color:rgba(120,53,15,.28);
+  box-shadow:0 16px 48px rgba(255,184,0,.15);
+  border-color:rgba(255,184,0,.35);
 }
 .lc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
 .lc-cefr{
   font-family:var(--font-display);font-size:13px;font-weight:800;
   letter-spacing:.02em;padding:5px 12px;border-radius:8px;line-height:1;
-  background:var(--franc-pale);color:var(--franc);
+  background:rgba(21,32,61,.05);color:var(--ink);
 }
 .lc-badge{
   font-size:11px;font-weight:700;letter-spacing:.04em;
@@ -228,18 +228,18 @@ h1 em{
 .lc-pills span{
   font-size:11px;font-weight:700;
   padding:4px 10px;border-radius:6px;
-  background:var(--franc-pale);color:var(--franc);
-  border:1px solid rgba(120,53,15,.12);
+  background:rgba(21,32,61,.05);color:var(--ink-soft);
+  border:1px solid var(--line);
 }
 .lc-arrow{
   position:absolute;bottom:22px;right:22px;
   width:32px;height:32px;border-radius:50%;
-  background:var(--franc-pale);color:var(--franc);
+  background:var(--cream);color:var(--ink);
   display:flex;align-items:center;justify-content:center;
   font-size:15px;font-weight:700;
   transition:background .2s,color .2s;
 }
-.lc:hover .lc-arrow{background:var(--franc);color:#fff}
+.lc:hover .lc-arrow{background:var(--yellow);color:var(--ink)}
 
 /* Joves card: red accent */
 .lc.joves-card::before{background:linear-gradient(90deg,var(--red),#F87171)}
@@ -249,39 +249,39 @@ h1 em{
 .lc.joves-card .lc-pills span{background:var(--red-pale);color:var(--red);border-color:rgba(237,41,57,.15)}
 
 /* ── DELF SECTION ── */
-.delf-section{background:var(--franc);color:#fff}
-.delf-section .section-label{color:rgba(255,255,255,.55)}
-.delf-section .section-label::before{background:rgba(255,255,255,.4)}
-.delf-section .section h2{color:#fff}
-.delf-section .section h2 em{color:#FDE68A;font-style:normal}
-.delf-section .section-lead{color:rgba(255,255,255,.62)}
-.delf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08);border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.delf-section{background:var(--cream);color:var(--ink)}
+.delf-section .section-label{color:var(--ink-soft)}
+.delf-section .section-label::before{background:var(--yellow)}
+.delf-section .section h2{color:var(--ink)}
+.delf-section .section h2 em{color:var(--ink);font-style:normal}
+.delf-section .section-lead{color:var(--ink-soft)}
+.delf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-radius:20px;overflow:hidden;border:1px solid var(--line)}
 .delf-item{
-  padding:32px 24px;background:rgba(255,255,255,.04);
+  padding:32px 24px;background:#fff;
 }
 .delf-cert{
   font-family:var(--font-display);font-size:22px;font-weight:800;
-  color:#fff;margin-bottom:4px;
+  color:var(--ink);margin-bottom:4px;
 }
-.delf-level{font-size:12px;font-weight:700;letter-spacing:.08em;color:#FDE68A;margin-bottom:12px}
-.delf-desc{font-size:14px;color:rgba(255,255,255,.85);line-height:1.5}
+.delf-level{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--ink-soft);margin-bottom:12px}
+.delf-desc{font-size:14px;color:var(--ink-soft);line-height:1.5}
 
 /* ── PROFESSORS ── */
 .profs-section{background:#F0F4F8}
 .prof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .prof-card{
   background:#fff;border-radius:20px;padding:32px 28px;
-  border:1.5px solid rgba(120,53,15,.1);
-  border-top:4px solid var(--pc-top,var(--franc));
+  border:1.5px solid var(--line);
+  border-top:4px solid var(--pc-top,var(--yellow));
   transition:transform .2s,box-shadow .2s;
 }
 .prof-card:nth-child(1){--pc-top:#002395}
 .prof-card:nth-child(2){--pc-top:#ED2939}
-.prof-card:nth-child(3){--pc-top:#78350F}
-.prof-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(120,53,15,.1)}
+.prof-card:nth-child(3){--pc-top:#FFB800}
+.prof-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(21,32,61,.1)}
 .prof-avatar{
   width:56px;height:56px;border-radius:50%;
-  background:var(--franc-pale);
+  background:var(--cream);
   display:flex;align-items:center;justify-content:center;
   font-size:26px;margin-bottom:16px;
 }
@@ -289,24 +289,25 @@ h1 em{
   font-family:var(--font-display);font-size:18px;font-weight:800;
   color:var(--ink);margin-bottom:4px;
 }
-.prof-origin{font-size:12px;font-weight:700;color:var(--franc);letter-spacing:.06em;margin-bottom:12px}
+.prof-origin{font-size:12px;font-weight:700;color:var(--ink-soft);letter-spacing:.06em;margin-bottom:12px}
 .prof-bio{font-size:14px;color:var(--ink-soft);line-height:1.6}
 
 /* ── HORARIS ── */
 .horaris-wrap{
-  background:linear-gradient(135deg,var(--franc) 0%,var(--franc-mid) 100%);
-  border-radius:24px;padding:44px;color:#fff;
+  background:linear-gradient(180deg,var(--franc-pale) 0%,var(--cream) 100%);
+  border:1px solid var(--line);
+  border-radius:24px;padding:44px;color:var(--ink);
   display:grid;grid-template-columns:1fr 1fr;gap:40px;
 }
 .hor-block-label{
   font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:rgba(255,255,255,.78);margin-bottom:12px;
+  color:var(--ink-soft);margin-bottom:12px;
 }
 .hor-block-time{
   font-family:var(--font-display);font-size:28px;font-weight:800;
-  color:#fff;margin-bottom:6px;
+  color:var(--ink);margin-bottom:6px;
 }
-.hor-block-sub{font-size:15px;color:rgba(255,255,255,.85)}
+.hor-block-sub{font-size:15px;color:var(--ink-soft)}
 
 /* ── CTA BAND ── */
 .cta-band{
