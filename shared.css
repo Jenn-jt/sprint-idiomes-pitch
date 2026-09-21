@@ -86,6 +86,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   transition:color .2s,border-color .2s;text-decoration:none;
 }
 .subnav-link:hover{color:var(--ink)}
+.subnav-link:first-child{margin-left:-18px}
 
 /* ---------- COURSE-NAV (navegacio entre els 7 cursos) ---------- */
 .course-nav{
@@ -107,6 +108,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   transition:color .2s,border-color .2s;text-decoration:none;
 }
 .course-nav-link:hover{color:var(--ink)}
+.course-nav-link:first-child{margin-left:-18px}
 .course-nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 @media(max-width:960px){.course-nav-inner{padding:0 22px}}
 
