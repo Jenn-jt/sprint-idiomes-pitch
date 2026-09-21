@@ -17,6 +17,14 @@
   --line-strong:rgba(21,32,61,.2);
   --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
   --font-body:"Nunito",ui-sans-serif,system-ui,sans-serif;
+
+  /* Tokens tipografics — escala real usada al lloc (no una escala generica).
+     --fs-h1 nomes l'usen les pagines interiors (index.html te la seva propia,
+     mes gran, per ser pagina de campanya). */
+  --fs-label:12px;
+  --fs-nav:12px;
+  --fs-h2:clamp(28px,4vw,48px);
+  --fs-h1:clamp(44px,6.4vw,76px);
 }
 
 /* ---------- RESET BASE ---------- */
@@ -35,7 +43,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .cta-band h2,
 .curs-head h2{
   font-family:var(--font-display);
-  font-size:clamp(28px,4vw,48px);
+  font-size:var(--fs-h2);
   font-weight:800;letter-spacing:-0.04em;line-height:1.05;
   color:var(--ink);margin-bottom:12px;
 }
@@ -46,7 +54,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
    El color (var(--camb), var(--kp)...) es queda declarat a cada pagina,
    perque no totes usen el seu color de marca principal aqui. */
 .section-label{
-  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  font-size:var(--fs-label);font-weight:700;letter-spacing:.14em;text-transform:uppercase;
   margin-bottom:12px;
   display:flex;align-items:center;gap:8px;
 }
@@ -71,7 +79,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .subnav-inner::-webkit-scrollbar{display:none}
 .subnav-link{
   display:inline-flex;align-items:center;gap:7px;
-  padding:14px 18px;font-size:12px;font-weight:700;
+  padding:14px 18px;font-size:var(--fs-nav);font-weight:700;
   letter-spacing:.08em;text-transform:uppercase;
   color:var(--ink-soft);border-bottom:3px solid transparent;
   white-space:nowrap;flex-shrink:0;
@@ -92,7 +100,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .course-nav-inner::-webkit-scrollbar{display:none}
 .course-nav-link{
   display:inline-flex;align-items:center;gap:7px;
-  padding:13px 18px;font-size:12px;font-weight:700;
+  padding:13px 18px;font-size:var(--fs-nav);font-weight:700;
   letter-spacing:.1em;text-transform:uppercase;
   color:var(--ink-soft);border-bottom:3px solid transparent;
   white-space:nowrap;flex-shrink:0;

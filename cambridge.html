@@ -60,7 +60,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .hero-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--camb);flex-shrink:0}
 h1{
   font-family:var(--font-display);
-  font-size:clamp(44px,6.4vw,76px);
+  font-size:var(--fs-h1);
   font-weight:800;letter-spacing:-0.04em;line-height:1.02;
   color:var(--ink);max-width:820px;margin-bottom:24px;
 }
@@ -86,7 +86,7 @@ h1 em{
   letter-spacing:-0.02em;color:var(--camb);line-height:1;
 }
 .hero-stat-label{
-  font-size:11px;font-weight:700;color:var(--ink-soft);
+  font-size:var(--fs-label);font-weight:700;color:var(--ink-soft);
   margin-top:4px;letter-spacing:.04em;
 }
 .btn-camb{
@@ -159,7 +159,7 @@ h1 em{
   background:var(--camb-pale);color:var(--camb);
 }
 .lc-cert{
-  font-size:11px;font-weight:700;letter-spacing:.06em;
+  font-size:var(--fs-label);font-weight:700;letter-spacing:.06em;
   padding:5px 10px;border-radius:8px;line-height:1;
   background:#FFFBEB;color:#92400E;border:1px solid #FDE68A;
 }
@@ -171,7 +171,7 @@ h1 em{
 .lc-desc{font-size:14px;color:var(--ink-soft);line-height:1.6;flex:1}
 .lc-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
 .lc-pills span{
-  font-size:11px;font-weight:700;
+  font-size:var(--fs-label);font-weight:700;
   padding:4px 10px;border-radius:6px;
   background:var(--camb-pale);color:var(--camb);
   border:1px solid rgba(225,0,15,.12);
@@ -264,7 +264,7 @@ h1 em{
 .horaris-table-wrap{overflow-x:auto}
 .horaris-table{width:100%;border-collapse:collapse;min-width:680px}
 .horaris-table th{
-  font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  font-size:var(--fs-label);font-weight:700;letter-spacing:.08em;text-transform:uppercase;
   color:rgba(255,255,255,.85);padding:0 14px 14px;text-align:left;white-space:nowrap;
 }
 .horaris-table td{
