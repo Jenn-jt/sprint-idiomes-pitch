@@ -1,0 +1,166 @@
+/* ==========================================================================
+   SPRINT IDIOMES — shared.css
+   Reglas comunes a les pagines interiors (cursos, qui-som, cursos.html).
+   index.html i summer.html NO l'usen (tenen la seva propia estructura de campanya).
+   Es carrega al <head> ABANS de l'<style> propi de cada pagina:
+   <link rel="stylesheet" href="shared.css">
+   ========================================================================== */
+
+/* ---------- DESIGN TOKENS ---------- */
+:root{
+  --cream:#FAF5EA;
+  --ink:#15203D;
+  --ink-soft:#4A5878;
+  --blue:#2547D9;
+  --yellow:#FFB800;
+  --line:rgba(21,32,61,.1);
+  --line-strong:rgba(21,32,61,.2);
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Nunito",ui-sans-serif,system-ui,sans-serif;
+}
+
+/* ---------- RESET BASE ---------- */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* ---------- ESCALA TIPOGRAFICA UNIFICADA ---------- */
+/* Titol de seccio (h2 dins .section) i titol del banner CTA final:
+   mateixa mida a totes les pagines interiors.
+   qui-som.html NO s'inclou aqui (usa --fd en lloc de --font-display i
+   necessita position:relative;z-index:1) — s'ajusta a part, sense tocar. */
+.section h2,
+.cta-band h2,
+.curs-head h2{
+  font-family:var(--font-display);
+  font-size:clamp(28px,4vw,48px);
+  font-weight:800;letter-spacing:-0.04em;line-height:1.05;
+  color:var(--ink);margin-bottom:12px;
+}
+.cta-band h2{color:#fff}
+
+/* Etiqueta petita en majuscules sobre cada titol de seccio.
+   Abans estava a 11px en diverses pagines — minim llegible: 12px.
+   El color (var(--camb), var(--kp)...) es queda declarat a cada pagina,
+   perque no totes usen el seu color de marca principal aqui. */
+.section-label{
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:12px;
+  display:flex;align-items:center;gap:8px;
+}
+.section-label::before{content:'';width:24px;height:2px;border-radius:2px}
+.section-label-dot{width:8px;height:8px;border-radius:50%}
+
+/* ---------- LAYOUT DE SECCIO ---------- */
+.section{
+  padding:80px 32px;
+  border-bottom:1px solid var(--line);
+  scroll-margin-top:130px;
+}
+.section-inner{max-width:1480px;margin:0 auto}
+.section-lead{font-size:17px;color:var(--ink-soft);line-height:1.6;max-width:580px;margin-bottom:48px}
+
+/* ---------- SUBNAV (navegacio interna de la pagina, per ancores) ---------- */
+.subnav-inner{
+  max-width:1480px;margin:0 auto;
+  padding:0 32px;
+  display:flex;overflow-x:auto;scrollbar-width:none;
+}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav-link{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:14px 18px;font-size:12px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-soft);border-bottom:3px solid transparent;
+  white-space:nowrap;flex-shrink:0;
+  transition:color .2s,border-color .2s;text-decoration:none;
+}
+.subnav-link:hover{color:var(--ink)}
+
+/* ---------- COURSE-NAV (navegacio entre els 7 cursos) ---------- */
+.course-nav{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;top:78px;z-index:91;
+}
+.course-nav-inner{
+  max-width:1480px;margin:0 auto;padding:0 32px;
+  display:flex;overflow-x:auto;scrollbar-width:none;
+}
+.course-nav-inner::-webkit-scrollbar{display:none}
+.course-nav-link{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:13px 18px;font-size:12px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-soft);border-bottom:3px solid transparent;
+  white-space:nowrap;flex-shrink:0;
+  transition:color .2s,border-color .2s;text-decoration:none;
+}
+.course-nav-link:hover{color:var(--ink)}
+.course-nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+@media(max-width:960px){.course-nav-inner{padding:0 22px}}
+
+/* ---------- HERO / CTA-BAND (peces comunes) ---------- */
+.hero-inner{max-width:1480px;margin:0 auto;position:relative;z-index:1}
+.hero-stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.lc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.cta-band-inner{max-width:620px;margin:0 auto;position:relative;z-index:1}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-ghost-white{
+  display:inline-flex;align-items:center;gap:10px;
+  color:rgba(255,255,255,.65);
+  font-family:var(--font-body);font-size:15px;font-weight:700;
+  border-radius:50px;padding:16px 28px;
+  border:1px solid rgba(255,255,255,.2);
+  transition:border-color .2s,color .2s;text-decoration:none;
+}
+
+/* ---------- TAULA D'HORARIS ---------- */
+.horaris-table th:first-child{padding-left:0}
+.horaris-table td:first-child{padding-left:0}
+
+/* ---------- BREADCRUMB ---------- */
+.breadcrumb span{opacity:.4}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:var(--ink);padding:72px 32px 32px;
+  color:var(--cream);
+  position:relative;overflow:hidden;
+}
+.footer-inner{max-width:1480px;margin:0 auto;position:relative;z-index:1}
+.footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:48px}
+.footer-huge{
+  font-family:var(--font-display);
+  font-size:clamp(48px,9vw,120px);
+  font-weight:800;letter-spacing:-0.05em;line-height:1;
+  color:rgba(255,246,228,.07);
+  margin-bottom:40px;user-select:none;
+}
+.footer-col h6{
+  font-family:var(--font-display);font-size:14px;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;
+  color:var(--cream);margin-bottom:16px;
+}
+.footer-col p{font-size:14.5px;color:rgba(255,246,228,.7);line-height:1.55}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:9px;font-size:14.5px;font-weight:600}
+.footer-col ul li a{color:rgba(255,246,228,.75)}
+.footer-col ul li a:hover{color:var(--yellow)}
+.footer-col ul li:not(:has(a)){color:rgba(255,246,228,.5)}
+.footer-socials{display:flex;gap:10px;margin-top:14px}
+.footer-socials a{
+  width:38px;height:38px;border-radius:10px;
+  background:rgba(255,255,255,.06);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s,transform .2s;
+}
+.footer-bottom{
+  border-top:1px solid rgba(255,246,228,.1);
+  padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:13px;color:rgba(255,246,228,.4);font-weight:600;
+  flex-wrap:wrap;gap:12px;
+}

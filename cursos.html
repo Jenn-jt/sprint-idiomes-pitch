@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
 <style>
 :root{
   --cream:#FAF5EA;
@@ -120,11 +121,10 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 }
 .breadcrumb a{color:var(--ink-soft)}
 .breadcrumb a:hover{color:var(--blue)}
-.breadcrumb span{opacity:.4}
 .page-hero-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:flex-end}
 .page-hero h1{
   font-family:var(--font-display);
-  font-size:clamp(36px,5vw,64px);
+  font-size:clamp(44px,6.4vw,76px);
   font-weight:800;letter-spacing:-0.04em;line-height:1.05;
   color:var(--ink);
 }
@@ -207,12 +207,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   width:8px;height:8px;border-radius:50%;
   background:var(--cat-color, var(--blue));
 }
-.curs-head h2{
-  font-family:var(--font-display);
-  font-size:clamp(24px,3vw,36px);
-  font-weight:800;letter-spacing:-0.03em;line-height:1.1;
-  color:var(--ink);margin-bottom:8px;
-}
 .curs-head p{
   font-size:15px;color:var(--ink-soft);
   line-height:1.6;max-width:540px;
@@ -269,7 +263,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   transform:translateY(-3px);
   box-shadow:0 12px 32px rgba(21,32,61,.08);
 }
-.lc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
 .lc-cefr{
   font-family:var(--font-display);
   font-size:13px;font-weight:800;letter-spacing:.02em;
@@ -365,12 +358,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   text-align:center;
 }
 .cta-band-inner{max-width:640px;margin:0 auto}
-.cta-band h2{
-  font-family:var(--font-display);
-  font-size:clamp(28px,4vw,44px);
-  font-weight:800;letter-spacing:-0.04em;line-height:1.1;
-  color:#fff;margin-bottom:14px;
-}
 .cta-band p{
   font-size:16px;color:rgba(255,255,255,.6);
   line-height:1.6;margin-bottom:32px;
@@ -397,50 +384,12 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .btn-cta-ghost-white:hover{border-color:rgba(255,255,255,.6);color:#fff}
 
 /* ── FOOTER ── */
-footer{
-  background:var(--ink);padding:72px 32px 32px;
-  color:var(--cream);
-  position:relative;overflow:hidden;
-}
-.footer-inner{max-width:1480px;margin:0 auto;position:relative;z-index:1}
-.footer-huge{
-  font-family:var(--font-display);
-  font-size:clamp(48px,9vw,120px);
-  font-weight:800;letter-spacing:-0.05em;line-height:1;
-  color:rgba(255,246,228,.07);
-  margin-bottom:40px;user-select:none;
-}
 .footer-huge .y,.footer-huge .p,.footer-huge .s,.footer-huge .c{color:rgba(255,246,228,.07)}
 .footer-cols{
   display:grid;grid-template-columns:repeat(4,1fr);
   gap:40px;margin-bottom:48px;
 }
-.footer-col h6{
-  font-family:var(--font-display);font-size:14px;font-weight:700;
-  letter-spacing:.04em;text-transform:uppercase;
-  color:var(--cream);margin-bottom:16px;
-}
-.footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:9px;font-size:14.5px;font-weight:600}
-.footer-col ul li a{color:rgba(255,246,228,.75)}
-.footer-col ul li a:hover{color:var(--yellow)}
-.footer-col ul li:not(:has(a)){color:rgba(255,246,228,.5)}
-.footer-col p{font-size:14.5px;color:rgba(255,246,228,.7);line-height:1.55}
-.footer-socials{display:flex;gap:10px;margin-top:14px}
-.footer-socials a{
-  width:38px;height:38px;border-radius:10px;
-  background:rgba(255,255,255,.06);
-  display:flex;align-items:center;justify-content:center;
-  transition:background .2s,transform .2s;
-}
 .footer-socials a:hover{background:var(--blue);transform:translateY(-2px)}
-.footer-bottom{
-  border-top:1px solid rgba(255,246,228,.1);
-  padding-top:24px;
-  display:flex;justify-content:space-between;align-items:center;
-  font-size:13px;color:rgba(255,246,228,.4);font-weight:600;
-  flex-wrap:wrap;gap:12px;
-}
 
 /* ── RESPONSIVE ── */
 @media(max-width:1080px){
