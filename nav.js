@@ -15,16 +15,12 @@
       display:flex;align-items:center;justify-content:space-between;gap:24px;
     }
     .nav .logo{
-      display:inline-flex;flex-direction:column;align-items:stretch;
-      font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
-      font-weight:500;font-size:13px;letter-spacing:.12em;line-height:1;
-      color:#15203D;text-transform:uppercase;padding:2px 0;
+      display:inline-flex;align-items:center;
       text-decoration:none;
+      transition:opacity .2s;
     }
-    .nav .logo .lw{display:block;text-align:center}
-    .nav .logo .lr{display:block;height:3px;background:#15203D;margin:4px 0;border-radius:1px;transition:background .2s}
-    .nav .logo:hover{color:#2547D9}
-    .nav .logo:hover .lr{background:#2547D9}
+    .nav .logo img{display:block;height:34px;width:auto}
+    .nav .logo:hover{opacity:.75}
     .nav-links{
       display:flex;align-items:center;gap:30px;
       font-size:15px;font-weight:600;
@@ -255,9 +251,7 @@
   nav.innerHTML = `
     <div class="nav-inner">
       <a href="index.html" class="logo" aria-label="Sprint Idiomes">
-        <span class="lw">Sprint</span>
-        <span class="lr"></span>
-        <span class="lw">Idiomes</span>
+        <img src="logo-sprint-idiomes.png" alt="Sprint Idiomes" width="112" height="57">
       </a>
       <div class="nav-links">
         <a href="index.html"${page==='index.html'||page===''?' class="active"':''}>Home</a>
