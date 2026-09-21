@@ -260,6 +260,7 @@ main, nav, footer{position:relative;z-index:1}
   flex-wrap:wrap;
   margin-bottom:28px;
 }
+.portada-ctas{display:flex;gap:14px;flex-wrap:wrap}
 .portada-cta{
   display:inline-flex;align-items:center;gap:10px;
   background:var(--yellow);color:var(--ink);
@@ -271,6 +272,17 @@ main, nav, footer{position:relative;z-index:1}
   white-space:nowrap;
 }
 .portada-cta span{display:inline-block;transition:transform .2s}
+.portada-cta-ghost{
+  display:inline-flex;align-items:center;gap:10px;
+  color:#fff;
+  font-family:var(--font-body);font-size:15px;font-weight:700;
+  border:1.5px solid rgba(255,255,255,.55);
+  border-radius:10px;padding:15px 28px;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:border-color .2s,background .2s;
+}
+.portada-cta-ghost:hover{border-color:#fff;background:rgba(255,255,255,.1)}
 .portada-cta:hover{background:#FFD000;transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,184,0,.45)}
 .portada-cta:hover span{transform:translateX(4px)}
 .portada-cta-sec{
@@ -1126,7 +1138,10 @@ footer{
     <span class="portada-badge"><span class="portada-dot"></span>Inscripcions obertes · Setembre 2026</span>
     <h1 class="portada-title">Matricula't<br>al setembre.</h1>
     <p class="portada-sub">Anglès · Francès · Sant Cugat · Des de 1974</p>
-    <a href="#contacte" class="portada-cta">Reserva la teva plaça <span>→</span></a>
+    <div class="portada-ctas">
+      <a href="#contacte" class="portada-cta">Reserva la teva plaça <span>→</span></a>
+      <a href="#contacte" class="portada-cta-ghost">Prova una classe gratis →</a>
+    </div>
   </div>
   <div class="portada-scroll" onclick="document.getElementById('per-a-qui').scrollIntoView({behavior:'smooth'})">
     <div class="portada-scroll-dot"></div>
