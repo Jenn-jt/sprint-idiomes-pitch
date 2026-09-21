@@ -1,7 +1,7 @@
 /* ==========================================================================
    SPRINT IDIOMES — shared.css
    Reglas comunes a les pagines interiors (cursos, qui-som, cursos.html).
-   index.html i summer.html NO l'usen (tenen la seva propia estructura de campanya).
+   index.html NO l'usa (te la seva propia estructura de campanya).
    Es carrega al <head> ABANS de l'<style> propi de cada pagina:
    <link rel="stylesheet" href="shared.css">
    ========================================================================== */
