@@ -230,7 +230,7 @@
           <span class="nav-dd-dot" style="background:#26A69A"></span>Teens <span style="font-size:11px;opacity:.55;font-weight:600">13–17 anys</span>
         </a>
         <a href="cambridge.html"${page==='cambridge.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#E53935"></span>Cambridge &amp; IELTS
+          <span class="nav-dd-dot" style="background:#E1000F"></span>Cambridge &amp; IELTS
         </a>
         <a href="adults.html"${page==='adults.html'?' class="active"':''}>
           <span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults <span style="font-size:11px;opacity:.55;font-weight:600">18+</span>
@@ -313,7 +313,7 @@ ${cursosDropdown}
       <a href="kids-planet.html"><span class="nav-dd-dot" style="background:#EC1E8C"></span>Kids Planet · 3–6 anys</a>
       <a href="kids.html"><span class="nav-dd-dot" style="background:#FF6B35"></span>Kids · 7–12 anys</a>
       <a href="teens.html"><span class="nav-dd-dot" style="background:#26A69A"></span>Teens · 13–17 anys</a>
-      <a href="cambridge.html"><span class="nav-dd-dot" style="background:#E53935"></span>Cambridge &amp; IELTS</a>
+      <a href="cambridge.html"><span class="nav-dd-dot" style="background:#E1000F"></span>Cambridge &amp; IELTS</a>
       <a href="adults.html"><span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults · 18+</a>
       <a href="frances.html"><span class="nav-dd-dot" style="background:#FFB800"></span>L'École de Français</a>
       <a href="business.html"><span class="nav-dd-dot" style="background:#9B72CF"></span>BLA Business</a>
