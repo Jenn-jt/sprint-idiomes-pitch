@@ -10,7 +10,7 @@
       border-bottom:1px solid rgba(21,32,61,.1);
     }
     .nav-inner{
-      max-width:1320px;margin:0 auto;
+      max-width:1480px;margin:0 auto;
       padding:18px 32px;
       display:flex;align-items:center;justify-content:space-between;gap:24px;
     }
