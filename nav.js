@@ -196,6 +196,59 @@
       .nav-inner{padding:14px 22px}
       .nav-burger{display:flex}
     }
+
+    /* ── FOOTER (compartit a totes les pagines) ── */
+    footer{
+      background:#15203D;padding:72px 32px 32px;
+      color:#FAF5EA;
+      position:relative;overflow:hidden;
+    }
+    .footer-inner{max-width:1480px;margin:0 auto;position:relative;z-index:1}
+    .footer-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:48px}
+    .footer-huge{
+      font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+      font-size:clamp(48px,9vw,120px);
+      font-weight:800;letter-spacing:-0.05em;line-height:1;
+      color:rgba(255,246,228,.07);
+      margin-bottom:40px;user-select:none;
+    }
+    .footer-col h6{
+      font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;font-size:14px;font-weight:700;
+      letter-spacing:.04em;text-transform:uppercase;
+      color:#FAF5EA;margin-bottom:16px;
+    }
+    .footer-col p{font-size:14.5px;color:rgba(255,246,228,.7);line-height:1.55}
+    .footer-col ul{list-style:none}
+    .footer-col ul li{margin-bottom:9px;font-size:14.5px;font-weight:600}
+    .footer-col ul li a{color:rgba(255,246,228,.75);text-decoration:none;transition:color .2s}
+    .footer-col ul li a:hover{color:#FFB800}
+    .footer-col ul li:not(:has(a)){color:rgba(255,246,228,.5)}
+    .footer-socials{display:flex;gap:10px;margin-top:14px}
+    .footer-socials a{
+      width:38px;height:38px;border-radius:10px;
+      background:rgba(255,255,255,.06);
+      display:flex;align-items:center;justify-content:center;
+      transition:background .2s,transform .2s;
+    }
+    .footer-socials a:hover{background:#FFB800;transform:translateY(-2px)}
+    .footer-bottom{
+      border-top:1px solid rgba(255,246,228,.1);
+      padding-top:24px;
+      display:flex;justify-content:space-between;align-items:center;
+      font-size:13px;color:rgba(255,246,228,.4);font-weight:600;
+      flex-wrap:wrap;gap:12px;
+    }
+    .footer-proto{
+      margin-top:18px;text-align:center;font-size:11px;
+      color:rgba(255,246,228,.35);font-weight:600;letter-spacing:.05em;
+    }
+    .footer-proto a{color:rgba(255,246,228,.5);text-decoration:underline}
+    @media(max-width:960px){
+      .footer-cols{grid-template-columns:1fr 1fr;gap:28px}
+    }
+    @media(max-width:540px){
+      .footer-cols{grid-template-columns:1fr}
+    }
   `;
   document.head.appendChild(style);
 
@@ -350,5 +403,77 @@ ${cursosDropdown}
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape') closeMobileMenu();
   });
+
+  /* ── FOOTER (compartit a totes les pagines) ── */
+  /* Es munta en DOMContentLoaded perque aquest script s'executa
+     abans que la resta del <body>; si s'afegis ara, quedaria
+     enganxat just despres del nav en lloc d'al final de la pagina. */
+  function mountFooter(){
+  const footer = document.createElement('footer');
+  footer.innerHTML = `
+    <div class="footer-inner">
+      <div class="footer-huge"><span class="y">Hello,</span> <span class="p">Hi,</span> <span class="s">Hola</span><span class="c">.</span></div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h6>Sprint Idiomes</h6>
+          <p>Escola d'anglès i de francès a Sant Cugat des de 1974. Cambridge oficial des de 1992. DELF/DALF amb professors nadius.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/sprintidiomes" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="#FFF6E4"/></svg></a>
+            <a href="https://www.facebook.com/EscolaSprintIdiomes" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 4h-2.5C10 4 9 5.5 9 8v2H6.5v3H9v8h3v-8h2.5l.5-3H12V8c0-.7.3-1 1-1h2V4z" fill="#FFF6E4"/></svg></a>
+            <a href="https://wa.me/34935892264" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.5-4.5A8 8 0 1 1 9 19.5L4 20z" stroke="#FFF6E4" stroke-width="1.8" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h6>Cursos</h6>
+          <ul>
+            <li><a href="cursos.html#kids-planet">Kids Planet (3–6)</a></li>
+            <li><a href="cursos.html#kids">Kids 1–6 (7–12)</a></li>
+            <li><a href="cursos.html#teens">Teens (12+)</a></li>
+            <li><a href="cursos.html#cambridge">Cambridge &amp; IELTS</a></li>
+            <li><a href="cursos.html#adults">Adults (18+)</a></li>
+            <li><a href="cursos.html#business">BLA Business</a></li>
+            <li><a href="cursos.html#frances">L'École de Français</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>L'escola</h6>
+          <ul>
+            <li><a href="qui-som.html">Qui som</a></li>
+            <li><a href="index.html#perque">Per què Sprint?</a></li>
+            <li><a href="index.html#metode">El nostre mètode</a></li>
+            <li><a href="qui-som.html#historia">Història des de 1974</a></li>
+            <li><a href="qui-som.html#equip">Equip docent</a></li>
+            <li><a href="index.html#opinions">Opinions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Contacte</h6>
+          <ul>
+            <li>C/ Francesc Moragas 4 i 8</li>
+            <li>08172 Sant Cugat del Vallès</li>
+            <li><a href="tel:+34935892264">93 589 22 64</a></li>
+            <li><a href="tel:+34936746635">93 674 66 35</a></li>
+            <li><a href="mailto:info@sprintidiomes.com">info@sprintidiomes.com</a></li>
+            <li>L–V · 9h–21h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 1974 – 2026 Sprint Idiomes · Sant Cugat del Vallès</span>
+        <span>Avís legal · Privacitat · Cookies</span>
+      </div>
+      <div class="footer-proto">
+        Prototip confidencial · Disseny i desenvolupament <a href="https://sheisdigitalab.com">She's Digital</a> · Tots els drets reservats
+      </div>
+    </div>
+  `;
+  document.body.appendChild(footer);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mountFooter);
+  } else {
+    mountFooter();
+  }
 
 })();
