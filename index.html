@@ -482,36 +482,24 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
   display:flex;
   flex-direction:column;
   align-items:center;justify-content:center;
-  text-align:center;padding:18px 10px;
+  text-align:center;padding:18px 14px;
   box-shadow:0 8px 24px rgba(21,32,61,.12);
-  outline:3px solid rgba(255,255,255,.38);
-  outline-offset:-4px;
-  transition:transform .3s ease, box-shadow .3s ease, outline-color .25s;
+  transition:transform .3s ease, box-shadow .3s ease;
   cursor:pointer;
   color:#fff;
 }
 .bubble:hover{
   transform:translateY(-10px) scale(1.04);
   box-shadow:0 24px 48px rgba(21,32,61,.2);
-  outline-color:rgba(255,255,255,.9);
 }
 .bubble .b-name{
   font-family:var(--font-display);
-  font-weight:700;
-  font-size:23px;
+  font-weight:800;
+  font-size:25px;
   line-height:1.05;
   letter-spacing:-0.02em;
   color:inherit;
   font-variation-settings:"wdth" 95;
-}
-.bubble .b-age{
-  display:block;
-  font-family:var(--font-body);
-  font-weight:700;
-  font-size:12px;
-  letter-spacing:.02em;
-  margin-top:5px;
-  color:inherit;
 }
 .bubble.a1{background:#EC1E8C}
 .bubble.a2{background:#FF6B35;color:var(--ink)}
@@ -992,8 +980,7 @@ footer{
   .hero{padding:32px 22px 40px}
   section{padding:64px 22px}
   .audience{grid-template-columns:repeat(4,1fr);gap:12px}
-  .bubble .b-name{font-size:16px}
-  .bubble .b-age{font-size:10px}
+  .bubble .b-name{font-size:17px}
   .why{grid-template-columns:1fr 1fr;gap:14px}
   .courses-grid > *{grid-column:span 12 !important}
   .method{padding:56px 22px;border-radius:24px}
@@ -1174,35 +1161,27 @@ footer{
   <div class="audience">
     <a href="kids-planet.html" class="bubble a1">
       <div class="b-name">Kids Planet</div>
-      <span class="b-age">3–6 anys</span>
     </a>
     <a href="kids.html" class="bubble a2">
       <div class="b-name">Kids</div>
-      <span class="b-age">7–12 anys</span>
     </a>
     <a href="teens.html" class="bubble a3">
       <div class="b-name">Teens</div>
-      <span class="b-age">13–17 anys</span>
     </a>
     <a href="cambridge.html" class="bubble a5">
       <div class="b-name">Cambridge</div>
-      <span class="b-age">Exàmens oficials</span>
     </a>
     <a href="adults.html" class="bubble a4">
       <div class="b-name">Adults</div>
-      <span class="b-age">18+</span>
     </a>
     <a href="frances.html" class="bubble a6">
       <div class="b-name">Français</div>
-      <span class="b-age">A1–C1</span>
     </a>
     <a href="business.html" class="bubble a7">
       <div class="b-name">Business</div>
-      <span class="b-age">Per a empreses</span>
     </a>
     <a href="particular.html" class="bubble a9">
       <div class="b-name">Particular</div>
-      <span class="b-age">A mida</span>
     </a>
   </div>
 </section>
