@@ -197,7 +197,7 @@
     @media(max-width:960px){
       .nav-links{display:none}
       .nav > .nav-inner > .nav-cta > .btn-nivel{display:none}
-      .nav-inner{padding:14px 20px}
+      .nav-inner{padding:14px 22px}
       .nav-burger{display:flex}
     }
   `;
