@@ -324,6 +324,93 @@ ${cursosDropdown}
 
   document.body.insertBefore(nav, document.body.firstChild);
 
+  /* ── BARRA DE CURSOS + SUBNAV (menu generic, compartit a totes les pagines) ──
+     Es munta ara mateix (no en DOMContentLoaded) perque ha d'anar just despres
+     del <nav>, que es on ja hi es en aquest punt de l'execucio. Els scripts
+     locals de cada pagina (scroll-spy de .subnav-link) s'executen mes tard,
+     al final del body, aixi que ja trobaran aquests elements al DOM. */
+  const COURSES = [
+    { href:'kids-planet.html', dot:'#EC1E8C', label:'Kids Planet' },
+    { href:'kids.html',        dot:'#FF6B35', label:'Kids 7–12' },
+    { href:'teens.html',       dot:'#26A69A', label:'Teens' },
+    { href:'cambridge.html',   dot:'#E1000F', label:'Cambridge' },
+    { href:'adults.html',      dot:'#1B5E3A', label:'Adults' },
+    { href:'frances.html',     dot:'#FFB800', label:"L'École de Français" },
+    { href:'business.html',    dot:'#9B72CF', label:'Business' },
+  ];
+
+  const SUBNAV = {
+    'kids-planet.html': [
+      { href:'#rainbow', text:'Aula Rainbow' },
+      { href:'#nivells', text:'2 grups' },
+      { href:'#horaris', text:'Horaris' },
+    ],
+    'kids.html': [
+      { href:'#kids-712', text:'Els nivells' },
+      { href:'#horaris', text:'Horaris' },
+    ],
+    'teens.html': [
+      { href:'#nivells', text:'Els nivells' },
+      { href:'#horaris', text:'Horaris' },
+    ],
+    'cambridge.html': [
+      { href:'#titols', text:'Els títols' },
+      { href:'#perque', text:'Per què Sprint?' },
+      { href:'#examens', text:'Examens 2026' },
+      { href:'#horaris', text:'Horaris' },
+    ],
+    'adults.html': [
+      { href:'#nivells', text:'Els nivells' },
+      { href:'#modalitats', text:'Com fer-ho' },
+      { href:'#horaris', text:'Horaris' },
+    ],
+    'frances.html': [
+      { href:'#nivells', text:'Els nivells' },
+      { href:'#delf', text:'DELF &amp; DALF' },
+      { href:'#professors', text:'Professors nadius' },
+      { href:'#horaris', text:'Horaris' },
+    ],
+    'business.html': [
+      { href:'#bla', text:'BLA Business' },
+      { href:'#programes', text:'Programes' },
+      { href:'#fundae', text:'FUNDAE' },
+      { href:'#sectors', text:'Sectors' },
+      { href:'#horaris', text:'Horaris' },
+    ],
+    'particular.html': [
+      { href:'#perque-particular', text:'Per què nosaltres' },
+      { href:'#com-funciona', text:'Com funciona' },
+    ],
+  };
+
+  let courseNavEl = null;
+  if (COURSES.some(function(c){ return c.href === page; })) {
+    courseNavEl = document.createElement('div');
+    courseNavEl.className = 'course-nav';
+    courseNavEl.innerHTML = `
+      <div class="course-nav-inner">
+        ${COURSES.map(function(c){
+          return `<a class="course-nav-link${c.href===page?' active':''}" href="${c.href}"><span class="course-nav-dot" style="background:${c.dot}"></span>${c.label}</a>`;
+        }).join('\n        ')}
+      </div>
+    `;
+  }
+
+  let subnavEl = null;
+  if (SUBNAV[page]) {
+    subnavEl = document.createElement('div');
+    subnavEl.className = 'subnav';
+    subnavEl.innerHTML = `
+      <div class="subnav-inner">
+        ${SUBNAV[page].map(function(t, i){
+          return `<a class="subnav-link${i===0?' active':''}" href="${t.href}">${t.text}</a>`;
+        }).join('\n        ')}
+      </div>
+    `;
+  }
+
+  nav.after.apply(nav, [courseNavEl, subnavEl].filter(Boolean));
+
   /* ── DROPDOWN escriptori amb delay per no tancar-se al instant ── */
   const wrap = nav.querySelector('.nav-dropdown-wrap');
   if (wrap) {
