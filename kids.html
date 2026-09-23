@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css?v=2">
+<link rel="stylesheet" href="shared.css?v=3">
 <style>
 :root{
   --cream:#FAF5EA;
@@ -32,45 +32,8 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
 /* ── CURSO SUBNAV ── */
-.course-nav-inner{
-  max-width:1480px;margin:0 auto;
-  padding:0 32px;
-  display:flex;gap:0;
-  overflow-x:auto;scrollbar-width:none;
-}
-.course-nav-link{
-  display:inline-flex;align-items:center;gap:7px;
-  padding:13px 18px;
-  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--ink-soft);
-  border-bottom:3px solid transparent;
-  white-space:nowrap;flex-shrink:0;
-  transition:color .2s,border-color .2s;
-}
 .course-nav-link.active{color:var(--ink);border-bottom-color:var(--kids)}
-
-.subnav{
-  background:#fff;
-  border-bottom:1px solid var(--line);
-  position:sticky;top:126px;z-index:90;
-}
-.subnav-inner{
-  max-width:1480px;margin:0 auto;
-  padding:0 32px;
-  display:flex;gap:0;
-  overflow-x:auto;scrollbar-width:none;
-}
-.subnav-link{
-  display:inline-flex;align-items:center;gap:7px;
-  padding:13px 18px;
-  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--ink-soft);
-  border-bottom:3px solid transparent;
-  white-space:nowrap;flex-shrink:0;
-  transition:color .2s,border-color .2s;
-}
 .subnav-link.active{color:var(--ink);border-bottom-color:var(--yellow)}
-.subnav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 
 /* ── PAGE HERO ── */
 .kids-hero{
@@ -332,8 +295,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   .levels-grid{grid-template-columns:1fr 1fr}
   .metodo-grid{grid-template-columns:1fr 1fr}
   .horaris-wrap{padding:32px 22px;border-radius:16px}
-  .course-nav-inner{padding:0 22px}
-  .subnav-inner{padding:0 22px}
 }
 @media(max-width:540px){
   .levels-grid{grid-template-columns:1fr}
