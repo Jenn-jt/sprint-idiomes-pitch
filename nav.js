@@ -96,17 +96,16 @@
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
       font-size:14.5px;font-weight:700;
       padding:11px 20px;border-radius:100px;
-      border:2px solid #15203D;
-      box-shadow:3px 3px 0 #FFB800;
+      border:none;
       text-decoration:none;
-      transition:transform .15s,box-shadow .15s;
+      transition:background .15s;
     }
     .nav .btn-nivel::before{
       content:'';display:inline-block;
       width:7px;height:7px;border-radius:50%;
       background:#FFB800;flex-shrink:0;
     }
-    .nav .btn-nivel:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #FFB800}
+    .nav .btn-nivel:hover{background:#F3EAD3}
 
     .nav-mobile-panel .btn-nivel{
       display:inline-flex;align-items:center;gap:8px;
@@ -114,10 +113,9 @@
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
       font-size:14.5px;font-weight:700;
       padding:12px 22px;border-radius:100px;
-      border:2px solid #15203D;
+      border:none;
       text-decoration:none;
-      box-shadow:4px 4px 0 #15203D;
-      transition:transform .15s,box-shadow .15s;
+      transition:background .15s;
     }
     .nav-mobile-panel .btn-nivel::before{
       content:'';display:inline-block;
@@ -129,31 +127,20 @@
       0%,100%{opacity:.5;transform:scale(1)}
       50%{opacity:1;transform:scale(1.3)}
     }
-    .nav-mobile-panel .btn-nivel:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #15203D}
-    .nav .btn-primary{
-      display:inline-flex;align-items:center;gap:10px;
-      background:#2547D9;color:#fff;
-      font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
-      font-size:14.5px;font-weight:600;
-      padding:12px 22px;border-radius:100px;
-      border:2px solid #15203D;
-      text-decoration:none;
-      box-shadow:3px 3px 0 #EC1E8C;
-      transition:transform .15s,box-shadow .15s;
-    }
-    .nav .btn-primary:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #EC1E8C}
+    .nav-mobile-panel .btn-nivel:hover{background:#FFD000}
+    .nav .btn-primary,
     .nav-mobile-panel .btn-primary{
       display:inline-flex;align-items:center;gap:10px;
       background:#2547D9;color:#fff;
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
       font-size:14.5px;font-weight:600;
       padding:12px 22px;border-radius:100px;
-      border:2px solid #15203D;
+      border:none;
       text-decoration:none;
-      box-shadow:4px 4px 0 #EC1E8C;
-      transition:transform .15s,box-shadow .15s;
+      transition:background .15s;
     }
-    .nav-mobile-panel .btn-primary:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #EC1E8C}
+    .nav .btn-primary:hover,
+    .nav-mobile-panel .btn-primary:hover{background:#1B36AD}
     .nav .btn-primary svg,
     .nav-mobile-panel .btn-primary svg{width:16px;height:16px;flex-shrink:0;transition:transform .2s}
     .nav .btn-primary:hover svg,

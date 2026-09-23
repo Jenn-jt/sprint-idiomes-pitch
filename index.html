@@ -483,31 +483,31 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
 .audience{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:26px;
+  gap:44px;
   margin-top:32px;
 }
 .bubble{
   position:relative;
   aspect-ratio:1/1;
+  max-width:260px;margin:0 auto;
   border-radius:50%;
   border:none;
   display:flex;
   flex-direction:column;
   align-items:center;justify-content:center;
   text-align:center;padding:18px 14px;
-  box-shadow:0 8px 24px rgba(21,32,61,.12);
-  transition:transform .3s ease, box-shadow .3s ease;
+  box-shadow:none;
+  transition:transform .2s ease;
   cursor:pointer;
   color:#fff;
 }
 .bubble:hover{
-  transform:translateY(-10px) scale(1.04);
-  box-shadow:0 24px 48px rgba(21,32,61,.2);
+  transform:scale(1.04);
 }
 .bubble .b-name{
   font-family:var(--font-display);
   font-weight:800;
-  font-size:24px;
+  font-size:22px;
   line-height:1.05;
   letter-spacing:-0.02em;
   color:inherit;
