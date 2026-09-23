@@ -4,10 +4,14 @@
   style.textContent = `
     .nav{
       position:sticky;top:0;z-index:200;
-      background:rgba(255,255,255,.95);
+      background:rgba(250,245,234,.9);
       backdrop-filter:blur(14px);
       -webkit-backdrop-filter:blur(14px);
       border-bottom:1px solid rgba(21,32,61,.1);
+    }
+    .nav::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:4px;
+      background:linear-gradient(90deg,#EC1E8C,#FF6B35,#26A69A,#E1000F,#1B5E3A,#FFB800,#9B72CF);
     }
     .nav-inner{
       max-width:1480px;margin:0 auto;
