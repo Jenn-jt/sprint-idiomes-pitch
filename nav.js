@@ -12,14 +12,14 @@
     .nav-inner{
       max-width:1480px;margin:0 auto;
       padding:18px 32px;
-      display:flex;align-items:center;justify-content:space-between;gap:24px;
+      display:flex;align-items:center;gap:44px;
     }
     .nav .logo{
       display:inline-flex;align-items:center;
       text-decoration:none;
       transition:opacity .2s;
     }
-    .nav .logo img{display:block;height:34px;width:auto}
+    .nav .logo img{display:block;height:38px;width:auto}
     .nav .logo:hover{opacity:.75}
     .nav-links{
       display:flex;align-items:center;gap:30px;
@@ -83,7 +83,7 @@
     .nav-dd-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
     .nav-dd-sep{height:1px;background:rgba(21,32,61,.08);margin:6px 4px}
 
-    .nav-cta{display:flex;gap:12px;align-items:center}
+    .nav-cta{display:flex;gap:12px;align-items:center;margin-left:auto}
     .nav .btn-lang{
       font-size:12px;font-weight:700;letter-spacing:.08em;
       color:#4A5878;padding:8px 14px;border-radius:8px;
@@ -92,7 +92,23 @@
       transition:all .2s;
     }
     .nav .btn-lang:hover{border-color:#15203D;color:#15203D}
-    .nav .btn-nivel,
+    .nav .btn-nivel{
+      display:inline-flex;align-items:center;gap:8px;
+      background:none;color:#4A5878;
+      font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
+      font-size:14.5px;font-weight:700;
+      padding:11px 20px;border-radius:100px;
+      border:1px solid rgba(21,32,61,.18);
+      text-decoration:none;
+      transition:border-color .2s,color .2s;
+    }
+    .nav .btn-nivel::before{
+      content:'';display:inline-block;
+      width:7px;height:7px;border-radius:50%;
+      background:#FFB800;flex-shrink:0;
+    }
+    .nav .btn-nivel:hover{border-color:#15203D;color:#15203D}
+
     .nav-mobile-panel .btn-nivel{
       display:inline-flex;align-items:center;gap:8px;
       background:#FFB800;color:#15203D;
@@ -104,7 +120,7 @@
       box-shadow:0 4px 16px rgba(255,184,0,.3);
       transition:transform .2s,box-shadow .2s,background .2s;
     }
-    .nav .btn-nivel::before{
+    .nav-mobile-panel .btn-nivel::before{
       content:'';display:inline-block;
       width:7px;height:7px;border-radius:50%;
       background:#15203D;opacity:.5;flex-shrink:0;
@@ -114,7 +130,6 @@
       0%,100%{opacity:.5;transform:scale(1)}
       50%{opacity:1;transform:scale(1.3)}
     }
-    .nav .btn-nivel:hover,
     .nav-mobile-panel .btn-nivel:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,184,0,.45);background:#FFD000}
     .nav .btn-primary,
     .nav-mobile-panel .btn-primary{
