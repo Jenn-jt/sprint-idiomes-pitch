@@ -92,20 +92,20 @@
     .nav .btn-lang:hover{border-color:#15203D;color:#15203D}
     .nav .btn-nivel{
       display:inline-flex;align-items:center;gap:8px;
-      background:#FAF5EA;color:#15203D;
+      background:none;color:#15203D;
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
       font-size:14.5px;font-weight:700;
-      padding:11px 20px;border-radius:100px;
+      padding:11px 12px;border-radius:100px;
       border:none;
       text-decoration:none;
-      transition:background .15s;
+      transition:color .15s;
     }
     .nav .btn-nivel::before{
       content:'';display:inline-block;
       width:7px;height:7px;border-radius:50%;
       background:#FFB800;flex-shrink:0;
     }
-    .nav .btn-nivel:hover{background:#F3EAD3}
+    .nav .btn-nivel:hover{color:#2547D9}
 
     .nav-mobile-panel .btn-nivel{
       display:inline-flex;align-items:center;gap:8px;
