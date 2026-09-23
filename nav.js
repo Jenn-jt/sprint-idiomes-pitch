@@ -90,43 +90,18 @@
       transition:all .2s;
     }
     .nav .btn-lang:hover{border-color:#15203D;color:#15203D}
-    .nav .btn-nivel{
-      display:inline-flex;align-items:center;gap:8px;
-      background:none;color:#15203D;
-      font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
-      font-size:14.5px;font-weight:700;
-      padding:11px 12px;border-radius:100px;
-      border:none;
-      text-decoration:none;
-      transition:color .15s;
-    }
-    .nav .btn-nivel::before{
-      content:'';display:inline-block;
-      width:7px;height:7px;border-radius:50%;
-      background:#FFB800;flex-shrink:0;
-    }
-    .nav .btn-nivel:hover{color:#2547D9}
-
+    .nav .btn-nivel,
     .nav-mobile-panel .btn-nivel{
-      display:inline-flex;align-items:center;gap:8px;
+      display:inline-flex;align-items:center;gap:10px;
       background:#FFB800;color:#15203D;
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
-      font-size:14.5px;font-weight:700;
+      font-size:14.5px;font-weight:600;
       padding:12px 22px;border-radius:100px;
       border:none;
       text-decoration:none;
       transition:background .15s;
     }
-    .nav-mobile-panel .btn-nivel::before{
-      content:'';display:inline-block;
-      width:7px;height:7px;border-radius:50%;
-      background:#15203D;opacity:.5;flex-shrink:0;
-      animation:nav-nivel-pulse 2s ease-in-out infinite;
-    }
-    @keyframes nav-nivel-pulse{
-      0%,100%{opacity:.5;transform:scale(1)}
-      50%{opacity:1;transform:scale(1.3)}
-    }
+    .nav .btn-nivel:hover,
     .nav-mobile-panel .btn-nivel:hover{background:#FFD000}
     .nav .btn-primary,
     .nav-mobile-panel .btn-primary{
