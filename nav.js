@@ -4,9 +4,7 @@
   style.textContent = `
     .nav{
       position:sticky;top:0;z-index:200;
-      background:rgba(255,255,255,.95);
-      backdrop-filter:blur(14px);
-      -webkit-backdrop-filter:blur(14px);
+      background:#fff;
       border-bottom:1px solid rgba(21,32,61,.1);
     }
     .nav-inner{
