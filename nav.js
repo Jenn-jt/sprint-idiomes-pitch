@@ -518,7 +518,7 @@ ${cursosDropdown}
       <div class="footer-cols">
         <div class="footer-col">
           <h6>Sprint Idiomes</h6>
-          <p>Escola d'anglès i de francès a Sant Cugat des de 1974. Cambridge oficial des de 1992. DELF/DALF amb professors nadius.</p>
+          <p>Escola d'anglès i de francès a Sant Cugat des de 1973. Cambridge oficial des de 1992. DELF/DALF amb professors nadius.</p>
           <div class="footer-socials">
             <a href="https://www.instagram.com/sprintidiomes" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#FFF6E4" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="#FFF6E4"/></svg></a>
             <a href="https://www.facebook.com/EscolaSprintIdiomes" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 4h-2.5C10 4 9 5.5 9 8v2H6.5v3H9v8h3v-8h2.5l.5-3H12V8c0-.7.3-1 1-1h2V4z" fill="#FFF6E4"/></svg></a>
@@ -543,7 +543,7 @@ ${cursosDropdown}
             <li><a href="qui-som.html">Qui som</a></li>
             <li><a href="index.html#perque">Per què Sprint?</a></li>
             <li><a href="index.html#metode">El nostre mètode</a></li>
-            <li><a href="qui-som.html#historia">Història des de 1974</a></li>
+            <li><a href="qui-som.html#historia">Història des de 1973</a></li>
             <li><a href="qui-som.html#equip">Equip docent</a></li>
             <li><a href="index.html#opinions">Opinions</a></li>
           </ul>
@@ -561,7 +561,7 @@ ${cursosDropdown}
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 1974 – 2026 Sprint Idiomes · Sant Cugat del Vallès</span>
+        <span>© 1973 – 2026 Sprint Idiomes · Sant Cugat del Vallès</span>
         <span>Avís legal · Privacitat · Cookies</span>
       </div>
       <div class="footer-proto">
