@@ -190,7 +190,8 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   color:#fff;margin-bottom:6px;
 }
 .horaris-sub{font-size:14px;color:rgba(255,255,255,.78);margin-bottom:32px}
-.horaris-table{width:100%;border-collapse:collapse}
+.horaris-table-wrap{overflow-x:auto}
+.horaris-table{width:100%;border-collapse:collapse;min-width:560px}
 .horaris-table th{
   font-size:var(--fs-label);font-weight:700;letter-spacing:.1em;text-transform:uppercase;
   color:rgba(255,255,255,.85);padding:0 16px 14px;text-align:left;
@@ -300,7 +301,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   .levels-grid{grid-template-columns:1fr}
   .metodo-grid{grid-template-columns:1fr}
   .cta-band{padding:56px 22px}
-  .horaris-table th:nth-child(3),.horaris-table td:nth-child(3){display:none}
 }
 
 /* --- kids orange btn override --- */
@@ -485,6 +485,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
     <div class="horaris-wrap" id="horaris">
       <div class="horaris-title">Horaris</div>
       <div class="horaris-sub">Dl–Dv · 9h–21h · Francesc Moragas 4 i 8, Sant Cugat</div>
+      <div class="horaris-table-wrap">
       <table class="horaris-table">
         <thead>
           <tr>
@@ -515,6 +516,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
           </tr>
         </tbody>
       </table>
+      </div>
       <p class="horaris-note">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(255,255,255,.4)" stroke-width="1.2"/><path d="M7 5v3M7 9.5v.5" stroke="rgba(255,255,255,.4)" stroke-width="1.2" stroke-linecap="round"/></svg>
         Els horaris poden variar lleugerament. Contacta'ns per confirmar la disponibilitat del curs.

@@ -82,7 +82,8 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .horaris-wrap{background:var(--kp-pale);border:1.5px solid rgba(236,30,140,.14);border-radius:32px;padding:48px;color:var(--ink);margin-top:48px;box-shadow:none}
 .horaris-title{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);margin-bottom:6px}
 .horaris-sub{font-size:14px;color:var(--ink-soft);margin-bottom:32px}
-.horaris-table{width:100%;border-collapse:collapse}
+.horaris-table-wrap{overflow-x:auto}
+.horaris-table{width:100%;border-collapse:collapse;min-width:480px}
 .horaris-table th{font-size:var(--fs-label);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--kp);padding:0 16px 14px;text-align:left}
 .horaris-table td{padding:14px 16px;font-size:14px;font-weight:600;color:var(--ink);border-top:1px solid rgba(21,32,61,.08);vertical-align:middle}
 .nivel-name{font-weight:800;color:var(--ink);font-size:15px}
@@ -108,9 +109,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   .nivells-grid{grid-template-columns:1fr}
   .horaris-wrap{padding:32px 22px;border-radius:16px}
   .cta-band{padding:56px 22px}
-}
-@media(max-width:540px){
-  .horaris-table th:nth-child(3),.horaris-table td:nth-child(3){display:none}
 }
 
 .kp-blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0}
@@ -325,6 +323,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
     <div class="horaris-wrap">
       <div class="horaris-title">Kids Planet · Horaris setmanals</div>
       <div class="horaris-sub">Dl–Dv · Francesc Moragas 8, 1ª planta, Sant Cugat</div>
+      <div class="horaris-table-wrap">
       <table class="horaris-table">
         <thead>
           <tr>
@@ -340,6 +339,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
           </tr>
         </tbody>
       </table>
+      </div>
       <p class="horaris-note">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="rgba(21,32,61,.35)" stroke-width="1.2"/><path d="M7 5v3M7 9.5v.5" stroke="rgba(21,32,61,.35)" stroke-width="1.2" stroke-linecap="round"/></svg>
         Els horaris poden variar. Contacta'ns per confirmar disponibilitat i places lliures.
