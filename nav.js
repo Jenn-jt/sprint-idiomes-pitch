@@ -20,24 +20,17 @@
     .nav .logo img{display:block;height:38px;width:auto}
     .nav .logo:hover{opacity:.75}
     .nav-links{
-      display:flex;align-items:center;gap:30px;
+      display:flex;align-items:center;gap:6px;
       font-size:16px;font-weight:700;
     }
     .nav-links a{
-      position:relative;padding:4px 0;
+      position:relative;padding:8px 14px;border-radius:8px;
       color:#4A5878;
-      transition:color .2s;
+      transition:background .2s,color .2s;
       text-decoration:none;
     }
-    .nav-links a:hover{color:#2547D9}
-    .nav-links a::after{
-      content:"";position:absolute;left:0;bottom:-2px;
-      width:0;height:3px;background:#FFB800;border-radius:3px;
-      transition:width .3s ease;
-    }
-    .nav-links a:hover::after,
-    .nav-links a.active::after{width:100%}
-    .nav-links a.active{color:#15203D}
+    .nav-links a:hover,
+    .nav-links a.active{background:#FAF5EA;color:#15203D}
 
     /* ── DROPDOWN CURSOS (escriptori) ── */
     .nav-dropdown-wrap{position:relative}
