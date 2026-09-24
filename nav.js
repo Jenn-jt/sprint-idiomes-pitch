@@ -117,95 +117,73 @@
     .nav .btn-primary:hover svg,
     .nav-mobile-panel .btn-primary:hover svg{transform:translateX(3px)}
 
-    /* ── BOTÓ HAMBURGUESA (només mòbil) ── */
+    /* ── BOTÓ HAMBURGUESA (només mòbil): 2 ratlles, sense caixa ── */
     .nav-burger{
       display:none;
-      width:44px;height:44px;border-radius:50%;
-      border:none;
-      background:#15203D;
+      width:44px;height:44px;
       align-items:center;justify-content:center;
-      flex-direction:column;gap:5px;
+      border:none;background:transparent;
       cursor:pointer;flex-shrink:0;padding:0;
-      transition:background .2s,transform .15s;
+      color:#15203D;
     }
-    .nav-burger:hover{background:#2547D9;transform:scale(1.06)}
-    .nav-burger-bar{
-      width:18px;height:2px;border-radius:2px;
-      background:#fff;
-      transition:transform .3s ease,opacity .2s ease;
+    .nav-burger-lines{position:relative;width:24px;height:10px;flex-shrink:0}
+    .nav-burger-lines i{
+      position:absolute;right:0;width:100%;height:1.5px;
+      background:currentColor;
+      transition:transform .3s,top .3s,width .3s;
     }
-    .nav-burger[aria-expanded="true"] .nav-burger-bar:nth-child(1){transform:translateY(7px) rotate(45deg)}
-    .nav-burger[aria-expanded="true"] .nav-burger-bar:nth-child(2){opacity:0}
-    .nav-burger[aria-expanded="true"] .nav-burger-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .nav-burger-lines i:first-child{top:0}
+    .nav-burger-lines i:last-child{top:8.5px;width:70%}
+    .nav-burger[aria-expanded="true"] .nav-burger-lines i:first-child{top:4.25px;transform:rotate(45deg)}
+    .nav-burger[aria-expanded="true"] .nav-burger-lines i:last-child{top:4.25px;width:100%;transform:rotate(-45deg)}
 
-    /* ── PANEL MÒBIL (fi, elegant) ── */
-    .nav-mobile-backdrop{
-      display:none;position:fixed;inset:0;
-      background:rgba(21,32,61,.45);z-index:399;
-      opacity:0;transition:opacity .3s ease;
-      backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
-    }
-    .nav-mobile-backdrop.open{opacity:1}
+    /* ── MENÚ MÒBIL: cortina a tot l'ample, sota la capçalera ── */
     .nav-mobile-panel{
-      display:none;position:fixed;top:0;right:0;bottom:0;
-      width:min(310px,84vw);background:#fff;
-      z-index:400;padding:28px 28px 30px;overflow-y:auto;
-      transform:translateX(100%);transition:transform .45s cubic-bezier(.19,1,.22,1);
+      display:none;position:fixed;left:0;right:0;bottom:0;
+      background:#15203D;color:#fff;
+      z-index:399;padding:8px 28px 32px;overflow-y:auto;
+      opacity:0;visibility:hidden;
+      transition:opacity .35s ease,visibility .35s ease;
     }
-    .nav-mobile-panel.open{transform:translateX(0)}
-    .nav-mobile-head{
-      display:flex;align-items:center;justify-content:space-between;
-      margin-bottom:34px;
-    }
-    .nav-mobile-head img{height:26px;width:auto;display:block}
-    .nav-mobile-close{
-      width:30px;height:30px;border-radius:50%;
-      border:none;background:none;
-      display:flex;align-items:center;justify-content:center;
-      cursor:pointer;opacity:.6;transition:opacity .2s;
-    }
-    .nav-mobile-close:hover{opacity:1}
+    .nav-mobile-panel.open{opacity:1;visibility:visible}
     .nav-mobile-item{
-      opacity:0;transform:translateY(8px);
-      transition:opacity .4s ease,transform .4s ease;
+      opacity:0;transform:translateY(16px);
+      transition:opacity .5s ease,transform .5s ease;
     }
     .nav-mobile-panel.open .nav-mobile-item{opacity:1;transform:translateY(0)}
-    .nav-mobile-panel.open .nav-mobile-item:nth-child(2){transition-delay:.04s}
-    .nav-mobile-panel.open .nav-mobile-item:nth-child(3){transition-delay:.08s}
-    .nav-mobile-panel.open .nav-mobile-item:nth-child(4){transition-delay:.12s}
-    .nav-mobile-panel.open .nav-mobile-item:nth-child(5){transition-delay:.16s}
-    .nav-mobile-panel.open .nav-mobile-item:nth-child(6){transition-delay:.2s}
+    .nav-mobile-panel.open .nav-mobile-item:nth-child(1){transition-delay:.06s}
+    .nav-mobile-panel.open .nav-mobile-item:nth-child(2){transition-delay:.12s}
+    .nav-mobile-panel.open .nav-mobile-item:nth-child(3){transition-delay:.18s}
+    .nav-mobile-panel.open .nav-mobile-item:nth-child(4){transition-delay:.24s}
+    .nav-mobile-panel.open .nav-mobile-item:nth-child(5){transition-delay:.3s}
     .nav-mobile-panel > a{
-      display:block;padding:13px 4px 13px 16px;margin-left:-16px;
-      border-left:2px solid transparent;
-      border-bottom:1px solid rgba(21,32,61,.07);
+      display:flex;align-items:center;gap:12px;
+      padding:12px 0;
       font-family:var(--font-display,"Bricolage Grotesque",sans-serif);
-      font-size:21px;font-weight:600;letter-spacing:-0.01em;color:#15203D;
-      text-decoration:none;transition:border-color .2s,padding-left .2s;
+      font-size:28px;font-weight:700;letter-spacing:-0.02em;line-height:1.2;
+      color:#fff;text-decoration:none;
     }
-    .nav-mobile-panel > a:hover,
-    .nav-mobile-panel > a.active{border-left-color:#FFB800;padding-left:22px}
+    .nav-mobile-panel > a::after{
+      content:'';width:7px;height:7px;border-radius:50%;flex:0 0 auto;
+      background:#FFB800;transform:scale(0);transition:transform .25s;
+    }
+    .nav-mobile-panel > a.active::after{transform:scale(1)}
     .nav-mobile-heading{
-      display:flex;align-items:center;gap:8px;
       font-size:11px;font-weight:700;text-transform:uppercase;
-      letter-spacing:.12em;color:#9AA3B8;
-      padding:22px 4px 10px;
-    }
-    .nav-mobile-heading::before{
-      content:'';width:14px;height:1px;background:#FFB800;flex-shrink:0;
+      letter-spacing:.14em;color:rgba(255,255,255,.4);
+      padding:22px 0 8px;
     }
     .nav-mobile-sub{display:flex;flex-direction:column}
     .nav-mobile-sub a{
-      font-size:14.5px;font-weight:500;color:#4A5878;
+      font-size:16px;font-weight:500;color:rgba(255,255,255,.72);
       display:flex;align-items:center;gap:10px;
-      padding:10px 4px 10px 16px;margin-left:-16px;
-      border-left:2px solid transparent;
-      text-decoration:none;transition:border-color .2s,color .2s,padding-left .2s;
+      padding:9px 0;
+      text-decoration:none;transition:color .2s;
     }
     .nav-mobile-sub a:hover,
-    .nav-mobile-sub a.active{border-left-color:#FFB800;color:#15203D;padding-left:22px}
-    .nav-mobile-cta{margin-top:26px;display:flex;flex-direction:column;gap:10px}
-    .nav-mobile-cta a{padding:0;border-bottom:none;margin-left:0}
+    .nav-mobile-sub a.active{color:#fff}
+    .nav-mobile-cta{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+    .nav-mobile-cta a{padding:0}
     .nav-mobile-cta .btn-primary,
     .nav-mobile-cta .btn-nivel{
       display:flex;justify-content:center;width:100%;box-sizing:border-box;
@@ -336,9 +314,7 @@ ${cursosDropdown}
       </div>
       <div class="nav-cta">
         <button class="nav-burger" type="button" aria-label="Obrir menú" aria-expanded="false">
-          <span class="nav-burger-bar"></span>
-          <span class="nav-burger-bar"></span>
-          <span class="nav-burger-bar"></span>
+          <span class="nav-burger-lines" aria-hidden="true"><i></i><i></i></span>
         </button>
         <a href="${nivellHref}" class="btn-nivel">Descobreix el teu nivell</a>
         <a href="${contactHref}" class="btn-primary">
@@ -472,18 +448,9 @@ ${cursosDropdown}
   }
 
   /* ── MENÚ MÒBIL ── */
-  const backdrop = document.createElement('div');
-  backdrop.className = 'nav-mobile-backdrop';
-
   const mobilePanel = document.createElement('div');
   mobilePanel.className = 'nav-mobile-panel';
   mobilePanel.innerHTML = `
-    <div class="nav-mobile-head">
-      <img src="logo-sprint-idiomes.png" alt="Sprint Idiomes" width="90" height="46">
-      <div class="nav-mobile-close" role="button" aria-label="Tancar menú">
-        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3l10 10M13 3L3 13" stroke="#15203D" stroke-width="1.8" stroke-linecap="round"/></svg>
-      </div>
-    </div>
     <a class="nav-mobile-item${page==='index.html'||page===''?' active':''}" href="index.html">Home</a>
     <a class="nav-mobile-item${page==='qui-som.html'?' active':''}" href="qui-som.html">Qui som</a>
     <div class="nav-mobile-item">
@@ -506,35 +473,38 @@ ${cursosDropdown}
     </div>
   `;
 
-  document.body.appendChild(backdrop);
   document.body.appendChild(mobilePanel);
 
   const burgerBtn = nav.querySelector('.nav-burger');
 
+  function headerBottom(){
+    let bottom = nav.getBoundingClientRect().bottom;
+    if (courseNavEl) bottom = Math.max(bottom, courseNavEl.getBoundingClientRect().bottom);
+    if (subnavEl) bottom = Math.max(bottom, subnavEl.getBoundingClientRect().bottom);
+    return bottom;
+  }
   function openMobileMenu(){
-    backdrop.style.display = 'block';
+    mobilePanel.style.top = headerBottom() + 'px';
     mobilePanel.style.display = 'block';
     requestAnimationFrame(function(){
-      backdrop.classList.add('open');
       mobilePanel.classList.add('open');
     });
     burgerBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
   }
   function closeMobileMenu(){
-    backdrop.classList.remove('open');
     mobilePanel.classList.remove('open');
     burgerBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
     setTimeout(function(){
-      backdrop.style.display = 'none';
       mobilePanel.style.display = 'none';
     }, 300);
   }
 
-  burgerBtn.addEventListener('click', openMobileMenu);
-  mobilePanel.querySelector('.nav-mobile-close').addEventListener('click', closeMobileMenu);
-  backdrop.addEventListener('click', closeMobileMenu);
+  burgerBtn.addEventListener('click', function(){
+    if (mobilePanel.classList.contains('open')) closeMobileMenu();
+    else openMobileMenu();
+  });
   mobilePanel.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', closeMobileMenu);
   });
