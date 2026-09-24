@@ -54,6 +54,9 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 
+/* ---------- FOCUS (teclat) ---------- */
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;border-radius:inherit}
+
 /* ---------- BG DECORATION ---------- */
 .bg-shapes{display:none}
 
@@ -1039,7 +1042,7 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
   <span class="blob b3"></span>
 </div>
 
-<script src="nav.js?v=6"></script>
+<script src="nav.js?v=7"></script>
 
 <!-- =================== PORTADA CAMPANYA ===================
      Carrusel de fotos reals de l'escola (carpeta img-portada/).
@@ -1289,19 +1292,19 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
       <p class="lead" data-default="Ompla el formulari i et truquem en menys de 24h per organitzar la teva prova gratuïta." data-nivell="Ompla el formulari i et truquem en menys de 24h per fer-te la prova de nivell, sense compromís.">Ompla el formulari i et truquem en menys de 24h per organitzar la teva prova gratuïta.</p>
 
       <div class="field">
-        <label>El teu nom</label>
-        <input type="text" placeholder="Com et dius?" required>
+        <label for="contacte-nom">El teu nom</label>
+        <input type="text" id="contacte-nom" placeholder="Com et dius?" required>
       </div>
       <div class="field">
-        <label>Telèfon</label>
-        <input type="tel" placeholder="600 000 000" required>
+        <label for="contacte-tel">Telèfon</label>
+        <input type="tel" id="contacte-tel" placeholder="600 000 000" required>
       </div>
       <div class="field">
-        <label>Email</label>
-        <input type="email" placeholder="tu@email.com" required>
+        <label for="contacte-email">Email</label>
+        <input type="email" id="contacte-email" placeholder="tu@email.com" required>
       </div>
       <div class="field">
-        <label>Per a qui és la classe?</label>
+        <label for="contacte-select">Per a qui és la classe?</label>
         <select required id="contacte-select">
           <option value="">Tria una opció</option>
           <option>Prova de nivell (sense compromís)</option>

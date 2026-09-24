@@ -64,10 +64,12 @@
       content:'';position:absolute;
       top:-14px;left:0;right:0;height:14px;
     }
-    .nav-dropdown-wrap.open .nav-dropdown{
+    .nav-dropdown-wrap.open .nav-dropdown,
+    .nav-dropdown-wrap:focus-within .nav-dropdown{
       opacity:1;pointer-events:auto;
       transform:translateX(-50%) translateY(0);
     }
+    .nav-dropdown-wrap:focus-within .nav-chevron{transform:rotate(180deg);color:#2547D9}
     .nav-dropdown a{
       display:flex;align-items:center;gap:11px;
       padding:10px 14px;border-radius:10px;
@@ -225,7 +227,7 @@
       border-top:1px solid rgba(255,246,228,.1);
       padding-top:24px;
       display:flex;justify-content:space-between;align-items:center;
-      font-size:13px;color:rgba(255,246,228,.4);font-weight:600;
+      font-size:13px;color:rgba(255,246,228,.6);font-weight:600;
       flex-wrap:wrap;gap:12px;
     }
     .footer-proto{
@@ -247,12 +249,12 @@
   const contactHref = home ? '#contacte' : 'index.html#contacte';
   const nivellHref = home ? '#contacte-nivell' : 'index.html#contacte-nivell';
 
-  const cursosPages = ['cursos.html','kids-planet.html','kids.html','teens.html','cambridge.html','adults.html','frances.html','business.html'];
+  const cursosPages = ['cursos.html','kids-planet.html','kids.html','teens.html','cambridge.html','adults.html','frances.html','business.html','particular.html'];
   const cursosActive = cursosPages.includes(page);
 
   const cursosDropdown = `
     <div class="nav-dropdown-wrap">
-      <a href="cursos.html"${cursosActive ? ' class="active"' : ''}>
+      <a href="cursos.html"${cursosActive ? ' class="active"' : ''} aria-haspopup="true" aria-expanded="false">
         Cursos
         <svg class="nav-chevron" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -280,6 +282,9 @@
         </a>
         <a href="business.html"${page==='business.html'?' class="active"':''}>
           <span class="nav-dd-dot" style="background:#9B72CF"></span>BLA Business
+        </a>
+        <a href="particular.html"${page==='particular.html'?' class="active"':''}>
+          <span class="nav-dd-dot" style="background:#036896"></span>Classes Particulars
         </a>
       </div>
     </div>
@@ -327,6 +332,7 @@ ${cursosDropdown}
     { href:'adults.html',      dot:'#1B5E3A', label:'Adults' },
     { href:'frances.html',     dot:'#FFB800', label:"L'École de Français" },
     { href:'business.html',    dot:'#9B72CF', label:'Business' },
+    { href:'particular.html',  dot:'#036896', label:'Particulars' },
   ];
 
   const SUBNAV = {
@@ -404,15 +410,30 @@ ${cursosDropdown}
   /* ── DROPDOWN escriptori amb delay per no tancar-se al instant ── */
   const wrap = nav.querySelector('.nav-dropdown-wrap');
   if (wrap) {
+    const trigger = wrap.querySelector(':scope > a');
     let closeTimer;
-    wrap.addEventListener('mouseenter', function () {
+    function openDropdown() {
       clearTimeout(closeTimer);
       wrap.classList.add('open');
-    });
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+    function closeDropdown() {
+      wrap.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    wrap.addEventListener('mouseenter', openDropdown);
     wrap.addEventListener('mouseleave', function () {
-      closeTimer = setTimeout(function () {
-        wrap.classList.remove('open');
-      }, 200);
+      closeTimer = setTimeout(closeDropdown, 200);
+    });
+    wrap.addEventListener('focusin', openDropdown);
+    wrap.addEventListener('focusout', function (e) {
+      if (!wrap.contains(e.relatedTarget)) closeDropdown();
+    });
+    wrap.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeDropdown();
+        trigger.focus();
+      }
     });
   }
 
@@ -437,6 +458,7 @@ ${cursosDropdown}
       <a href="adults.html"><span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults · 18+</a>
       <a href="frances.html"><span class="nav-dd-dot" style="background:#FFB800"></span>L'École de Français</a>
       <a href="business.html"><span class="nav-dd-dot" style="background:#9B72CF"></span>BLA Business</a>
+      <a href="particular.html"><span class="nav-dd-dot" style="background:#036896"></span>Classes Particulars</a>
     </div>
     <a href="${contactHref}">Contacte</a>
     <div class="nav-mobile-cta">
@@ -510,6 +532,7 @@ ${cursosDropdown}
             <li><a href="cursos.html#adults">Adults (18+)</a></li>
             <li><a href="cursos.html#business">BLA Business</a></li>
             <li><a href="cursos.html#frances">L'École de Français</a></li>
+            <li><a href="particular.html">Classes Particulars</a></li>
           </ul>
         </div>
         <div class="footer-col">
