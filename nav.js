@@ -21,7 +21,7 @@
     .nav .logo:hover{opacity:.75}
     .nav-links{
       display:flex;align-items:center;gap:30px;
-      font-size:15px;font-weight:600;
+      font-size:16px;font-weight:700;
     }
     .nav-links a{
       position:relative;padding:4px 0;
