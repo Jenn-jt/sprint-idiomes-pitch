@@ -299,7 +299,7 @@ ${cursosDropdown}
         </button>
         <a href="${nivellHref}" class="btn-nivel">Descobreix el teu nivell</a>
         <a href="${contactHref}" class="btn-primary">
-          Matricula't
+          Prova gratuïta
           <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -437,7 +437,7 @@ ${cursosDropdown}
     <a href="${contactHref}">Contacte</a>
     <div class="nav-mobile-cta">
       <a href="${nivellHref}" class="btn-nivel">Descobreix el teu nivell</a>
-      <a href="${contactHref}" class="btn-primary">Matricula't</a>
+      <a href="${contactHref}" class="btn-primary">Prova gratuïta</a>
     </div>
   `;
 
