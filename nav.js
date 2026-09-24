@@ -120,13 +120,23 @@
     /* ── BOTÓ HAMBURGUESA (només mòbil) ── */
     .nav-burger{
       display:none;
-      width:40px;height:40px;border-radius:10px;
-      border:1px solid rgba(21,32,61,.18);
+      width:42px;height:42px;border-radius:12px;
+      border:1px solid rgba(21,32,61,.16);
       background:#fff;
       align-items:center;justify-content:center;
+      flex-direction:column;gap:5px;
       cursor:pointer;flex-shrink:0;padding:0;
+      transition:border-color .2s,background .2s;
     }
-    .nav-burger svg{width:20px;height:20px;color:#15203D}
+    .nav-burger:hover{border-color:rgba(21,32,61,.32);background:#FAF5EA}
+    .nav-burger-bar{
+      width:19px;height:2px;border-radius:2px;
+      background:#15203D;
+      transition:transform .3s ease,opacity .2s ease;
+    }
+    .nav-burger[aria-expanded="true"] .nav-burger-bar:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-burger[aria-expanded="true"] .nav-burger-bar:nth-child(2){opacity:0}
+    .nav-burger[aria-expanded="true"] .nav-burger-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
     /* ── PANEL MÒBIL ── */
     .nav-mobile-backdrop{
@@ -137,36 +147,51 @@
     .nav-mobile-backdrop.open{opacity:1}
     .nav-mobile-panel{
       display:none;position:fixed;top:0;right:0;bottom:0;
-      width:min(320px,86vw);background:#fff;
+      width:min(340px,88vw);background:#fff;
+      border-radius:20px 0 0 20px;
       box-shadow:-16px 0 48px rgba(21,32,61,.2);
-      z-index:400;padding:20px 22px 32px;overflow-y:auto;
+      z-index:400;padding:22px 20px 28px;overflow-y:auto;
       transform:translateX(100%);transition:transform .3s ease;
     }
     .nav-mobile-panel.open{transform:translateX(0)}
+    .nav-mobile-head{
+      display:flex;align-items:center;justify-content:space-between;
+      margin-bottom:20px;
+    }
+    .nav-mobile-head img{height:32px;width:auto;display:block}
     .nav-mobile-close{
       width:36px;height:36px;border-radius:50%;
       border:1px solid rgba(21,32,61,.18);background:#fff;
       display:flex;align-items:center;justify-content:center;
-      margin-left:auto;margin-bottom:14px;cursor:pointer;
+      cursor:pointer;transition:background .2s,border-color .2s;
     }
-    .nav-mobile-panel a{
-      display:block;padding:12px 4px;
+    .nav-mobile-close:hover{background:#FAF5EA;border-color:rgba(21,32,61,.32)}
+    .nav-mobile-panel > a{
+      display:block;padding:13px 12px;border-radius:10px;
       font-size:16px;font-weight:700;color:#15203D;
-      text-decoration:none;border-bottom:1px solid rgba(21,32,61,.08);
+      text-decoration:none;transition:background .15s;
     }
+    .nav-mobile-panel > a:hover,
+    .nav-mobile-panel > a.active{background:#FAF5EA}
     .nav-mobile-heading{
+      display:flex;align-items:center;gap:8px;
       font-size:12px;font-weight:700;text-transform:uppercase;
-      letter-spacing:.06em;color:#4A5878;
-      padding:16px 4px 4px;
+      letter-spacing:.08em;color:#4A5878;
+      padding:18px 12px 6px;
     }
-    .nav-mobile-sub{padding-left:4px}
+    .nav-mobile-heading::before{
+      content:'';width:16px;height:2px;border-radius:2px;background:#FFB800;flex-shrink:0;
+    }
     .nav-mobile-sub a{
       font-size:14.5px;font-weight:600;color:#4A5878;
       display:flex;align-items:center;gap:10px;
-      border-bottom:none;padding:9px 4px;
+      padding:10px 12px;border-radius:10px;
+      text-decoration:none;transition:background .15s,color .15s;
     }
-    .nav-mobile-cta{margin-top:20px;display:flex;flex-direction:column;gap:10px}
-    .nav-mobile-cta a{border-bottom:none;padding:0}
+    .nav-mobile-sub a:hover,
+    .nav-mobile-sub a.active{background:#FAF5EA;color:#15203D}
+    .nav-mobile-cta{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+    .nav-mobile-cta a{padding:0}
     .nav-mobile-cta .btn-primary,
     .nav-mobile-cta .btn-nivel{
       display:flex;justify-content:center;width:100%;box-sizing:border-box;
@@ -297,7 +322,9 @@ ${cursosDropdown}
       </div>
       <div class="nav-cta">
         <button class="nav-burger" type="button" aria-label="Obrir menú" aria-expanded="false">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span class="nav-burger-bar"></span>
+          <span class="nav-burger-bar"></span>
+          <span class="nav-burger-bar"></span>
         </button>
         <a href="${nivellHref}" class="btn-nivel">Descobreix el teu nivell</a>
         <a href="${contactHref}" class="btn-primary">
@@ -437,21 +464,24 @@ ${cursosDropdown}
   const mobilePanel = document.createElement('div');
   mobilePanel.className = 'nav-mobile-panel';
   mobilePanel.innerHTML = `
-    <div class="nav-mobile-close" role="button" aria-label="Tancar menú">
-      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3l10 10M13 3L3 13" stroke="#15203D" stroke-width="1.8" stroke-linecap="round"/></svg>
+    <div class="nav-mobile-head">
+      <img src="logo-sprint-idiomes.png" alt="Sprint Idiomes" width="90" height="46">
+      <div class="nav-mobile-close" role="button" aria-label="Tancar menú">
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3l10 10M13 3L3 13" stroke="#15203D" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
     </div>
     <a href="index.html"${page==='index.html'||page===''?' class="active"':''}>Home</a>
     <a href="qui-som.html"${page==='qui-som.html'?' class="active"':''}>Qui som</a>
     <div class="nav-mobile-heading">Cursos</div>
     <div class="nav-mobile-sub">
-      <a href="kids-planet.html"><span class="nav-dd-dot" style="background:#EC1E8C"></span>Kids Planet · 3–6 anys</a>
-      <a href="kids.html"><span class="nav-dd-dot" style="background:#FF6B35"></span>Kids · 7–12 anys</a>
-      <a href="teens.html"><span class="nav-dd-dot" style="background:#26A69A"></span>Teens · 13–17 anys</a>
-      <a href="cambridge.html"><span class="nav-dd-dot" style="background:#E1000F"></span>Cambridge &amp; IELTS</a>
-      <a href="adults.html"><span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults · 18+</a>
-      <a href="frances.html"><span class="nav-dd-dot" style="background:#FFB800"></span>L'École de Français</a>
-      <a href="business.html"><span class="nav-dd-dot" style="background:#9B72CF"></span>BLA Business</a>
-      <a href="particular.html"><span class="nav-dd-dot" style="background:#036896"></span>Classes Particulars</a>
+      <a href="kids-planet.html"${page==='kids-planet.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#EC1E8C"></span>Kids Planet · 3–6 anys</a>
+      <a href="kids.html"${page==='kids.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#FF6B35"></span>Kids · 7–12 anys</a>
+      <a href="teens.html"${page==='teens.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#26A69A"></span>Teens · 13–17 anys</a>
+      <a href="cambridge.html"${page==='cambridge.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#E1000F"></span>Cambridge &amp; IELTS</a>
+      <a href="adults.html"${page==='adults.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults · 18+</a>
+      <a href="frances.html"${page==='frances.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#FFB800"></span>L'École de Français</a>
+      <a href="business.html"${page==='business.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#9B72CF"></span>BLA Business</a>
+      <a href="particular.html"${page==='particular.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#036896"></span>Classes Particulars</a>
     </div>
     <a href="${contactHref}">Contacte</a>
     <div class="nav-mobile-cta">
