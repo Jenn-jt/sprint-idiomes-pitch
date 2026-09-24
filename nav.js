@@ -120,18 +120,18 @@
     /* ── BOTÓ HAMBURGUESA (només mòbil) ── */
     .nav-burger{
       display:none;
-      width:42px;height:42px;border-radius:12px;
-      border:1px solid rgba(21,32,61,.16);
-      background:#fff;
+      width:44px;height:44px;border-radius:50%;
+      border:none;
+      background:#15203D;
       align-items:center;justify-content:center;
       flex-direction:column;gap:5px;
       cursor:pointer;flex-shrink:0;padding:0;
-      transition:border-color .2s,background .2s;
+      transition:background .2s,transform .15s;
     }
-    .nav-burger:hover{border-color:rgba(21,32,61,.32);background:#FAF5EA}
+    .nav-burger:hover{background:#2547D9;transform:scale(1.06)}
     .nav-burger-bar{
-      width:19px;height:2px;border-radius:2px;
-      background:#15203D;
+      width:18px;height:2px;border-radius:2px;
+      background:#fff;
       transition:transform .3s ease,opacity .2s ease;
     }
     .nav-burger[aria-expanded="true"] .nav-burger-bar:nth-child(1){transform:translateY(7px) rotate(45deg)}
