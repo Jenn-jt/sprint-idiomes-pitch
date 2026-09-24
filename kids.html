@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared.css?v=4">
+<link rel="stylesheet" href="shared.css?v=5">
 <style>
 :root{
   --cream:#FAF5EA;
@@ -230,13 +230,13 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
 .btn-ghost-white{
   display:inline-flex;align-items:center;gap:8px;
-  background:transparent;color:#fff;
+  background:rgba(255,255,255,.1);color:#fff;
   font-family:var(--font-body);font-size:14px;font-weight:700;
   border-radius:100px;padding:13px 24px;
   border:1.5px solid rgba(255,255,255,.55);
-  transition:border-color .2s,color .2s;
+  transition:border-color .2s,color .2s,background .2s;
 }
-.btn-ghost-white:hover{border-color:rgba(255,255,255,.85);color:#fff}
+.btn-ghost-white:hover{border-color:rgba(255,255,255,.85);color:#fff;background:rgba(255,255,255,.18)}
 
 /* ── METODOLOGIA ── */
 .metodo-grid{
