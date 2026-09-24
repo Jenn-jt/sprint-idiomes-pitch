@@ -112,6 +112,7 @@
       padding:12px 22px;border-radius:100px;
       border:none;
       text-decoration:none;
+      white-space:nowrap;
       transition:background .15s;
     }
     .nav .btn-primary:hover,
@@ -181,6 +182,9 @@
       .nav > .nav-inner > .nav-cta > .btn-nivel{display:none}
       .nav-inner{padding:14px 22px}
       .nav-burger{display:flex}
+    }
+    @media(max-width:400px){
+      .nav .btn-primary{padding:11px 16px;font-size:13.5px}
     }
 
     /* ── FOOTER (compartit a totes les pagines) ── */
