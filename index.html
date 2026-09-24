@@ -188,15 +188,6 @@ main, nav, footer{position:relative;z-index:1}
   margin:0 auto;
   padding:0 32px 72px;
 }
-/* Línia accent vertical groga */
-.portada-content::before{
-  content:'';
-  display:block;
-  width:3px;height:56px;
-  background:linear-gradient(to bottom, transparent, var(--yellow));
-  border-radius:2px;
-  margin-bottom:20px;
-}
 .portada-badge{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(255,184,0,.1);
@@ -916,7 +907,6 @@ section#metode,section#opinions{padding-top:0;padding-bottom:0}
 @media (max-width:960px){
   .portada{height:85vh;min-height:520px}
   .portada-content{padding:0 22px 56px}
-  .portada-content::before{height:40px;margin-bottom:16px}
   .portada-deco{font-size:clamp(120px,22vw,260px);right:-10px}
   .portada-trust{gap:0}
   .nav-links{display:none}
