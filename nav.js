@@ -157,10 +157,10 @@
     .nav-mobile-panel.open .nav-mobile-item:nth-child(4){transition-delay:.24s}
     .nav-mobile-panel.open .nav-mobile-item:nth-child(5){transition-delay:.3s}
     .nav-mobile-panel > a{
-      display:flex;align-items:center;gap:12px;
-      padding:12px 0;
+      display:flex;align-items:center;gap:10px;
+      padding:9px 0;
       font-family:var(--font-display,"Bricolage Grotesque",sans-serif);
-      font-size:28px;font-weight:700;letter-spacing:-0.02em;line-height:1.2;
+      font-size:21px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;
       color:#fff;text-decoration:none;
     }
     .nav-mobile-panel > a::after{
