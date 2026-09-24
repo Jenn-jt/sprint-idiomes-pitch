@@ -138,75 +138,60 @@
     .nav-burger[aria-expanded="true"] .nav-burger-bar:nth-child(2){opacity:0}
     .nav-burger[aria-expanded="true"] .nav-burger-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-    /* ── PANEL MÒBIL (pantalla completa, fosc) ── */
+    /* ── PANEL MÒBIL ── */
     .nav-mobile-backdrop{
       display:none;position:fixed;inset:0;
-      background:#15203D;z-index:399;
-      opacity:0;transition:opacity .3s ease;
+      background:rgba(21,32,61,.4);z-index:399;
+      opacity:0;transition:opacity .25s ease;
     }
     .nav-mobile-backdrop.open{opacity:1}
     .nav-mobile-panel{
-      display:none;position:fixed;inset:0;
-      background:#15203D;
-      z-index:400;padding:22px 26px 32px;overflow-y:auto;
-      opacity:0;transition:opacity .25s ease;
+      display:none;position:fixed;top:0;right:0;bottom:0;
+      width:min(340px,88vw);background:#fff;
+      border-radius:20px 0 0 20px;
+      box-shadow:-16px 0 48px rgba(21,32,61,.2);
+      z-index:400;padding:22px 20px 28px;overflow-y:auto;
+      transform:translateX(100%);transition:transform .3s ease;
     }
-    .nav-mobile-panel.open{opacity:1}
+    .nav-mobile-panel.open{transform:translateX(0)}
     .nav-mobile-head{
       display:flex;align-items:center;justify-content:space-between;
-      margin-bottom:32px;
+      margin-bottom:20px;
     }
-    .nav-mobile-head img{height:30px;width:auto;display:block;filter:invert(1) brightness(2)}
+    .nav-mobile-head img{height:32px;width:auto;display:block}
     .nav-mobile-close{
-      width:40px;height:40px;border-radius:50%;
-      border:1px solid rgba(255,255,255,.22);background:transparent;
+      width:36px;height:36px;border-radius:50%;
+      border:1px solid rgba(21,32,61,.18);background:#fff;
       display:flex;align-items:center;justify-content:center;
       cursor:pointer;transition:background .2s,border-color .2s;
     }
-    .nav-mobile-close svg path{stroke:#fff}
-    .nav-mobile-close:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
-    .nav-mobile-item{
-      opacity:0;transform:translateY(14px);
-      transition:opacity .45s ease,transform .45s ease;
-    }
-    .nav-mobile-panel.open .nav-mobile-item{opacity:1;transform:translateY(0)}
-    .nav-mobile-panel.open .nav-mobile-item:nth-child(2){transition-delay:.05s}
-    .nav-mobile-panel.open .nav-mobile-item:nth-child(3){transition-delay:.1s}
-    .nav-mobile-panel.open .nav-mobile-item:nth-child(4){transition-delay:.15s}
-    .nav-mobile-panel.open .nav-mobile-item:nth-child(5){transition-delay:.2s}
-    .nav-mobile-panel.open .nav-mobile-item:nth-child(6){transition-delay:.25s}
+    .nav-mobile-close:hover{background:#FAF5EA;border-color:rgba(21,32,61,.32)}
     .nav-mobile-panel > a{
-      display:block;padding:14px 2px;
-      font-family:var(--font-display,"Bricolage Grotesque",sans-serif);
-      font-size:34px;font-weight:800;letter-spacing:-0.02em;color:#fff;
-      text-decoration:none;border-bottom:1px solid rgba(255,255,255,.1);
-      transition:color .15s;
+      display:block;padding:13px 12px;border-radius:10px;
+      font-size:16px;font-weight:700;color:#15203D;
+      text-decoration:none;transition:background .15s;
     }
     .nav-mobile-panel > a:hover,
-    .nav-mobile-panel > a.active{color:#FFB800}
+    .nav-mobile-panel > a.active{background:#FAF5EA}
     .nav-mobile-heading{
-      display:flex;align-items:center;gap:10px;
+      display:flex;align-items:center;gap:8px;
       font-size:12px;font-weight:700;text-transform:uppercase;
-      letter-spacing:.1em;color:rgba(255,255,255,.5);
-      padding:26px 2px 14px;
+      letter-spacing:.08em;color:#4A5878;
+      padding:18px 12px 6px;
     }
     .nav-mobile-heading::before{
       content:'';width:16px;height:2px;border-radius:2px;background:#FFB800;flex-shrink:0;
     }
-    .nav-mobile-sub{
-      display:grid;grid-template-columns:1fr 1fr;gap:8px;
-    }
     .nav-mobile-sub a{
-      font-size:13.5px;font-weight:700;color:rgba(255,255,255,.82);
-      display:flex;align-items:center;gap:8px;
-      padding:12px 12px;border-radius:12px;
-      background:rgba(255,255,255,.06);
+      font-size:14.5px;font-weight:600;color:#4A5878;
+      display:flex;align-items:center;gap:10px;
+      padding:10px 12px;border-radius:10px;
       text-decoration:none;transition:background .15s,color .15s;
     }
     .nav-mobile-sub a:hover,
-    .nav-mobile-sub a.active{background:rgba(255,184,0,.16);color:#fff}
-    .nav-mobile-cta{margin-top:28px;display:flex;flex-direction:column;gap:10px}
-    .nav-mobile-cta a{padding:0;border-bottom:none}
+    .nav-mobile-sub a.active{background:#FAF5EA;color:#15203D}
+    .nav-mobile-cta{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+    .nav-mobile-cta a{padding:0}
     .nav-mobile-cta .btn-primary,
     .nav-mobile-cta .btn-nivel{
       display:flex;justify-content:center;width:100%;box-sizing:border-box;
@@ -482,26 +467,24 @@ ${cursosDropdown}
     <div class="nav-mobile-head">
       <img src="logo-sprint-idiomes.png" alt="Sprint Idiomes" width="90" height="46">
       <div class="nav-mobile-close" role="button" aria-label="Tancar menú">
-        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3l10 10M13 3L3 13" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3l10 10M13 3L3 13" stroke="#15203D" stroke-width="1.8" stroke-linecap="round"/></svg>
       </div>
     </div>
-    <a class="nav-mobile-item${page==='index.html'||page===''?' active':''}" href="index.html">Home</a>
-    <a class="nav-mobile-item${page==='qui-som.html'?' active':''}" href="qui-som.html">Qui som</a>
-    <div class="nav-mobile-item">
-      <div class="nav-mobile-heading">Cursos</div>
-      <div class="nav-mobile-sub">
-        <a href="kids-planet.html"${page==='kids-planet.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#EC1E8C"></span>Kids Planet</a>
-        <a href="kids.html"${page==='kids.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#FF6B35"></span>Kids · 7–12</a>
-        <a href="teens.html"${page==='teens.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#26A69A"></span>Teens</a>
-        <a href="cambridge.html"${page==='cambridge.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#E1000F"></span>Cambridge</a>
-        <a href="adults.html"${page==='adults.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults</a>
-        <a href="frances.html"${page==='frances.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#FFB800"></span>Français</a>
-        <a href="business.html"${page==='business.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#9B72CF"></span>Business</a>
-        <a href="particular.html"${page==='particular.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#036896"></span>Particulars</a>
-      </div>
+    <a href="index.html"${page==='index.html'||page===''?' class="active"':''}>Home</a>
+    <a href="qui-som.html"${page==='qui-som.html'?' class="active"':''}>Qui som</a>
+    <div class="nav-mobile-heading">Cursos</div>
+    <div class="nav-mobile-sub">
+      <a href="kids-planet.html"${page==='kids-planet.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#EC1E8C"></span>Kids Planet · 3–6 anys</a>
+      <a href="kids.html"${page==='kids.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#FF6B35"></span>Kids · 7–12 anys</a>
+      <a href="teens.html"${page==='teens.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#26A69A"></span>Teens · 13–17 anys</a>
+      <a href="cambridge.html"${page==='cambridge.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#E1000F"></span>Cambridge &amp; IELTS</a>
+      <a href="adults.html"${page==='adults.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults · 18+</a>
+      <a href="frances.html"${page==='frances.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#FFB800"></span>L'École de Français</a>
+      <a href="business.html"${page==='business.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#9B72CF"></span>BLA Business</a>
+      <a href="particular.html"${page==='particular.html'?' class="active"':''}><span class="nav-dd-dot" style="background:#036896"></span>Classes Particulars</a>
     </div>
-    <a class="nav-mobile-item" href="${contactHref}">Contacte</a>
-    <div class="nav-mobile-item nav-mobile-cta">
+    <a href="${contactHref}">Contacte</a>
+    <div class="nav-mobile-cta">
       <a href="${nivellHref}" class="btn-nivel">Descobreix el teu nivell</a>
       <a href="${contactHref}" class="btn-primary">Prova gratuïta</a>
     </div>
