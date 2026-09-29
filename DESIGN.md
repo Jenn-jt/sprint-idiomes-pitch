@@ -159,6 +159,7 @@ Seven steps, audited and consolidated from the shipped code (index.html + nav.js
 ### Named Rules
 **The One Display Size Rule.** `--fs-h1`/`--fs-h2` are shared fluid tokens; a page never invents its own hero size — index.html's larger campaign H1 is the one confirmed exception, since it is the standalone homepage, not an interior page.
 **The Seven-Step Rule.** Every new size must land on Display, Headline, Title, Lead, Body, Small, or Label — never introduce a one-off value (a 17px, a 14.5px) to split the difference between two existing steps.
+**The Watermark Exception.** Two background-text elements sit outside the seven steps by design, confirmed with the user on 2026-09-29: the "1973" numeral behind the hero (`clamp(180px,28vw,400px)`, desktop; `clamp(120px,22vw,260px)`, tablet) and the footer's "Hello, Hi, Hola." (`clamp(48px,9vw,120px)`). Both render at near-zero opacity purely as oversized background texture, not as legible copy — forcing them onto the reading scale (max 64px) would shrink them into ordinary, legible-sized text and delete the watermark effect that is their entire purpose. Never resize these to match Display; if a future watermark is added, it follows this same exception, not the seven-step scale.
 
 ## Layout
 
