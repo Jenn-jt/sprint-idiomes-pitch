@@ -1,0 +1,18 @@
+{
+  "buildPath": "comp",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T10:02:28.546Z",
+        "reason": "Both instances checked against source: body{overflow-x:hidden} only clips the X axis to prevent a horizontal scrollbar (a standard, benign technique, not a tooltip/menu clip); .portada{overflow:hidden} is the hero image-carousel container intentionally clipping its own crossfade slides to its bounds, which is the entire point of the carousel. Neither wraps an escaping tooltip/menu/popover. Verified in Assessment B of /impeccable critique."
+      }
+    ]
+  }
+}
