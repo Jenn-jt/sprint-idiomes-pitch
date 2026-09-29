@@ -32,7 +32,7 @@ a{color:inherit;text-decoration:none}
 .hero{position:relative;min-height:56vh;background:var(--ink);display:flex;align-items:flex-end;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background-image:url('img-historia/imgi_3_418569_370971246246361_833552655_n.jpg');background-size:cover;background-position:center 30%;filter:grayscale(20%) brightness(.42);transform:scale(1.04)}
 .hero-content{position:relative;z-index:2;max-width:1480px;margin:0 auto;padding:56px 32px;width:100%}
-.eyebrow{font-size:var(--fs-label);font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow);margin-bottom:10px;display:block}
+.eyebrow{font-size:var(--fs-label);font-weight:700;letter-spacing:.04em;color:var(--yellow);margin-bottom:10px;display:block}
 .hero h1{font-family:var(--fd);font-size:var(--fs-h1);font-weight:700;line-height:1.04;color:#fff;margin-bottom:8px}
 .hero p{font-size:17px;color:rgba(255,255,255,.88);max-width:460px;text-shadow:0 1px 4px rgba(0,0,0,.4)}
 
@@ -48,7 +48,7 @@ a{color:inherit;text-decoration:none}
 .historia-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;padding-bottom:56px}
 .historia-text p{font-size:17px;color:var(--ink-soft);line-height:1.78;margin-bottom:16px}
 .historia-text p:last-child{margin-bottom:0}
-.pull{background:var(--cream);border-left:4px solid var(--yellow);padding:20px 24px;border-radius:0 12px 12px 0;margin:24px 0}
+.pull{background:var(--cream);padding:24px 28px;border-radius:16px;margin:24px 0}
 .pull p{font-family:var(--fd);font-size:19px;font-style:italic;color:var(--ink);line-height:1.5;margin:0}
 .stats-card{border:1px solid var(--line);border-radius:20px;overflow:hidden}
 .sc-row{padding:20px 28px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:20px}
@@ -107,7 +107,7 @@ a{color:inherit;text-decoration:none}
 .teacher.t-3 .photo{background:linear-gradient(160deg,#E1000F,#15203D)}
 .teacher.t-4 .photo{background:linear-gradient(160deg,#B0125F,#0E1530)}
 .teacher.t-5 .photo{background:linear-gradient(160deg,#B45309,#15203D)}
-.teacher.t-6 .photo{background:linear-gradient(160deg,#7C3AED,#0E1530)}
+.teacher.t-6 .photo{background:linear-gradient(160deg,#9B72CF,#1A0B2E)}
 .teacher .photo::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.7) 100%);
@@ -156,7 +156,7 @@ a{color:inherit;text-decoration:none}
 .diff{background:var(--cream);border-radius:14px;padding:24px;display:flex;gap:14px;align-items:flex-start}
 .diff-ic{width:42px;height:42px;border-radius:10px;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .diff-ic svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.diff h4{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.diff h3{font-family:var(--fd);font-size:16px;font-weight:700;color:var(--ink);margin-bottom:4px}
 .diff p{font-size:14px;color:var(--ink-soft);line-height:1.6}
 
 /* CTA */
@@ -482,27 +482,27 @@ a{color:inherit;text-decoration:none}
         <div class="diff-grid">
           <div class="diff">
             <div class="diff-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-            <div><h4>Grups reduïts</h4><p>Màxim 10–12 alumnes. Atenció personal. Ningú queda enrere.</p></div>
+            <div><h3>Grups reduïts</h3><p>Màxim 10–12 alumnes. Atenció personal. Ningú queda enrere.</p></div>
           </div>
           <div class="diff">
             <div class="diff-ic"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-            <div><h4>Resultats reals</h4><p>Alta taxa d'aprovats als exàmens Cambridge i DELF/DALF.</p></div>
+            <div><h3>Resultats reals</h3><p>Alta taxa d'aprovats als exàmens Cambridge i DELF/DALF.</p></div>
           </div>
           <div class="diff">
             <div class="diff-ic"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-            <div><h4>Professors estables</h4><p>El mateix equip any rere any. Coneixen cada alumne i el seu ritme.</p></div>
+            <div><h3>Professors estables</h3><p>El mateix equip any rere any. Coneixen cada alumne i el seu ritme.</p></div>
           </div>
           <div class="diff">
             <div class="diff-ic"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-            <div><h4>Gramàtica + comunicació oral</h4><p>Treballem la base gramatical i la pràctica real. Parleu, no només estudieu.</p></div>
+            <div><h3>Gramàtica + comunicació oral</h3><p>Treballem la base gramatical i la pràctica real. Parleu, no només estudieu.</p></div>
           </div>
           <div class="diff">
             <div class="diff-ic" style="background:var(--yellow)"><svg viewBox="0 0 24 24" style="stroke:var(--ink)"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-            <div><h4>Flexibilitat</h4><p>Cada alumne és diferent. Ens adaptem als vostres horaris, necessitats i objectius.</p></div>
+            <div><h3>Flexibilitat</h3><p>Cada alumne és diferent. Ens adaptem als vostres horaris, necessitats i objectius.</p></div>
           </div>
           <div class="diff">
             <div class="diff-ic" style="background:var(--yellow)"><svg viewBox="0 0 24 24" style="stroke:var(--ink)"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-            <div><h4>3 generacions</h4><p>Els fills dels primers alumnes porten ara els seus fills. La millor prova que funciona.</p></div>
+            <div><h3>3 generacions</h3><p>Els fills dels primers alumnes porten ara els seus fills. La millor prova que funciona.</p></div>
           </div>
         </div>
       </div>

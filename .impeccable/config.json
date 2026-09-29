@@ -156,6 +156,33 @@
         ],
         "createdAt": "2026-09-29T11:01:17.286Z",
         "reason": "Endpoint of index.html's campaign section title clamp(36,5vw,72) — the confirmed campaign-scale exception documented in DESIGN.md's Headline row."
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "qui-som.html"
+        ],
+        "createdAt": "2026-09-29T17:49:42.857Z",
+        "reason": "The 12 flagged pairs are all .teacher .info h4/p (teacher name + role, e.g. 'Anna Kanalas' / 'Responsable de Kids Planet'). The detector's static contrast check walks DOM ancestors for a background and falls through to the cream body color, but the real background is the sibling .teacher .photo layer (position:absolute;inset:0, colored gradient + dark ::after overlay) which sits visually behind the text due to paint order, not DOM ancestry. Verified visually in the browser: white text renders with strong real contrast over each teacher card's colored photo gradient."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "qui-som.html"
+        ],
+        "createdAt": "2026-09-29T17:51:39.226Z",
+        "reason": "Both flagged divs (#equip, #per-que) are section wrappers with a hairline border-top and zero own padding, but their nested .wrap > .section-anchor child has padding-top:52px, so real content sits 52px below the border, not flush against it. Verified via getBoundingClientRect: .section-anchor starts 0.8px (the border's own thickness) below the wrapper's top edge, then its own 52px padding-top pushes the heading down from there. The detector checks the outer div's own padding, not the nested wrapper providing the actual inset."
+      },
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "qui-som.html"
+        ],
+        "createdAt": "2026-09-29T17:51:52.007Z",
+        "reason": "Same pattern already confirmed on index.html this session: body{overflow-x:hidden} only clips the X axis to prevent a horizontal scrollbar — a standard, benign technique. It does not clip vertical overflow, so it doesn't cut off the nav's Cursos dropdown or any other menu/tooltip that needs to escape downward."
       }
     ]
   }
