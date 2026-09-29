@@ -48,6 +48,24 @@
         ],
         "createdAt": "2026-09-29T10:33:28.532Z",
         "reason": "Remaining instance is .portada-cta:hover's yellow glow shadow — the hover-only 'course-glow' CTA feedback DESIGN.md explicitly sanctions (Named Rules / Do's: 'put the course-glow shadow only on primary course CTA buttons, and only as hover-responsive feedback, never as a resting decoration'). The resting-state glow on the same button was already removed."
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T10:39:43.245Z",
+        "reason": "User confirmed via AskUserQuestion: keep the 'Curs 2026-2027 · Places limitades' badge as-is. It carries real enrollment-urgency content and the hero layout is already approved after several rounds of user iteration; not worth the redesign risk for a style-genericness warning."
+      },
+      {
+        "rule": "pulsing-dot",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T10:39:43.341Z",
+        "reason": "User confirmed keeping the hero badge (.portada-badge) as-is, which includes its pulsing dot (.portada-dot). Same decision as the paired hero-eyebrow-chip ignore."
       }
     ]
   }
