@@ -12,6 +12,15 @@
         ],
         "createdAt": "2026-09-29T10:02:28.546Z",
         "reason": "Both instances checked against source: body{overflow-x:hidden} only clips the X axis to prevent a horizontal scrollbar (a standard, benign technique, not a tooltip/menu clip); .portada{overflow:hidden} is the hero image-carousel container intentionally clipping its own crossfade slides to its bounds, which is the entire point of the carousel. Neither wraps an escaping tooltip/menu/popover. Verified in Assessment B of /impeccable critique."
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T10:12:23.359Z",
+        "reason": "User confirmed: reverted the 6 audience-bubble background colors to their original vivid brand hues (magenta/orange/yellow/teal/purple/cyan) after /impeccable critique's darker AA-compliant fix, explicitly choosing brand vividness over WCAG AA contrast on this specific section. Asked directly via AskUserQuestion; user picked 'Volver a los originales vivos, acepto el riesgo de contraste.'"
       }
     ]
   }
