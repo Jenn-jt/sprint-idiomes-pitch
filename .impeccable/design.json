@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-29T00:00:00Z",
+  "title": "Design System: Sprint Idiomes",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "neutral", "displayName": "Ink Navy", "canonical": "#15203D", "tonalRamp": ["#0A0F1E", "#0F1730", "#15203D", "#1E2C52", "#2A3B6B", "#4A5878", "#8791A8", "#C7CCDA"] },
+      "cream": { "role": "neutral", "displayName": "Cream", "canonical": "#FAF5EA", "tonalRamp": ["#8C7F5E", "#B3A47C", "#D6C9A6", "#EDE3CE", "#F4EDDD", "#FAF5EA", "#FCF9F1", "#FEFDFA"] },
+      "blue": { "role": "primary", "displayName": "Signal Blue", "canonical": "#2547D9", "tonalRamp": ["#0A1550", "#122076", "#1B36AD", "#2547D9", "#4A68E2", "#7C93EB", "#AFC0F4", "#DDE4FA"] },
+      "yellow": { "role": "accent", "displayName": "Marker Yellow", "canonical": "#FFB800", "tonalRamp": ["#5C4200", "#8A6300", "#B88400", "#E6A600", "#FFB800", "#FFCC42", "#FFDF80", "#FFF2BF"] },
+      "kids-planet": { "role": "course-accent", "displayName": "Kids Planet Magenta", "canonical": "#EC1E8C", "tonalRamp": ["#4C0836", "#8A0F4A", "#B0125F", "#EC1E8C", "#F24DA5", "#F77FBF", "#FBB3D9", "#FDE0EE"] },
+      "kids": { "role": "course-accent", "displayName": "Kids Orange", "canonical": "#FF6B35", "tonalRamp": ["#5C2200", "#7A2200", "#CC3300", "#FF6B35", "#FF8C5F", "#FFAD8C", "#FFCEB8", "#FFE9DE"] },
+      "teens": { "role": "course-accent", "displayName": "Teens Teal", "canonical": "#26A69A", "tonalRamp": ["#082F2B", "#0F766E", "#15877D", "#26A69A", "#5CC1B7", "#8FD7CF", "#C2EAE5", "#E6F8F5"] },
+      "cambridge": { "role": "course-accent", "displayName": "Cambridge Red", "canonical": "#E1000F", "tonalRamp": ["#24070A", "#5C1015", "#8A0913", "#E1000F", "#EC4B4B", "#F58080", "#FAB3B3", "#FDE0E0"] },
+      "adults": { "role": "course-accent", "displayName": "Adults Forest", "canonical": "#1B5E3A", "tonalRamp": ["#052E16", "#0B3D22", "#144B2E", "#1B5E3A", "#2F7D53", "#5CA378", "#94C7A9", "#D2ECDC"] },
+      "francais": { "role": "course-accent", "displayName": "Français Amber-Brown", "canonical": "#78350F", "tonalRamp": ["#2E1400", "#4A2000", "#78350F", "#92400E", "#B45309", "#D97F3E", "#EDB07B", "#FBE3C8"] },
+      "business": { "role": "course-accent", "displayName": "Business Violet", "canonical": "#9B72CF", "tonalRamp": ["#1A0B2E", "#3D1F5C", "#6B44A0", "#9B72CF", "#B794E3", "#CDB2ED", "#E2D2F5", "#F1E9FA"] },
+      "particulars": { "role": "course-accent", "displayName": "Particulars Petrol", "canonical": "#036896", "tonalRamp": ["#001521", "#002A3D", "#014A6B", "#036896", "#2389B7", "#5CACCF", "#94CBE1", "#CDE7F2"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "One per page: the hero H1. Never used for anything else." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s and the closing CTA-band headline." },
+      "title": { "displayName": "Title", "purpose": "Card-level headings: why-us cards, method steps, audience-bubble labels, mobile menu links." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy, form labels, descriptions." },
+      "small": { "displayName": "Small", "purpose": "Buttons, CTAs, nav links, secondary paragraph text — not in Stitch's 5-role schema so it lives here only." },
+      "lead": { "displayName": "Lead", "purpose": "Intro/lead paragraphs heavier than Body but not a heading — not in Stitch's 5-role schema so it lives here only." },
+      "label": { "displayName": "Label", "purpose": "Uppercase eyebrows, stat captions, nav pills, badges — short tags only, never a sentence." }
+    },
+    "shadows": [
+      { "name": "course-glow", "value": "0 6px 24px color-mix(in srgb, var(--course-accent) 28%, transparent)", "purpose": "Primary course CTA button at rest — doubles as the hover affordance, not decoration." },
+      { "name": "course-glow-hover", "value": "0 10px 32px color-mix(in srgb, var(--course-accent) 36%, transparent)", "purpose": "Primary course CTA on hover, paired with translateY(-2px)." },
+      { "name": "overlay-panel", "value": "0 8px 40px rgba(21,32,61,.13), 0 1px 4px rgba(21,32,61,.07)", "purpose": "Desktop Cursos dropdown and any future floating panel — ordinary functional elevation, not the Miró exception." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "ease", "purpose": "Default transition timing for color/background/border changes sitewide (0.15s-0.3s)." },
+      { "name": "cta-lift", "value": "transform .2s, box-shadow .2s", "purpose": "Primary course CTA hover: 2px lift + shadow deepen together." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "960px" },
+      { "name": "mobile", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (sitewide)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one CTA that means the same thing on every page: talk to us. Signal Blue fill, no shadow.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Prova gratuïta <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8h10M9 4l4 4-4 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:10px;background:#2547D9;color:#fff;font-family:'Nunito',sans-serif;font-size:14.5px;font-weight:600;padding:12px 22px;border-radius:100px;text-decoration:none;transition:background .15s}.ds-btn-primary:hover{background:#1B36AD}.ds-btn-primary svg{width:16px;height:16px;transition:transform .2s}.ds-btn-primary:hover svg{transform:translateX(3px)}"
+    },
+    {
+      "name": "Course CTA Button",
+      "kind": "button",
+      "refersTo": "button-course",
+      "description": "A course page's primary action, filled with that course's accent (example: Adults Forest). Soft color-matched glow is the hover feedback.",
+      "html": "<a class=\"ds-btn-course\" href=\"#\">Reprèn l'anglès →</a>",
+      "css": ".ds-btn-course{display:inline-flex;align-items:center;gap:10px;background:#1B5E3A;color:#fff;font-family:'Nunito',sans-serif;font-size:15px;font-weight:800;padding:16px 34px;border-radius:50px;text-decoration:none;box-shadow:0 6px 24px rgba(27,94,58,.28);transition:transform .2s,box-shadow .2s}.ds-btn-course:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(27,94,58,.36)}"
+    },
+    {
+      "name": "Ghost Button (dark context)",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action on a dark/colored background (e.g. phone number in a closing CTA band). Border-only, solid white text, no shadow.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">93 589 22 64</a>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;gap:10px;color:#fff;background:rgba(255,255,255,.1);font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;padding:16px 28px;border-radius:100px;border:1.5px solid rgba(255,255,255,.55);text-decoration:none;transition:border-color .2s,background .2s}.ds-btn-ghost:hover{border-color:rgba(255,255,255,.85);background:rgba(255,255,255,.18)}"
+    },
+    {
+      "name": "Course Identity Dot",
+      "kind": "chip",
+      "refersTo": "course-dot",
+      "description": "The one recurring signature mark: a small solid circle in a course's accent, reused identically in the nav dropdown, course-switcher pills, mobile menu and footer. One dot, one meaning, sitewide.",
+      "html": "<span class=\"ds-course-dot\"></span>",
+      "css": ".ds-course-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#FF6B35;flex-shrink:0}"
+    },
+    {
+      "name": "Course-Switcher Pill (nav)",
+      "kind": "nav",
+      "refersTo": "course-nav-pill",
+      "description": "Appears on every course page, just under the main header. One pill per course; the active one gets a colored underline in that course's accent.",
+      "html": "<a class=\"ds-course-pill ds-active\" href=\"#\"><span class=\"ds-course-dot\"></span>Kids 7–12</a>",
+      "css": ".ds-course-pill{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;font-family:'Nunito',sans-serif;font-size:13.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4A5878;text-decoration:none;border-bottom:3px solid transparent;transition:color .2s,border-color .2s}.ds-course-pill:hover{color:#15203D}.ds-course-pill.ds-active{color:#15203D;border-bottom-color:#FF6B35}.ds-course-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#FF6B35;flex-shrink:0}"
+    },
+    {
+      "name": "Level Card (flat, static)",
+      "kind": "card",
+      "refersTo": "card-level",
+      "description": "An informational course-level card. Deliberately flat and non-interactive (no shadow, no hover-lift, no pointer cursor) since it doesn't link anywhere — an accessibility fix this session removed a false 'clickable' affordance from this exact component.",
+      "html": "<div class=\"ds-card-level\"><div class=\"ds-card-top\"><span class=\"ds-card-cefr\">A1</span><span class=\"ds-card-badge\">Principiant</span></div><div class=\"ds-card-name\">Elementary</div><p class=\"ds-card-desc\">Punt de partida per a qui comença des de zero.</p></div>",
+      "css": ".ds-card-level{background:#fff;border:1.5px solid rgba(27,94,58,.1);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:14px}.ds-card-top{display:flex;gap:8px;align-items:center}.ds-card-cefr{font-family:'Bricolage Grotesque',sans-serif;font-size:13px;font-weight:800;padding:5px 12px;border-radius:8px;background:#EAF6EE;color:#1B5E3A}.ds-card-badge{font-size:12px;font-weight:700;letter-spacing:.05em;padding:5px 10px;border-radius:8px;background:#D7EEDF;color:#1B5E3A}.ds-card-name{font-family:'Bricolage Grotesque',sans-serif;font-size:19px;font-weight:800;letter-spacing:-0.02em;color:#15203D}.ds-card-desc{font-size:14px;color:#4A5878;line-height:1.6;margin:0}"
+    },
+    {
+      "name": "Section Label (eyebrow)",
+      "kind": "custom",
+      "refersTo": "section-label",
+      "description": "The small uppercase tag above every section H2, colored in that page's course accent with a short dash before it.",
+      "html": "<div class=\"ds-section-label\"><span class=\"ds-label-dash\"></span>Els nivells</div>",
+      "css": ".ds-section-label{display:flex;align-items:center;gap:8px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#1B5E3A;margin-bottom:12px}.ds-label-dash{width:24px;height:2px;border-radius:2px;background:#1B5E3A}"
+    },
+    {
+      "name": "Mobile Menu Link",
+      "kind": "nav",
+      "refersTo": "mobile-menu-link",
+      "description": "Large display-type link inside the full-width dark mobile curtain. A small yellow dot after the text is the only active-state marker — no background fill, no underline.",
+      "html": "<a class=\"ds-mobile-link ds-active\" href=\"#\">Qui som</a>",
+      "css": ".ds-mobile-link{display:flex;align-items:center;gap:10px;padding:9px 0;font-family:'Bricolage Grotesque',sans-serif;font-size:21px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;color:#fff;text-decoration:none}.ds-mobile-link::after{content:'';width:7px;height:7px;border-radius:50%;background:#FFB800;transform:scale(0);transition:transform .25s}.ds-mobile-link.ds-active::after{transform:scale(1)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El Fichero de Asignaturas (The Subject Binder)",
+    "overview": "Sprint Idiomes' site is built like a well-kept school filing system: one shared binder (navigation, typography, button shape, spacing rhythm) that never changes, with a distinct colored tab for every subject inside it. Kids Planet is magenta, Kids is orange, Teens is teal, Cambridge is red, Adults is forest green, Français is amber-brown, Business is violet, Particulars is petrol blue — walk from one course page to the next and the accent changes, but the shelf it sits on (ink-navy text, cream backgrounds, pill buttons, Bricolage Grotesque headlines) never does. That consistency is doing real work: the school is pitching 50 years of continuity (three generations of the same families), and a chassis this disciplined reads as an institution that has had its paperwork in order since 1973, not a startup improvising a brand.\n\nThe character is warm but efficient, confident without décor: Joan Miró / CaixaBank is the client's own stated reference — flat solid colors, no gradients, no decorative embellishment, shapes that read instantly. Color carries the personality; nothing else is asked to.",
+    "keyCharacteristics": [
+      "One neutral chassis (ink/cream/blue/yellow + Bricolage Grotesque/Nunito) shared by every page; one accent color per course, never mixed.",
+      "Flat by default; a soft colored glow is reserved for primary CTA buttons only, as the hover-affordance itself, not as decoration.",
+      "Every clickable button is a pill (100px radius) regardless of color or page — shape is the one constant users can rely on.",
+      "Small colored dots (course identity) reused everywhere the same course is referenced: nav dropdown, course pills, mobile menu, footer — one dot, one meaning, sitewide."
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "A page belonging to a course uses that course's accent for every colored element on it (dots, buttons, stat numbers, underlines) — never a second course's color, never the neutral chassis colors standing in for it.", "section": "colors" },
+      { "name": "The One Display Size Rule", "body": "--fs-h1/--fs-h2 are shared fluid tokens; a page never invents its own hero size — index.html's larger campaign H1 is the one confirmed exception, since it is the standalone homepage, not an interior page.", "section": "typography" },
+      { "name": "The Flat-Chassis Rule", "body": "Navigation, pills, badges and cards never carry a shadow. If something needs to look clickable, that's the course-glow's job, not a generic card shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep every button a pill (100px radius) no matter what color or page it's on.",
+      "Do give each course exactly one accent color and use it for every colored element on that course's pages — dots, stat numbers, buttons, underlines.",
+      "Do reserve Marker Yellow (#FFB800) for small marks (dots, underlines, accents), never a large fill — its rarity is what reads as \"the brand.\"",
+      "Do put the course-glow shadow only on primary course CTA buttons, and only as hover-responsive feedback, never as a resting decoration.",
+      "Do keep the same neutral chassis identical across every interior page; only the course accent changes.",
+      "Do meet WCAG AA on every text/background pairing — this project already had a full contrast/focus/heading-order pass; hold that bar for new work."
+    ],
+    "donts": [
+      "Don't put a shadow on a card, pill, badge, or nav element at rest — that space is reserved for the course-glow CTA treatment only.",
+      "Don't use a gradient as a fill technique anywhere; the client's explicit Miró/CaixaBank reference rules this out.",
+      "Don't give a static, non-interactive card a hover-lift or pointer cursor — that affordance is reserved for things that actually navigate somewhere.",
+      "Don't invent a new display type size per page — reuse --fs-h1/--fs-h2.",
+      "Don't mix a second course's accent color onto a page that already belongs to a different course."
+    ]
+  }
+}

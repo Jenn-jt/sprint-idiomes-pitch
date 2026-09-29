@@ -66,7 +66,7 @@
     .nav-dropdown a{
       display:flex;align-items:center;gap:11px;
       padding:10px 14px;border-radius:10px;
-      font-size:14px;font-weight:700;
+      font-size:15px;font-weight:700;
       color:#4A5878;text-decoration:none;
       transition:background .15s, color .15s;
       white-space:nowrap;
@@ -89,7 +89,7 @@
       display:inline-flex;align-items:center;gap:8px;
       background:transparent;color:#4A5878;
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
-      font-size:14px;font-weight:600;
+      font-size:15px;font-weight:600;
       padding:12px 14px;
       border:none;
       text-decoration:underline;text-underline-offset:3px;
@@ -100,7 +100,7 @@
       display:inline-flex;align-items:center;justify-content:center;gap:8px;
       background:transparent;color:rgba(255,255,255,.65);
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
-      font-size:14px;font-weight:600;
+      font-size:15px;font-weight:600;
       padding:10px 0;
       border:none;
       text-decoration:underline;text-underline-offset:3px;
@@ -112,7 +112,7 @@
       display:inline-flex;align-items:center;gap:10px;
       background:#2547D9;color:#fff;
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
-      font-size:14.5px;font-weight:600;
+      font-size:15px;font-weight:600;
       padding:12px 22px;border-radius:100px;
       border:none;
       text-decoration:none;
@@ -169,7 +169,7 @@
       display:flex;align-items:center;gap:10px;
       padding:9px 0;
       font-family:var(--font-display,"Bricolage Grotesque",sans-serif);
-      font-size:21px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;
+      font-size:22px;font-weight:700;letter-spacing:-0.01em;line-height:1.2;
       color:#fff;text-decoration:none;
     }
     .nav-mobile-panel > a::after{
@@ -178,7 +178,7 @@
     }
     .nav-mobile-panel > a.active::after{transform:scale(1)}
     .nav-mobile-heading{
-      font-size:11px;font-weight:700;text-transform:uppercase;
+      font-size:12px;font-weight:700;text-transform:uppercase;
       letter-spacing:.14em;color:rgba(255,255,255,.4);
       padding:22px 0 8px;
     }
@@ -225,13 +225,13 @@
       margin-bottom:40px;user-select:none;
     }
     .footer-col h6{
-      font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;font-size:14px;font-weight:700;
+      font-family:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;font-size:15px;font-weight:700;
       letter-spacing:.04em;text-transform:uppercase;
       color:#FAF5EA;margin-bottom:16px;
     }
-    .footer-col p{font-size:14.5px;color:rgba(255,246,228,.7);line-height:1.55}
+    .footer-col p{font-size:15px;color:rgba(255,246,228,.7);line-height:1.55}
     .footer-col ul{list-style:none}
-    .footer-col ul li{margin-bottom:9px;font-size:14.5px;font-weight:600}
+    .footer-col ul li{margin-bottom:9px;font-size:15px;font-weight:600}
     .footer-col ul li a{color:rgba(255,246,228,.75);text-decoration:none;transition:color .2s}
     .footer-col ul li a:hover{color:#FFB800}
     .footer-col ul li:not(:has(a)){color:rgba(255,246,228,.5)}
@@ -247,11 +247,11 @@
       border-top:1px solid rgba(255,246,228,.1);
       padding-top:24px;
       display:flex;justify-content:space-between;align-items:center;
-      font-size:13px;color:rgba(255,246,228,.6);font-weight:600;
+      font-size:12px;color:rgba(255,246,228,.6);font-weight:600;
       flex-wrap:wrap;gap:12px;
     }
     .footer-proto{
-      margin-top:18px;text-align:center;font-size:11px;
+      margin-top:18px;text-align:center;font-size:12px;
       color:rgba(255,246,228,.35);font-weight:600;letter-spacing:.05em;
     }
     .footer-proto a{color:rgba(255,246,228,.5);text-decoration:underline}
@@ -282,19 +282,19 @@
       </a>
       <div class="nav-dropdown">
         <a href="kids-planet.html"${page==='kids-planet.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#EC1E8C"></span>Kids Planet <span style="font-size:11px;opacity:.55;font-weight:600">3–6 anys</span>
+          <span class="nav-dd-dot" style="background:#EC1E8C"></span>Kids Planet <span style="font-size:12px;opacity:.55;font-weight:600">3–6 anys</span>
         </a>
         <a href="kids.html"${page==='kids.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#FF6B35"></span>Kids <span style="font-size:11px;opacity:.55;font-weight:600">7–12 anys</span>
+          <span class="nav-dd-dot" style="background:#FF6B35"></span>Kids <span style="font-size:12px;opacity:.55;font-weight:600">7–12 anys</span>
         </a>
         <a href="teens.html"${page==='teens.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#26A69A"></span>Teens <span style="font-size:11px;opacity:.55;font-weight:600">13–17 anys</span>
+          <span class="nav-dd-dot" style="background:#26A69A"></span>Teens <span style="font-size:12px;opacity:.55;font-weight:600">13–17 anys</span>
         </a>
         <a href="cambridge.html"${page==='cambridge.html'?' class="active"':''}>
           <span class="nav-dd-dot" style="background:#E1000F"></span>Cambridge &amp; IELTS
         </a>
         <a href="adults.html"${page==='adults.html'?' class="active"':''}>
-          <span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults <span style="font-size:11px;opacity:.55;font-weight:600">18+</span>
+          <span class="nav-dd-dot" style="background:#1B5E3A"></span>Adults <span style="font-size:12px;opacity:.55;font-weight:600">18+</span>
         </a>
         <div class="nav-dd-sep"></div>
         <a href="frances.html"${page==='frances.html'?' class="active"':''}>

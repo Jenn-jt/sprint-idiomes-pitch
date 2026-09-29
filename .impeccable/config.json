@@ -84,6 +84,78 @@
         ],
         "createdAt": "2026-09-29T10:41:15.388Z",
         "reason": "The flagged 33-char uppercase text is the .portada-badge label 'Curs 2026-2027 · Places limitades' — the same hero badge the user explicitly confirmed keeping as-is (see hero-eyebrow-chip/pulsing-dot ignores on this same element)."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "180px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T11:00:44.916Z",
+        "reason": "Filigrana '1973' background watermark — decorative illustration, not reading text, exempt from the type scale."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "160px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T11:00:45.032Z",
+        "reason": "Per-course background watermark letters (.c-french .deco / .course .deco) — decorative illustration, exempt from the type scale."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "120px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T11:00:45.146Z",
+        "reason": "Decorative background numeral (.portada-deco) — illustration, not reading text."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "20px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T11:00:45.264Z",
+        "reason": "Icon-glyph sizing (.why-card .icon, .c-business .c-arrow) — sizes an SVG/arrow symbol inside a circular container, not reading text."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "120px",
+        "files": [
+          "nav.js"
+        ],
+        "createdAt": "2026-09-29T11:00:45.375Z",
+        "reason": "Footer wordmark 'SPRINT' background numeral (.footer-huge) — decorative illustration, exempt from the type scale."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "13.5px",
+        "files": [
+          "nav.js"
+        ],
+        "createdAt": "2026-09-29T11:00:45.487Z",
+        "reason": "Narrow-screen-only (<400px) micro-shrink of the Small(15px) nav CTA button, inside a dedicated media query — not a new type-scale step."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "34px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T11:01:17.167Z",
+        "reason": "Endpoint of index.html's campaign hero H1 clamp(34,4.6vw,64) — the confirmed campaign-scale exception documented in DESIGN.md's Display row."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "36px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T11:01:17.286Z",
+        "reason": "Endpoint of index.html's campaign section title clamp(36,5vw,72) — the confirmed campaign-scale exception documented in DESIGN.md's Headline row."
       }
     ]
   }
