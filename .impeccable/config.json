@@ -39,6 +39,15 @@
         ],
         "createdAt": "2026-09-29T10:28:16.842Z",
         "reason": "why-card icons were restructured into a .why-head flex row (icon + h3 side-by-side, align-items:center) per the detector's own suggested fix. Confirmed via getBoundingClientRect that icon and h3 now sit on the same horizontal band, not stacked. The static detector still flags based on DOM order (icon element precedes h3) without reading the flex layout."
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T10:33:28.532Z",
+        "reason": "Remaining instance is .portada-cta:hover's yellow glow shadow — the hover-only 'course-glow' CTA feedback DESIGN.md explicitly sanctions (Named Rules / Do's: 'put the course-glow shadow only on primary course CTA buttons, and only as hover-responsive feedback, never as a resting decoration'). The resting-state glow on the same button was already removed."
       }
     ]
   }
