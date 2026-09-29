@@ -153,8 +153,8 @@ Seven steps, audited and consolidated from the shipped code (index.html + nav.js
 - **Title** (700, 22px, line-height 1.1, tracking -0.02em): card-level headings that live inside a card or list rather than opening a section — why-us card titles, method-step titles, the audience-bubble labels, the mobile full-screen menu's top-level links.
 - **Lead** (600, 18px): intro/lead paragraphs that need more weight than Body but aren't a heading — section leads, the hero subhead, the method section's intro line.
 - **Body** (500, 16px, line-height 1.55): paragraph copy, descriptions, form labels.
-- **Small** (600, 15px): buttons, CTAs, nav links, secondary paragraph text — one step below Body for interactive/UI text and any description copy that needs to read a touch quieter than the main body size.
-- **Label** (700, 12px, tracking 0.1em, uppercase): section eyebrows, stat captions, badges, nav pills, course-age tags — the smallest text on the site, reserved for short all-caps tags, never for a sentence.
+- **Small** (600, 15px): buttons, CTAs, nav links, secondary paragraph text, the footer's copyright/legal line and prototype credit — one step below Body for interactive/UI text and any description copy that needs to read a touch quieter than the main body size.
+- **Label** (700, 12px, tracking 0.1em, uppercase): section eyebrows, stat captions, badges, nav pills, course-age tags — the smallest text on the site, reserved for short all-caps tags, never for a sentence. Moved off Label on 2026-09-29: the footer's copyright and prototype-credit lines are real short sentences, not tags, so they read at Small (15px) instead.
 
 ### Named Rules
 **The One Display Size Rule.** `--fs-h1`/`--fs-h2` are shared fluid tokens; a page never invents its own hero size — index.html's larger campaign H1 is the one confirmed exception, since it is the standalone homepage, not an interior page.

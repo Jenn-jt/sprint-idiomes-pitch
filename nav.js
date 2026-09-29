@@ -247,11 +247,11 @@
       border-top:1px solid rgba(255,246,228,.1);
       padding-top:24px;
       display:flex;justify-content:space-between;align-items:center;
-      font-size:12px;color:rgba(255,246,228,.6);font-weight:600;
+      font-size:15px;color:rgba(255,246,228,.6);font-weight:600;
       flex-wrap:wrap;gap:12px;
     }
     .footer-proto{
-      margin-top:18px;text-align:center;font-size:12px;
+      margin-top:18px;text-align:center;font-size:15px;
       color:rgba(255,246,228,.35);font-weight:600;letter-spacing:.05em;
     }
     .footer-proto a{color:rgba(255,246,228,.5);text-decoration:underline}
