@@ -85,19 +85,28 @@
       transition:all .2s;
     }
     .nav .btn-lang:hover{border-color:#15203D;color:#15203D}
-    .nav .btn-nivel,
-    .nav-mobile-panel .btn-nivel{
-      display:inline-flex;align-items:center;gap:10px;
-      background:#FFB800;color:#15203D;
+    .nav .btn-nivel{
+      display:inline-flex;align-items:center;gap:8px;
+      background:transparent;color:#4A5878;
       font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
-      font-size:14.5px;font-weight:600;
-      padding:12px 22px;border-radius:100px;
+      font-size:14px;font-weight:600;
+      padding:12px 14px;
       border:none;
-      text-decoration:none;
-      transition:background .15s;
+      text-decoration:underline;text-underline-offset:3px;
+      transition:color .15s;
     }
-    .nav .btn-nivel:hover,
-    .nav-mobile-panel .btn-nivel:hover{background:#FFD000}
+    .nav .btn-nivel:hover{color:#15203D}
+    .nav-mobile-panel .btn-nivel{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      background:transparent;color:rgba(255,255,255,.65);
+      font-family:"Nunito",ui-sans-serif,system-ui,sans-serif;
+      font-size:14px;font-weight:600;
+      padding:10px 0;
+      border:none;
+      text-decoration:underline;text-underline-offset:3px;
+      transition:color .15s;
+    }
+    .nav-mobile-panel .btn-nivel:hover{color:#fff}
     .nav .btn-primary,
     .nav-mobile-panel .btn-primary{
       display:inline-flex;align-items:center;gap:10px;
@@ -183,10 +192,11 @@
     .nav-mobile-sub a:hover,
     .nav-mobile-sub a.active{color:#fff}
     .nav-mobile-cta{margin-top:24px;display:flex;flex-direction:column;gap:10px}
-    .nav-mobile-cta a{padding:0}
-    .nav-mobile-cta .btn-primary,
-    .nav-mobile-cta .btn-nivel{
+    .nav-mobile-cta .btn-primary{
       display:flex;justify-content:center;width:100%;box-sizing:border-box;
+    }
+    .nav-mobile-cta .btn-nivel{
+      width:100%;box-sizing:border-box;
     }
 
     @media(max-width:960px){
