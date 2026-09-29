@@ -206,7 +206,7 @@
       .nav-burger{display:flex}
     }
     @media(max-width:400px){
-      .nav .btn-primary{padding:11px 16px;font-size:13.5px}
+      .nav .btn-primary{padding:11px 16px}
     }
 
     /* ── FOOTER (compartit a totes les pagines) ── */
