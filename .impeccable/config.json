@@ -21,6 +21,24 @@
         ],
         "createdAt": "2026-09-29T10:12:23.359Z",
         "reason": "User confirmed: reverted the 6 audience-bubble background colors to their original vivid brand hues (magenta/orange/yellow/teal/purple/cyan) after /impeccable critique's darker AA-compliant fix, explicitly choosing brand vividness over WCAG AA contrast on this specific section. Asked directly via AskUserQuestion; user picked 'Volver a los originales vivos, acepto el riesgo de contraste.'"
+      },
+      {
+        "rule": "layout-transition",
+        "value": "*",
+        "files": [
+          "nav.js"
+        ],
+        "createdAt": "2026-09-29T10:27:06.261Z",
+        "reason": "Burger icon lines use width transition for an intentional asymmetric right-aligned look copied from an approved reference (juli-manitas-v2). Converting to scaleX/transform would need a transform-origin flip between rest and open state, breaking the center-pivoted X rotation. Element is a fixed 24x10px icon, no measurable layout-thrash impact."
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T10:28:16.842Z",
+        "reason": "why-card icons were restructured into a .why-head flex row (icon + h3 side-by-side, align-items:center) per the detector's own suggested fix. Confirmed via getBoundingClientRect that icon and h3 now sit on the same horizontal band, not stacked. The static detector still flags based on DOM order (icon element precedes h3) without reading the flex layout."
       }
     ]
   }
