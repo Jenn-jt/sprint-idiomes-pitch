@@ -66,6 +66,24 @@
         ],
         "createdAt": "2026-09-29T10:39:43.341Z",
         "reason": "User confirmed keeping the hero badge (.portada-badge) as-is, which includes its pulsing dot (.portada-dot). Same decision as the paired hero-eyebrow-chip ignore."
+      },
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T10:41:15.282Z",
+        "reason": "The 6 flagged raster backgrounds are the non-active slides of .portada-slideshow (a JS-rotated hero photo carousel, script at line ~954). Each one starts at opacity:0 and IS shown once rotation reaches it via the .is-active class toggle — the static detector can't see the JS rotation logic and reads the rest-state opacity:0 as permanent."
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-29T10:41:15.388Z",
+        "reason": "The flagged 33-char uppercase text is the .portada-badge label 'Curs 2026-2027 · Places limitades' — the same hero badge the user explicitly confirmed keeping as-is (see hero-eyebrow-chip/pulsing-dot ignores on this same element)."
       }
     ]
   }
