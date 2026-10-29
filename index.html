@@ -111,81 +111,6 @@ main, nav, footer{position:relative;z-index:1}
   pointer-events:none;
 }
 .portada-title,.portada-sub{text-shadow:0 2px 18px rgba(6,15,54,.45)}
-/* ---------- EFECTE PORTADA: "obre portes" ----------
-   1) Dues portes (Hello / Bonjour) s'obren i deixen veure la foto (1 cop per sessió)
-   2) El títol puja línia a línia, després subtítol i botons
-   3) Zoom lent (Ken Burns) a cada foto del carrusel */
-.portada{perspective:1800px}
-.portada-slide{transform:scale(1.1);transition:opacity 1.8s ease-in-out, transform 7s linear}
-.portada-slide.is-active{transform:scale(1)}
-
-.portada-doors{position:absolute;inset:0;z-index:6;pointer-events:none;display:none}
-.portada.intro-doors .portada-doors{display:block}
-.door{
-  position:absolute;top:0;bottom:0;width:50.5%;
-  background:linear-gradient(160deg,#0D1A55 0%,#060F36 100%);
-  display:flex;align-items:center;justify-content:center;
-  backface-visibility:hidden;
-  will-change:transform,opacity;
-}
-.door-l{left:0;transform-origin:left center;animation:door-l 2.4s cubic-bezier(.6,0,.25,1) 1.9s forwards;
-  box-shadow:inset -1px 0 0 rgba(255,184,0,.55)}
-.door-r{right:0;transform-origin:right center;animation:door-r 2.4s cubic-bezier(.6,0,.25,1) 1.9s forwards;
-  background:linear-gradient(200deg,#0D1A55 0%,#060F36 100%)}
-.door-word{
-  font-family:var(--font-display);font-weight:800;
-  font-size:clamp(44px,8vw,128px);letter-spacing:-0.04em;line-height:1;
-  color:#fff;
-  animation:door-word .8s cubic-bezier(.2,.8,.2,1) .2s both;
-}
-.door-r .door-word{animation-delay:.45s}
-.door-r .door-word{color:var(--yellow)}
-.door::after{ /* pom de la porta */
-  content:"";position:absolute;top:50%;width:6px;height:56px;margin-top:-28px;
-  border-radius:6px;background:var(--yellow);opacity:.9;
-  animation:door-knob .5s ease-in-out 1.3s 2;
-}
-.door-l::after{right:22px}
-.door-r::after{left:22px}
-@keyframes door-l{
-  0%{transform:rotateY(0);opacity:1}
-  85%{opacity:1}
-  100%{transform:rotateY(-105deg);opacity:0}
-}
-@keyframes door-r{
-  0%{transform:rotateY(0);opacity:1}
-  85%{opacity:1}
-  100%{transform:rotateY(105deg);opacity:0}
-}
-@keyframes door-word{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-@keyframes door-knob{50%{transform:scaleY(.7) translateY(6px);opacity:1}}
-
-/* Entrada del text */
-.portada{--t:.15s}
-.portada.intro-doors{--t:3.1s}
-.portada-title .ln{display:block;overflow:hidden;padding-bottom:.06em}
-.portada-title .ln > span{display:inline-block;transform:translateY(110%);animation:ln-up .9s cubic-bezier(.2,.8,.2,1) forwards}
-.portada-title .ln:nth-child(1) > span{animation-delay:var(--t)}
-.portada-title .ln:nth-child(2) > span{animation-delay:calc(var(--t) + .14s)}
-.portada-badge,.portada-sub,.portada-ctas{opacity:0;animation:fade-up .8s ease-out forwards}
-.portada-badge{animation-delay:calc(var(--t) - .1s)}
-.portada-sub{animation-delay:calc(var(--t) + .35s)}
-.portada-ctas{animation-delay:calc(var(--t) + .5s)}
-@keyframes ln-up{to{transform:none}}
-@keyframes fade-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-
-@media (prefers-reduced-motion:reduce){
-  .portada-doors{display:none !important}
-  .portada-slide,.portada-slide.is-active{transform:none;transition:opacity 1s}
-  .portada-title .ln > span,.portada-badge,.portada-sub,.portada-ctas{animation:none;opacity:1;transform:none}
-}
-
-.portada-content{
-  position:relative;z-index:3;
-  width:100%;max-width:1480px;
-  margin:0 auto;
-  padding:0 32px 72px;
-}
 .portada-badge{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(255,184,0,.1);
@@ -732,6 +657,41 @@ section{padding:96px 32px;max-width:1480px;margin:0 auto;position:relative}
   .hero-meta-row{gap:20px}
   .nav-inner{padding:14px 22px}
 }
+
+/* ---------- PORTADA "SPRINT IDIOMES" ----------
+   El nom de l'escola, ple de fotos, creix en fer scroll fins que la foto omple la pantalla
+   i apareix el títol. Les fotos fan un zoom lent (Ken Burns). */
+.portada-slide{transform:scale(1.1);transition:opacity 1.8s ease-in-out, transform 7s linear}
+.portada-slide.is-active{transform:scale(1)}
+.hB-pin{position:relative;height:200vh}
+.hB{position:sticky;top:0;height:100vh;overflow:hidden;background:#060F36}
+.hB .portada-slideshow{position:absolute;inset:0}
+.hB-shade{position:absolute;inset:0;z-index:2;opacity:0;pointer-events:none;
+  background:linear-gradient(to top, rgba(6,15,54,.72) 0%, rgba(6,15,54,.38) 30%, rgba(6,15,54,0) 60%)}
+.hB-mask{position:absolute;inset:0;z-index:3;background:#fff;mix-blend-mode:screen;
+  display:flex;align-items:center;justify-content:center;pointer-events:none;will-change:transform}
+.hB-mask .w{font-family:var(--font-display);font-weight:800;color:#000;
+  font-size:min(19vw,29vh);letter-spacing:-0.045em;line-height:.84;white-space:nowrap;text-align:center;display:block;
+  font-variation-settings:"wdth" 85}
+.hB-top{position:absolute;left:0;right:0;top:9vh;z-index:4;text-align:center;
+  font-family:var(--font-body);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:13px;color:var(--ink)}
+.hB-hint{position:absolute;left:0;right:0;bottom:6vh;z-index:4;text-align:center;
+  font-family:var(--font-body);font-weight:700;font-size:14px;color:var(--ink-soft)}
+.hB-hint i{display:block;font-style:normal;font-size:20px;animation:pd-bob 1.6s ease-in-out infinite}
+@keyframes pd-bob{50%{transform:translateY(6px)}}
+.hB-content{position:absolute;left:0;right:0;bottom:0;z-index:5;opacity:0;transform:translateY(30px);
+  max-width:1480px;margin:0 auto;padding:0 32px 72px;pointer-events:none}
+.hB-content.live{pointer-events:auto}
+.hB .portada-title{max-width:820px}
+@media (max-width:960px){.hB-content{padding:0 22px 56px}}
+@media (max-width:700px){.hB-mask .w{font-size:min(25vw,29vh)}}
+@media (prefers-reduced-motion:reduce){
+  .hB-pin{height:auto}.hB{position:relative;height:90vh}
+  .hB-mask,.hB-top,.hB-hint{display:none}.hB-shade{opacity:1}
+  .hB-content{opacity:1;transform:none;pointer-events:auto}
+  .portada-slide,.portada-slide.is-active{transform:none;transition:opacity 1s}
+}
+
 </style>
 
   <!-- SEO: Open Graph -->
@@ -840,7 +800,8 @@ section{padding:96px 32px;max-width:1480px;margin:0 auto;position:relative}
      Per canviar-les o reordenar-les: edita els divs .portada-slide d'aquí sota.
      Campanyes: Setembre 2026 / Gener 2027 / Abril 2027
      ===================================================== -->
-<div class="portada">
+<div class="hB-pin">
+<div class="hB">
   <div class="portada-slideshow" aria-hidden="true">
     <div class="portada-slide is-active" style="background-image:url('img-portada/sprint-entrada.jpg')"></div>
     <div class="portada-slide" style="background-image:url('img-portada/adults-1.jpg')"></div>
@@ -850,36 +811,22 @@ section{padding:96px 32px;max-width:1480px;margin:0 auto;position:relative}
     <div class="portada-slide" style="background-image:url('img-portada/kids-3.jpg')"></div>
     <div class="portada-slide" style="background-image:url('img-portada/teens-4.jpg')"></div>
   </div>
-  <div class="portada-deco">1973</div>
-  <div class="portada-doors" aria-hidden="true">
-    <div class="door door-l"><span class="door-word">Hello</span></div>
-    <div class="door door-r"><span class="door-word">Bonjour</span></div>
-  </div>
-  <div class="portada-overlay"></div>
-  <div class="portada-content">
+  <div class="hB-shade"></div>
+  <div class="hB-mask" aria-hidden="true"><span class="w">SPR<span class="o">I</span>NT<br>IDIOMES</span></div>
+  <div class="hB-top" aria-hidden="true">Escola d'idiomes · Sant Cugat · des de 1973</div>
+  <div class="hB-hint" aria-hidden="true">Fes scroll<i>↓</i></div>
+  <div class="hB-content">
     <span class="portada-badge"><span class="portada-dot"></span>Curs 2026–2027 · Places limitades</span>
-    <h1 class="portada-title"><span class="ln"><span>Aprendre idiomes</span></span><span class="ln"><span>obre portes.</span></span></h1>
+    <h1 class="portada-title">Aprendre idiomes<br>obre portes.</h1>
     <p class="portada-sub">Acompanyem infants, joves i adults en l'aprenentatge d'idiomes a Sant Cugat del Vallès des de 1973.</p>
     <div class="portada-ctas">
       <a href="cursos.html" class="portada-cta">Coneix els nostres cursos <span>→</span></a>
       <a href="#contacte" class="portada-cta-ghost">Prova una classe gratuïta →</a>
     </div>
   </div>
-  <div class="portada-scroll" onclick="document.getElementById('per-a-qui').scrollIntoView({behavior:'smooth'})">
-    <div class="portada-scroll-dot"></div>
-    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 7l5 5 5-5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
+</div>
 </div>
 <script>
-(function(){
-  /* Portes: només la primera vegada que s'obre la home en aquesta pestanya */
-  var portada = document.querySelector('.portada');
-  var seen = false;
-  try { seen = sessionStorage.getItem('sprint-portes') === '1'; sessionStorage.setItem('sprint-portes','1'); } catch(e){}
-  if (portada && !seen) portada.classList.add('intro-doors');
-})();
 (function(){
   var slides = document.querySelectorAll('.portada-slide');
   if(slides.length < 2) return;
@@ -889,6 +836,38 @@ section{padding:96px 32px;max-width:1480px;margin:0 auto;position:relative}
     current = (current + 1) % slides.length;
     slides[current].classList.add('is-active');
   }, 5000);
+})();
+</script>
+<script>
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var pin = document.querySelector('.hB-pin'), mask = document.querySelector('.hB-mask'),
+      o = mask.querySelector('.o'), shade = document.querySelector('.hB-shade'),
+      content = document.querySelector('.hB-content'),
+      hint = document.querySelector('.hB-hint'), top = document.querySelector('.hB-top');
+  function origin(){
+    mask.style.transform = 'none';
+    var m = mask.getBoundingClientRect(), r = o.getBoundingClientRect();
+    mask.style.transformOrigin = (r.left - m.left + r.width/2) + 'px ' + (r.top - m.top + r.height/2) + 'px';
+    update();
+  }
+  function clamp(v){ return Math.max(0, Math.min(1, v)); }
+  function update(){
+    var range = pin.offsetHeight - innerHeight;
+    var p = clamp(-pin.getBoundingClientRect().top / range);
+    var z = clamp(p / .7);
+    mask.style.transform = 'scale(' + Math.pow(80, Math.pow(z, 1.4)) + ')';
+    mask.style.opacity = 1 - clamp((p - .6) / .12);
+    hint.style.opacity = top.style.opacity = 1 - clamp(p * 6);
+    var c = clamp((p - .62) / .25);
+    content.style.opacity = c; shade.style.opacity = c;
+    content.style.transform = 'translateY(' + (30 * (1 - c)) + 'px)';
+    content.classList.toggle('live', c > .5);
+  }
+  addEventListener('scroll', function(){ requestAnimationFrame(update); }, {passive:true});
+  addEventListener('resize', origin);
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(origin);
+  origin();
 })();
 </script>
 
