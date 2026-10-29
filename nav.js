@@ -559,21 +559,19 @@ ${cursosDropdown}
           <ul>
             <li><a href="qui-som.html">Qui som</a></li>
             <li><a href="index.html#perque">Per què Sprint?</a></li>
-            <li><a href="index.html#metode">El nostre mètode</a></li>
             <li><a href="qui-som.html#historia">Història des de 1973</a></li>
             <li><a href="qui-som.html#equip">Equip docent</a></li>
-            <li><a href="index.html#opinions">Opinions</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h6>Contacte</h6>
           <ul>
-            <li>C/ Francesc Moragas 4 i 8</li>
+            <li>C/ Francesc Moragas 8</li>
             <li>08172 Sant Cugat del Vallès</li>
             <li><a href="tel:+34935892264">93 589 22 64</a></li>
-            <li><a href="tel:+34936746635">93 674 66 35</a></li>
+            <li><a href="https://wa.me/34640679888" target="_blank" rel="noopener">640 67 98 88 (WhatsApp)</a></li>
             <li><a href="mailto:info@sprintidiomes.com">info@sprintidiomes.com</a></li>
-            <li>L–V · 9h–21h</li>
+            <li>Dl–Dj · 9h–21h · Dv · 9h–20h</li>
           </ul>
         </div>
       </div>
