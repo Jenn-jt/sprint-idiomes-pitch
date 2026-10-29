@@ -111,6 +111,72 @@ main, nav, footer{position:relative;z-index:1}
   pointer-events:none;
 }
 .portada-title,.portada-sub{text-shadow:0 2px 18px rgba(6,15,54,.45)}
+/* ---------- EFECTE PORTADA: "obre portes" ----------
+   1) Dues portes (Hello / Bonjour) s'obren i deixen veure la foto (1 cop per sessió)
+   2) El títol puja línia a línia, després subtítol i botons
+   3) Zoom lent (Ken Burns) a cada foto del carrusel */
+.portada{perspective:1800px}
+.portada-slide{transform:scale(1.1);transition:opacity 1.8s ease-in-out, transform 7s linear}
+.portada-slide.is-active{transform:scale(1)}
+
+.portada-doors{position:absolute;inset:0;z-index:6;pointer-events:none;display:none}
+.portada.intro-doors .portada-doors{display:block}
+.door{
+  position:absolute;top:0;bottom:0;width:50.5%;
+  background:linear-gradient(160deg,#0D1A55 0%,#060F36 100%);
+  display:flex;align-items:center;justify-content:center;
+  backface-visibility:hidden;
+  will-change:transform,opacity;
+}
+.door-l{left:0;transform-origin:left center;animation:door-l 1.5s cubic-bezier(.7,0,.25,1) .45s forwards;
+  box-shadow:inset -1px 0 0 rgba(255,184,0,.55)}
+.door-r{right:0;transform-origin:right center;animation:door-r 1.5s cubic-bezier(.7,0,.25,1) .45s forwards;
+  background:linear-gradient(200deg,#0D1A55 0%,#060F36 100%)}
+.door-word{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(44px,8vw,128px);letter-spacing:-0.04em;line-height:1;
+  color:#fff;
+  animation:door-word .45s ease-out both;
+}
+.door-r .door-word{color:var(--yellow)}
+.door::after{ /* pom de la porta */
+  content:"";position:absolute;top:50%;width:6px;height:56px;margin-top:-28px;
+  border-radius:6px;background:var(--yellow);opacity:.9;
+}
+.door-l::after{right:22px}
+.door-r::after{left:22px}
+@keyframes door-l{
+  0%{transform:rotateY(0);opacity:1}
+  80%{opacity:1}
+  100%{transform:rotateY(-100deg);opacity:0}
+}
+@keyframes door-r{
+  0%{transform:rotateY(0);opacity:1}
+  80%{opacity:1}
+  100%{transform:rotateY(100deg);opacity:0}
+}
+@keyframes door-word{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* Entrada del text */
+.portada{--t:.15s}
+.portada.intro-doors{--t:1.2s}
+.portada-title .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.portada-title .ln > span{display:inline-block;transform:translateY(110%);animation:ln-up .9s cubic-bezier(.2,.8,.2,1) forwards}
+.portada-title .ln:nth-child(1) > span{animation-delay:var(--t)}
+.portada-title .ln:nth-child(2) > span{animation-delay:calc(var(--t) + .14s)}
+.portada-badge,.portada-sub,.portada-ctas{opacity:0;animation:fade-up .8s ease-out forwards}
+.portada-badge{animation-delay:calc(var(--t) - .1s)}
+.portada-sub{animation-delay:calc(var(--t) + .35s)}
+.portada-ctas{animation-delay:calc(var(--t) + .5s)}
+@keyframes ln-up{to{transform:none}}
+@keyframes fade-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+@media (prefers-reduced-motion:reduce){
+  .portada-doors{display:none !important}
+  .portada-slide,.portada-slide.is-active{transform:none;transition:opacity 1s}
+  .portada-title .ln > span,.portada-badge,.portada-sub,.portada-ctas{animation:none;opacity:1;transform:none}
+}
+
 .portada-content{
   position:relative;z-index:3;
   width:100%;max-width:1480px;
@@ -782,10 +848,14 @@ section{padding:96px 32px;max-width:1480px;margin:0 auto;position:relative}
     <div class="portada-slide" style="background-image:url('img-portada/teens-4.jpg')"></div>
   </div>
   <div class="portada-deco">1973</div>
+  <div class="portada-doors" aria-hidden="true">
+    <div class="door door-l"><span class="door-word">Hello</span></div>
+    <div class="door door-r"><span class="door-word">Bonjour</span></div>
+  </div>
   <div class="portada-overlay"></div>
   <div class="portada-content">
     <span class="portada-badge"><span class="portada-dot"></span>Curs 2026–2027 · Places limitades</span>
-    <h1 class="portada-title">Aprendre idiomes<br>obre portes.</h1>
+    <h1 class="portada-title"><span class="ln"><span>Aprendre idiomes</span></span><span class="ln"><span>obre portes.</span></span></h1>
     <p class="portada-sub">Acompanyem infants, joves i adults en l'aprenentatge d'idiomes a Sant Cugat del Vallès des de 1973.</p>
     <div class="portada-ctas">
       <a href="cursos.html" class="portada-cta">Coneix els nostres cursos <span>→</span></a>
@@ -800,6 +870,13 @@ section{padding:96px 32px;max-width:1480px;margin:0 auto;position:relative}
   </div>
 </div>
 <script>
+(function(){
+  /* Portes: només la primera vegada que s'obre la home en aquesta pestanya */
+  var portada = document.querySelector('.portada');
+  var seen = false;
+  try { seen = sessionStorage.getItem('sprint-portes') === '1'; sessionStorage.setItem('sprint-portes','1'); } catch(e){}
+  if (portada && !seen) portada.classList.add('intro-doors');
+})();
 (function(){
   var slides = document.querySelectorAll('.portada-slide');
   if(slides.length < 2) return;
